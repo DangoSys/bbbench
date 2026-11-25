@@ -1,0 +1,5518 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "area": {
+        "constraints_met": false,
+        "hierarchy": [
+          {
+            "combinational_um2": 11.2896,
+            "instance": "PebbleHart",
+            "module": "PebbleHart",
+            "noncombinational_um2": 0.0,
+            "um2": 54861797.8767
+          },
+          {
+            "combinational_um2": 11.2896,
+            "instance": "acc",
+            "module": "Acc",
+            "noncombinational_um2": 0.0,
+            "um2": 44852611.8394
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/ballDomain",
+            "module": "BallDomain",
+            "noncombinational_um2": 0.0,
+            "um2": 5046375.4024
+          },
+          {
+            "combinational_um2": 13997.2226,
+            "instance": "acc/ballDomain/bbus",
+            "module": "BBus",
+            "noncombinational_um2": 30032.2171,
+            "um2": 5045980.2664
+          },
+          {
+            "combinational_um2": 287961.9519,
+            "instance": "acc/ballDomain/bbus/FixedBall",
+            "module": "FixedBall",
+            "noncombinational_um2": 135917.3732,
+            "um2": 649554.6685
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/ballDomain/bbus/Im2colBall",
+            "module": "Im2colBall",
+            "noncombinational_um2": 0.0,
+            "um2": 62621.5296
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/ballDomain/bbus/Int2FpBall",
+            "module": "Int2FpBall",
+            "noncombinational_um2": 0.0,
+            "um2": 340674.9733
+          },
+          {
+            "combinational_um2": 22741.0182,
+            "instance": "acc/ballDomain/bbus/Int8AddBall",
+            "module": "Int8AddBall",
+            "noncombinational_um2": 30837.5419,
+            "um2": 200412.9804
+          },
+          {
+            "combinational_um2": 20289.2933,
+            "instance": "acc/ballDomain/bbus/Int8MulBall",
+            "module": "Int8MulBall",
+            "noncombinational_um2": 25352.6779,
+            "um2": 110246.708
+          },
+          {
+            "combinational_um2": 33304.3207,
+            "instance": "acc/ballDomain/bbus/LutBall",
+            "module": "LutBall",
+            "noncombinational_um2": 20597.8748,
+            "um2": 118283.0215
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/ballDomain/bbus/MatAddBall",
+            "module": "MatAddBall",
+            "noncombinational_um2": 0.0,
+            "um2": 28918.3105
+          },
+          {
+            "combinational_um2": 90681.8318,
+            "instance": "acc/ballDomain/bbus/MaxPoolBall",
+            "module": "MaxPoolBall",
+            "noncombinational_um2": 42949.4005,
+            "um2": 133631.2323
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/ballDomain/bbus/SMatMulBall",
+            "module": "SMatMulBall",
+            "noncombinational_um2": 0.0,
+            "um2": 2355928.2207
+          },
+          {
+            "combinational_um2": 35451.2263,
+            "instance": "acc/ballDomain/bbus/ToInt8Ball",
+            "module": "ToInt8Ball",
+            "noncombinational_um2": 50547.3015,
+            "um2": 154861.3254
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/ballDomain/bbus/TransposeBall",
+            "module": "TransposeBall",
+            "noncombinational_um2": 0.0,
+            "um2": 44787.7246
+          },
+          {
+            "combinational_um2": 691749.5565,
+            "instance": "acc/ballDomain/bbus/channels",
+            "module": "Channels",
+            "noncombinational_um2": 8852.9277,
+            "um2": 700602.4842
+          },
+          {
+            "combinational_um2": 35611.1625,
+            "instance": "acc/ballDomain/bbus/pending",
+            "module": "Queue_13",
+            "noncombinational_um2": 65257.6501,
+            "um2": 100868.8126
+          },
+          {
+            "combinational_um2": 558.8352,
+            "instance": "acc/ballDomain/bbus/responses",
+            "module": "Arbiter_5",
+            "noncombinational_um2": 0.0,
+            "um2": 558.8352
+          },
+          {
+            "combinational_um2": 395.136,
+            "instance": "acc/ballDomain/decoder",
+            "module": "Decoder_1",
+            "noncombinational_um2": 0.0,
+            "um2": 395.136
+          },
+          {
+            "combinational_um2": 11.2896,
+            "instance": "acc/frontend",
+            "module": "Frontend",
+            "noncombinational_um2": 0.0,
+            "um2": 1426483.2406
+          },
+          {
+            "combinational_um2": 15555.1872,
+            "instance": "acc/frontend/boot",
+            "module": "BootRom",
+            "noncombinational_um2": 289.7664,
+            "um2": 15844.9536
+          },
+          {
+            "combinational_um2": 683.0208,
+            "instance": "acc/frontend/gDecoder",
+            "module": "GlobalDecoder",
+            "noncombinational_um2": 0.0,
+            "um2": 683.0208
+          },
+          {
+            "combinational_um2": 26080.8585,
+            "instance": "acc/frontend/ingress",
+            "module": "Ingress",
+            "noncombinational_um2": 59667.4167,
+            "um2": 85748.2751
+          },
+          {
+            "combinational_um2": 925.7472,
+            "instance": "acc/frontend/scheduler",
+            "module": "Scheduler",
+            "noncombinational_um2": 165.5808,
+            "um2": 1324195.7015
+          },
+          {
+            "combinational_um2": 23555.7509,
+            "instance": "acc/frontend/scheduler/bat",
+            "module": "BankAliasTable",
+            "noncombinational_um2": 12414.7964,
+            "um2": 35970.5473
+          },
+          {
+            "combinational_um2": 219669.279,
+            "instance": "acc/frontend/scheduler/rob",
+            "module": "GlobalROB",
+            "noncombinational_um2": 86267.5954,
+            "um2": 1243690.552
+          },
+          {
+            "combinational_um2": 329995.0137,
+            "instance": "acc/frontend/scheduler/rob/queue",
+            "module": "Rob",
+            "noncombinational_um2": 586778.8235,
+            "um2": 916773.8372
+          },
+          {
+            "combinational_um2": 19066.2532,
+            "instance": "acc/frontend/scheduler/scoreboard",
+            "module": "BankScoreboard",
+            "noncombinational_um2": 2370.8159,
+            "um2": 21437.0691
+          },
+          {
+            "combinational_um2": 391.3728,
+            "instance": "acc/memDomain",
+            "module": "MemDomain",
+            "noncombinational_um2": 331.1616,
+            "um2": 38379741.9068
+          },
+          {
+            "combinational_um2": 333.0432,
+            "instance": "acc/memDomain/bankRouter",
+            "module": "BankRouter",
+            "noncombinational_um2": 455.3472,
+            "um2": 1673250.4611
+          },
+          {
+            "combinational_um2": 1234843.3073,
+            "instance": "acc/memDomain/bankRouter/blt",
+            "module": "BankLayoutTable",
+            "noncombinational_um2": 136344.4953,
+            "um2": 1665057.9747
+          },
+          {
+            "combinational_um2": 6794.4577,
+            "instance": "acc/memDomain/bankRouter/blt/arb",
+            "module": "RRArbiter_11_23",
+            "noncombinational_um2": 165.5808,
+            "um2": 6960.0385
+          },
+          {
+            "combinational_um2": 2717.0305,
+            "instance": "acc/memDomain/bankRouter/replies",
+            "module": "Queue_11",
+            "noncombinational_um2": 4687.0655,
+            "um2": 7404.096
+          },
+          {
+            "combinational_um2": 17393.5104,
+            "instance": "acc/memDomain/commands",
+            "module": "RRArbiter_12",
+            "noncombinational_um2": 41.3952,
+            "um2": 17434.9056
+          },
+          {
+            "combinational_um2": 87746.5369,
+            "instance": "acc/memDomain/control",
+            "module": "MemoryControl",
+            "noncombinational_um2": 126306.1612,
+            "um2": 2842783.3692
+          },
+          {
+            "combinational_um2": 11.2896,
+            "instance": "acc/memDomain/control/coherence",
+            "module": "ToL1",
+            "noncombinational_um2": 0.0,
+            "um2": 2620938.9655
+          },
+          {
+            "combinational_um2": 3797.0688,
+            "instance": "acc/memDomain/control/walker",
+            "module": "RangeWalker",
+            "noncombinational_um2": 3994.6367,
+            "um2": 7791.7056
+          },
+          {
+            "combinational_um2": 506.1504,
+            "instance": "acc/memDomain/ctrl",
+            "module": "Ctrl",
+            "noncombinational_um2": 0.0,
+            "um2": 7298.7264
+          },
+          {
+            "combinational_um2": 741.3504,
+            "instance": "acc/memDomain/ctrl/completion",
+            "module": "Arbiter_4_1",
+            "noncombinational_um2": 0.0,
+            "um2": 741.3504
+          },
+          {
+            "combinational_um2": 1503.3984,
+            "instance": "acc/memDomain/ctrl/configer",
+            "module": "Configer",
+            "noncombinational_um2": 1573.0176,
+            "um2": 3076.416
+          },
+          {
+            "combinational_um2": 2974.8096,
+            "instance": "acc/memDomain/ctrl/decoder",
+            "module": "Decoder",
+            "noncombinational_um2": 0.0,
+            "um2": 2974.8096
+          },
+          {
+            "combinational_um2": 118.5408,
+            "instance": "acc/memDomain/preparation",
+            "module": "Preparation",
+            "noncombinational_um2": 0.0,
+            "um2": 6150681.3298
+          },
+          {
+            "combinational_um2": 206592.1562,
+            "instance": "acc/memDomain/preparation/check",
+            "module": "PermissionCheck",
+            "noncombinational_um2": 50312.1016,
+            "um2": 256904.2578
+          },
+          {
+            "combinational_um2": 1215201.292,
+            "instance": "acc/memDomain/preparation/maps",
+            "module": "PreparedMap",
+            "noncombinational_um2": 1447176.1365,
+            "um2": 2662377.4285
+          },
+          {
+            "combinational_um2": 22.5792,
+            "instance": "acc/memDomain/prm",
+            "module": "PRM",
+            "noncombinational_um2": 0.0,
+            "um2": 27098321.1967
+          },
+          {
+            "combinational_um2": 6739.8914,
+            "instance": "acc/memDomain/prm/banks_0",
+            "module": "Bank_23",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129096.7949
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_0/mem",
+            "module": "mem_23",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6754.9442,
+            "instance": "acc/memDomain/prm/banks_1",
+            "module": "Bank_22",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129111.8477
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_1/mem",
+            "module": "mem_22",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6734.2466,
+            "instance": "acc/memDomain/prm/banks_10",
+            "module": "Bank_13",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129091.1501
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_10/mem",
+            "module": "mem_13",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6738.0098,
+            "instance": "acc/memDomain/prm/banks_11",
+            "module": "Bank_12",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129094.9133
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_11/mem",
+            "module": "mem_12",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6726.7202,
+            "instance": "acc/memDomain/prm/banks_12",
+            "module": "Bank_11",
+            "noncombinational_um2": 5597.7599,
+            "um2": 1129085.5053
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_12/mem",
+            "module": "mem_11",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6707.9042,
+            "instance": "acc/memDomain/prm/banks_13",
+            "module": "Bank_10",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129147.5981
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_13/mem",
+            "module": "mem_10",
+            "noncombinational_um2": 0.0,
+            "um2": 1116843.8157
+          },
+          {
+            "combinational_um2": 6732.365,
+            "instance": "acc/memDomain/prm/banks_14",
+            "module": "Bank_9",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129089.2685
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_14/mem",
+            "module": "mem_9",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6751.181,
+            "instance": "acc/memDomain/prm/banks_15",
+            "module": "Bank_8",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129108.0845
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_15/mem",
+            "module": "mem_8",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6743.6546,
+            "instance": "acc/memDomain/prm/banks_16",
+            "module": "Bank_7",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129100.5581
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_16/mem",
+            "module": "mem_7",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6732.365,
+            "instance": "acc/memDomain/prm/banks_17",
+            "module": "Bank_6",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129089.2685
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_17/mem",
+            "module": "mem_6",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6713.549,
+            "instance": "acc/memDomain/prm/banks_18",
+            "module": "Bank_5",
+            "noncombinational_um2": 5597.7599,
+            "um2": 1129072.3341
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_18/mem",
+            "module": "mem_5",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6728.6018,
+            "instance": "acc/memDomain/prm/banks_19",
+            "module": "Bank_4",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129085.5053
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_19/mem",
+            "module": "mem_4",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6739.8914,
+            "instance": "acc/memDomain/prm/banks_2",
+            "module": "Bank_21",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129096.7949
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_2/mem",
+            "module": "mem_21",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6722.957,
+            "instance": "acc/memDomain/prm/banks_20",
+            "module": "Bank_3",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129079.8605
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_20/mem",
+            "module": "mem_3",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6768.1154,
+            "instance": "acc/memDomain/prm/banks_21",
+            "module": "Bank_2",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129125.0189
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_21/mem",
+            "module": "mem_2",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6734.2466,
+            "instance": "acc/memDomain/prm/banks_22",
+            "module": "Bank_1",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129091.1501
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_22/mem",
+            "module": "mem_1",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6717.3122,
+            "instance": "acc/memDomain/prm/banks_23",
+            "module": "Bank_0",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129074.2157
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_23/mem",
+            "module": "mem_0",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6726.7202,
+            "instance": "acc/memDomain/prm/banks_3",
+            "module": "Bank_20",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129083.6237
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_3/mem",
+            "module": "mem_20",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6739.8914,
+            "instance": "acc/memDomain/prm/banks_4",
+            "module": "Bank_19",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129096.7949
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_4/mem",
+            "module": "mem_19",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6762.4706,
+            "instance": "acc/memDomain/prm/banks_5",
+            "module": "Bank_18",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129119.3741
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_5/mem",
+            "module": "mem_18",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6749.2994,
+            "instance": "acc/memDomain/prm/banks_6",
+            "module": "Bank_17",
+            "noncombinational_um2": 5597.7599,
+            "um2": 1129108.0845
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_6/mem",
+            "module": "mem_17",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6739.8914,
+            "instance": "acc/memDomain/prm/banks_7",
+            "module": "Bank_16",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129096.7949
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_7/mem",
+            "module": "mem_16",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6724.8386,
+            "instance": "acc/memDomain/prm/banks_8",
+            "module": "Bank_15",
+            "noncombinational_um2": 5597.7599,
+            "um2": 1129083.6237
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_8/mem",
+            "module": "mem_15",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 6713.549,
+            "instance": "acc/memDomain/prm/banks_9",
+            "module": "Bank_14",
+            "noncombinational_um2": 5595.8783,
+            "um2": 1129070.4525
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "acc/memDomain/prm/banks_9/mem",
+            "module": "mem_14",
+            "noncombinational_um2": 0.0,
+            "um2": 1116761.0253
+          },
+          {
+            "combinational_um2": 142899.9964,
+            "instance": "acc/memDomain/toMem",
+            "module": "ToMem",
+            "noncombinational_um2": 200132.6177,
+            "um2": 344285.7597
+          },
+          {
+            "combinational_um2": 1253.1456,
+            "instance": "acc/memDomain/toMem/completion",
+            "module": "Arbiter_4_0",
+            "noncombinational_um2": 0.0,
+            "um2": 1253.1456
+          },
+          {
+            "combinational_um2": 1206.1056,
+            "instance": "acc/memDomain/transport",
+            "module": "ToDDR",
+            "noncombinational_um2": 0.0,
+            "um2": 244963.6239
+          },
+          {
+            "combinational_um2": 108865.6145,
+            "instance": "acc/memDomain/transport/reader",
+            "module": "ReadDma",
+            "noncombinational_um2": 37259.4425,
+            "um2": 146125.0571
+          },
+          {
+            "combinational_um2": 63453.1979,
+            "instance": "acc/memDomain/transport/writer",
+            "module": "WriteDma",
+            "noncombinational_um2": 34179.2633,
+            "um2": 97632.4612
+          },
+          {
+            "combinational_um2": 11.2896,
+            "instance": "loom",
+            "module": "Loom",
+            "noncombinational_um2": 0.0,
+            "um2": 10009174.7477
+          },
+          {
+            "combinational_um2": 56.448,
+            "instance": "loom/execution",
+            "module": "Execution",
+            "noncombinational_um2": 0.0,
+            "um2": 1563942.6567
+          },
+          {
+            "combinational_um2": 89771.1375,
+            "instance": "loom/execution/floating",
+            "module": "FPU",
+            "noncombinational_um2": 3121.5743,
+            "um2": 503134.2016
+          },
+          {
+            "combinational_um2": 2154.432,
+            "instance": "loom/execution/floating/compare",
+            "module": "CompareRecFN",
+            "noncombinational_um2": 0.0,
+            "um2": 2154.432
+          },
+          {
+            "combinational_um2": 3996.5185,
+            "instance": "loom/execution/floating/compare_1",
+            "module": "CompareRecFN_1",
+            "noncombinational_um2": 0.0,
+            "um2": 3996.5185
+          },
+          {
+            "combinational_um2": 82.7904,
+            "instance": "loom/execution/floating/convert",
+            "module": "RecFNToRecFN",
+            "noncombinational_um2": 0.0,
+            "um2": 5812.2625
+          },
+          {
+            "combinational_um2": 82.7904,
+            "instance": "loom/execution/floating/convert_1",
+            "module": "RecFNToRecFN_1",
+            "noncombinational_um2": 0.0,
+            "um2": 404.544
+          },
+          {
+            "combinational_um2": 13.1712,
+            "instance": "loom/execution/floating/div",
+            "module": "DivSqrtRecFM_small_e8_s24",
+            "noncombinational_um2": 0.0,
+            "um2": 15907.0465
+          },
+          {
+            "combinational_um2": 5.6448,
+            "instance": "loom/execution/floating/div_1",
+            "module": "DivSqrtRecFM_small_e11_s53",
+            "noncombinational_um2": 0.0,
+            "um2": 31582.6562
+          },
+          {
+            "combinational_um2": 31345.575,
+            "instance": "loom/execution/floating/fma",
+            "module": "Fma_l3_e8_s24_8",
+            "noncombinational_um2": 12271.795,
+            "um2": 71606.1704
+          },
+          {
+            "combinational_um2": 117831.4388,
+            "instance": "loom/execution/floating/fma_1",
+            "module": "Fma_l3_e11_s53",
+            "noncombinational_um2": 23309.2603,
+            "um2": 205448.1434
+          },
+          {
+            "combinational_um2": 12697.037,
+            "instance": "loom/execution/floating/fromInt",
+            "module": "INToRecFN_i64_e8_s24",
+            "noncombinational_um2": 0.0,
+            "um2": 15126.1827
+          },
+          {
+            "combinational_um2": 13466.6114,
+            "instance": "loom/execution/floating/fromInt_1",
+            "module": "INToRecFN_i64_e11_s53",
+            "noncombinational_um2": 0.0,
+            "um2": 17863.9107
+          },
+          {
+            "combinational_um2": 6638.2849,
+            "instance": "loom/execution/floating/toInt",
+            "module": "RecFNToIN_e8_s24_i32",
+            "noncombinational_um2": 0.0,
+            "um2": 6638.2849
+          },
+          {
+            "combinational_um2": 10382.669,
+            "instance": "loom/execution/floating/toInt_1",
+            "module": "RecFNToIN_e8_s24_i64",
+            "noncombinational_um2": 0.0,
+            "um2": 10382.669
+          },
+          {
+            "combinational_um2": 8128.5121,
+            "instance": "loom/execution/floating/toInt_2",
+            "module": "RecFNToIN_e11_s53_i32",
+            "noncombinational_um2": 0.0,
+            "um2": 8128.5121
+          },
+          {
+            "combinational_um2": 15190.157,
+            "instance": "loom/execution/floating/toInt_3",
+            "module": "RecFNToIN_e11_s53_i64",
+            "noncombinational_um2": 0.0,
+            "um2": 15190.157
+          },
+          {
+            "combinational_um2": 6188.5825,
+            "instance": "loom/execution/instruction",
+            "module": "Instruction",
+            "noncombinational_um2": 0.0,
+            "um2": 6188.5825
+          },
+          {
+            "combinational_um2": 18462.2595,
+            "instance": "loom/execution/integer_0",
+            "module": "Integer",
+            "noncombinational_um2": 0.0,
+            "um2": 18462.2595
+          },
+          {
+            "combinational_um2": 204097.1557,
+            "instance": "loom/execution/multiply",
+            "module": "MulDiv",
+            "noncombinational_um2": 10999.8333,
+            "um2": 215096.989
+          },
+          {
+            "combinational_um2": 294270.9547,
+            "instance": "loom/execution/privileged",
+            "module": "Privileged",
+            "noncombinational_um2": 126584.6371,
+            "um2": 420855.5918
+          },
+          {
+            "combinational_um2": 72550.7349,
+            "instance": "loom/execution/registers",
+            "module": "RegisterFile",
+            "noncombinational_um2": 78394.9812,
+            "um2": 150945.7161
+          },
+          {
+            "combinational_um2": 145084.5338,
+            "instance": "loom/execution/sequencer",
+            "module": "Sequencer",
+            "noncombinational_um2": 104118.3344,
+            "um2": 249202.8682
+          },
+          {
+            "combinational_um2": 2560.8576,
+            "instance": "loom/memory",
+            "module": "MemorySystem",
+            "noncombinational_um2": 79.0272,
+            "um2": 8445220.8014
+          },
+          {
+            "combinational_um2": 252.1344,
+            "instance": "loom/memory/cacheOwners",
+            "module": "Queue_5",
+            "noncombinational_um2": 257.7792,
+            "um2": 509.9136
+          },
+          {
+            "combinational_um2": 1851.4944,
+            "instance": "loom/memory/cacheRequests",
+            "module": "Arbiter",
+            "noncombinational_um2": 0.0,
+            "um2": 1851.4944
+          },
+          {
+            "combinational_um2": 208.8576,
+            "instance": "loom/memory/dcache",
+            "module": "Cache",
+            "noncombinational_um2": 0.0,
+            "um2": 1701465.4694
+          },
+          {
+            "combinational_um2": 1870.3104,
+            "instance": "loom/memory/dcache/cache",
+            "module": "BankedChiCache_1",
+            "noncombinational_um2": 82.7904,
+            "um2": 1672899.0183
+          },
+          {
+            "combinational_um2": 140135.9263,
+            "instance": "loom/memory/dcache/cache/caches_0",
+            "module": "ChiCache_2",
+            "noncombinational_um2": 101083.3135,
+            "um2": 802302.2325
+          },
+          {
+            "combinational_um2": 140290.2175,
+            "instance": "loom/memory/dcache/cache/caches_1",
+            "module": "ChiCache_3",
+            "noncombinational_um2": 101060.7344,
+            "um2": 802411.3653
+          },
+          {
+            "combinational_um2": 5531.9042,
+            "instance": "loom/memory/dcache/cache/datArb",
+            "module": "RRArbiter_2_1",
+            "noncombinational_um2": 41.3952,
+            "um2": 5573.2994
+          },
+          {
+            "combinational_um2": 13494.8352,
+            "instance": "loom/memory/dcache/cache/datQueue",
+            "module": "Queue_3_1",
+            "noncombinational_um2": 27983.1548,
+            "um2": 41477.99
+          },
+          {
+            "combinational_um2": 965.2608,
+            "instance": "loom/memory/dcache/cache/reqArb",
+            "module": "RRArbiter_8",
+            "noncombinational_um2": 41.3952,
+            "um2": 1006.656
+          },
+          {
+            "combinational_um2": 3381.2352,
+            "instance": "loom/memory/dcache/cache/reqQueue",
+            "module": "Queue_1_0",
+            "noncombinational_um2": 7989.2735,
+            "um2": 11370.5087
+          },
+          {
+            "combinational_um2": 492.9792,
+            "instance": "loom/memory/dcache/cache/rspArb",
+            "module": "RRArbiter_1_1",
+            "noncombinational_um2": 41.3952,
+            "um2": 534.3744
+          },
+          {
+            "combinational_um2": 1721.664,
+            "instance": "loom/memory/dcache/cache/rspQueue",
+            "module": "Queue_2_1",
+            "noncombinational_um2": 3998.3999,
+            "um2": 5720.064
+          },
+          {
+            "combinational_um2": 5003.1745,
+            "instance": "loom/memory/dcache/maintenance",
+            "module": "Maintenance",
+            "noncombinational_um2": 4037.9135,
+            "um2": 9041.088
+          },
+          {
+            "combinational_um2": 5864.9472,
+            "instance": "loom/memory/dcache/requestQueue",
+            "module": "Queue_4",
+            "noncombinational_um2": 11545.4974,
+            "um2": 17410.4446
+          },
+          {
+            "combinational_um2": 1864.6656,
+            "instance": "loom/memory/dcache/requests",
+            "module": "RRArbiter_9",
+            "noncombinational_um2": 41.3952,
+            "um2": 1906.0608
+          },
+          {
+            "combinational_um2": 10343.1553,
+            "instance": "loom/memory/fetch",
+            "module": "VirtualAccess_1",
+            "noncombinational_um2": 7033.4207,
+            "um2": 218608.0521
+          },
+          {
+            "combinational_um2": 7436.0834,
+            "instance": "loom/memory/fetch/physical",
+            "module": "PhysicalAccess_1",
+            "noncombinational_um2": 876.8256,
+            "um2": 8312.909
+          },
+          {
+            "combinational_um2": 104259.4581,
+            "instance": "loom/memory/fetch/walker",
+            "module": "Walker_2",
+            "noncombinational_um2": 88659.109,
+            "um2": 192918.5672
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "loom/memory/home",
+            "module": "Home",
+            "noncombinational_um2": 0.0,
+            "um2": 4601709.4572
+          },
+          {
+            "combinational_um2": 282.24,
+            "instance": "loom/memory/home/fabric",
+            "module": "Fabric",
+            "noncombinational_um2": 0.0,
+            "um2": 747326.3589
+          },
+          {
+            "combinational_um2": 6837.7346,
+            "instance": "loom/memory/home/fabric/data",
+            "module": "RRArbiter_2_0",
+            "noncombinational_um2": 41.3952,
+            "um2": 6879.1298
+          },
+          {
+            "combinational_um2": 2604.1345,
+            "instance": "loom/memory/home/fabric/requests",
+            "module": "RRArbiter_0",
+            "noncombinational_um2": 41.3952,
+            "um2": 2645.5297
+          },
+          {
+            "combinational_um2": 1290.7776,
+            "instance": "loom/memory/home/fabric/responses",
+            "module": "RRArbiter_1_0",
+            "noncombinational_um2": 41.3952,
+            "um2": 1332.1728
+          },
+          {
+            "combinational_um2": 13690.5219,
+            "instance": "loom/memory/home/fabric/rx",
+            "module": "Rx_4",
+            "noncombinational_um2": 23173.7852,
+            "um2": 36864.3071
+          },
+          {
+            "combinational_um2": 6815.1553,
+            "instance": "loom/memory/home/fabric/rx_1",
+            "module": "Rx_1_3",
+            "noncombinational_um2": 11635.8142,
+            "um2": 18450.9696
+          },
+          {
+            "combinational_um2": 35545.3064,
+            "instance": "loom/memory/home/fabric/rx_10",
+            "module": "Rx_2_0",
+            "noncombinational_um2": 61897.1126,
+            "um2": 97442.419
+          },
+          {
+            "combinational_um2": 8898.0866,
+            "instance": "loom/memory/home/fabric/rx_11",
+            "module": "Rx_3_0",
+            "noncombinational_um2": 15271.0654,
+            "um2": 24169.1519
+          },
+          {
+            "combinational_um2": 35541.5432,
+            "instance": "loom/memory/home/fabric/rx_2",
+            "module": "Rx_2_3",
+            "noncombinational_um2": 61897.1126,
+            "um2": 97438.6558
+          },
+          {
+            "combinational_um2": 13427.0979,
+            "instance": "loom/memory/home/fabric/rx_3",
+            "module": "Rx_0",
+            "noncombinational_um2": 23173.7852,
+            "um2": 36600.8831
+          },
+          {
+            "combinational_um2": 6815.1553,
+            "instance": "loom/memory/home/fabric/rx_4",
+            "module": "Rx_1_2",
+            "noncombinational_um2": 11635.8142,
+            "um2": 18450.9696
+          },
+          {
+            "combinational_um2": 35541.5432,
+            "instance": "loom/memory/home/fabric/rx_5",
+            "module": "Rx_2_2",
+            "noncombinational_um2": 61897.1126,
+            "um2": 97438.6558
+          },
+          {
+            "combinational_um2": 6817.0369,
+            "instance": "loom/memory/home/fabric/rx_6",
+            "module": "Rx_1_1",
+            "noncombinational_um2": 11635.8142,
+            "um2": 18452.8512
+          },
+          {
+            "combinational_um2": 35541.5432,
+            "instance": "loom/memory/home/fabric/rx_7",
+            "module": "Rx_2_1",
+            "noncombinational_um2": 61897.1126,
+            "um2": 97438.6558
+          },
+          {
+            "combinational_um2": 8899.9682,
+            "instance": "loom/memory/home/fabric/rx_8",
+            "module": "Rx_3_1",
+            "noncombinational_um2": 15271.0654,
+            "um2": 24171.0335
+          },
+          {
+            "combinational_um2": 6817.0369,
+            "instance": "loom/memory/home/fabric/rx_9",
+            "module": "Rx_1_0",
+            "noncombinational_um2": 11635.8142,
+            "um2": 18452.8512
+          },
+          {
+            "combinational_um2": 3296.5633,
+            "instance": "loom/memory/home/fabric/tx",
+            "module": "Tx_4",
+            "noncombinational_um2": 6167.8846,
+            "um2": 9464.4479
+          },
+          {
+            "combinational_um2": 1687.7952,
+            "instance": "loom/memory/home/fabric/tx_1",
+            "module": "Tx_1_3",
+            "noncombinational_um2": 3146.0351,
+            "um2": 4833.8303
+          },
+          {
+            "combinational_um2": 8679.821,
+            "instance": "loom/memory/home/fabric/tx_10",
+            "module": "Tx_2_0",
+            "noncombinational_um2": 16309.7083,
+            "um2": 24989.5293
+          },
+          {
+            "combinational_um2": 2193.9456,
+            "instance": "loom/memory/home/fabric/tx_11",
+            "module": "Tx_3_0",
+            "noncombinational_um2": 4098.1247,
+            "um2": 6292.0703
+          },
+          {
+            "combinational_um2": 8681.7026,
+            "instance": "loom/memory/home/fabric/tx_2",
+            "module": "Tx_2_3",
+            "noncombinational_um2": 16309.7083,
+            "um2": 24991.4109
+          },
+          {
+            "combinational_um2": 3296.5633,
+            "instance": "loom/memory/home/fabric/tx_3",
+            "module": "Tx_0",
+            "noncombinational_um2": 6167.8846,
+            "um2": 9464.4479
+          },
+          {
+            "combinational_um2": 1689.6768,
+            "instance": "loom/memory/home/fabric/tx_4",
+            "module": "Tx_1_2",
+            "noncombinational_um2": 3146.0351,
+            "um2": 4835.7119
+          },
+          {
+            "combinational_um2": 8681.7026,
+            "instance": "loom/memory/home/fabric/tx_5",
+            "module": "Tx_2_2",
+            "noncombinational_um2": 16309.7083,
+            "um2": 24991.4109
+          },
+          {
+            "combinational_um2": 1689.6768,
+            "instance": "loom/memory/home/fabric/tx_6",
+            "module": "Tx_1_1",
+            "noncombinational_um2": 3146.0351,
+            "um2": 4835.7119
+          },
+          {
+            "combinational_um2": 8679.821,
+            "instance": "loom/memory/home/fabric/tx_7",
+            "module": "Tx_2_1",
+            "noncombinational_um2": 16309.7083,
+            "um2": 24989.5293
+          },
+          {
+            "combinational_um2": 2193.9456,
+            "instance": "loom/memory/home/fabric/tx_8",
+            "module": "Tx_3_1",
+            "noncombinational_um2": 4098.1247,
+            "um2": 6292.0703
+          },
+          {
+            "combinational_um2": 1689.6768,
+            "instance": "loom/memory/home/fabric/tx_9",
+            "module": "Tx_1_0",
+            "noncombinational_um2": 3146.0351,
+            "um2": 4835.7119
+          },
+          {
+            "combinational_um2": 264671.508,
+            "instance": "loom/memory/home/home",
+            "module": "Coherence",
+            "noncombinational_um2": 189251.3229,
+            "um2": 3854383.0983
+          },
+          {
+            "combinational_um2": 424505.9041,
+            "instance": "loom/memory/home/home/cache",
+            "module": "Cache_1",
+            "noncombinational_um2": 382758.8291,
+            "um2": 3093097.1441
+          },
+          {
+            "combinational_um2": 3712.3969,
+            "instance": "loom/memory/home/home/cacheArb",
+            "module": "RRArbiter_3",
+            "noncombinational_um2": 124.1856,
+            "um2": 3836.5825
+          },
+          {
+            "combinational_um2": 3337.9584,
+            "instance": "loom/memory/home/home/cacheQueue",
+            "module": "Queue_7",
+            "noncombinational_um2": 7712.6783,
+            "um2": 11050.6367
+          },
+          {
+            "combinational_um2": 19512.1926,
+            "instance": "loom/memory/home/home/datArb",
+            "module": "RRArbiter_7",
+            "noncombinational_um2": 124.1856,
+            "um2": 19636.3782
+          },
+          {
+            "combinational_um2": 13790.2464,
+            "instance": "loom/memory/home/home/datQueue",
+            "module": "Queue_3_0",
+            "noncombinational_um2": 28654.886,
+            "um2": 42445.1324
+          },
+          {
+            "combinational_um2": 26698.023,
+            "instance": "loom/memory/home/home/directory",
+            "module": "Directory",
+            "noncombinational_um2": 31791.5127,
+            "um2": 58489.5357
+          },
+          {
+            "combinational_um2": 34374.9515,
+            "instance": "loom/memory/home/home/memArb",
+            "module": "RRArbiter_4",
+            "noncombinational_um2": 124.1856,
+            "um2": 34499.1371
+          },
+          {
+            "combinational_um2": 23358.1824,
+            "instance": "loom/memory/home/home/memQueue",
+            "module": "Queue_8",
+            "noncombinational_um2": 47726.7833,
+            "um2": 71084.9657
+          },
+          {
+            "combinational_um2": 15991.7187,
+            "instance": "loom/memory/home/home/mshr",
+            "module": "Mshr",
+            "noncombinational_um2": 27674.5723,
+            "um2": 43666.291
+          },
+          {
+            "combinational_um2": 2111.1553,
+            "instance": "loom/memory/home/home/rspArb",
+            "module": "RRArbiter_6",
+            "noncombinational_um2": 124.1856,
+            "um2": 2235.3409
+          },
+          {
+            "combinational_um2": 2020.8384,
+            "instance": "loom/memory/home/home/rspQueue",
+            "module": "Queue_2_0",
+            "noncombinational_um2": 4670.1311,
+            "um2": 6690.9695
+          },
+          {
+            "combinational_um2": 3584.4481,
+            "instance": "loom/memory/home/home/snpArb",
+            "module": "RRArbiter_5",
+            "noncombinational_um2": 124.1856,
+            "um2": 3708.6337
+          },
+          {
+            "combinational_um2": 3097.1136,
+            "instance": "loom/memory/home/home/snpQueue",
+            "module": "Queue_9",
+            "noncombinational_um2": 6922.4063,
+            "um2": 10019.5199
+          },
+          {
+            "combinational_um2": 1601.2416,
+            "instance": "loom/memory/icache",
+            "module": "BankedChiCache",
+            "noncombinational_um2": 82.7904,
+            "um2": 1671474.6471
+          },
+          {
+            "combinational_um2": 139624.1311,
+            "instance": "loom/memory/icache/caches_0",
+            "module": "ChiCache",
+            "noncombinational_um2": 101126.5903,
+            "um2": 801820.5429
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "loom/memory/icache/caches_0/data",
+            "module": "data",
+            "noncombinational_um2": 0.0,
+            "um2": 468905.2896
+          },
+          {
+            "combinational_um2": 139612.8415,
+            "instance": "loom/memory/icache/caches_1",
+            "module": "ChiCache_1",
+            "noncombinational_um2": 101064.4976,
+            "um2": 801767.8581
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "loom/memory/icache/caches_1/data",
+            "module": "data_0",
+            "noncombinational_um2": 0.0,
+            "um2": 468931.632
+          },
+          {
+            "combinational_um2": 5531.9042,
+            "instance": "loom/memory/icache/datArb",
+            "module": "RRArbiter_2_2",
+            "noncombinational_um2": 41.3952,
+            "um2": 5573.2994
+          },
+          {
+            "combinational_um2": 13494.8352,
+            "instance": "loom/memory/icache/datQueue",
+            "module": "Queue_3_2",
+            "noncombinational_um2": 27983.1548,
+            "um2": 41477.99
+          },
+          {
+            "combinational_um2": 965.2608,
+            "instance": "loom/memory/icache/reqArb",
+            "module": "RRArbiter_10",
+            "noncombinational_um2": 41.3952,
+            "um2": 1006.656
+          },
+          {
+            "combinational_um2": 3381.2352,
+            "instance": "loom/memory/icache/reqQueue",
+            "module": "Queue_1_1",
+            "noncombinational_um2": 7989.2735,
+            "um2": 11370.5087
+          },
+          {
+            "combinational_um2": 274.7136,
+            "instance": "loom/memory/icache/retirement",
+            "module": "Queue_14",
+            "noncombinational_um2": 244.608,
+            "um2": 519.3216
+          },
+          {
+            "combinational_um2": 492.9792,
+            "instance": "loom/memory/icache/rspArb",
+            "module": "RRArbiter_1_2",
+            "noncombinational_um2": 41.3952,
+            "um2": 534.3744
+          },
+          {
+            "combinational_um2": 1721.664,
+            "instance": "loom/memory/icache/rspQueue",
+            "module": "Queue_2_2",
+            "noncombinational_um2": 3998.3999,
+            "um2": 5720.064
+          },
+          {
+            "combinational_um2": 12920.9473,
+            "instance": "loom/memory/memory",
+            "module": "VirtualAccess_0",
+            "noncombinational_um2": 9816.307,
+            "um2": 223906.6377
+          },
+          {
+            "combinational_um2": 7895.1938,
+            "instance": "loom/memory/memory/physical",
+            "module": "PhysicalAccess_0",
+            "noncombinational_um2": 923.8656,
+            "um2": 8819.0593
+          },
+          {
+            "combinational_um2": 103691.215,
+            "instance": "loom/memory/memory/walker",
+            "module": "Walker_0",
+            "noncombinational_um2": 88659.109,
+            "um2": 192350.324
+          },
+          {
+            "combinational_um2": 12902.1315,
+            "instance": "loom/memory/uncached",
+            "module": "Uncached",
+            "noncombinational_um2": 7633.6511,
+            "um2": 20535.7826
+          },
+          {
+            "combinational_um2": 2519.4625,
+            "instance": "loom/memory/uncachedRequests",
+            "module": "Arbiter_1",
+            "noncombinational_um2": 0.0,
+            "um2": 2519.4625
+          }
+        ],
+        "library": "scc018ug_uhd_rvt_ss_v1p62_125c_ccs.db",
+        "status": "pass",
+        "timing": {
+          "endpoint": "acc/memDomain/control/coherence/interlock/overlaps_23_14_reg",
+          "slack_ns": -0.24,
+          "startpoint": "acc/memDomain/preparation/preflight/outputSelect_reg_26_"
+        },
+        "tool": "DC",
+        "um2": 54861797.876721,
+        "violations": {
+          "max_delay/setup": 48967,
+          "max_fanout": 637
+        }
+      },
+      "hart": "pebble/harts/pebble",
+      "path": "examples/designs/pebble/harts/pebble",
+      "power": {
+        "hierarchy": [
+          {
+            "instance": "PebbleHart",
+            "internal_w": 1.087,
+            "leakage_w": 0.000524,
+            "module": "PebbleHart",
+            "switching_w": 0.00431,
+            "total_w": 1.092
+          },
+          {
+            "instance": "acc",
+            "internal_w": 0.792,
+            "leakage_w": 0.000394,
+            "module": "Acc",
+            "switching_w": 0.00113,
+            "total_w": 0.794
+          },
+          {
+            "instance": "acc/ballDomain",
+            "internal_w": 0.135,
+            "leakage_w": 8.16e-05,
+            "module": "BallDomain",
+            "switching_w": 3.85e-05,
+            "total_w": 0.135
+          },
+          {
+            "instance": "acc/ballDomain/decoder",
+            "internal_w": 9.97e-11,
+            "leakage_w": 8.07e-09,
+            "module": "Decoder_1",
+            "switching_w": 1.5e-10,
+            "total_w": 8.32e-09
+          },
+          {
+            "instance": "acc/ballDomain/bbus",
+            "internal_w": 0.135,
+            "leakage_w": 8.16e-05,
+            "module": "BBus",
+            "switching_w": 3.85e-05,
+            "total_w": 0.135
+          },
+          {
+            "instance": "acc/ballDomain/bbus/responses",
+            "internal_w": 1.03e-09,
+            "leakage_w": 1.16e-08,
+            "module": "Arbiter_5",
+            "switching_w": 1.23e-09,
+            "total_w": 1.39e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8MulBall",
+            "internal_w": 0.00435,
+            "leakage_w": 2.36e-06,
+            "module": "Int8MulBall",
+            "switching_w": 2.55e-08,
+            "total_w": 0.00436
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8MulBall/scale",
+            "internal_w": 0.00138,
+            "leakage_w": 1.27e-06,
+            "module": "Fma_l3_e8_s24_4",
+            "switching_w": 2.46e-08,
+            "total_w": 0.00139
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8MulBall/scale/mulAddRecFNToRaw_preMul",
+            "internal_w": 1.46e-11,
+            "leakage_w": 2.8e-08,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24_4",
+            "switching_w": 6.76e-11,
+            "total_w": 2.81e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8MulBall/scale/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.88e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_4",
+            "switching_w": 0.0,
+            "total_w": 9.88e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8MulBall/scale/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.88e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_4",
+            "switching_w": 0.0,
+            "total_w": 9.88e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8MulBall/scale/mulAddRecFNToRaw_postMul",
+            "internal_w": 4.28e-09,
+            "leakage_w": 2.36e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24_4",
+            "switching_w": 4.26e-09,
+            "total_w": 2.44e-07
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8MulBall/productToFloat",
+            "internal_w": 0.0,
+            "leakage_w": 2.47e-08,
+            "module": "INToRecFN_i16_e8_s24",
+            "switching_w": 0.0,
+            "total_w": 2.47e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8MulBall/productToFloat/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 3.56e-09,
+            "module": "RoundAnyRawFNToRecFN_ie5_is16_oe8_os24",
+            "switching_w": 0.0,
+            "total_w": 3.56e-09
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8MulBall/toInt8",
+            "internal_w": 1.98e-11,
+            "leakage_w": 1.81e-08,
+            "module": "RecFNToIN_e8_s24_i8_0",
+            "switching_w": 3.91e-11,
+            "total_w": 1.82e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Im2colBall",
+            "internal_w": 0.00266,
+            "leakage_w": 1.58e-06,
+            "module": "Im2colBall",
+            "switching_w": 1.71e-09,
+            "total_w": 0.00266
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Im2colBall/im2colUnit",
+            "internal_w": 0.00266,
+            "leakage_w": 1.58e-06,
+            "module": "Im2col",
+            "switching_w": 1.71e-09,
+            "total_w": 0.00266
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Im2colBall/im2colUnit/pendingRows",
+            "internal_w": 0.00135,
+            "leakage_w": 3.92e-07,
+            "module": "Queue_12",
+            "switching_w": 1.68e-11,
+            "total_w": 0.00135
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Im2colBall/im2colUnit/div",
+            "internal_w": 0.000182,
+            "leakage_w": 6.31e-08,
+            "module": "RestoringDiv",
+            "switching_w": 4.17e-12,
+            "total_w": 0.000182
+          },
+          {
+            "instance": "acc/ballDomain/bbus/FixedBall",
+            "internal_w": 0.0206,
+            "leakage_w": 1.41e-05,
+            "module": "FixedBall",
+            "switching_w": 2.1e-08,
+            "total_w": 0.0206
+          },
+          {
+            "instance": "acc/ballDomain/bbus/FixedBall/multiply",
+            "internal_w": 0.00122,
+            "leakage_w": 1.26e-06,
+            "module": "Multiply_3",
+            "switching_w": 4.99e-11,
+            "total_w": 0.00122
+          },
+          {
+            "instance": "acc/ballDomain/bbus/FixedBall/requantMultipliers_0",
+            "internal_w": 0.00119,
+            "leakage_w": 1.21e-06,
+            "module": "Multiply_2",
+            "switching_w": 1.25e-11,
+            "total_w": 0.00119
+          },
+          {
+            "instance": "acc/ballDomain/bbus/FixedBall/requantMultipliers_1",
+            "internal_w": 0.00119,
+            "leakage_w": 1.2e-06,
+            "module": "Multiply_1",
+            "switching_w": 1.25e-11,
+            "total_w": 0.00119
+          },
+          {
+            "instance": "acc/ballDomain/bbus/FixedBall/requantMultipliers_2",
+            "internal_w": 0.00119,
+            "leakage_w": 1.21e-06,
+            "module": "Multiply_0",
+            "switching_w": 7.07e-09,
+            "total_w": 0.00119
+          },
+          {
+            "instance": "acc/ballDomain/bbus/pending",
+            "internal_w": 0.00765,
+            "leakage_w": 2.24e-06,
+            "module": "Queue_13",
+            "switching_w": 9.34e-09,
+            "total_w": 0.00765
+          },
+          {
+            "instance": "acc/ballDomain/bbus/channels",
+            "internal_w": 0.000994,
+            "leakage_w": 1.26e-05,
+            "module": "Channels",
+            "switching_w": 2.88e-07,
+            "total_w": 0.00101
+          },
+          {
+            "instance": "acc/ballDomain/bbus/LutBall",
+            "internal_w": 0.00469,
+            "leakage_w": 2.58e-06,
+            "module": "LutBall",
+            "switching_w": 3.16e-08,
+            "total_w": 0.00469
+          },
+          {
+            "instance": "acc/ballDomain/bbus/LutBall/multiply",
+            "internal_w": 0.00104,
+            "leakage_w": 9.15e-07,
+            "module": "Multiply_4",
+            "switching_w": 4.01e-09,
+            "total_w": 0.00104
+          },
+          {
+            "instance": "acc/ballDomain/bbus/LutBall/divide",
+            "internal_w": 0.00124,
+            "leakage_w": 4.52e-07,
+            "module": "DivRem",
+            "switching_w": 1.47e-11,
+            "total_w": 0.00124
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall",
+            "internal_w": 0.00828,
+            "leakage_w": 4.29e-06,
+            "module": "Int8AddBall",
+            "switching_w": 1.15e-07,
+            "total_w": 0.00828
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/round",
+            "internal_w": 1.35e-09,
+            "leakage_w": 8.48e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_8",
+            "switching_w": 6.49e-10,
+            "total_w": 8.68e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/round/roundAnyRawFNToRecFN",
+            "internal_w": 1.35e-09,
+            "leakage_w": 8.48e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_8",
+            "switching_w": 6.49e-10,
+            "total_w": 8.68e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/add",
+            "internal_w": 0.00175,
+            "leakage_w": 5.95e-07,
+            "module": "PipelinedAddRawFN",
+            "switching_w": 9.66e-08,
+            "total_w": 0.00175
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/toInt",
+            "internal_w": 3.22e-12,
+            "leakage_w": 1.82e-08,
+            "module": "RecFNToIN_e8_s24_i8_1",
+            "switching_w": 6.66e-13,
+            "total_w": 1.82e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/lhsMul",
+            "internal_w": 0.00131,
+            "leakage_w": 1.15e-06,
+            "module": "Fma_l3_e8_s24_6",
+            "switching_w": 1.54e-08,
+            "total_w": 0.00131
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/lhsMul/mulAddRecFNToRaw_postMul",
+            "internal_w": 4.66e-12,
+            "leakage_w": 2.41e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24_6",
+            "switching_w": 2.43e-11,
+            "total_w": 2.41e-07
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/lhsMul/mulAddRecFNToRaw_preMul",
+            "internal_w": 5.38e-12,
+            "leakage_w": 2.84e-08,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24_6",
+            "switching_w": 9.1e-12,
+            "total_w": 2.84e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/lhsMul/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.86e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_6",
+            "switching_w": 0.0,
+            "total_w": 9.86e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/lhsMul/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.86e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_6",
+            "switching_w": 0.0,
+            "total_w": 9.86e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/rhsMul",
+            "internal_w": 0.00131,
+            "leakage_w": 1.15e-06,
+            "module": "Fma_l3_e8_s24_5",
+            "switching_w": 7.74e-10,
+            "total_w": 0.00131
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/rhsMul/mulAddRecFNToRaw_postMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.4e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24_5",
+            "switching_w": 0.0,
+            "total_w": 2.4e-07
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/rhsMul/mulAddRecFNToRaw_preMul",
+            "internal_w": 0.0,
+            "leakage_w": 3.1e-08,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24_5",
+            "switching_w": 0.0,
+            "total_w": 3.1e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/rhsMul/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.53e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_5",
+            "switching_w": 0.0,
+            "total_w": 9.53e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/rhsMul/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.53e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_5",
+            "switching_w": 0.0,
+            "total_w": 9.53e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/lhsToFloat",
+            "internal_w": 0.000135,
+            "leakage_w": 4.44e-08,
+            "module": "IntToFloat_1",
+            "switching_w": 1.5e-11,
+            "total_w": 0.000135
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/lhsToFloat/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 2.48e-09,
+            "module": "RoundAnyRawFNToRecFN_ie4_is8_oe8_os24_1",
+            "switching_w": 0.0,
+            "total_w": 2.48e-09
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/rhsToFloat",
+            "internal_w": 0.000159,
+            "leakage_w": 5.07e-08,
+            "module": "IntToFloat_0",
+            "switching_w": 5.91e-11,
+            "total_w": 0.000159
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int8AddBall/rhsToFloat/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 1.66e-09,
+            "module": "RoundAnyRawFNToRecFN_ie4_is8_oe8_os24_0",
+            "switching_w": 0.0,
+            "total_w": 1.66e-09
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall",
+            "internal_w": 0.0577,
+            "leakage_w": 2.6e-05,
+            "module": "SMatMulBall",
+            "switching_w": 3.8e-05,
+            "total_w": 0.0578
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit",
+            "internal_w": 0.0577,
+            "leakage_w": 2.6e-05,
+            "module": "SMatMulUnit",
+            "switching_w": 3.8e-05,
+            "total_w": 0.0578
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/accumulator",
+            "internal_w": 5.91e-06,
+            "leakage_w": 1.9e-07,
+            "module": "accumulator",
+            "switching_w": 3.33e-05,
+            "total_w": 3.94e-05
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/accumulator/accumulator_ext",
+            "internal_w": 5.91e-06,
+            "leakage_w": 1.9e-07,
+            "module": "accumulator_ext",
+            "switching_w": 3.33e-05,
+            "total_w": 3.94e-05
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array",
+            "internal_w": 0.0379,
+            "leakage_w": 1.87e-05,
+            "module": "Array",
+            "switching_w": 3.41e-06,
+            "total_w": 0.0379
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_10",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_53",
+            "switching_w": 3.17e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_11",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_52",
+            "switching_w": 2.2e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_12",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_51",
+            "switching_w": 2.93e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_13",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_50",
+            "switching_w": 1.87e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_14",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_49",
+            "switching_w": 3.19e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_15",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_48",
+            "switching_w": 1.6e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_0",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_63",
+            "switching_w": 2.46e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_1",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_62",
+            "switching_w": 3.14e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_2",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_61",
+            "switching_w": 2.22e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_3",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_60",
+            "switching_w": 3.49e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_4",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_59",
+            "switching_w": 2.1e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_5",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_58",
+            "switching_w": 1.7e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_6",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_57",
+            "switching_w": 2.59e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_7",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_56",
+            "switching_w": 2.15e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_8",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_55",
+            "switching_w": 2.14e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_4_9",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_54",
+            "switching_w": 1.92e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_0",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_15",
+            "switching_w": 2.03e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_1",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_14",
+            "switching_w": 2.85e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_2",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_13",
+            "switching_w": 1.8e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_3",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_12",
+            "switching_w": 2.72e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_4",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_11",
+            "switching_w": 1.52e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_5",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_10",
+            "switching_w": 3.43e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_6",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_9",
+            "switching_w": 2.25e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_7",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_8",
+            "switching_w": 3.11e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_8",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_7",
+            "switching_w": 2.94e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_9",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_6",
+            "switching_w": 1.46e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_10",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_69",
+            "switching_w": 3.07e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_11",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_68",
+            "switching_w": 2.18e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_12",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_67",
+            "switching_w": 2.93e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_13",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_66",
+            "switching_w": 3.31e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_14",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_65",
+            "switching_w": 1.93e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_15",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_64",
+            "switching_w": 1.78e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_0",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_95",
+            "switching_w": 3e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_1",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_94",
+            "switching_w": 2.89e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_2",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_93",
+            "switching_w": 2.18e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_3",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_92",
+            "switching_w": 2.66e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_4",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_91",
+            "switching_w": 1.83e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_5",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_90",
+            "switching_w": 3e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_6",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_89",
+            "switching_w": 1.72e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_7",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_88",
+            "switching_w": 2.93e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_8",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_87",
+            "switching_w": 3.06e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_9",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_86",
+            "switching_w": 2.42e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_10",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_5",
+            "switching_w": 1.87e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_11",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_4",
+            "switching_w": 2.2e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_12",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_3",
+            "switching_w": 3.74e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_13",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_2",
+            "switching_w": 2.53e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_14",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_1",
+            "switching_w": 3.13e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_7_15",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_0",
+            "switching_w": 1.99e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_0",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_47",
+            "switching_w": 1.82e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_1",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_46",
+            "switching_w": 3.53e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_2",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_45",
+            "switching_w": 1.78e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_3",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_44",
+            "switching_w": 2.58e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_4",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_43",
+            "switching_w": 2.05e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_5",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_42",
+            "switching_w": 2.9e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_6",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_41",
+            "switching_w": 1.85e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_7",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_40",
+            "switching_w": 2.02e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_8",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_39",
+            "switching_w": 2.25e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_9",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_38",
+            "switching_w": 2.26e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_10",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_85",
+            "switching_w": 2.7e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_11",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_84",
+            "switching_w": 2.44e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_12",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_83",
+            "switching_w": 3.27e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_13",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_82",
+            "switching_w": 2.64e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_14",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_81",
+            "switching_w": 3.65e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_2_15",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_80",
+            "switching_w": 2.04e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_0",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_127",
+            "switching_w": 1.91e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_1",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_126",
+            "switching_w": 1.72e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_2",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_125",
+            "switching_w": 1.91e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_3",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_124",
+            "switching_w": 2.49e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_4",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_123",
+            "switching_w": 2.44e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_5",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_122",
+            "switching_w": 3.65e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_6",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_121",
+            "switching_w": 1.76e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_7",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_120",
+            "switching_w": 3.24e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_8",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_119",
+            "switching_w": 2.86e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_9",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_118",
+            "switching_w": 1.77e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_10",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_21",
+            "switching_w": 2.35e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_11",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_20",
+            "switching_w": 2.38e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_12",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_19",
+            "switching_w": 3.6e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_13",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_18",
+            "switching_w": 2.56e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_14",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_17",
+            "switching_w": 4.75e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_15",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_16",
+            "switching_w": 2.81e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_0",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_79",
+            "switching_w": 2.06e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_1",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_78",
+            "switching_w": 3.83e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_2",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_77",
+            "switching_w": 2.07e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_3",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_76",
+            "switching_w": 1.91e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_4",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_75",
+            "switching_w": 1.82e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_5",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_74",
+            "switching_w": 2.67e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_6",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_73",
+            "switching_w": 2.76e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_7",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_72",
+            "switching_w": 2.65e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_8",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_71",
+            "switching_w": 3.12e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_3_9",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_70",
+            "switching_w": 2.33e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_10",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_101",
+            "switching_w": 3.46e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_11",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_100",
+            "switching_w": 2.62e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_12",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_99",
+            "switching_w": 3.48e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_13",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_98",
+            "switching_w": 2.2e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_14",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_97",
+            "switching_w": 3.72e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_15",
+            "internal_w": 0.000258,
+            "leakage_w": 1.32e-07,
+            "module": "PE_96",
+            "switching_w": 2.8e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_10",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_37",
+            "switching_w": 3.18e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_11",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_36",
+            "switching_w": 2.37e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_12",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_35",
+            "switching_w": 3.14e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_13",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_34",
+            "switching_w": 2.09e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_14",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_33",
+            "switching_w": 3.49e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_5_15",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_32",
+            "switching_w": 3.06e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_0",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_31",
+            "switching_w": 2.04e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_1",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_30",
+            "switching_w": 2.97e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_2",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_29",
+            "switching_w": 2.69e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_3",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_28",
+            "switching_w": 3.52e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_4",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_27",
+            "switching_w": 1.72e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_5",
+            "internal_w": 0.000259,
+            "leakage_w": 1.34e-07,
+            "module": "PE_26",
+            "switching_w": 3.14e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_6",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_25",
+            "switching_w": 2.86e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_7",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_24",
+            "switching_w": 3.39e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_8",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_23",
+            "switching_w": 3.68e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_6_9",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_22",
+            "switching_w": 2.84e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_0",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_111",
+            "switching_w": 1.79e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_1",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_110",
+            "switching_w": 2.85e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_2",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_109",
+            "switching_w": 2.11e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_3",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_108",
+            "switching_w": 3.11e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_4",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_107",
+            "switching_w": 2.36e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_5",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_106",
+            "switching_w": 3.81e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_6",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_105",
+            "switching_w": 2.66e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_7",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_104",
+            "switching_w": 3.09e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_8",
+            "internal_w": 0.000258,
+            "leakage_w": 1.35e-07,
+            "module": "PE_103",
+            "switching_w": 2.57e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_1_9",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_102",
+            "switching_w": 2.35e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_10",
+            "internal_w": 0.000258,
+            "leakage_w": 1.34e-07,
+            "module": "PE_117",
+            "switching_w": 2.56e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_11",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_116",
+            "switching_w": 2.3e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_12",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_115",
+            "switching_w": 2.5e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_13",
+            "internal_w": 0.000259,
+            "leakage_w": 1.32e-07,
+            "module": "PE_114",
+            "switching_w": 1.82e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_14",
+            "internal_w": 0.000259,
+            "leakage_w": 1.33e-07,
+            "module": "PE_113",
+            "switching_w": 2.28e-08,
+            "total_w": 0.000259
+          },
+          {
+            "instance": "acc/ballDomain/bbus/SMatMulBall/smatmulArrayUnit/array/pe_0_15",
+            "internal_w": 0.000258,
+            "leakage_w": 1.33e-07,
+            "module": "PE_112",
+            "switching_w": 2.41e-08,
+            "total_w": 0.000258
+          },
+          {
+            "instance": "acc/ballDomain/bbus/MaxPoolBall",
+            "internal_w": 0.00493,
+            "leakage_w": 3.07e-06,
+            "module": "MaxPoolBall",
+            "switching_w": 2.19e-08,
+            "total_w": 0.00493
+          },
+          {
+            "instance": "acc/ballDomain/bbus/TransposeBall",
+            "internal_w": 0.00252,
+            "leakage_w": 9.54e-07,
+            "module": "TransposeBall",
+            "switching_w": 2.62e-09,
+            "total_w": 0.00252
+          },
+          {
+            "instance": "acc/ballDomain/bbus/TransposeBall/transposeUnit",
+            "internal_w": 0.00252,
+            "leakage_w": 9.54e-07,
+            "module": "Transpose",
+            "switching_w": 2.62e-09,
+            "total_w": 0.00252
+          },
+          {
+            "instance": "acc/ballDomain/bbus/MatAddBall",
+            "internal_w": 0.00159,
+            "leakage_w": 6.83e-07,
+            "module": "MatAddBall",
+            "switching_w": 8.44e-10,
+            "total_w": 0.00159
+          },
+          {
+            "instance": "acc/ballDomain/bbus/MatAddBall/unit",
+            "internal_w": 0.00159,
+            "leakage_w": 6.83e-07,
+            "module": "MatAdd",
+            "switching_w": 8.44e-10,
+            "total_w": 0.00159
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall",
+            "internal_w": 0.00845,
+            "leakage_w": 6.91e-06,
+            "module": "Int2FpBall",
+            "switching_w": 1.37e-09,
+            "total_w": 0.00846
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit",
+            "internal_w": 0.00845,
+            "leakage_w": 6.91e-06,
+            "module": "Int2Fp",
+            "switching_w": 1.37e-09,
+            "total_w": 0.00846
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_0",
+            "internal_w": 0.00138,
+            "leakage_w": 1.28e-06,
+            "module": "Fma_l3_e8_s24_3",
+            "switching_w": 6.26e-12,
+            "total_w": 0.00139
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_0/mulAddRecFNToRaw_preMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.84e-08,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24_3",
+            "switching_w": 0.0,
+            "total_w": 2.84e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_0/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.36e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_3",
+            "switching_w": 0.0,
+            "total_w": 9.36e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_0/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.36e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_3",
+            "switching_w": 0.0,
+            "total_w": 9.36e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_0/mulAddRecFNToRaw_postMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.46e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24_3",
+            "switching_w": 0.0,
+            "total_w": 2.46e-07
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_1",
+            "internal_w": 0.00138,
+            "leakage_w": 1.29e-06,
+            "module": "Fma_l3_e8_s24_2",
+            "switching_w": 6.93e-12,
+            "total_w": 0.00139
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_1/mulAddRecFNToRaw_preMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.77e-08,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24_2",
+            "switching_w": 0.0,
+            "total_w": 2.77e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_1/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.32e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_2",
+            "switching_w": 0.0,
+            "total_w": 9.32e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_1/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.32e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_2",
+            "switching_w": 0.0,
+            "total_w": 9.32e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_1/mulAddRecFNToRaw_postMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.46e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24_2",
+            "switching_w": 0.0,
+            "total_w": 2.46e-07
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_2",
+            "internal_w": 0.00138,
+            "leakage_w": 1.28e-06,
+            "module": "Fma_l3_e8_s24_1",
+            "switching_w": 4.73e-10,
+            "total_w": 0.00139
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_2/mulAddRecFNToRaw_preMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.83e-08,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24_1",
+            "switching_w": 0.0,
+            "total_w": 2.83e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_2/roundRawFNToRecFN",
+            "internal_w": 6.47e-11,
+            "leakage_w": 9.38e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_1",
+            "switching_w": 6.27e-11,
+            "total_w": 9.39e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_2/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 6.47e-11,
+            "leakage_w": 9.38e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_1",
+            "switching_w": 6.27e-11,
+            "total_w": 9.39e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_2/mulAddRecFNToRaw_postMul",
+            "internal_w": 4.7e-12,
+            "leakage_w": 2.43e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24_1",
+            "switching_w": 2.43e-11,
+            "total_w": 2.43e-07
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_3",
+            "internal_w": 0.00139,
+            "leakage_w": 1.29e-06,
+            "module": "Fma_l3_e8_s24_0",
+            "switching_w": 3.21e-10,
+            "total_w": 0.00139
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_3/mulAddRecFNToRaw_preMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.94e-08,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24_0",
+            "switching_w": 0.0,
+            "total_w": 2.94e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_3/roundRawFNToRecFN",
+            "internal_w": 1.44e-10,
+            "leakage_w": 9.46e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_0",
+            "switching_w": 1.14e-10,
+            "total_w": 9.49e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_3/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 1.44e-10,
+            "leakage_w": 9.46e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_0",
+            "switching_w": 1.14e-10,
+            "total_w": 9.49e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/Int2FpBall/unit/multipliers_3/mulAddRecFNToRaw_postMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.41e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24_0",
+            "switching_w": 0.0,
+            "total_w": 2.41e-07
+          },
+          {
+            "instance": "acc/ballDomain/bbus/ToInt8Ball",
+            "internal_w": 0.0073,
+            "leakage_w": 3.27e-06,
+            "module": "ToInt8Ball",
+            "switching_w": 7e-09,
+            "total_w": 0.0073
+          },
+          {
+            "instance": "acc/ballDomain/bbus/ToInt8Ball/multiply",
+            "internal_w": 0.00139,
+            "leakage_w": 1.27e-06,
+            "module": "Fma_l3_e8_s24_7",
+            "switching_w": 3.05e-10,
+            "total_w": 0.00139
+          },
+          {
+            "instance": "acc/ballDomain/bbus/ToInt8Ball/multiply/mulAddRecFNToRaw_preMul",
+            "internal_w": 0.0,
+            "leakage_w": 1.87e-08,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24_7",
+            "switching_w": 0.0,
+            "total_w": 1.87e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/ToInt8Ball/multiply/roundRawFNToRecFN",
+            "internal_w": 2.21e-10,
+            "leakage_w": 9.64e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_7",
+            "switching_w": 1.43e-10,
+            "total_w": 9.68e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/ToInt8Ball/multiply/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 2.21e-10,
+            "leakage_w": 9.64e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_7",
+            "switching_w": 1.43e-10,
+            "total_w": 9.68e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/ToInt8Ball/multiply/mulAddRecFNToRaw_postMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.4e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24_7",
+            "switching_w": 0.0,
+            "total_w": 2.4e-07
+          },
+          {
+            "instance": "acc/ballDomain/bbus/ToInt8Ball/intToFloat",
+            "internal_w": 0.0,
+            "leakage_w": 1.01e-07,
+            "module": "INToRecFN_i32_e8_s24",
+            "switching_w": 0.0,
+            "total_w": 1.01e-07
+          },
+          {
+            "instance": "acc/ballDomain/bbus/ToInt8Ball/intToFloat/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 2.54e-08,
+            "module": "RoundAnyRawFNToRecFN_ie6_is32_oe8_os24",
+            "switching_w": 0.0,
+            "total_w": 2.54e-08
+          },
+          {
+            "instance": "acc/ballDomain/bbus/ToInt8Ball/floatToInt",
+            "internal_w": 0.0,
+            "leakage_w": 1.4e-08,
+            "module": "RecFNToIN_e8_s24_i8_2",
+            "switching_w": 0.0,
+            "total_w": 1.4e-08
+          },
+          {
+            "instance": "acc/frontend",
+            "internal_w": 0.0852,
+            "leakage_w": 3.3e-05,
+            "module": "Frontend",
+            "switching_w": 1.4e-06,
+            "total_w": 0.0852
+          },
+          {
+            "instance": "acc/frontend/boot",
+            "internal_w": 3.27e-05,
+            "leakage_w": 3.57e-07,
+            "module": "BootRom",
+            "switching_w": 3.59e-09,
+            "total_w": 3.3e-05
+          },
+          {
+            "instance": "acc/frontend/ingress",
+            "internal_w": 0.00705,
+            "leakage_w": 1.91e-06,
+            "module": "Ingress",
+            "switching_w": 4.84e-08,
+            "total_w": 0.00705
+          },
+          {
+            "instance": "acc/frontend/scheduler",
+            "internal_w": 0.0781,
+            "leakage_w": 3.07e-05,
+            "module": "Scheduler",
+            "switching_w": 1.34e-06,
+            "total_w": 0.0782
+          },
+          {
+            "instance": "acc/frontend/scheduler/scoreboard",
+            "internal_w": 0.000264,
+            "leakage_w": 3.95e-07,
+            "module": "BankScoreboard",
+            "switching_w": 4.35e-09,
+            "total_w": 0.000264
+          },
+          {
+            "instance": "acc/frontend/scheduler/completeQueue",
+            "internal_w": 0.000109,
+            "leakage_w": 3.45e-08,
+            "module": "Queue_10",
+            "switching_w": 8.87e-07,
+            "total_w": 0.00011
+          },
+          {
+            "instance": "acc/frontend/scheduler/completeQueue/readData_memory",
+            "internal_w": 7.23e-08,
+            "leakage_w": 1.95e-10,
+            "module": "readData_memory",
+            "switching_w": 1.74e-07,
+            "total_w": 2.46e-07
+          },
+          {
+            "instance": "acc/frontend/scheduler/completeQueue/readData_memory/readData_memory_ext",
+            "internal_w": 7.23e-08,
+            "leakage_w": 1.95e-10,
+            "module": "readData_memory_ext",
+            "switching_w": 1.74e-07,
+            "total_w": 2.46e-07
+          },
+          {
+            "instance": "acc/frontend/scheduler/rob",
+            "internal_w": 0.0763,
+            "leakage_w": 2.95e-05,
+            "module": "GlobalROB",
+            "switching_w": 4.45e-07,
+            "total_w": 0.0764
+          },
+          {
+            "instance": "acc/frontend/scheduler/rob/dependencies",
+            "internal_w": 2.82e-09,
+            "leakage_w": 3.34e-07,
+            "module": "DependencyResolver",
+            "switching_w": 1.92e-09,
+            "total_w": 3.39e-07
+          },
+          {
+            "instance": "acc/frontend/scheduler/rob/mappings",
+            "internal_w": 2.11e-09,
+            "leakage_w": 3.24e-08,
+            "module": "Arbiter_2",
+            "switching_w": 2.22e-09,
+            "total_w": 3.67e-08
+          },
+          {
+            "instance": "acc/frontend/scheduler/rob/queue",
+            "internal_w": 0.0662,
+            "leakage_w": 2.34e-05,
+            "module": "Rob",
+            "switching_w": 1.53e-07,
+            "total_w": 0.0662
+          },
+          {
+            "instance": "acc/frontend/scheduler/bat",
+            "internal_w": 0.00139,
+            "leakage_w": 7.68e-07,
+            "module": "BankAliasTable",
+            "switching_w": 6.06e-09,
+            "total_w": 0.00139
+          },
+          {
+            "instance": "acc/frontend/scheduler/completeArb",
+            "internal_w": 4.57e-10,
+            "leakage_w": 2.07e-09,
+            "module": "Arbiter_3",
+            "switching_w": 9.62e-11,
+            "total_w": 2.62e-09
+          },
+          {
+            "instance": "acc/frontend/gDecoder",
+            "internal_w": 1.86e-10,
+            "leakage_w": 1.49e-08,
+            "module": "GlobalDecoder",
+            "switching_w": 4.6e-10,
+            "total_w": 1.56e-08
+          },
+          {
+            "instance": "acc/memDomain",
+            "internal_w": 0.572,
+            "leakage_w": 0.00028,
+            "module": "MemDomain",
+            "switching_w": 0.00109,
+            "total_w": 0.573
+          },
+          {
+            "instance": "acc/memDomain/prm",
+            "internal_w": 0.0165,
+            "leakage_w": 1.11e-05,
+            "module": "PRM",
+            "switching_w": 0.000822,
+            "total_w": 0.0173
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_0",
+            "internal_w": 0.000686,
+            "leakage_w": 4.59e-07,
+            "module": "Bank_23",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_0/mem",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.6e-07,
+            "module": "mem_23",
+            "switching_w": 3.42e-05,
+            "total_w": 6.29e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_0/mem/mem_ext",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.6e-07,
+            "module": "mem_ext_23",
+            "switching_w": 3.42e-05,
+            "total_w": 6.29e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_1",
+            "internal_w": 0.000687,
+            "leakage_w": 4.51e-07,
+            "module": "Bank_22",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000722
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_1/mem",
+            "internal_w": 2.86e-05,
+            "leakage_w": 1.62e-07,
+            "module": "mem_22",
+            "switching_w": 3.42e-05,
+            "total_w": 6.3e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_1/mem/mem_ext",
+            "internal_w": 2.86e-05,
+            "leakage_w": 1.62e-07,
+            "module": "mem_ext_22",
+            "switching_w": 3.42e-05,
+            "total_w": 6.3e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_2",
+            "internal_w": 0.000687,
+            "leakage_w": 4.64e-07,
+            "module": "Bank_21",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_2/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_21",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_2/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_ext_21",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_10",
+            "internal_w": 0.000687,
+            "leakage_w": 4.68e-07,
+            "module": "Bank_13",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000722
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_10/mem",
+            "internal_w": 2.86e-05,
+            "leakage_w": 1.68e-07,
+            "module": "mem_13",
+            "switching_w": 3.42e-05,
+            "total_w": 6.29e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_10/mem/mem_ext",
+            "internal_w": 2.86e-05,
+            "leakage_w": 1.68e-07,
+            "module": "mem_ext_13",
+            "switching_w": 3.42e-05,
+            "total_w": 6.29e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_3",
+            "internal_w": 0.000687,
+            "leakage_w": 4.51e-07,
+            "module": "Bank_20",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_3/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.64e-07,
+            "module": "mem_20",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_3/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.64e-07,
+            "module": "mem_ext_20",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_11",
+            "internal_w": 0.000687,
+            "leakage_w": 4.55e-07,
+            "module": "Bank_12",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_11/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_12",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_11/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_ext_12",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_4",
+            "internal_w": 0.000687,
+            "leakage_w": 4.53e-07,
+            "module": "Bank_19",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_4/mem",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.65e-07,
+            "module": "mem_19",
+            "switching_w": 3.42e-05,
+            "total_w": 6.29e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_4/mem/mem_ext",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.65e-07,
+            "module": "mem_ext_19",
+            "switching_w": 3.42e-05,
+            "total_w": 6.29e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_12",
+            "internal_w": 0.000686,
+            "leakage_w": 4.58e-07,
+            "module": "Bank_11",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_12/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.62e-07,
+            "module": "mem_11",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_12/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.62e-07,
+            "module": "mem_ext_11",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_5",
+            "internal_w": 0.000687,
+            "leakage_w": 4.64e-07,
+            "module": "Bank_18",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000722
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_5/mem",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.6e-07,
+            "module": "mem_18",
+            "switching_w": 3.42e-05,
+            "total_w": 6.29e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_5/mem/mem_ext",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.6e-07,
+            "module": "mem_ext_18",
+            "switching_w": 3.42e-05,
+            "total_w": 6.29e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_13",
+            "internal_w": 0.000687,
+            "leakage_w": 4.63e-07,
+            "module": "Bank_10",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000722
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_13/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.63e-07,
+            "module": "mem_10",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_13/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.63e-07,
+            "module": "mem_ext_10",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_6",
+            "internal_w": 0.000687,
+            "leakage_w": 4.64e-07,
+            "module": "Bank_17",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_6/mem",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.63e-07,
+            "module": "mem_17",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_6/mem/mem_ext",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.63e-07,
+            "module": "mem_ext_17",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_14",
+            "internal_w": 0.000687,
+            "leakage_w": 4.65e-07,
+            "module": "Bank_9",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000722
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_14/mem",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.64e-07,
+            "module": "mem_9",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_14/mem/mem_ext",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.64e-07,
+            "module": "mem_ext_9",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_7",
+            "internal_w": 0.000687,
+            "leakage_w": 4.72e-07,
+            "module": "Bank_16",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000722
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_7/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_16",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_7/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_ext_16",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_15",
+            "internal_w": 0.000686,
+            "leakage_w": 4.63e-07,
+            "module": "Bank_8",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_15/mem",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_8",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_15/mem/mem_ext",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_ext_8",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_8",
+            "internal_w": 0.000686,
+            "leakage_w": 4.59e-07,
+            "module": "Bank_15",
+            "switching_w": 3.42e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_8/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.64e-07,
+            "module": "mem_15",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_8/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.64e-07,
+            "module": "mem_ext_15",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_16",
+            "internal_w": 0.000687,
+            "leakage_w": 4.76e-07,
+            "module": "Bank_7",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_16/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_7",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_16/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_ext_7",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_9",
+            "internal_w": 0.000686,
+            "leakage_w": 4.64e-07,
+            "module": "Bank_14",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_9/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_14",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_9/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_ext_14",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_17",
+            "internal_w": 0.000687,
+            "leakage_w": 4.62e-07,
+            "module": "Bank_6",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_17/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.62e-07,
+            "module": "mem_6",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_17/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.62e-07,
+            "module": "mem_ext_6",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_20",
+            "internal_w": 0.000687,
+            "leakage_w": 4.63e-07,
+            "module": "Bank_3",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000722
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_20/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.64e-07,
+            "module": "mem_3",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_20/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.64e-07,
+            "module": "mem_ext_3",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_18",
+            "internal_w": 0.000687,
+            "leakage_w": 4.51e-07,
+            "module": "Bank_5",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_18/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.65e-07,
+            "module": "mem_5",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_18/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.65e-07,
+            "module": "mem_ext_5",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_21",
+            "internal_w": 0.000687,
+            "leakage_w": 4.68e-07,
+            "module": "Bank_2",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000722
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_21/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.65e-07,
+            "module": "mem_2",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_21/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.65e-07,
+            "module": "mem_ext_2",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_19",
+            "internal_w": 0.000687,
+            "leakage_w": 4.64e-07,
+            "module": "Bank_4",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000722
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_19/mem",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.65e-07,
+            "module": "mem_4",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_19/mem/mem_ext",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.65e-07,
+            "module": "mem_ext_4",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_22",
+            "internal_w": 0.000686,
+            "leakage_w": 4.54e-07,
+            "module": "Bank_1",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_22/mem",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_1",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_22/mem/mem_ext",
+            "internal_w": 2.85e-05,
+            "leakage_w": 1.66e-07,
+            "module": "mem_ext_1",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_23",
+            "internal_w": 0.000687,
+            "leakage_w": 4.61e-07,
+            "module": "Bank_0",
+            "switching_w": 3.43e-05,
+            "total_w": 0.000721
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_23/mem",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.61e-07,
+            "module": "mem_0",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/prm/banks_23/mem/mem_ext",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.61e-07,
+            "module": "mem_ext_0",
+            "switching_w": 3.42e-05,
+            "total_w": 6.28e-05
+          },
+          {
+            "instance": "acc/memDomain/control",
+            "internal_w": 0.132,
+            "leakage_w": 6.33e-05,
+            "module": "MemoryControl",
+            "switching_w": 0.000268,
+            "total_w": 0.133
+          },
+          {
+            "instance": "acc/memDomain/control/walker",
+            "internal_w": 0.000472,
+            "leakage_w": 1.86e-07,
+            "module": "RangeWalker",
+            "switching_w": 5.6e-08,
+            "total_w": 0.000472
+          },
+          {
+            "instance": "acc/memDomain/control/coherence",
+            "internal_w": 0.117,
+            "leakage_w": 5.86e-05,
+            "module": "ToL1",
+            "switching_w": 0.000268,
+            "total_w": 0.117
+          },
+          {
+            "instance": "acc/memDomain/control/coherence/interlock",
+            "internal_w": 0.117,
+            "leakage_w": 5.86e-05,
+            "module": "Interlock",
+            "switching_w": 0.000268,
+            "total_w": 0.117
+          },
+          {
+            "instance": "acc/memDomain/ctrl",
+            "internal_w": 0.000179,
+            "leakage_w": 1.26e-07,
+            "module": "Ctrl",
+            "switching_w": 3.32e-09,
+            "total_w": 0.000179
+          },
+          {
+            "instance": "acc/memDomain/ctrl/decoder",
+            "internal_w": 8.64e-10,
+            "leakage_w": 4.15e-08,
+            "module": "Decoder",
+            "switching_w": 1.53e-09,
+            "total_w": 4.39e-08
+          },
+          {
+            "instance": "acc/memDomain/ctrl/configer",
+            "internal_w": 0.000179,
+            "leakage_w": 6.34e-08,
+            "module": "Configer",
+            "switching_w": 9.9e-10,
+            "total_w": 0.000179
+          },
+          {
+            "instance": "acc/memDomain/ctrl/completion",
+            "internal_w": 5.13e-10,
+            "leakage_w": 1.17e-08,
+            "module": "Arbiter_4_1",
+            "switching_w": 6.65e-10,
+            "total_w": 1.29e-08
+          },
+          {
+            "instance": "acc/memDomain/toMem",
+            "internal_w": 0.0236,
+            "leakage_w": 7.68e-06,
+            "module": "ToMem",
+            "switching_w": 4.99e-08,
+            "total_w": 0.0237
+          },
+          {
+            "instance": "acc/memDomain/toMem/completion",
+            "internal_w": 2.34e-09,
+            "leakage_w": 2.81e-08,
+            "module": "Arbiter_4_0",
+            "switching_w": 1.04e-09,
+            "total_w": 3.15e-08
+          },
+          {
+            "instance": "acc/memDomain/commands",
+            "internal_w": 4.72e-06,
+            "leakage_w": 2.43e-07,
+            "module": "RRArbiter_12",
+            "switching_w": 2.54e-08,
+            "total_w": 4.99e-06
+          },
+          {
+            "instance": "acc/memDomain/transport",
+            "internal_w": 0.00818,
+            "leakage_w": 5.18e-06,
+            "module": "ToDDR",
+            "switching_w": 3.31e-07,
+            "total_w": 0.00818
+          },
+          {
+            "instance": "acc/memDomain/transport/writer",
+            "internal_w": 0.00385,
+            "leakage_w": 2.1e-06,
+            "module": "WriteDma",
+            "switching_w": 7.23e-08,
+            "total_w": 0.00385
+          },
+          {
+            "instance": "acc/memDomain/transport/reader",
+            "internal_w": 0.00433,
+            "leakage_w": 3.05e-06,
+            "module": "ReadDma",
+            "switching_w": 2.58e-07,
+            "total_w": 0.00433
+          },
+          {
+            "instance": "acc/memDomain/preparation",
+            "internal_w": 0.365,
+            "leakage_w": 0.00016,
+            "module": "Preparation",
+            "switching_w": 1.07e-06,
+            "total_w": 0.365
+          },
+          {
+            "instance": "acc/memDomain/preparation/preflight",
+            "internal_w": 0.205,
+            "leakage_w": 7.53e-05,
+            "module": "Preflight",
+            "switching_w": 8.85e-07,
+            "total_w": 0.205
+          },
+          {
+            "instance": "acc/memDomain/preparation/preflight/splitter",
+            "internal_w": 0.000902,
+            "leakage_w": 6.03e-07,
+            "module": "Segmenter",
+            "switching_w": 3.59e-09,
+            "total_w": 0.000902
+          },
+          {
+            "instance": "acc/memDomain/preparation/preflight/walker",
+            "internal_w": 0.000645,
+            "leakage_w": 2.05e-07,
+            "module": "Walker_1",
+            "switching_w": 8.77e-08,
+            "total_w": 0.000645
+          },
+          {
+            "instance": "acc/memDomain/preparation/maps",
+            "internal_w": 0.155,
+            "leakage_w": 7.86e-05,
+            "module": "PreparedMap",
+            "switching_w": 1.6e-07,
+            "total_w": 0.155
+          },
+          {
+            "instance": "acc/memDomain/preparation/check",
+            "internal_w": 0.00594,
+            "leakage_w": 5.71e-06,
+            "module": "PermissionCheck",
+            "switching_w": 2.05e-08,
+            "total_w": 0.00594
+          },
+          {
+            "instance": "acc/memDomain/bankRouter",
+            "internal_w": 0.0258,
+            "leakage_w": 3.23e-05,
+            "module": "BankRouter",
+            "switching_w": 7.28e-07,
+            "total_w": 0.0259
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt",
+            "internal_w": 0.0252,
+            "leakage_w": 3.21e-05,
+            "module": "BankLayoutTable",
+            "switching_w": 7.27e-07,
+            "total_w": 0.0253
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.73e-07,
+            "module": "RRArbiter_11_23",
+            "switching_w": 3.23e-09,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_10",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.8e-07,
+            "module": "RRArbiter_11_13",
+            "switching_w": 6.13e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_11",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.71e-07,
+            "module": "RRArbiter_11_12",
+            "switching_w": 3.54e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_12",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.81e-07,
+            "module": "RRArbiter_11_11",
+            "switching_w": 2.98e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_13",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.79e-07,
+            "module": "RRArbiter_11_10",
+            "switching_w": 3.1e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_14",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.63e-07,
+            "module": "RRArbiter_11_9",
+            "switching_w": 2.87e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_15",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.81e-07,
+            "module": "RRArbiter_11_8",
+            "switching_w": 5.74e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_16",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.77e-07,
+            "module": "RRArbiter_11_7",
+            "switching_w": 3.39e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_17",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.68e-07,
+            "module": "RRArbiter_11_6",
+            "switching_w": 3.22e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_18",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.88e-07,
+            "module": "RRArbiter_11_5",
+            "switching_w": 2.41e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_19",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.81e-07,
+            "module": "RRArbiter_11_4",
+            "switching_w": 2.51e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_20",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.79e-07,
+            "module": "RRArbiter_11_3",
+            "switching_w": 3.08e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_21",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.89e-07,
+            "module": "RRArbiter_11_2",
+            "switching_w": 2.23e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_22",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.69e-07,
+            "module": "RRArbiter_11_1",
+            "switching_w": 4.3e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_23",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.78e-07,
+            "module": "RRArbiter_11_0",
+            "switching_w": 2.91e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_1",
+            "internal_w": 1.87e-05,
+            "leakage_w": 1.72e-07,
+            "module": "RRArbiter_11_22",
+            "switching_w": 4.57e-08,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_2",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.66e-07,
+            "module": "RRArbiter_11_21",
+            "switching_w": 2.69e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_3",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.64e-07,
+            "module": "RRArbiter_11_20",
+            "switching_w": 2.98e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_4",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.79e-07,
+            "module": "RRArbiter_11_19",
+            "switching_w": 2.94e-09,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_5",
+            "internal_w": 1.88e-05,
+            "leakage_w": 1.67e-07,
+            "module": "RRArbiter_11_18",
+            "switching_w": 1.14e-09,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_6",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.71e-07,
+            "module": "RRArbiter_11_17",
+            "switching_w": 2.09e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_7",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.6e-07,
+            "module": "RRArbiter_11_16",
+            "switching_w": 5.02e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_8",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.74e-07,
+            "module": "RRArbiter_11_15",
+            "switching_w": 2.05e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/arb_9",
+            "internal_w": 1.89e-05,
+            "leakage_w": 1.77e-07,
+            "module": "RRArbiter_11_14",
+            "switching_w": 3.38e-10,
+            "total_w": 1.9e-05
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_10",
+            "internal_w": 0.000618,
+            "leakage_w": 1.92e-07,
+            "module": "AccPipe_4",
+            "switching_w": 3.6e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_11",
+            "internal_w": 0.000618,
+            "leakage_w": 1.9e-07,
+            "module": "AccPipe_3",
+            "switching_w": 3.74e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_12",
+            "internal_w": 0.000618,
+            "leakage_w": 1.91e-07,
+            "module": "AccPipe_2",
+            "switching_w": 3.33e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_13",
+            "internal_w": 0.000614,
+            "leakage_w": 1.77e-07,
+            "module": "AccPipe_1",
+            "switching_w": 2.39e-08,
+            "total_w": 0.000614
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_14",
+            "internal_w": 0.000617,
+            "leakage_w": 1.77e-07,
+            "module": "AccPipe_0",
+            "switching_w": 4.06e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_0",
+            "internal_w": 0.000614,
+            "leakage_w": 1.94e-07,
+            "module": "AccPipe_14",
+            "switching_w": 1.74e-08,
+            "total_w": 0.000614
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_1",
+            "internal_w": 0.000614,
+            "leakage_w": 1.95e-07,
+            "module": "AccPipe_13",
+            "switching_w": 1.62e-08,
+            "total_w": 0.000614
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_2",
+            "internal_w": 0.000617,
+            "leakage_w": 1.91e-07,
+            "module": "AccPipe_12",
+            "switching_w": 7.27e-09,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_3",
+            "internal_w": 0.000618,
+            "leakage_w": 1.9e-07,
+            "module": "AccPipe_11",
+            "switching_w": 8.97e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_4",
+            "internal_w": 0.000618,
+            "leakage_w": 1.91e-07,
+            "module": "AccPipe_10",
+            "switching_w": 6.8e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_5",
+            "internal_w": 0.000618,
+            "leakage_w": 1.91e-07,
+            "module": "AccPipe_9",
+            "switching_w": 3.17e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_6",
+            "internal_w": 0.000618,
+            "leakage_w": 1.91e-07,
+            "module": "AccPipe_8",
+            "switching_w": 5.64e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_7",
+            "internal_w": 0.000618,
+            "leakage_w": 1.91e-07,
+            "module": "AccPipe_7",
+            "switching_w": 8.49e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_8",
+            "internal_w": 0.000618,
+            "leakage_w": 1.91e-07,
+            "module": "AccPipe_6",
+            "switching_w": 4.59e-09,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/blt/accPipes_9",
+            "internal_w": 0.000618,
+            "leakage_w": 1.92e-07,
+            "module": "AccPipe_5",
+            "switching_w": 3.99e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "acc/memDomain/bankRouter/replies",
+            "internal_w": 0.000551,
+            "leakage_w": 1.63e-07,
+            "module": "Queue_11",
+            "switching_w": 1.25e-09,
+            "total_w": 0.000551
+          },
+          {
+            "instance": "loom",
+            "internal_w": 0.295,
+            "leakage_w": 0.00013,
+            "module": "Loom",
+            "switching_w": 0.00318,
+            "total_w": 0.298
+          },
+          {
+            "instance": "loom/execution",
+            "internal_w": 0.0464,
+            "leakage_w": 3.71e-05,
+            "module": "Execution",
+            "switching_w": 0.00232,
+            "total_w": 0.0487
+          },
+          {
+            "instance": "loom/execution/floating",
+            "internal_w": 0.00648,
+            "leakage_w": 1.2e-05,
+            "module": "FPU",
+            "switching_w": 0.000564,
+            "total_w": 0.00705
+          },
+          {
+            "instance": "loom/execution/floating/fma",
+            "internal_w": 0.00144,
+            "leakage_w": 1.63e-06,
+            "module": "Fma_l3_e8_s24_8",
+            "switching_w": 1.05e-07,
+            "total_w": 0.00144
+          },
+          {
+            "instance": "loom/execution/floating/fma/mulAddRecFNToRaw_preMul",
+            "internal_w": 1.18e-07,
+            "leakage_w": 3.24e-07,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24_8",
+            "switching_w": 1.05e-07,
+            "total_w": 5.46e-07
+          },
+          {
+            "instance": "loom/execution/floating/fma/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 1.06e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_10",
+            "switching_w": 0.0,
+            "total_w": 1.06e-07
+          },
+          {
+            "instance": "loom/execution/floating/fma/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 1.06e-07,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_10",
+            "switching_w": 0.0,
+            "total_w": 1.06e-07
+          },
+          {
+            "instance": "loom/execution/floating/fma/mulAddRecFNToRaw_postMul",
+            "internal_w": 0.0,
+            "leakage_w": 2.41e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24_8",
+            "switching_w": 0.0,
+            "total_w": 2.41e-07
+          },
+          {
+            "instance": "loom/execution/floating/toInt_1",
+            "internal_w": 5.45e-07,
+            "leakage_w": 2.61e-07,
+            "module": "RecFNToIN_e8_s24_i64",
+            "switching_w": 3.44e-07,
+            "total_w": 1.15e-06
+          },
+          {
+            "instance": "loom/execution/floating/toInt_2",
+            "internal_w": 3.88e-05,
+            "leakage_w": 2.33e-07,
+            "module": "RecFNToIN_e11_s53_i32",
+            "switching_w": 3.3e-05,
+            "total_w": 7.21e-05
+          },
+          {
+            "instance": "loom/execution/floating/toInt_3",
+            "internal_w": 8.69e-05,
+            "leakage_w": 4.65e-07,
+            "module": "RecFNToIN_e11_s53_i64",
+            "switching_w": 7.7e-05,
+            "total_w": 0.000164
+          },
+          {
+            "instance": "loom/execution/floating/toInt",
+            "internal_w": 5.6e-07,
+            "leakage_w": 1.74e-07,
+            "module": "RecFNToIN_e8_s24_i32",
+            "switching_w": 3.98e-07,
+            "total_w": 1.13e-06
+          },
+          {
+            "instance": "loom/execution/floating/compare",
+            "internal_w": 3.48e-09,
+            "leakage_w": 6.13e-08,
+            "module": "CompareRecFN",
+            "switching_w": 1.97e-09,
+            "total_w": 6.68e-08
+          },
+          {
+            "instance": "loom/execution/floating/fma_1",
+            "internal_w": 0.00285,
+            "leakage_w": 4.5e-06,
+            "module": "Fma_l3_e11_s53",
+            "switching_w": 0.000115,
+            "total_w": 0.00297
+          },
+          {
+            "instance": "loom/execution/floating/fma_1/roundRawFNToRecFN",
+            "internal_w": 3.83e-09,
+            "leakage_w": 2.16e-07,
+            "module": "RoundRawFNToRecFN_e11_s53_1",
+            "switching_w": 3.56e-09,
+            "total_w": 2.23e-07
+          },
+          {
+            "instance": "loom/execution/floating/fma_1/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 3.83e-09,
+            "leakage_w": 2.16e-07,
+            "module": "RoundAnyRawFNToRecFN_ie11_is55_oe11_os53_1",
+            "switching_w": 3.56e-09,
+            "total_w": 2.23e-07
+          },
+          {
+            "instance": "loom/execution/floating/fma_1/mulAddRecFNToRaw_postMul",
+            "internal_w": 2.36e-09,
+            "leakage_w": 6e-07,
+            "module": "MulAddRecFNToRaw_postMul_e11_s53",
+            "switching_w": 2.1e-09,
+            "total_w": 6.04e-07
+          },
+          {
+            "instance": "loom/execution/floating/fma_1/mulAddRecFNToRaw_preMul",
+            "internal_w": 0.00013,
+            "leakage_w": 6.28e-07,
+            "module": "MulAddRecFNToRaw_preMul_e11_s53",
+            "switching_w": 0.000115,
+            "total_w": 0.000245
+          },
+          {
+            "instance": "loom/execution/floating/div_1",
+            "internal_w": 0.000942,
+            "leakage_w": 6.86e-07,
+            "module": "DivSqrtRecFM_small_e11_s53",
+            "switching_w": 3.47e-05,
+            "total_w": 0.000978
+          },
+          {
+            "instance": "loom/execution/floating/div_1/roundRawFNToRecFN",
+            "internal_w": 2.54e-14,
+            "leakage_w": 1.92e-07,
+            "module": "RoundRawFNToRecFN_e11_s53_0",
+            "switching_w": 0.0,
+            "total_w": 1.92e-07
+          },
+          {
+            "instance": "loom/execution/floating/div_1/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 2.54e-14,
+            "leakage_w": 1.92e-07,
+            "module": "RoundAnyRawFNToRecFN_ie11_is55_oe11_os53_0",
+            "switching_w": 0.0,
+            "total_w": 1.92e-07
+          },
+          {
+            "instance": "loom/execution/floating/div_1/divSqrtRecFNToRaw",
+            "internal_w": 0.000942,
+            "leakage_w": 4.94e-07,
+            "module": "DivSqrtRecFMToRaw_small_e11_s53",
+            "switching_w": 3.47e-05,
+            "total_w": 0.000977
+          },
+          {
+            "instance": "loom/execution/floating/div_1/divSqrtRecFNToRaw/divSqrtRawFN",
+            "internal_w": 0.000942,
+            "leakage_w": 4.92e-07,
+            "module": "DivSqrtRawFN_small_e11_s53",
+            "switching_w": 3.45e-05,
+            "total_w": 0.000977
+          },
+          {
+            "instance": "loom/execution/floating/fromInt",
+            "internal_w": 5.01e-05,
+            "leakage_w": 4.03e-07,
+            "module": "INToRecFN_i64_e8_s24",
+            "switching_w": 4.96e-05,
+            "total_w": 0.0001
+          },
+          {
+            "instance": "loom/execution/floating/fromInt/roundAnyRawFNToRecFN",
+            "internal_w": 5.95e-06,
+            "leakage_w": 6.62e-08,
+            "module": "RoundAnyRawFNToRecFN_ie7_is64_oe8_os24",
+            "switching_w": 5.73e-06,
+            "total_w": 1.18e-05
+          },
+          {
+            "instance": "loom/execution/floating/compare_1",
+            "internal_w": 1.92e-05,
+            "leakage_w": 9.73e-08,
+            "module": "CompareRecFN_1",
+            "switching_w": 1.09e-05,
+            "total_w": 3.02e-05
+          },
+          {
+            "instance": "loom/execution/floating/fromInt_1",
+            "internal_w": 5.33e-05,
+            "leakage_w": 4.86e-07,
+            "module": "INToRecFN_i64_e11_s53",
+            "switching_w": 5.29e-05,
+            "total_w": 0.000107
+          },
+          {
+            "instance": "loom/execution/floating/fromInt_1/roundAnyRawFNToRecFN",
+            "internal_w": 5.31e-06,
+            "leakage_w": 1.04e-07,
+            "module": "RoundAnyRawFNToRecFN_ie7_is64_oe11_os53",
+            "switching_w": 4.45e-06,
+            "total_w": 9.86e-06
+          },
+          {
+            "instance": "loom/execution/floating/div",
+            "internal_w": 0.000479,
+            "leakage_w": 3.68e-07,
+            "module": "DivSqrtRecFM_small_e8_s24",
+            "switching_w": 4.86e-11,
+            "total_w": 0.000479
+          },
+          {
+            "instance": "loom/execution/floating/div/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 1.05e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_9",
+            "switching_w": 0.0,
+            "total_w": 1.05e-07
+          },
+          {
+            "instance": "loom/execution/floating/div/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 1.05e-07,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_9",
+            "switching_w": 0.0,
+            "total_w": 1.05e-07
+          },
+          {
+            "instance": "loom/execution/floating/div/divSqrtRecFNToRaw",
+            "internal_w": 0.000479,
+            "leakage_w": 2.63e-07,
+            "module": "DivSqrtRecFMToRaw_small_e8_s24",
+            "switching_w": 4.86e-11,
+            "total_w": 0.000479
+          },
+          {
+            "instance": "loom/execution/floating/div/divSqrtRecFNToRaw/divSqrtRawFN",
+            "internal_w": 0.000479,
+            "leakage_w": 2.61e-07,
+            "module": "DivSqrtRawFN_small_e8_s24",
+            "switching_w": 4.86e-11,
+            "total_w": 0.000479
+          },
+          {
+            "instance": "loom/execution/floating/convert_1",
+            "internal_w": 0.0,
+            "leakage_w": 9.45e-09,
+            "module": "RecFNToRecFN_1",
+            "switching_w": 0.0,
+            "total_w": 9.45e-09
+          },
+          {
+            "instance": "loom/execution/floating/convert_1/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 7.63e-09,
+            "module": "RoundAnyRawFNToRecFN_ie8_is24_oe11_os53",
+            "switching_w": 0.0,
+            "total_w": 7.63e-09
+          },
+          {
+            "instance": "loom/execution/floating/convert",
+            "internal_w": 1.97e-05,
+            "leakage_w": 1.71e-07,
+            "module": "RecFNToRecFN",
+            "switching_w": 1.87e-05,
+            "total_w": 3.86e-05
+          },
+          {
+            "instance": "loom/execution/floating/convert/roundAnyRawFNToRecFN",
+            "internal_w": 1.96e-05,
+            "leakage_w": 1.7e-07,
+            "module": "RoundAnyRawFNToRecFN_ie11_is53_oe8_os24",
+            "switching_w": 1.86e-05,
+            "total_w": 3.84e-05
+          },
+          {
+            "instance": "loom/execution/sequencer",
+            "internal_w": 0.0126,
+            "leakage_w": 5.97e-06,
+            "module": "Sequencer",
+            "switching_w": 0.000279,
+            "total_w": 0.0129
+          },
+          {
+            "instance": "loom/execution/integer_0",
+            "internal_w": 4.76e-05,
+            "leakage_w": 3.51e-07,
+            "module": "Integer",
+            "switching_w": 4.91e-05,
+            "total_w": 9.7e-05
+          },
+          {
+            "instance": "loom/execution/privileged",
+            "internal_w": 0.0147,
+            "leakage_w": 1.01e-05,
+            "module": "Privileged",
+            "switching_w": 7.42e-05,
+            "total_w": 0.0148
+          },
+          {
+            "instance": "loom/execution/multiply",
+            "internal_w": 0.00322,
+            "leakage_w": 5.04e-06,
+            "module": "MulDiv",
+            "switching_w": 0.00125,
+            "total_w": 0.00447
+          },
+          {
+            "instance": "loom/execution/registers",
+            "internal_w": 0.00933,
+            "leakage_w": 3.39e-06,
+            "module": "RegisterFile",
+            "switching_w": 7.1e-05,
+            "total_w": 0.0094
+          },
+          {
+            "instance": "loom/execution/instruction",
+            "internal_w": 2.21e-05,
+            "leakage_w": 2.35e-07,
+            "module": "Instruction",
+            "switching_w": 3.04e-05,
+            "total_w": 5.28e-05
+          },
+          {
+            "instance": "loom/memory",
+            "internal_w": 0.248,
+            "leakage_w": 9.27e-05,
+            "module": "MemorySystem",
+            "switching_w": 0.000865,
+            "total_w": 0.249
+          },
+          {
+            "instance": "loom/memory/uncachedRequests",
+            "internal_w": 1.32e-08,
+            "leakage_w": 3.39e-08,
+            "module": "Arbiter_1",
+            "switching_w": 6.08e-09,
+            "total_w": 5.33e-08
+          },
+          {
+            "instance": "loom/memory/icache",
+            "internal_w": 0.0388,
+            "leakage_w": 1.55e-05,
+            "module": "BankedChiCache",
+            "switching_w": 0.000558,
+            "total_w": 0.0394
+          },
+          {
+            "instance": "loom/memory/icache/rspArb",
+            "internal_w": 4.66e-06,
+            "leakage_w": 1.07e-08,
+            "module": "RRArbiter_1_2",
+            "switching_w": 5.78e-09,
+            "total_w": 4.68e-06
+          },
+          {
+            "instance": "loom/memory/icache/reqQueue",
+            "internal_w": 0.000943,
+            "leakage_w": 2.58e-07,
+            "module": "Queue_1_1",
+            "switching_w": 1.01e-07,
+            "total_w": 0.000943
+          },
+          {
+            "instance": "loom/memory/icache/reqArb",
+            "internal_w": 4.69e-06,
+            "leakage_w": 1.98e-08,
+            "module": "RRArbiter_10",
+            "switching_w": 2.28e-08,
+            "total_w": 4.73e-06
+          },
+          {
+            "instance": "loom/memory/icache/datQueue",
+            "internal_w": 0.0033,
+            "leakage_w": 9.39e-07,
+            "module": "Queue_3_2",
+            "switching_w": 2.78e-12,
+            "total_w": 0.0033
+          },
+          {
+            "instance": "loom/memory/icache/rspQueue",
+            "internal_w": 0.000472,
+            "leakage_w": 1.29e-07,
+            "module": "Queue_2_2",
+            "switching_w": 2.34e-08,
+            "total_w": 0.000472
+          },
+          {
+            "instance": "loom/memory/icache/retirement",
+            "internal_w": 3.63e-05,
+            "leakage_w": 1.08e-08,
+            "module": "Queue_14",
+            "switching_w": 3.81e-06,
+            "total_w": 4.01e-05
+          },
+          {
+            "instance": "loom/memory/icache/datArb",
+            "internal_w": 4.72e-06,
+            "leakage_w": 1.23e-07,
+            "module": "RRArbiter_2_2",
+            "switching_w": 4.49e-09,
+            "total_w": 4.85e-06
+          },
+          {
+            "instance": "loom/memory/icache/caches_0",
+            "internal_w": 0.017,
+            "leakage_w": 6.98e-06,
+            "module": "ChiCache",
+            "switching_w": 0.00028,
+            "total_w": 0.0173
+          },
+          {
+            "instance": "loom/memory/icache/caches_0/tags_ext",
+            "internal_w": 0.00478,
+            "leakage_w": 1.86e-06,
+            "module": "tags_32x32_3",
+            "switching_w": 9.25e-07,
+            "total_w": 0.00479
+          },
+          {
+            "instance": "loom/memory/icache/caches_0/data",
+            "internal_w": 9.33e-08,
+            "leakage_w": 3.42e-10,
+            "module": "data",
+            "switching_w": 3.2e-05,
+            "total_w": 3.21e-05
+          },
+          {
+            "instance": "loom/memory/icache/caches_0/data/data_ext",
+            "internal_w": 9.33e-08,
+            "leakage_w": 3.42e-10,
+            "module": "data_ext_3",
+            "switching_w": 3.2e-05,
+            "total_w": 3.21e-05
+          },
+          {
+            "instance": "loom/memory/icache/caches_1",
+            "internal_w": 0.017,
+            "leakage_w": 7e-06,
+            "module": "ChiCache_1",
+            "switching_w": 0.000267,
+            "total_w": 0.0173
+          },
+          {
+            "instance": "loom/memory/icache/caches_1/tags_ext",
+            "internal_w": 0.00478,
+            "leakage_w": 1.86e-06,
+            "module": "tags_32x32_2",
+            "switching_w": 8.8e-07,
+            "total_w": 0.00479
+          },
+          {
+            "instance": "loom/memory/icache/caches_1/data",
+            "internal_w": 1.9e-07,
+            "leakage_w": 2.1e-09,
+            "module": "data_0",
+            "switching_w": 3.2e-05,
+            "total_w": 3.22e-05
+          },
+          {
+            "instance": "loom/memory/icache/caches_1/data/data_ext",
+            "internal_w": 1.9e-07,
+            "leakage_w": 2.1e-09,
+            "module": "data_ext_2",
+            "switching_w": 3.2e-05,
+            "total_w": 3.22e-05
+          },
+          {
+            "instance": "loom/memory/cacheOwners",
+            "internal_w": 2.95e-05,
+            "leakage_w": 1.17e-08,
+            "module": "Queue_5",
+            "switching_w": 5.97e-07,
+            "total_w": 3.01e-05
+          },
+          {
+            "instance": "loom/memory/uncached",
+            "internal_w": 0.0009,
+            "leakage_w": 4.03e-07,
+            "module": "Uncached",
+            "switching_w": 1.51e-08,
+            "total_w": 0.0009
+          },
+          {
+            "instance": "loom/memory/dcache",
+            "internal_w": 0.0401,
+            "leakage_w": 1.61e-05,
+            "module": "Cache",
+            "switching_w": 0.000172,
+            "total_w": 0.0403
+          },
+          {
+            "instance": "loom/memory/dcache/requests",
+            "internal_w": 4.76e-06,
+            "leakage_w": 3.43e-08,
+            "module": "RRArbiter_9",
+            "switching_w": 4.04e-08,
+            "total_w": 4.84e-06
+          },
+          {
+            "instance": "loom/memory/dcache/requestQueue",
+            "internal_w": 0.00136,
+            "leakage_w": 3.84e-07,
+            "module": "Queue_4",
+            "switching_w": 8.15e-08,
+            "total_w": 0.00136
+          },
+          {
+            "instance": "loom/memory/dcache/maintenance",
+            "internal_w": 0.000477,
+            "leakage_w": 1.92e-07,
+            "module": "Maintenance",
+            "switching_w": 2.24e-08,
+            "total_w": 0.000477
+          },
+          {
+            "instance": "loom/memory/dcache/cache",
+            "internal_w": 0.0383,
+            "leakage_w": 1.55e-05,
+            "module": "BankedChiCache_1",
+            "switching_w": 0.000171,
+            "total_w": 0.0385
+          },
+          {
+            "instance": "loom/memory/dcache/cache/reqArb",
+            "internal_w": 4.72e-06,
+            "leakage_w": 1.98e-08,
+            "module": "RRArbiter_8",
+            "switching_w": 2.45e-08,
+            "total_w": 4.76e-06
+          },
+          {
+            "instance": "loom/memory/dcache/cache/rspQueue",
+            "internal_w": 0.000472,
+            "leakage_w": 1.29e-07,
+            "module": "Queue_2_1",
+            "switching_w": 1.39e-08,
+            "total_w": 0.000472
+          },
+          {
+            "instance": "loom/memory/dcache/cache/rspArb",
+            "internal_w": 4.68e-06,
+            "leakage_w": 1.06e-08,
+            "module": "RRArbiter_1_1",
+            "switching_w": 6.4e-09,
+            "total_w": 4.7e-06
+          },
+          {
+            "instance": "loom/memory/dcache/cache/caches_0",
+            "internal_w": 0.0168,
+            "leakage_w": 7.01e-06,
+            "module": "ChiCache_2",
+            "switching_w": 8.66e-05,
+            "total_w": 0.0169
+          },
+          {
+            "instance": "loom/memory/dcache/cache/caches_0/tags_ext",
+            "internal_w": 0.00478,
+            "leakage_w": 1.86e-06,
+            "module": "tags_32x32_1",
+            "switching_w": 8.3e-07,
+            "total_w": 0.00479
+          },
+          {
+            "instance": "loom/memory/dcache/cache/caches_0/data",
+            "internal_w": 1.39e-07,
+            "leakage_w": 6.04e-10,
+            "module": "data_1",
+            "switching_w": 3.22e-05,
+            "total_w": 3.23e-05
+          },
+          {
+            "instance": "loom/memory/dcache/cache/caches_0/data/data_ext",
+            "internal_w": 1.39e-07,
+            "leakage_w": 6.04e-10,
+            "module": "data_ext_1",
+            "switching_w": 3.22e-05,
+            "total_w": 3.23e-05
+          },
+          {
+            "instance": "loom/memory/dcache/cache/caches_1",
+            "internal_w": 0.0168,
+            "leakage_w": 6.98e-06,
+            "module": "ChiCache_3",
+            "switching_w": 8.09e-05,
+            "total_w": 0.0168
+          },
+          {
+            "instance": "loom/memory/dcache/cache/caches_1/tags_ext",
+            "internal_w": 0.00478,
+            "leakage_w": 1.86e-06,
+            "module": "tags_32x32_0",
+            "switching_w": 7.74e-07,
+            "total_w": 0.00479
+          },
+          {
+            "instance": "loom/memory/dcache/cache/caches_1/data",
+            "internal_w": 1.4e-07,
+            "leakage_w": 6.04e-10,
+            "module": "data_2",
+            "switching_w": 3.21e-05,
+            "total_w": 3.22e-05
+          },
+          {
+            "instance": "loom/memory/dcache/cache/caches_1/data/data_ext",
+            "internal_w": 1.4e-07,
+            "leakage_w": 6.04e-10,
+            "module": "data_ext_0",
+            "switching_w": 3.21e-05,
+            "total_w": 3.22e-05
+          },
+          {
+            "instance": "loom/memory/dcache/cache/datArb",
+            "internal_w": 4.78e-06,
+            "leakage_w": 1.24e-07,
+            "module": "RRArbiter_2_1",
+            "switching_w": 3.75e-08,
+            "total_w": 4.94e-06
+          },
+          {
+            "instance": "loom/memory/dcache/cache/datQueue",
+            "internal_w": 0.0033,
+            "leakage_w": 9.32e-07,
+            "module": "Queue_3_1",
+            "switching_w": 9.87e-08,
+            "total_w": 0.0033
+          },
+          {
+            "instance": "loom/memory/dcache/cache/reqQueue",
+            "internal_w": 0.000943,
+            "leakage_w": 2.58e-07,
+            "module": "Queue_1_0",
+            "switching_w": 5.14e-08,
+            "total_w": 0.000943
+          },
+          {
+            "instance": "loom/memory/dcache/cache/retirement",
+            "internal_w": 2.94e-05,
+            "leakage_w": 1.22e-08,
+            "module": "Queue_0",
+            "switching_w": 5.87e-07,
+            "total_w": 3e-05
+          },
+          {
+            "instance": "loom/memory/memory",
+            "internal_w": 0.0117,
+            "leakage_w": 4.94e-06,
+            "module": "VirtualAccess_0",
+            "switching_w": 2.45e-05,
+            "total_w": 0.0118
+          },
+          {
+            "instance": "loom/memory/memory/physical",
+            "internal_w": 0.000109,
+            "leakage_w": 1.73e-07,
+            "module": "PhysicalAccess_0",
+            "switching_w": 5.6e-06,
+            "total_w": 0.000115
+          },
+          {
+            "instance": "loom/memory/memory/walker",
+            "internal_w": 0.0105,
+            "leakage_w": 4.24e-06,
+            "module": "Walker_0",
+            "switching_w": 1.83e-06,
+            "total_w": 0.0105
+          },
+          {
+            "instance": "loom/memory/home",
+            "internal_w": 0.145,
+            "leakage_w": 5.06e-05,
+            "module": "Home",
+            "switching_w": 1.33e-05,
+            "total_w": 0.145
+          },
+          {
+            "instance": "loom/memory/home/fabric",
+            "internal_w": 0.0551,
+            "leakage_w": 1.63e-05,
+            "module": "Fabric",
+            "switching_w": 2.78e-06,
+            "total_w": 0.0551
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_11",
+            "internal_w": 0.00181,
+            "leakage_w": 5.27e-07,
+            "module": "Rx_3_0",
+            "switching_w": 2.54e-08,
+            "total_w": 0.00181
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx",
+            "internal_w": 0.00274,
+            "leakage_w": 8.01e-07,
+            "module": "Rx_4",
+            "switching_w": 1.42e-07,
+            "total_w": 0.00274
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_1",
+            "internal_w": 0.00138,
+            "leakage_w": 3.98e-07,
+            "module": "Rx_1_3",
+            "switching_w": 5.3e-08,
+            "total_w": 0.00138
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_2",
+            "internal_w": 0.00731,
+            "leakage_w": 2.19e-06,
+            "module": "Rx_2_3",
+            "switching_w": 7.58e-10,
+            "total_w": 0.00731
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_3",
+            "internal_w": 0.00274,
+            "leakage_w": 8e-07,
+            "module": "Rx_0",
+            "switching_w": 1.72e-07,
+            "total_w": 0.00274
+          },
+          {
+            "instance": "loom/memory/home/fabric/requests",
+            "internal_w": 4.8e-06,
+            "leakage_w": 5.32e-08,
+            "module": "RRArbiter_0",
+            "switching_w": 1.05e-07,
+            "total_w": 4.96e-06
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_4",
+            "internal_w": 0.00138,
+            "leakage_w": 3.99e-07,
+            "module": "Rx_1_2",
+            "switching_w": 5.41e-08,
+            "total_w": 0.00138
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_5",
+            "internal_w": 0.00732,
+            "leakage_w": 2.13e-06,
+            "module": "Rx_2_2",
+            "switching_w": 2.12e-07,
+            "total_w": 0.00733
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_6",
+            "internal_w": 0.00137,
+            "leakage_w": 4.05e-07,
+            "module": "Rx_1_1",
+            "switching_w": 3.31e-08,
+            "total_w": 0.00137
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_7",
+            "internal_w": 0.00732,
+            "leakage_w": 2.13e-06,
+            "module": "Rx_2_1",
+            "switching_w": 6.65e-07,
+            "total_w": 0.00732
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_8",
+            "internal_w": 0.0018,
+            "leakage_w": 5.41e-07,
+            "module": "Rx_3_1",
+            "switching_w": 3.46e-10,
+            "total_w": 0.0018
+          },
+          {
+            "instance": "loom/memory/home/fabric/responses",
+            "internal_w": 4.69e-06,
+            "leakage_w": 2.72e-08,
+            "module": "RRArbiter_1_0",
+            "switching_w": 2.15e-08,
+            "total_w": 4.73e-06
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_9",
+            "internal_w": 0.00138,
+            "leakage_w": 4.01e-07,
+            "module": "Rx_1_0",
+            "switching_w": 1.54e-08,
+            "total_w": 0.00138
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_1",
+            "internal_w": 0.000358,
+            "leakage_w": 1.02e-07,
+            "module": "Tx_1_3",
+            "switching_w": 3.5e-08,
+            "total_w": 0.000358
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_2",
+            "internal_w": 0.00186,
+            "leakage_w": 5.15e-07,
+            "module": "Tx_2_3",
+            "switching_w": 8.06e-10,
+            "total_w": 0.00186
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_3",
+            "internal_w": 0.000701,
+            "leakage_w": 2e-07,
+            "module": "Tx_0",
+            "switching_w": 8.33e-08,
+            "total_w": 0.000702
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_4",
+            "internal_w": 0.000358,
+            "leakage_w": 1.02e-07,
+            "module": "Tx_1_2",
+            "switching_w": 3.69e-08,
+            "total_w": 0.000358
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_5",
+            "internal_w": 0.00186,
+            "leakage_w": 5.25e-07,
+            "module": "Tx_2_2",
+            "switching_w": 8.81e-08,
+            "total_w": 0.00186
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_6",
+            "internal_w": 0.000358,
+            "leakage_w": 1.02e-07,
+            "module": "Tx_1_1",
+            "switching_w": 1.7e-08,
+            "total_w": 0.000358
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_7",
+            "internal_w": 0.00185,
+            "leakage_w": 5.35e-07,
+            "module": "Tx_2_1",
+            "switching_w": 2.66e-07,
+            "total_w": 0.00185
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_8",
+            "internal_w": 0.000467,
+            "leakage_w": 1.31e-07,
+            "module": "Tx_3_1",
+            "switching_w": 2.42e-10,
+            "total_w": 0.000467
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_9",
+            "internal_w": 0.000358,
+            "leakage_w": 1.02e-07,
+            "module": "Tx_1_0",
+            "switching_w": 1.87e-08,
+            "total_w": 0.000358
+          },
+          {
+            "instance": "loom/memory/home/fabric/data",
+            "internal_w": 4.67e-06,
+            "leakage_w": 1.64e-07,
+            "module": "RRArbiter_2_0",
+            "switching_w": 7.55e-08,
+            "total_w": 4.91e-06
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx",
+            "internal_w": 0.000701,
+            "leakage_w": 2e-07,
+            "module": "Tx_4",
+            "switching_w": 4.28e-08,
+            "total_w": 0.000702
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_10",
+            "internal_w": 0.00185,
+            "leakage_w": 5.32e-07,
+            "module": "Tx_2_0",
+            "switching_w": 1.77e-07,
+            "total_w": 0.00185
+          },
+          {
+            "instance": "loom/memory/home/fabric/tx_11",
+            "internal_w": 0.000466,
+            "leakage_w": 1.32e-07,
+            "module": "Tx_3_0",
+            "switching_w": 2.29e-08,
+            "total_w": 0.000466
+          },
+          {
+            "instance": "loom/memory/home/fabric/rx_10",
+            "internal_w": 0.00732,
+            "leakage_w": 2.14e-06,
+            "module": "Rx_2_0",
+            "switching_w": 4.2e-07,
+            "total_w": 0.00732
+          },
+          {
+            "instance": "loom/memory/home/home",
+            "internal_w": 0.0902,
+            "leakage_w": 3.43e-05,
+            "module": "Coherence",
+            "switching_w": 1.05e-05,
+            "total_w": 0.0902
+          },
+          {
+            "instance": "loom/memory/home/home/memQueue",
+            "internal_w": 0.00563,
+            "leakage_w": 1.64e-06,
+            "module": "Queue_8",
+            "switching_w": 6.52e-07,
+            "total_w": 0.00563
+          },
+          {
+            "instance": "loom/memory/home/home/rspArb",
+            "internal_w": 1.42e-05,
+            "leakage_w": 4.02e-08,
+            "module": "RRArbiter_6",
+            "switching_w": 3.92e-08,
+            "total_w": 1.43e-05
+          },
+          {
+            "instance": "loom/memory/home/home/directory",
+            "internal_w": 0.00362,
+            "leakage_w": 1.19e-06,
+            "module": "Directory",
+            "switching_w": 5.11e-08,
+            "total_w": 0.00362
+          },
+          {
+            "instance": "loom/memory/home/home/cache",
+            "internal_w": 0.0504,
+            "leakage_w": 1.94e-05,
+            "module": "Cache_1",
+            "switching_w": 5.07e-06,
+            "total_w": 0.0505
+          },
+          {
+            "instance": "loom/memory/home/home/cache/responses",
+            "internal_w": 0.00537,
+            "leakage_w": 1.54e-06,
+            "module": "Queue_6",
+            "switching_w": 1.21e-06,
+            "total_w": 0.00537
+          },
+          {
+            "instance": "loom/memory/home/home/cache/data_0",
+            "internal_w": 7.6e-08,
+            "leakage_w": 6.26e-09,
+            "module": "data_0_0",
+            "switching_w": 1.3e-07,
+            "total_w": 2.13e-07
+          },
+          {
+            "instance": "loom/memory/home/home/cache/data_0/data_0_ext",
+            "internal_w": 7.6e-08,
+            "leakage_w": 6.26e-09,
+            "module": "data_0_ext_3",
+            "switching_w": 1.3e-07,
+            "total_w": 2.13e-07
+          },
+          {
+            "instance": "loom/memory/home/home/cache/data_1",
+            "internal_w": 7.57e-08,
+            "leakage_w": 6.26e-09,
+            "module": "data_1_0",
+            "switching_w": 1.56e-07,
+            "total_w": 2.38e-07
+          },
+          {
+            "instance": "loom/memory/home/home/cache/data_1/data_0_ext",
+            "internal_w": 7.57e-08,
+            "leakage_w": 6.26e-09,
+            "module": "data_0_ext_2",
+            "switching_w": 1.56e-07,
+            "total_w": 2.38e-07
+          },
+          {
+            "instance": "loom/memory/home/home/cache/data_2",
+            "internal_w": 7.54e-08,
+            "leakage_w": 6.26e-09,
+            "module": "data_2_0",
+            "switching_w": 5.63e-08,
+            "total_w": 1.38e-07
+          },
+          {
+            "instance": "loom/memory/home/home/cache/data_2/data_0_ext",
+            "internal_w": 7.54e-08,
+            "leakage_w": 6.26e-09,
+            "module": "data_0_ext_1",
+            "switching_w": 5.63e-08,
+            "total_w": 1.38e-07
+          },
+          {
+            "instance": "loom/memory/home/home/cache/data_3",
+            "internal_w": 7.52e-08,
+            "leakage_w": 6.26e-09,
+            "module": "data_3",
+            "switching_w": 0.0,
+            "total_w": 8.15e-08
+          },
+          {
+            "instance": "loom/memory/home/home/cache/data_3/data_0_ext",
+            "internal_w": 7.52e-08,
+            "leakage_w": 6.26e-09,
+            "module": "data_0_ext_0",
+            "switching_w": 0.0,
+            "total_w": 8.15e-08
+          },
+          {
+            "instance": "loom/memory/home/home/snpArb",
+            "internal_w": 1.42e-05,
+            "leakage_w": 6.37e-08,
+            "module": "RRArbiter_5",
+            "switching_w": 3.05e-08,
+            "total_w": 1.43e-05
+          },
+          {
+            "instance": "loom/memory/home/home/datArb",
+            "internal_w": 1.46e-05,
+            "leakage_w": 3.2e-07,
+            "module": "RRArbiter_7",
+            "switching_w": 7.46e-07,
+            "total_w": 1.57e-05
+          },
+          {
+            "instance": "loom/memory/home/home/mshr",
+            "internal_w": 0.00325,
+            "leakage_w": 9.63e-07,
+            "module": "Mshr",
+            "switching_w": 2.49e-07,
+            "total_w": 0.00325
+          },
+          {
+            "instance": "loom/memory/home/home/datQueue",
+            "internal_w": 0.00338,
+            "leakage_w": 9.63e-07,
+            "module": "Queue_3_0",
+            "switching_w": 3.93e-07,
+            "total_w": 0.00338
+          },
+          {
+            "instance": "loom/memory/home/home/cacheArb",
+            "internal_w": 1.46e-05,
+            "leakage_w": 6.88e-08,
+            "module": "RRArbiter_3",
+            "switching_w": 4.87e-07,
+            "total_w": 1.51e-05
+          },
+          {
+            "instance": "loom/memory/home/home/memArb",
+            "internal_w": 1.57e-05,
+            "leakage_w": 5.97e-07,
+            "module": "RRArbiter_4",
+            "switching_w": 1.43e-06,
+            "total_w": 1.77e-05
+          },
+          {
+            "instance": "loom/memory/home/home/rspQueue",
+            "internal_w": 0.000551,
+            "leakage_w": 1.54e-07,
+            "module": "Queue_2_0",
+            "switching_w": 1.7e-08,
+            "total_w": 0.000551
+          },
+          {
+            "instance": "loom/memory/home/home/snpQueue",
+            "internal_w": 0.000817,
+            "leakage_w": 2.3e-07,
+            "module": "Queue_9",
+            "switching_w": 1.21e-08,
+            "total_w": 0.000817
+          },
+          {
+            "instance": "loom/memory/home/home/cacheQueue",
+            "internal_w": 0.000909,
+            "leakage_w": 2.62e-07,
+            "module": "Queue_7",
+            "switching_w": 2.77e-07,
+            "total_w": 0.00091
+          },
+          {
+            "instance": "loom/memory/fetch",
+            "internal_w": 0.0115,
+            "leakage_w": 4.89e-06,
+            "module": "VirtualAccess_1",
+            "switching_w": 8.38e-05,
+            "total_w": 0.0115
+          },
+          {
+            "instance": "loom/memory/fetch/physical",
+            "internal_w": 0.000126,
+            "leakage_w": 1.53e-07,
+            "module": "PhysicalAccess_1",
+            "switching_w": 2.2e-05,
+            "total_w": 0.000148
+          },
+          {
+            "instance": "loom/memory/fetch/walker",
+            "internal_w": 0.0105,
+            "leakage_w": 4.33e-06,
+            "module": "Walker_2",
+            "switching_w": 1.88e-06,
+            "total_w": 0.0105
+          },
+          {
+            "instance": "loom/memory/cacheRequests",
+            "internal_w": 3.68e-06,
+            "leakage_w": 3.97e-08,
+            "module": "Arbiter",
+            "switching_w": 3.96e-06,
+            "total_w": 7.68e-06
+          }
+        ],
+        "internal_w": 1.087,
+        "leakage_w": 0.000524,
+        "status": "pass",
+        "switching_w": 0.00431,
+        "total_w": 1.092
+      }
+    }
+  ],
+  "taken": "2026-11-24T07:26:11.998148+00:00"
+}

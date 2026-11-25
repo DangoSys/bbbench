@@ -1,0 +1,313 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "pebble/devices/pebble/configs/PebbleDefaultConfig.toml",
+  "design": "pebble",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "bitstream": "/home/wanghui/Code/buckyball/examples/designs/pebble/output/sims/device/pebble/PebbleDefaultConfig/p2e/2026-11-24-22-23-diff/fpgaCompDir/bitstream.bit",
+      "diff": true,
+      "elapsed_s": 509.2,
+      "estimates": [
+        {
+          "cycles": 1584842,
+          "elapsed_s": 182.659,
+          "model": "lenet",
+          "slices": [
+            {
+              "cycles": 14092,
+              "elapsed_s": 11.224,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice0-iteration0",
+              "log": "2026-11-25-04-47-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice0-iteration0-tmpnmdh8sw0",
+              "repeats": 28,
+              "share": 0.2489686669081208,
+              "total": 394576
+            },
+            {
+              "cycles": 51485,
+              "elapsed_s": 11.422,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice1-iteration0",
+              "log": "2026-11-25-04-48-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice1-iteration0-tmpnyjt9utq",
+              "repeats": 9,
+              "share": 0.2923729936485782,
+              "total": 463365
+            },
+            {
+              "cycles": 10705,
+              "elapsed_s": 11.643,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice2-iteration0",
+              "log": "2026-11-25-04-48-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice2-iteration0-tmpi622znu4",
+              "repeats": 12,
+              "share": 0.08105539858231925,
+              "total": 128460
+            },
+            {
+              "cycles": 42064,
+              "elapsed_s": 11.523,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice3-iteration0",
+              "log": "2026-11-25-04-48-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice3-iteration0-tmp355rmbtj",
+              "repeats": 8,
+              "share": 0.2123315762706945,
+              "total": 336512
+            },
+            {
+              "cycles": 14434,
+              "elapsed_s": 11.426,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice4-iteration0",
+              "log": "2026-11-25-04-49-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice4-iteration0-tmpaylw81b5",
+              "repeats": 4,
+              "share": 0.036430129943552735,
+              "total": 57736
+            },
+            {
+              "cycles": 8436,
+              "elapsed_s": 11.122,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice5-iteration0",
+              "log": "2026-11-25-04-49-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice5-iteration0-tmpe3evqqeo",
+              "repeats": 1,
+              "share": 0.005322928089992567,
+              "total": 8436
+            },
+            {
+              "cycles": 9290,
+              "elapsed_s": 11.827,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice6-iteration0",
+              "log": "2026-11-25-04-49-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice6-iteration0-tmp59esm_9e",
+              "repeats": 8,
+              "share": 0.04689426453867326,
+              "total": 74320
+            },
+            {
+              "cycles": 8559,
+              "elapsed_s": 11.425,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice7-iteration0",
+              "log": "2026-11-25-04-50-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice7-iteration0-tmpkko0z82c",
+              "repeats": 1,
+              "share": 0.005400538350195162,
+              "total": 8559
+            },
+            {
+              "cycles": 7700,
+              "elapsed_s": 11.226,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice8-iteration0",
+              "log": "2026-11-25-04-50-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice8-iteration0-tmp26vzibk6",
+              "repeats": 1,
+              "share": 0.00485852848422745,
+              "total": 7700
+            },
+            {
+              "cycles": 7893,
+              "elapsed_s": 11.261,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice9-iteration0",
+              "log": "2026-11-25-04-50-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice9-iteration0-tmpz7vwq1qz",
+              "repeats": 1,
+              "share": 0.004980307185195748,
+              "total": 7893
+            },
+            {
+              "cycles": 8309,
+              "elapsed_s": 11.631,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice10-iteration0",
+              "log": "2026-11-25-04-51-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice10-iteration0-tmpnr__n1i4",
+              "repeats": 6,
+              "share": 0.03145676351333445,
+              "total": 49854
+            },
+            {
+              "cycles": 8353,
+              "elapsed_s": 11.629,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice11-iteration0",
+              "log": "2026-11-25-04-51-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice11-iteration0-tmpynmp2dv5",
+              "repeats": 1,
+              "share": 0.005270556938798947,
+              "total": 8353
+            },
+            {
+              "cycles": 7402,
+              "elapsed_s": 11.225,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice12-iteration0",
+              "log": "2026-11-25-04-51-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice12-iteration0-tmpmyyq6l2z",
+              "repeats": 1,
+              "share": 0.004670497122110595,
+              "total": 7402
+            },
+            {
+              "cycles": 7857,
+              "elapsed_s": 11.221,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice13-iteration0",
+              "log": "2026-11-25-04-52-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice13-iteration0-tmpd1v2t2j0",
+              "repeats": 1,
+              "share": 0.004957591987087672,
+              "total": 7857
+            },
+            {
+              "cycles": 7840,
+              "elapsed_s": 11.53,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice14-iteration0",
+              "log": "2026-11-25-04-52-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice14-iteration0-tmppka87wnw",
+              "repeats": 1,
+              "share": 0.004946865365758858,
+              "total": 7840
+            },
+            {
+              "cycles": 15979,
+              "elapsed_s": 11.324,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice15-iteration0",
+              "log": "2026-11-25-04-52-pebble-p2e-device-pebble-PebbleDefaultConfig-pebble-lenet-gvn-slice15-iteration0-tmp_eeak8tf",
+              "repeats": 1,
+              "share": 0.010082393071359795,
+              "total": 15979
+            }
+          ],
+          "status": "pass"
+        }
+      ],
+      "fpga_location": "0.A",
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T20:44:43.278201+00:00"
+}

@@ -1,0 +1,569 @@
+/* Designs: the wheel, a design's head, its timeline. */
+
+/* Choosing a design: the selected one large on the left, every design a
+   slanted row on the right. */
+
+.select {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background:
+    linear-gradient(115deg, transparent 0 55%, color-mix(in srgb, var(--accent) 7%, transparent) 55% 70%, transparent 70%),
+    linear-gradient(160deg, color-mix(in srgb, var(--accent) 6%, var(--bg)), var(--panel));
+}
+
+.feature {
+  --tint: hsl(var(--hue) 65% 50%);
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 1.5rem;
+  align-items: center;
+  min-height: 26rem;
+  animation: enter 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+}
+
+.feature .ghost {
+  position: absolute;
+  left: -0.5rem;
+  bottom: -2.5rem;
+  font-size: 9rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--tint) 30%, transparent);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.feature .info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature .pack {
+  align-self: flex-start;
+  padding: 0.15rem 0.9rem 0.15rem 0.6rem;
+  background: var(--tint);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 0.6rem) 100%, 0 100%);
+}
+
+.feature h2 {
+  margin: 0.6rem 0 0;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.feature .description {
+  margin: 0.6rem 0 0;
+  max-width: 30rem;
+  line-height: 1.55;
+}
+
+.feature .side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.feature .side .stage-count {
+  margin-top: 1.25rem;
+}
+
+.models {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.models span {
+  padding: 0.15rem 0.6rem;
+  border-radius: 0.3rem;
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  border: 1px solid var(--line);
+  font-size: 0.78rem;
+}
+
+.metrics {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0.75rem;
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  border-left: 3px solid var(--tint);
+  backdrop-filter: blur(4px);
+}
+
+.metric .name {
+  color: var(--muted);
+}
+
+.metric .value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric .value.none {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.feature .stage-count {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.progress {
+  display: flex;
+  gap: 3px;
+  margin-top: 0.35rem;
+}
+
+.progress span {
+  flex: 1;
+  height: 0.35rem;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+.progress .pass {
+  background: var(--ok);
+}
+
+.progress .running {
+  background: var(--accent);
+}
+
+.progress .failure {
+  background: var(--bad);
+}
+
+.progress .skipped {
+  background: var(--na);
+}
+
+.feature .art {
+  position: relative;
+  display: block;
+  transform: rotate(2deg);
+  transition: transform 0.25s;
+}
+
+.feature .art:hover {
+  transform: rotate(0) scale(1.02);
+}
+
+.cover {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 18px 40px color-mix(in srgb, var(--tint, #000) 30%, transparent);
+}
+
+.cover-title {
+  font-size: 9px;
+  font-weight: 800;
+  fill: #fff;
+  letter-spacing: -0.02em;
+}
+
+/* The list: slanted rows, the selected one pulled out. */
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-height: 34rem;
+  overflow-y: auto;
+  padding: 0.25rem 0.25rem 0.25rem 1.25rem;
+}
+
+button.row {
+  --tint: hsl(var(--hue) 65% 50%);
+  display: grid;
+  grid-template-columns: 3rem 3.25rem 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  flex: none;
+  padding: 0.45rem 1.25rem 0.45rem 0.9rem;
+  border: 0;
+  border-radius: 0.35rem;
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  font-size: 1rem;
+  text-align: left;
+  transform: skewX(-10deg);
+  transition:
+    transform 0.25s,
+    background 0.25s;
+}
+
+button.row > * {
+  transform: skewX(10deg);
+}
+
+button.row:hover {
+  background: var(--bg);
+}
+
+button.row.on {
+  transform: skewX(-10deg) translateX(-0.9rem);
+  background: var(--bg);
+  box-shadow: inset 4px 0 0 var(--tint), 0 6px 18px rgb(0 0 0 / 0.08);
+}
+
+button.row .index {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--tint);
+  font-variant-numeric: tabular-nums;
+}
+
+button.row .thumb .cover {
+  width: 3.25rem;
+  border-radius: 0.25rem;
+  box-shadow: none;
+}
+
+button.row .body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+button.row .name {
+  font-weight: 700;
+}
+
+button.row .about {
+  font-size: 0.75rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+button.row .progress {
+  margin-top: 0;
+}
+
+/* A design's head. */
+
+.design-head {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.head-art .cover {
+  width: 4.5rem;
+  box-shadow: none;
+}
+
+.design-head h1 {
+  margin: 0;
+}
+
+.design-head p {
+  margin: 0;
+}
+
+@media (max-width: 56rem) {
+  .select,
+  .feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .feature .ghost {
+    font-size: 5rem;
+  }
+}
+
+/* The timeline: nodes on a canvas, needs as curves behind them. */
+
+.timeline {
+  overflow-x: auto;
+  padding: 0.5rem 0 1rem;
+}
+
+.canvas {
+  position: relative;
+}
+
+.canvas svg {
+  position: absolute;
+  inset: 0;
+}
+
+.edge {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 2;
+}
+
+.edge.done {
+  stroke: var(--ok);
+}
+
+button.step {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  text-align: left;
+  font-size: 0.8rem;
+  overflow: hidden;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+button.step .name {
+  font-weight: 600;
+  /* At most two lines, with room for the rerun button over the top right
+     corner. */
+  padding-right: 1.4rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+button.step .info {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  /* One line each: the progress, then the time. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+button.step.pending {
+  border-style: dashed;
+  background: var(--panel);
+}
+
+button.step.pending .name {
+  color: var(--muted);
+}
+
+button.step.running {
+  border-color: var(--accent);
+  animation: running 1.6s ease-in-out infinite;
+}
+
+@keyframes running {
+  50% {
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+}
+
+button.step.skipped {
+  border-style: dotted;
+  border-color: var(--na);
+  box-shadow: inset 4px 0 0 var(--na);
+}
+
+button.step.pass {
+  border-color: var(--ok);
+  box-shadow: inset 4px 0 0 var(--ok);
+}
+
+button.step.failure {
+  border-color: var(--bad);
+  box-shadow: inset 4px 0 0 var(--bad);
+}
+
+button.step:hover,
+button.step[aria-pressed="true"] {
+  border-color: var(--text);
+}
+
+.node-detail:empty {
+  display: none;
+}
+
+.node-detail {
+  margin: 0.5rem 0 1.5rem;
+  padding: 0.75rem 1rem;
+  border-left: 2px solid var(--accent);
+}
+
+.node-detail h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 40rem) {
+  .stage {
+    height: 28rem;
+  }
+
+  .disc {
+    left: calc(50% - 8rem);
+    width: 16rem;
+  }
+
+  button.turn {
+    display: none;
+  }
+}
+
+/* The rerun button of a node, over its top right corner. */
+button.step-rerun {
+  position: absolute;
+  z-index: 1;
+}
+
+button.step-rerun[disabled] {
+  opacity: 0.4;
+}
+
+button.step-rerun.refused {
+  color: var(--bad);
+  font-weight: 700;
+}
+
+/* Performance: a chart per OS. The series hues are the validated categorical
+   slots 1–4, light and dark; text stays in the text tokens. */
+.perf {
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --time: #6250d6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .perf {
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --time: #9085e9;
+  }
+}
+
+.perf-chart {
+  display: block;
+  margin: 0.5rem 0 1rem;
+}
+
+.perf-chart .grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.perf-chart .axis {
+  fill: var(--muted);
+  font-size: 11px;
+}
+
+.perf-chart .model {
+  fill: var(--text);
+}
+
+/* The golden reference in neutral ink: the measure the levels compare to. */
+.perf-chart path.golden,
+.perf-legend .golden {
+  fill: var(--muted);
+  background: var(--muted);
+}
+
+.perf-chart path.series-1,
+.perf-legend .series-1 {
+  fill: var(--series-1);
+  background: var(--series-1);
+}
+
+.perf-chart path.series-2,
+.perf-legend .series-2 {
+  fill: var(--series-2);
+  background: var(--series-2);
+}
+
+.perf-chart path.series-3,
+.perf-legend .series-3 {
+  fill: var(--series-3);
+  background: var(--series-3);
+}
+
+.perf-chart path.series-4,
+.perf-legend .series-4 {
+  fill: var(--series-4);
+  background: var(--series-4);
+}
+
+/* The simulation time: one hue for every bar (categorical slot 7, validated
+   beside slots 1–4), a 2px surface ring setting it off the bar under it. */
+.perf-chart .dot {
+  fill: var(--time);
+  stroke: var(--bg);
+  stroke-width: 2;
+}
+
+.perf-legend .swatch.dot {
+  background: var(--time);
+  border-radius: 50%;
+}
+
+.perf-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.perf-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.perf-legend .swatch {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 3px;
+}
+
+.uvm-chart { display: grid; gap: .25rem; max-width: 58rem; }
+.uvm-bar { display: grid; grid-template-columns: minmax(7rem, 1fr) 3fr minmax(4rem, auto); gap: .75rem; align-items: center; min-height: 2rem; padding: 0 .4rem; color: inherit; text-decoration: none; }
+.uvm-bar:hover, .uvm-bar[aria-current] { background: rgba(120, 130, 145, .14); }
+.uvm-track { height: .8rem; background: rgba(120, 130, 145, .18); }
+.uvm-fill { display: block; height: 100%; background: #398276; }
+.uvm-analysis { margin-top: 2rem; }
+.uvm-analysis pre, .uvm-analysis p { overflow-wrap: anywhere; white-space: pre-wrap; }

@@ -1,0 +1,3050 @@
+{
+  "balls": [
+    {
+      "ball": "piplus/balls/layernorm",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "LAYERNORM"
+        ],
+        "name": "layernorm",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/piplus/balls/layernorm",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 99,
+            "instruction": "LAYERNORM",
+            "iter": 1
+          },
+          {
+            "cycles": 100,
+            "instruction": "LAYERNORM.even",
+            "iter": 1
+          },
+          {
+            "cycles": 104,
+            "instruction": "LAYERNORM.odd",
+            "iter": 1
+          },
+          {
+            "cycles": 96,
+            "instruction": "LAYERNORM.rms",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 5225,
+            "instruction": "LAYERNORM",
+            "iter": 2
+          },
+          {
+            "cycles": 5227,
+            "instruction": "LAYERNORM.even",
+            "iter": 2
+          },
+          {
+            "cycles": 5225,
+            "instruction": "LAYERNORM.odd",
+            "iter": 2
+          },
+          {
+            "cycles": 3213,
+            "instruction": "LAYERNORM.rms",
+            "iter": 2
+          }
+        ]
+      }
+    },
+    {
+      "ball": "piplus/balls/mxint8mm",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8MM"
+        ],
+        "name": "mxint8mm",
+        "param": {
+          "cols": 8,
+          "lanes": 16,
+          "rows": 8
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/piplus/balls/mxint8mm",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 22,
+            "instruction": "MXINT8MM",
+            "iter": 32
+          },
+          {
+            "cycles": 22,
+            "instruction": "MXINT8MM.acc",
+            "iter": 32
+          },
+          {
+            "cycles": 22,
+            "instruction": "MXINT8MM.bias",
+            "iter": 32
+          },
+          {
+            "cycles": 48,
+            "instruction": "MXINT8MM.tiles",
+            "iter": 32
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 1186,
+            "instruction": "MXINT8MM",
+            "iter": 1984
+          },
+          {
+            "cycles": 1202,
+            "instruction": "MXINT8MM.acc",
+            "iter": 1984
+          },
+          {
+            "cycles": 1188,
+            "instruction": "MXINT8MM.bias",
+            "iter": 1984
+          },
+          {
+            "cycles": 2269,
+            "instruction": "MXINT8MM.tiles",
+            "iter": 32
+          }
+        ]
+      }
+    },
+    {
+      "ball": "piplus/balls/mxint8quant",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8QUANT"
+        ],
+        "name": "mxint8quant",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/piplus/balls/mxint8quant",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 17,
+            "instruction": "MXINT8QUANT",
+            "iter": 1
+          },
+          {
+            "cycles": 59,
+            "instruction": "MXINT8QUANT.columns",
+            "iter": 4
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 1033,
+            "instruction": "MXINT8QUANT",
+            "iter": 128
+          },
+          {
+            "cycles": 1051,
+            "instruction": "MXINT8QUANT.columns",
+            "iter": 128
+          }
+        ]
+      }
+    },
+    {
+      "ball": "piplus/balls/softmax",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "SOFTMAX"
+        ],
+        "name": "softmax",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/piplus/balls/softmax",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 65,
+            "instruction": "SOFTMAX",
+            "iter": 1
+          },
+          {
+            "cycles": 70,
+            "instruction": "SOFTMAX.odd",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 4193,
+            "instruction": "SOFTMAX",
+            "iter": 2
+          },
+          {
+            "cycles": 4187,
+            "instruction": "SOFTMAX.odd",
+            "iter": 2
+          }
+        ]
+      }
+    },
+    {
+      "ball": "poly/balls/mxint8unpack",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8UNPACK"
+        ],
+        "name": "mxint8unpack",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/poly/balls/mxint8unpack",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 22,
+            "instruction": "MXINT8UNPACK",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 2449,
+            "instruction": "MXINT8UNPACK",
+            "iter": 128
+          }
+        ]
+      }
+    },
+    {
+      "ball": "f32add",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "F32ADD"
+        ],
+        "name": "f32add",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/f32add",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 7,
+            "instruction": "F32ADD.acc",
+            "iter": 1
+          },
+          {
+            "cycles": 7,
+            "instruction": "F32ADD.first",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 2053,
+            "instruction": "F32ADD.acc",
+            "iter": 1024
+          },
+          {
+            "cycles": 2053,
+            "instruction": "F32ADD.first",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "fixed",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "FIXED"
+        ],
+        "name": "fixed",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/fixed",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 25,
+            "instruction": "FIXED.add",
+            "iter": 4
+          },
+          {
+            "cycles": 229,
+            "instruction": "FIXED.hsigmoid",
+            "iter": 4
+          },
+          {
+            "cycles": 229,
+            "instruction": "FIXED.hsigmoid_stream",
+            "iter": 4
+          },
+          {
+            "cycles": 309,
+            "instruction": "FIXED.hswish",
+            "iter": 4
+          },
+          {
+            "cycles": 309,
+            "instruction": "FIXED.hswish_stream",
+            "iter": 4
+          },
+          {
+            "cycles": 1073,
+            "instruction": "FIXED.mean",
+            "iter": 4
+          },
+          {
+            "cycles": 133,
+            "instruction": "FIXED.mul",
+            "iter": 4
+          },
+          {
+            "cycles": 25,
+            "instruction": "FIXED.relu",
+            "iter": 4
+          },
+          {
+            "cycles": 61,
+            "instruction": "FIXED.requant",
+            "iter": 4
+          },
+          {
+            "cycles": 61,
+            "instruction": "FIXED.requant_stream",
+            "iter": 4
+          },
+          {
+            "cycles": 49,
+            "instruction": "FIXED.sum",
+            "iter": 4
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 6145,
+            "instruction": "FIXED.add",
+            "iter": 1024
+          },
+          {
+            "cycles": 54289,
+            "instruction": "FIXED.hsigmoid",
+            "iter": 1024
+          },
+          {
+            "cycles": 29185,
+            "instruction": "FIXED.hsigmoid_stream",
+            "iter": 512
+          },
+          {
+            "cycles": 74769,
+            "instruction": "FIXED.hswish",
+            "iter": 1024
+          },
+          {
+            "cycles": 39425,
+            "instruction": "FIXED.hswish_stream",
+            "iter": 512
+          },
+          {
+            "cycles": 1073,
+            "instruction": "FIXED.mean",
+            "iter": 4
+          },
+          {
+            "cycles": 33793,
+            "instruction": "FIXED.mul",
+            "iter": 1024
+          },
+          {
+            "cycles": 6145,
+            "instruction": "FIXED.relu",
+            "iter": 1024
+          },
+          {
+            "cycles": 11281,
+            "instruction": "FIXED.requant",
+            "iter": 1024
+          },
+          {
+            "cycles": 7681,
+            "instruction": "FIXED.requant_stream",
+            "iter": 512
+          },
+          {
+            "cycles": 4129,
+            "instruction": "FIXED.sum",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "gemmini",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": false,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": true,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": true
+          }
+        },
+        "instructions": [
+          "GEMMINI_LOOP_WS_CONFIG_BOUNDS",
+          "GEMMINI_LOOP_WS_CONFIG_ADDR_A",
+          "GEMMINI_LOOP_WS_CONFIG_ADDR_B",
+          "GEMMINI_LOOP_WS_CONFIG_ADDR_D",
+          "GEMMINI_LOOP_WS_CONFIG_ADDR_C",
+          "GEMMINI_LOOP_WS_CONFIG_STRIDES_AB",
+          "GEMMINI_LOOP_WS_CONFIG_STRIDES_DC",
+          "GEMMINI_LOOP_WS",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_1",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_2",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_3",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_4",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_5",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_6",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_7",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_8",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_9",
+          "GEMMINI_LOOP_CONV_WS",
+          "GEMMINI_CONFIG",
+          "GEMMINI_FLUSH",
+          "GEMMINI_PRELOAD",
+          "GEMMINI_COMPUTE_PRELOADED",
+          "GEMMINI_COMPUTE_ACCUMULATED"
+        ],
+        "name": "gemmini",
+        "param": {
+          "accWidth": 32,
+          "inputWidth": 8,
+          "meshColumns": 16,
+          "meshRows": 16,
+          "outputDelay": 1,
+          "spatialOutputWidth": 20,
+          "tileColumns": 1,
+          "tileLatency": 0,
+          "tileRows": 1
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 4
+        }
+      },
+      "path": "examples/prefab/balls/gemmini",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 346,
+            "instruction": "GEMMINI_COMPUTE_ACCUMULATED.os",
+            "iter": 16
+          },
+          {
+            "cycles": 329,
+            "instruction": "GEMMINI_COMPUTE_ACCUMULATED.os_at",
+            "iter": 16
+          },
+          {
+            "cycles": 136,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.os",
+            "iter": 16
+          },
+          {
+            "cycles": 119,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.os_at",
+            "iter": 16
+          },
+          {
+            "cycles": 136,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.os_at_bt",
+            "iter": 16
+          },
+          {
+            "cycles": 42,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.ws",
+            "iter": 1
+          },
+          {
+            "cycles": 42,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.ws_at_bt",
+            "iter": 1
+          },
+          {
+            "cycles": 42,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.ws_zero",
+            "iter": 1
+          },
+          {
+            "cycles": 1,
+            "instruction": "GEMMINI_CONFIG",
+            "iter": 0
+          },
+          {
+            "cycles": 1,
+            "instruction": "GEMMINI_FLUSH",
+            "iter": 0
+          },
+          {
+            "cycles": 151,
+            "instruction": "GEMMINI_LOOP_CONV_WS",
+            "iter": 1
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_1",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_2",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_3",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_4",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_5",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_6",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_7",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_8",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_9",
+            "iter": 0
+          },
+          {
+            "cycles": 119,
+            "instruction": "GEMMINI_LOOP_WS",
+            "iter": 1
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_ADDR_A",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_ADDR_B",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_ADDR_C",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_ADDR_D",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_BOUNDS",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_STRIDES_AB",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_STRIDES_DC",
+            "iter": 0
+          },
+          {
+            "cycles": 5,
+            "instruction": "GEMMINI_PRELOAD.os",
+            "iter": 1
+          },
+          {
+            "cycles": 5,
+            "instruction": "GEMMINI_PRELOAD.ws",
+            "iter": 1
+          },
+          {
+            "cycles": 7,
+            "instruction": "GEMMINI_PRELOAD.ws_bt",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 346,
+            "instruction": "GEMMINI_COMPUTE_ACCUMULATED.os",
+            "iter": 16
+          },
+          {
+            "cycles": 329,
+            "instruction": "GEMMINI_COMPUTE_ACCUMULATED.os_at",
+            "iter": 16
+          },
+          {
+            "cycles": 136,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.os",
+            "iter": 16
+          },
+          {
+            "cycles": 119,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.os_at",
+            "iter": 16
+          },
+          {
+            "cycles": 136,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.os_at_bt",
+            "iter": 16
+          },
+          {
+            "cycles": 102,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.ws",
+            "iter": 16
+          },
+          {
+            "cycles": 102,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.ws_at_bt",
+            "iter": 16
+          },
+          {
+            "cycles": 102,
+            "instruction": "GEMMINI_COMPUTE_PRELOADED.ws_zero",
+            "iter": 16
+          },
+          {
+            "cycles": 1,
+            "instruction": "GEMMINI_CONFIG",
+            "iter": 0
+          },
+          {
+            "cycles": 1,
+            "instruction": "GEMMINI_FLUSH",
+            "iter": 0
+          },
+          {
+            "cycles": 111763,
+            "instruction": "GEMMINI_LOOP_CONV_WS",
+            "iter": 36864
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_1",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_2",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_3",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_4",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_5",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_6",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_7",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_8",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_CONV_WS_CONFIG_9",
+            "iter": 0
+          },
+          {
+            "cycles": 12404,
+            "instruction": "GEMMINI_LOOP_WS",
+            "iter": 4096
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_ADDR_A",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_ADDR_B",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_ADDR_C",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_ADDR_D",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_BOUNDS",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_STRIDES_AB",
+            "iter": 0
+          },
+          {
+            "cycles": 9,
+            "instruction": "GEMMINI_LOOP_WS_CONFIG_STRIDES_DC",
+            "iter": 0
+          },
+          {
+            "cycles": 35,
+            "instruction": "GEMMINI_PRELOAD.os",
+            "iter": 16
+          },
+          {
+            "cycles": 35,
+            "instruction": "GEMMINI_PRELOAD.ws",
+            "iter": 16
+          },
+          {
+            "cycles": 52,
+            "instruction": "GEMMINI_PRELOAD.ws_bt",
+            "iter": 16
+          }
+        ]
+      }
+    },
+    {
+      "ball": "im2col",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "IM2COL"
+        ],
+        "name": "im2col",
+        "param": {
+          "inputWidth": 8,
+          "maxIter": 16,
+          "maxKSize": 7,
+          "maxPadding": 7
+        },
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/im2col",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 74,
+            "instruction": "IM2COL",
+            "iter": 1
+          },
+          {
+            "cycles": 73,
+            "instruction": "IM2COL.pad",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 9872,
+            "instruction": "IM2COL",
+            "iter": 16
+          },
+          {
+            "cycles": 4679,
+            "instruction": "IM2COL.pad",
+            "iter": 16
+          }
+        ]
+      }
+    },
+    {
+      "ball": "int2fp",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INT32_TO_FP32"
+        ],
+        "name": "int2fp",
+        "param": {
+          "inputType": "INT32",
+          "outputType": "FP32"
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/int2fp",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 37,
+            "instruction": "INT32_TO_FP32",
+            "iter": 4
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 9217,
+            "instruction": "INT32_TO_FP32",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "int8add",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INT8ADD",
+          "INT8ADD_RELU"
+        ],
+        "name": "int8add",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/int8add",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 32,
+            "instruction": "INT8ADD",
+            "iter": 1
+          },
+          {
+            "cycles": 32,
+            "instruction": "INT8ADD_RELU",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 30722,
+            "instruction": "INT8ADD",
+            "iter": 1024
+          },
+          {
+            "cycles": 30722,
+            "instruction": "INT8ADD_RELU",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "int8mul",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INT8MUL"
+        ],
+        "name": "int8mul",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/int8mul",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 30,
+            "instruction": "INT8MUL.group1",
+            "iter": 1
+          },
+          {
+            "cycles": 58,
+            "instruction": "INT8MUL.group2",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 26628,
+            "instruction": "INT8MUL.group1",
+            "iter": 1024
+          },
+          {
+            "cycles": 53254,
+            "instruction": "INT8MUL.group2",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "intnorm",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INTNORM"
+        ],
+        "name": "intnorm",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/intnorm",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 4325,
+            "instruction": "INTNORM",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 34579,
+            "instruction": "INTNORM",
+            "iter": 8
+          }
+        ]
+      }
+    },
+    {
+      "ball": "intsoftmax",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INTSOFTMAX"
+        ],
+        "name": "intsoftmax",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/intsoftmax",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 85,
+            "instruction": "INTSOFTMAX",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 129025,
+            "instruction": "INTSOFTMAX",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "lut",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "LUT"
+        ],
+        "name": "lut",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/lut",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 37,
+            "instruction": "LUT.byte",
+            "iter": 1
+          },
+          {
+            "cycles": 109,
+            "instruction": "LUT.softmax",
+            "iter": 1
+          },
+          {
+            "cycles": 13,
+            "instruction": "LUT.word",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 36865,
+            "instruction": "LUT.byte",
+            "iter": 1024
+          },
+          {
+            "cycles": 43075,
+            "instruction": "LUT.softmax",
+            "iter": 1024
+          },
+          {
+            "cycles": 12289,
+            "instruction": "LUT.word",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "matadd",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MATADD"
+        ],
+        "name": "matadd",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/matadd",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 6,
+            "instruction": "MATADD",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 4098,
+            "instruction": "MATADD",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "maxpool",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MAXPOOL",
+          "TOPK_U32"
+        ],
+        "name": "maxpool",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/maxpool",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 5,
+            "instruction": "MAXPOOL",
+            "iter": 1
+          },
+          {
+            "cycles": 4,
+            "instruction": "MAXPOOL.pad",
+            "iter": 1
+          },
+          {
+            "cycles": 6,
+            "instruction": "TOPK_U32",
+            "iter": 1
+          },
+          {
+            "cycles": 9,
+            "instruction": "TOPK_U32.groups",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 8321,
+            "instruction": "MAXPOOL",
+            "iter": 64
+          },
+          {
+            "cycles": 4325,
+            "instruction": "MAXPOOL.pad",
+            "iter": 225
+          },
+          {
+            "cycles": 527361,
+            "instruction": "TOPK_U32",
+            "iter": 1024
+          },
+          {
+            "cycles": 2103297,
+            "instruction": "TOPK_U32.groups",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "mxfp2int",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXFP2INT"
+        ],
+        "name": "mxfp2int",
+        "param": {
+          "mxfpFormat": "MXFP4"
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxfp2int",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 9,
+            "instruction": "MXFP2INT",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 4097,
+            "instruction": "MXFP2INT",
+            "iter": 512
+          }
+        ]
+      }
+    },
+    {
+      "ball": "mxint5gemv",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT5GEMV"
+        ],
+        "name": "mxint5gemv",
+        "param": {},
+        "port": {
+          "inBW": 5,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint5gemv",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 82,
+            "instruction": "MXINT5GEMV",
+            "iter": 32
+          },
+          {
+            "cycles": 116,
+            "instruction": "MXINT5GEMV.acc",
+            "iter": 32
+          },
+          {
+            "cycles": 120,
+            "instruction": "MXINT5GEMV.acc.quant",
+            "iter": 32
+          },
+          {
+            "cycles": 86,
+            "instruction": "MXINT5GEMV.quant",
+            "iter": 32
+          },
+          {
+            "cycles": 79,
+            "instruction": "MXINT5GEMV.zero",
+            "iter": 32
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 1524,
+            "instruction": "MXINT5GEMV",
+            "iter": 2944
+          },
+          {
+            "cycles": 1558,
+            "instruction": "MXINT5GEMV.acc",
+            "iter": 2944
+          },
+          {
+            "cycles": 1562,
+            "instruction": "MXINT5GEMV.acc.quant",
+            "iter": 2944
+          },
+          {
+            "cycles": 1528,
+            "instruction": "MXINT5GEMV.quant",
+            "iter": 2944
+          },
+          {
+            "cycles": 1314,
+            "instruction": "MXINT5GEMV.zero",
+            "iter": 2944
+          }
+        ]
+      }
+    },
+    {
+      "ball": "mxint8act",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8ACT"
+        ],
+        "name": "mxint8act",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint8act",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 276,
+            "instruction": "MXINT8ACT.gated",
+            "iter": 1
+          },
+          {
+            "cycles": 270,
+            "instruction": "MXINT8ACT.interior",
+            "iter": 1
+          },
+          {
+            "cycles": 334,
+            "instruction": "MXINT8ACT.next",
+            "iter": 1
+          },
+          {
+            "cycles": 110,
+            "instruction": "MXINT8ACT.tail",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 65551,
+            "instruction": "MXINT8ACT.gated",
+            "iter": 15
+          },
+          {
+            "cycles": 132495,
+            "instruction": "MXINT8ACT.interior",
+            "iter": 31
+          },
+          {
+            "cycles": 164239,
+            "instruction": "MXINT8ACT.next",
+            "iter": 31
+          },
+          {
+            "cycles": 53135,
+            "instruction": "MXINT8ACT.tail",
+            "iter": 31
+          }
+        ]
+      }
+    },
+    {
+      "ball": "mxint8gemv",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8GEMV"
+        ],
+        "name": "mxint8gemv",
+        "param": {},
+        "port": {
+          "inBW": 5,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint8gemv",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 74,
+            "instruction": "MXINT8GEMV",
+            "iter": 32
+          },
+          {
+            "cycles": 108,
+            "instruction": "MXINT8GEMV.acc",
+            "iter": 32
+          },
+          {
+            "cycles": 112,
+            "instruction": "MXINT8GEMV.acc.quant",
+            "iter": 32
+          },
+          {
+            "cycles": 78,
+            "instruction": "MXINT8GEMV.quant",
+            "iter": 32
+          },
+          {
+            "cycles": 71,
+            "instruction": "MXINT8GEMV.zero",
+            "iter": 32
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 1196,
+            "instruction": "MXINT8GEMV",
+            "iter": 1984
+          },
+          {
+            "cycles": 1230,
+            "instruction": "MXINT8GEMV.acc",
+            "iter": 1984
+          },
+          {
+            "cycles": 1234,
+            "instruction": "MXINT8GEMV.acc.quant",
+            "iter": 1984
+          },
+          {
+            "cycles": 1200,
+            "instruction": "MXINT8GEMV.quant",
+            "iter": 1984
+          },
+          {
+            "cycles": 1193,
+            "instruction": "MXINT8GEMV.zero",
+            "iter": 1984
+          }
+        ]
+      }
+    },
+    {
+      "ball": "mxint8matmul",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8MM"
+        ],
+        "name": "mxint8matmul",
+        "param": {
+          "cols": 8,
+          "lanes": 8,
+          "rows": 4
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint8matmul",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 25,
+            "instruction": "MXINT8MM",
+            "iter": 32
+          },
+          {
+            "cycles": 28,
+            "instruction": "MXINT8MM.acc",
+            "iter": 32
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 24833,
+            "instruction": "MXINT8MM",
+            "iter": 224
+          },
+          {
+            "cycles": 26113,
+            "instruction": "MXINT8MM.acc",
+            "iter": 224
+          }
+        ]
+      }
+    },
+    {
+      "ball": "mxint8quantize",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8QUANT"
+        ],
+        "name": "mxint8quantize",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint8quantize",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 17,
+            "instruction": "MXINT8QUANT",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 1809,
+            "instruction": "MXINT8QUANT",
+            "iter": 8
+          }
+        ]
+      }
+    },
+    {
+      "ball": "mxmm",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXMM_MXFP8",
+          "MXMM_MXFP8_WINDOW"
+        ],
+        "name": "mxmm",
+        "param": {
+          "tileCols": 16,
+          "tileRows": 16
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxmm",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 246,
+            "instruction": "MXMM_MXFP8.first",
+            "iter": 32
+          },
+          {
+            "cycles": 256,
+            "instruction": "MXMM_MXFP8.first_last",
+            "iter": 32
+          },
+          {
+            "cycles": 257,
+            "instruction": "MXMM_MXFP8.last",
+            "iter": 32
+          },
+          {
+            "cycles": 247,
+            "instruction": "MXMM_MXFP8.mid",
+            "iter": 32
+          },
+          {
+            "cycles": 256,
+            "instruction": "MXMM_MXFP8_WINDOW.first_last",
+            "iter": 32
+          },
+          {
+            "cycles": 256,
+            "instruction": "MXMM_MXFP8_WINDOW.offset",
+            "iter": 32
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 6853,
+            "instruction": "MXMM_MXFP8.first",
+            "iter": 224
+          },
+          {
+            "cycles": 9413,
+            "instruction": "MXMM_MXFP8.first_last",
+            "iter": 224
+          },
+          {
+            "cycles": 9669,
+            "instruction": "MXMM_MXFP8.last",
+            "iter": 224
+          },
+          {
+            "cycles": 7109,
+            "instruction": "MXMM_MXFP8.mid",
+            "iter": 224
+          },
+          {
+            "cycles": 9533,
+            "instruction": "MXMM_MXFP8_WINDOW.first_last",
+            "iter": 224
+          },
+          {
+            "cycles": 8629,
+            "instruction": "MXMM_MXFP8_WINDOW.offset",
+            "iter": 192
+          }
+        ]
+      }
+    },
+    {
+      "ball": "mxquant",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXQUANT"
+        ],
+        "name": "mxquant",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxquant",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 56,
+            "instruction": "MXQUANT",
+            "iter": 32
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 7041,
+            "instruction": "MXQUANT",
+            "iter": 4096
+          }
+        ]
+      }
+    },
+    {
+      "ball": "redmule",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "REDMULE_F16"
+        ],
+        "name": "redmule",
+        "param": {
+          "lanes": 8
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/redmule",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 230,
+            "instruction": "REDMULE_F16",
+            "iter": 8
+          },
+          {
+            "cycles": 291,
+            "instruction": "REDMULE_F16.ACC",
+            "iter": 8
+          },
+          {
+            "cycles": 664,
+            "instruction": "REDMULE_F16.ACC_TILES",
+            "iter": 8
+          },
+          {
+            "cycles": 528,
+            "instruction": "REDMULE_F16.TILES",
+            "iter": 8
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 13925,
+            "instruction": "REDMULE_F16",
+            "iter": 1024
+          },
+          {
+            "cycles": 13996,
+            "instruction": "REDMULE_F16.ACC",
+            "iter": 1024
+          },
+          {
+            "cycles": 47746,
+            "instruction": "REDMULE_F16.ACC_TILES",
+            "iter": 8
+          },
+          {
+            "cycles": 38146,
+            "instruction": "REDMULE_F16.TILES",
+            "iter": 8
+          }
+        ]
+      }
+    },
+    {
+      "ball": "relu",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "RELU"
+        ],
+        "name": "relu",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/relu",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 66,
+            "instruction": "RELU",
+            "iter": 16
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 4098,
+            "instruction": "RELU",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "smatmul",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "SMATMUL_OS",
+          "SMATMUL_BIAS"
+        ],
+        "name": "smatmul",
+        "param": {
+          "tileCols": 16,
+          "tileRows": 16
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/smatmul",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 10,
+            "instruction": "SMATMUL_BIAS",
+            "iter": 4
+          },
+          {
+            "cycles": 4386,
+            "instruction": "SMATMUL_OS.cgroups",
+            "iter": 16
+          },
+          {
+            "cycles": 116,
+            "instruction": "SMATMUL_OS.first",
+            "iter": 16
+          },
+          {
+            "cycles": 374,
+            "instruction": "SMATMUL_OS.kgroups",
+            "iter": 16
+          },
+          {
+            "cycles": 260,
+            "instruction": "SMATMUL_OS.last",
+            "iter": 16
+          },
+          {
+            "cycles": 100,
+            "instruction": "SMATMUL_OS.middle",
+            "iter": 16
+          },
+          {
+            "cycles": 71,
+            "instruction": "SMATMUL_OS.vec.first",
+            "iter": 16
+          },
+          {
+            "cycles": 80,
+            "instruction": "SMATMUL_OS.vec.last",
+            "iter": 16
+          },
+          {
+            "cycles": 70,
+            "instruction": "SMATMUL_OS.vec.middle",
+            "iter": 16
+          },
+          {
+            "cycles": 81,
+            "instruction": "SMATMUL_OS.vec.whole",
+            "iter": 16
+          },
+          {
+            "cycles": 276,
+            "instruction": "SMATMUL_OS.whole",
+            "iter": 16
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 10,
+            "instruction": "SMATMUL_BIAS",
+            "iter": 4
+          },
+          {
+            "cycles": 9090,
+            "instruction": "SMATMUL_OS.cgroups",
+            "iter": 64
+          },
+          {
+            "cycles": 6290,
+            "instruction": "SMATMUL_OS.first",
+            "iter": 1024
+          },
+          {
+            "cycles": 69170,
+            "instruction": "SMATMUL_OS.kgroups",
+            "iter": 1024
+          },
+          {
+            "cycles": 6434,
+            "instruction": "SMATMUL_OS.last",
+            "iter": 1024
+          },
+          {
+            "cycles": 6274,
+            "instruction": "SMATMUL_OS.middle",
+            "iter": 1024
+          },
+          {
+            "cycles": 4355,
+            "instruction": "SMATMUL_OS.vec.first",
+            "iter": 1024
+          },
+          {
+            "cycles": 4364,
+            "instruction": "SMATMUL_OS.vec.last",
+            "iter": 1024
+          },
+          {
+            "cycles": 4354,
+            "instruction": "SMATMUL_OS.vec.middle",
+            "iter": 1024
+          },
+          {
+            "cycles": 4365,
+            "instruction": "SMATMUL_OS.vec.whole",
+            "iter": 1024
+          },
+          {
+            "cycles": 6450,
+            "instruction": "SMATMUL_OS.whole",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "toint8",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "QUANT_F32_TO_I8",
+          "QUANT_I32_TO_I8"
+        ],
+        "name": "toint8",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/toint8",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 63,
+            "instruction": "QUANT_F32_TO_I8",
+            "iter": 4
+          },
+          {
+            "cycles": 63,
+            "instruction": "QUANT_I32_TO_I8",
+            "iter": 4
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 13833,
+            "instruction": "QUANT_F32_TO_I8",
+            "iter": 1024
+          },
+          {
+            "cycles": 13833,
+            "instruction": "QUANT_I32_TO_I8",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "trace",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "BDB_COUNTER"
+        ],
+        "name": "trace",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/trace",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 2,
+            "instruction": "BDB_COUNTER",
+            "iter": 0
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 2,
+            "instruction": "BDB_COUNTER",
+            "iter": 0
+          }
+        ]
+      }
+    },
+    {
+      "ball": "transpose",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "TRANSPOSE"
+        ],
+        "name": "transpose",
+        "param": {
+          "InputNum": 16,
+          "inputWidth": 8
+        },
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/transpose",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 9,
+            "instruction": "TRANSPOSE.i32",
+            "iter": 1
+          },
+          {
+            "cycles": 21,
+            "instruction": "TRANSPOSE.i8",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 14337,
+            "instruction": "TRANSPOSE.i32",
+            "iter": 1024
+          },
+          {
+            "cycles": 51201,
+            "instruction": "TRANSPOSE.i8",
+            "iter": 1024
+          }
+        ]
+      }
+    },
+    {
+      "ball": "vector",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "VECMAT16"
+        ],
+        "name": "vector",
+        "param": {
+          "InputNum": 16,
+          "inputWidth": 8,
+          "lane": 16,
+          "numCasThreads": 16,
+          "numMulThreads": 16,
+          "outputWidth": 32
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 4
+        }
+      },
+      "path": "examples/prefab/balls/vector",
+      "performance": {
+        "latency": [
+          {
+            "cycles": 100,
+            "instruction": "VECMAT16",
+            "iter": 1
+          }
+        ],
+        "status": "pass",
+        "throughput": [
+          {
+            "cycles": 2146,
+            "instruction": "VECMAT16",
+            "iter": 1024
+          }
+        ]
+      }
+    }
+  ],
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-23T06:29:18.012739+00:00"
+}

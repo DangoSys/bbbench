@@ -1,0 +1,408 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "poly/harts/reduce-unpack",
+      "path": "examples/designs/poly/harts/reduce-unpack",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-24-02-02-poly-bebop-bemu-hart-reduce-unpack-default-bare-tests",
+            "passed": 69,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_blocks_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_partial_rows_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_strided_block2_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_strided_block4_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_strided_rows_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_strided_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_unaligned_stream-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-f32add_groups-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-f32add_pipeline-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-intnorm_extreme-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-intnorm_round-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-intnorm_signed-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-intnorm_wide-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-intnorm_zero-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mset_transfer_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mvin_2d_pixel_stride_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mvin_2d_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mvin_mvout_acc_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mvin_mvout_group_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mvin_mvout_stride_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mvin_mvout_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mvin_mvout_unaligned_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mvin_unaligned_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_exhaustive-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_extremes-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_full_bank-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_metadata_tail-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_single-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_unused_field-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-reduce_quant-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-tlb_bare_mode_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-tlb_repeated_sfence_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-tlb_sfence_flush_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-tlb_sfence_remap_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-tlb_sv39_4k_alias_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-tlb_sv39_identity_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-tlb_sv39_nonidentity_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-tutorial-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-trace_events-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-ball_f32add_groups-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-ball_intnorm_round-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-ball_mxint8quantize_random-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-ball_mxint8unpack_single-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-bank_f32add_groups-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-bank_intnorm_round-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-bank_mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-bank_mxint8act_reference-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-bank_mxint8quantize_random-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-bank_mxint8unpack_blocks-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-base_bank_loop_carried-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-base_bank_mvin_mvout_16x16_i8-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-base_bank_transfer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-base_dma_blocks-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-base_dma_strided-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-base_memref_copy_dynamic-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-base_mvin_mvout_16x16_i8-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-compiler_integer_norm-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-compiler_packed_decode-baremetal"
+              }
+            ],
+            "total": 69
+          },
+          "verilator": {
+            "log": "2026-11-24-02-02-poly-bebop-verilator-hart-reduce-unpack-default-bare-tests",
+            "passed": 25,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_partial_rows_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_unaligned_stream-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-f32add_groups-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-f32add_pipeline-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-intnorm_extreme-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-intnorm_round-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_extremes-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_full_bank-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_metadata_tail-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_single-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-mxint8unpack_unused_field-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-reduce_quant-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-trace_events-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-ball_mxint8quantize_random-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-ball_mxint8unpack_single-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-main-mlirtest-bank_mxint8unpack_blocks-baremetal"
+              }
+            ],
+            "total": 25
+          }
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "taken": "2026-11-23T17:52:07.245341+00:00"
+}

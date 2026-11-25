@@ -1,0 +1,2149 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "area": {
+        "constraints_met": false,
+        "hierarchy": [
+          {
+            "combinational_um2": 62.0928,
+            "instance": "Rocket",
+            "module": "Rocket",
+            "noncombinational_um2": 0.0,
+            "um2": 11036242.9271
+          },
+          {
+            "combinational_um2": 21946.9831,
+            "instance": "execution",
+            "module": "Execution",
+            "noncombinational_um2": 47243.2121,
+            "um2": 2455618.4304
+          },
+          {
+            "combinational_um2": 33332.5445,
+            "instance": "execution/checker_0",
+            "module": "PMPChecker_s3_2",
+            "noncombinational_um2": 0.0,
+            "um2": 33332.5445
+          },
+          {
+            "combinational_um2": 36787.162,
+            "instance": "execution/checker_1",
+            "module": "PMPChecker_s3_1",
+            "noncombinational_um2": 0.0,
+            "um2": 36787.162
+          },
+          {
+            "combinational_um2": 64685.6458,
+            "instance": "execution/fetch",
+            "module": "Fetch",
+            "noncombinational_um2": 42006.7192,
+            "um2": 801037.2234
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "execution/fetch/array",
+            "module": "array",
+            "noncombinational_um2": 0.0,
+            "um2": 694344.8583
+          },
+          {
+            "combinational_um2": 1808.2177,
+            "instance": "execution/fetch/array/array_ext",
+            "module": "array_ext",
+            "noncombinational_um2": 0.0,
+            "um2": 694344.8583
+          },
+          {
+            "combinational_um2": 21256.4356,
+            "instance": "execution/fpu",
+            "module": "FPU",
+            "noncombinational_um2": 7802.9951,
+            "um2": 705611.2955
+          },
+          {
+            "combinational_um2": 4801.8434,
+            "instance": "execution/fpu/dfma",
+            "module": "FPUFMAPipe_l6_f64",
+            "noncombinational_um2": 10708.1854,
+            "um2": 235803.9962
+          },
+          {
+            "combinational_um2": 126481.1541,
+            "instance": "execution/fpu/dfma/fma",
+            "module": "MulAddRecFNPipe_l4_e11_s53",
+            "noncombinational_um2": 35238.6042,
+            "um2": 220293.9674
+          },
+          {
+            "combinational_um2": 5.6448,
+            "instance": "execution/fpu/divSqrt",
+            "module": "DivSqrtRecFM_small_e8_s24",
+            "noncombinational_um2": 0.0,
+            "um2": 15288.0001
+          },
+          {
+            "combinational_um2": 5.6448,
+            "instance": "execution/fpu/divSqrt_1",
+            "module": "DivSqrtRecFM_small_e11_s53",
+            "noncombinational_um2": 0.0,
+            "um2": 30060.4418
+          },
+          {
+            "combinational_um2": 955.8528,
+            "instance": "execution/fpu/fp_decoder",
+            "module": "FPUDecoder",
+            "noncombinational_um2": 0.0,
+            "um2": 955.8528
+          },
+          {
+            "combinational_um2": 14294.5155,
+            "instance": "execution/fpu/fpiu",
+            "module": "FPToInt",
+            "noncombinational_um2": 5492.3903,
+            "um2": 36444.7109
+          },
+          {
+            "combinational_um2": 11758.1186,
+            "instance": "execution/fpu/fpiu/conv",
+            "module": "RecFNToIN_e11_s53_i64",
+            "noncombinational_um2": 0.0,
+            "um2": 11758.1186
+          },
+          {
+            "combinational_um2": 2749.0177,
+            "instance": "execution/fpu/fpiu/dcmp",
+            "module": "CompareRecFN",
+            "noncombinational_um2": 0.0,
+            "um2": 2749.0177
+          },
+          {
+            "combinational_um2": 2150.6688,
+            "instance": "execution/fpu/fpiu/narrow",
+            "module": "RecFNToIN_e11_s53_i32",
+            "noncombinational_um2": 0.0,
+            "um2": 2150.6688
+          },
+          {
+            "combinational_um2": 5552.6017,
+            "instance": "execution/fpu/fpmu",
+            "module": "FPToFP",
+            "noncombinational_um2": 8220.7103,
+            "um2": 18272.2177
+          },
+          {
+            "combinational_um2": 58.3296,
+            "instance": "execution/fpu/fpmu/narrower",
+            "module": "RecFNToRecFN",
+            "noncombinational_um2": 0.0,
+            "um2": 4498.9057
+          },
+          {
+            "combinational_um2": 13120.3971,
+            "instance": "execution/fpu/ifpu",
+            "module": "IntToFP",
+            "noncombinational_um2": 5543.1935,
+            "um2": 64873.8054
+          },
+          {
+            "combinational_um2": 13225.7667,
+            "instance": "execution/fpu/ifpu/i2f_0",
+            "module": "PipelinedINToRecFN",
+            "noncombinational_um2": 11312.179,
+            "um2": 25896.461
+          },
+          {
+            "combinational_um2": 11116.493,
+            "instance": "execution/fpu/ifpu/i2f_1",
+            "module": "PipelinedINToRecFN_1",
+            "noncombinational_um2": 5975.9615,
+            "um2": 20313.7538
+          },
+          {
+            "combinational_um2": 109258.8692,
+            "instance": "execution/fpu/regfile_ext",
+            "module": "regfile_32x65",
+            "noncombinational_um2": 82188.2867,
+            "um2": 191447.156
+          },
+          {
+            "combinational_um2": 1875.9553,
+            "instance": "execution/fpu/sfma",
+            "module": "FPUFMAPipe_l5_f32",
+            "noncombinational_um2": 4148.9279,
+            "um2": 83405.684
+          },
+          {
+            "combinational_um2": 34709.8759,
+            "instance": "execution/fpu/sfma/fma",
+            "module": "MulAddRecFNPipe_l4_e8_s24",
+            "noncombinational_um2": 18347.4813,
+            "um2": 77380.8008
+          },
+          {
+            "combinational_um2": 30039.7445,
+            "instance": "execution/lineChecker",
+            "module": "PMPChecker_s6",
+            "noncombinational_um2": 0.0,
+            "um2": 30039.7445
+          },
+          {
+            "combinational_um2": 83012.4314,
+            "instance": "execution/lsu",
+            "module": "Lsu",
+            "noncombinational_um2": 166103.8823,
+            "um2": 307959.5913
+          },
+          {
+            "combinational_um2": 58843.2776,
+            "instance": "execution/lsu/checker_0",
+            "module": "PMPChecker_s3_0",
+            "noncombinational_um2": 0.0,
+            "um2": 58843.2776
+          },
+          {
+            "combinational_um2": 118527.6317,
+            "instance": "execution/pipeline",
+            "module": "RocketBB",
+            "noncombinational_um2": 113353.227,
+            "um2": 471660.6741
+          },
+          {
+            "combinational_um2": 18934.5411,
+            "instance": "execution/pipeline/alu",
+            "module": "RocketALU",
+            "noncombinational_um2": 0.0,
+            "um2": 18934.5411
+          },
+          {
+            "combinational_um2": 6028.6465,
+            "instance": "execution/pipeline/bpu",
+            "module": "BreakpointUnit",
+            "noncombinational_um2": 0.0,
+            "um2": 6028.6465
+          },
+          {
+            "combinational_um2": 71335.2201,
+            "instance": "execution/pipeline/csr",
+            "module": "RocketImpl_Anon",
+            "noncombinational_um2": 63837.042,
+            "um2": 135172.262
+          },
+          {
+            "combinational_um2": 60926.209,
+            "instance": "execution/pipeline/div",
+            "module": "MulDiv",
+            "noncombinational_um2": 8559.3983,
+            "um2": 69485.6073
+          },
+          {
+            "combinational_um2": 3415.1041,
+            "instance": "execution/pipeline/ibuf",
+            "module": "IBuf",
+            "noncombinational_um2": 2333.184,
+            "um2": 9479.5009
+          },
+          {
+            "combinational_um2": 3731.2129,
+            "instance": "execution/pipeline/ibuf/exp",
+            "module": "RVCExpander",
+            "noncombinational_um2": 0.0,
+            "um2": 3731.2129
+          },
+          {
+            "combinational_um2": 679.2576,
+            "instance": "execution/pipeline/ll_arb",
+            "module": "Arbiter",
+            "noncombinational_um2": 0.0,
+            "um2": 679.2576
+          },
+          {
+            "combinational_um2": 3012.4417,
+            "instance": "memory",
+            "module": "MemorySystem",
+            "noncombinational_um2": 79.0272,
+            "um2": 8580562.4039
+          },
+          {
+            "combinational_um2": 259.6608,
+            "instance": "memory/cacheOwners",
+            "module": "Queue_5",
+            "noncombinational_um2": 261.5424,
+            "um2": 521.2032
+          },
+          {
+            "combinational_um2": 1303.9488,
+            "instance": "memory/cacheRequests",
+            "module": "Arbiter_1",
+            "noncombinational_um2": 0.0,
+            "um2": 1303.9488
+          },
+          {
+            "combinational_um2": 148.6464,
+            "instance": "memory/dcache",
+            "module": "Cache",
+            "noncombinational_um2": 0.0,
+            "um2": 1893605.0534
+          },
+          {
+            "combinational_um2": 3904.3201,
+            "instance": "memory/dcache/cache",
+            "module": "BankedChiCache_1",
+            "noncombinational_um2": 169.344,
+            "um2": 1870801.9432
+          },
+          {
+            "combinational_um2": 185399.6964,
+            "instance": "memory/dcache/cache/caches_0",
+            "module": "ChiCache_2",
+            "noncombinational_um2": 145148.5033,
+            "um2": 900203.7621
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "memory/dcache/cache/caches_0/data",
+            "module": "data_1",
+            "noncombinational_um2": 0.0,
+            "um2": 468910.9344
+          },
+          {
+            "combinational_um2": 185505.066,
+            "instance": "memory/dcache/cache/caches_1",
+            "module": "ChiCache_3",
+            "noncombinational_um2": 145146.6217,
+            "um2": 900301.6053
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "memory/dcache/cache/caches_1/data",
+            "module": "data_2",
+            "noncombinational_um2": 0.0,
+            "um2": 468910.9344
+          },
+          {
+            "combinational_um2": 5531.9042,
+            "instance": "memory/dcache/cache/datArb",
+            "module": "RRArbiter_2_1",
+            "noncombinational_um2": 41.3952,
+            "um2": 5573.2994
+          },
+          {
+            "combinational_um2": 13487.3088,
+            "instance": "memory/dcache/cache/datQueue",
+            "module": "Queue_3_1",
+            "noncombinational_um2": 27983.1548,
+            "um2": 41470.4636
+          },
+          {
+            "combinational_um2": 965.2608,
+            "instance": "memory/dcache/cache/reqArb",
+            "module": "RRArbiter_8",
+            "noncombinational_um2": 41.3952,
+            "um2": 1006.656
+          },
+          {
+            "combinational_um2": 3381.2352,
+            "instance": "memory/dcache/cache/reqQueue",
+            "module": "Queue_1_0",
+            "noncombinational_um2": 7989.2735,
+            "um2": 11370.5087
+          },
+          {
+            "combinational_um2": 295.4112,
+            "instance": "memory/dcache/cache/retirement",
+            "module": "Queue_0",
+            "noncombinational_um2": 252.1344,
+            "um2": 547.5456
+          },
+          {
+            "combinational_um2": 492.9792,
+            "instance": "memory/dcache/cache/rspArb",
+            "module": "RRArbiter_1_1",
+            "noncombinational_um2": 41.3952,
+            "um2": 534.3744
+          },
+          {
+            "combinational_um2": 1721.664,
+            "instance": "memory/dcache/cache/rspQueue",
+            "module": "Queue_2_1",
+            "noncombinational_um2": 3998.3999,
+            "um2": 5720.064
+          },
+          {
+            "combinational_um2": 1509.0432,
+            "instance": "memory/dcache/maintenance",
+            "module": "Maintenance",
+            "noncombinational_um2": 1862.784,
+            "um2": 3371.8272
+          },
+          {
+            "combinational_um2": 5864.9472,
+            "instance": "memory/dcache/requestQueue",
+            "module": "Queue_4",
+            "noncombinational_um2": 11545.4974,
+            "um2": 17410.4446
+          },
+          {
+            "combinational_um2": 1830.7968,
+            "instance": "memory/dcache/requests",
+            "module": "RRArbiter_9",
+            "noncombinational_um2": 41.3952,
+            "um2": 1872.192
+          },
+          {
+            "combinational_um2": 13698.0481,
+            "instance": "memory/fetch",
+            "module": "VirtualAccess",
+            "noncombinational_um2": 6894.1823,
+            "um2": 222619.6234
+          },
+          {
+            "combinational_um2": 9153.9841,
+            "instance": "memory/fetch/physical",
+            "module": "PhysicalAccess",
+            "noncombinational_um2": 438.4128,
+            "um2": 9592.3969
+          },
+          {
+            "combinational_um2": 105657.4871,
+            "instance": "memory/fetch/walker",
+            "module": "Walker_1",
+            "noncombinational_um2": 86777.5091,
+            "um2": 192434.9961
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "memory/home",
+            "module": "Home",
+            "noncombinational_um2": 0.0,
+            "um2": 4525197.9543
+          },
+          {
+            "combinational_um2": 282.24,
+            "instance": "memory/home/fabric",
+            "module": "Fabric",
+            "noncombinational_um2": 0.0,
+            "um2": 747046.0005
+          },
+          {
+            "combinational_um2": 6833.9714,
+            "instance": "memory/home/fabric/data",
+            "module": "RRArbiter_2_0",
+            "noncombinational_um2": 41.3952,
+            "um2": 6875.3666
+          },
+          {
+            "combinational_um2": 2587.2001,
+            "instance": "memory/home/fabric/requests",
+            "module": "RRArbiter_0",
+            "noncombinational_um2": 41.3952,
+            "um2": 2628.5953
+          },
+          {
+            "combinational_um2": 1290.7776,
+            "instance": "memory/home/fabric/responses",
+            "module": "RRArbiter_1_0",
+            "noncombinational_um2": 41.3952,
+            "um2": 1332.1728
+          },
+          {
+            "combinational_um2": 13413.9267,
+            "instance": "memory/home/fabric/rx",
+            "module": "Rx_4",
+            "noncombinational_um2": 23173.7852,
+            "um2": 36587.7119
+          },
+          {
+            "combinational_um2": 6815.1553,
+            "instance": "memory/home/fabric/rx_1",
+            "module": "Rx_1_3",
+            "noncombinational_um2": 11635.8142,
+            "um2": 18450.9696
+          },
+          {
+            "combinational_um2": 35543.4248,
+            "instance": "memory/home/fabric/rx_10",
+            "module": "Rx_2_0",
+            "noncombinational_um2": 61897.1126,
+            "um2": 97440.5374
+          },
+          {
+            "combinational_um2": 8913.1394,
+            "instance": "memory/home/fabric/rx_11",
+            "module": "Rx_3_0",
+            "noncombinational_um2": 15271.0654,
+            "um2": 24184.2047
+          },
+          {
+            "combinational_um2": 35541.5432,
+            "instance": "memory/home/fabric/rx_2",
+            "module": "Rx_2_3",
+            "noncombinational_um2": 61897.1126,
+            "um2": 97438.6558
+          },
+          {
+            "combinational_um2": 13438.3875,
+            "instance": "memory/home/fabric/rx_3",
+            "module": "Rx_0",
+            "noncombinational_um2": 23173.7852,
+            "um2": 36612.1727
+          },
+          {
+            "combinational_um2": 6815.1553,
+            "instance": "memory/home/fabric/rx_4",
+            "module": "Rx_1_2",
+            "noncombinational_um2": 11635.8142,
+            "um2": 18450.9696
+          },
+          {
+            "combinational_um2": 35541.5432,
+            "instance": "memory/home/fabric/rx_5",
+            "module": "Rx_2_2",
+            "noncombinational_um2": 61897.1126,
+            "um2": 97438.6558
+          },
+          {
+            "combinational_um2": 6815.1553,
+            "instance": "memory/home/fabric/rx_6",
+            "module": "Rx_1_1",
+            "noncombinational_um2": 11635.8142,
+            "um2": 18450.9696
+          },
+          {
+            "combinational_um2": 35541.5432,
+            "instance": "memory/home/fabric/rx_7",
+            "module": "Rx_2_1",
+            "noncombinational_um2": 61897.1126,
+            "um2": 97438.6558
+          },
+          {
+            "combinational_um2": 8896.205,
+            "instance": "memory/home/fabric/rx_8",
+            "module": "Rx_3_1",
+            "noncombinational_um2": 15271.0654,
+            "um2": 24167.2703
+          },
+          {
+            "combinational_um2": 6815.1553,
+            "instance": "memory/home/fabric/rx_9",
+            "module": "Rx_1_0",
+            "noncombinational_um2": 11635.8142,
+            "um2": 18450.9696
+          },
+          {
+            "combinational_um2": 3296.5633,
+            "instance": "memory/home/fabric/tx",
+            "module": "Tx_4",
+            "noncombinational_um2": 6167.8846,
+            "um2": 9464.4479
+          },
+          {
+            "combinational_um2": 1687.7952,
+            "instance": "memory/home/fabric/tx_1",
+            "module": "Tx_1_3",
+            "noncombinational_um2": 3146.0351,
+            "um2": 4833.8303
+          },
+          {
+            "combinational_um2": 8679.821,
+            "instance": "memory/home/fabric/tx_10",
+            "module": "Tx_2_0",
+            "noncombinational_um2": 16309.7083,
+            "um2": 24989.5293
+          },
+          {
+            "combinational_um2": 2193.9456,
+            "instance": "memory/home/fabric/tx_11",
+            "module": "Tx_3_0",
+            "noncombinational_um2": 4098.1247,
+            "um2": 6292.0703
+          },
+          {
+            "combinational_um2": 8681.7026,
+            "instance": "memory/home/fabric/tx_2",
+            "module": "Tx_2_3",
+            "noncombinational_um2": 16309.7083,
+            "um2": 24991.4109
+          },
+          {
+            "combinational_um2": 3296.5633,
+            "instance": "memory/home/fabric/tx_3",
+            "module": "Tx_0",
+            "noncombinational_um2": 6167.8846,
+            "um2": 9464.4479
+          },
+          {
+            "combinational_um2": 1689.6768,
+            "instance": "memory/home/fabric/tx_4",
+            "module": "Tx_1_2",
+            "noncombinational_um2": 3146.0351,
+            "um2": 4835.7119
+          },
+          {
+            "combinational_um2": 8681.7026,
+            "instance": "memory/home/fabric/tx_5",
+            "module": "Tx_2_2",
+            "noncombinational_um2": 16309.7083,
+            "um2": 24991.4109
+          },
+          {
+            "combinational_um2": 1689.6768,
+            "instance": "memory/home/fabric/tx_6",
+            "module": "Tx_1_1",
+            "noncombinational_um2": 3146.0351,
+            "um2": 4835.7119
+          },
+          {
+            "combinational_um2": 8679.821,
+            "instance": "memory/home/fabric/tx_7",
+            "module": "Tx_2_1",
+            "noncombinational_um2": 16309.7083,
+            "um2": 24989.5293
+          },
+          {
+            "combinational_um2": 2193.9456,
+            "instance": "memory/home/fabric/tx_8",
+            "module": "Tx_3_1",
+            "noncombinational_um2": 4098.1247,
+            "um2": 6292.0703
+          },
+          {
+            "combinational_um2": 1689.6768,
+            "instance": "memory/home/fabric/tx_9",
+            "module": "Tx_1_0",
+            "noncombinational_um2": 3146.0351,
+            "um2": 4835.7119
+          },
+          {
+            "combinational_um2": 263521.8505,
+            "instance": "memory/home/home",
+            "module": "Coherence",
+            "noncombinational_um2": 189251.3229,
+            "um2": 3778151.9538
+          },
+          {
+            "combinational_um2": 351925.0635,
+            "instance": "memory/home/home/cache",
+            "module": "Cache_1",
+            "noncombinational_um2": 382623.3539,
+            "um2": 3020380.8284
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "memory/home/home/cache/data_0",
+            "module": "data_0_0",
+            "noncombinational_um2": 0.0,
+            "um2": 554403.7509
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "memory/home/home/cache/data_1",
+            "module": "data_1_0",
+            "noncombinational_um2": 0.0,
+            "um2": 554403.7509
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "memory/home/home/cache/data_2",
+            "module": "data_2_0",
+            "noncombinational_um2": 0.0,
+            "um2": 554403.7509
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "memory/home/home/cache/data_3",
+            "module": "data_3",
+            "noncombinational_um2": 0.0,
+            "um2": 554403.7509
+          },
+          {
+            "combinational_um2": 22769.2416,
+            "instance": "memory/home/home/cache/responses",
+            "module": "Queue_6",
+            "noncombinational_um2": 45448.1657,
+            "um2": 68217.4073
+          },
+          {
+            "combinational_um2": 3710.5153,
+            "instance": "memory/home/home/cacheArb",
+            "module": "RRArbiter_3",
+            "noncombinational_um2": 124.1856,
+            "um2": 3834.7009
+          },
+          {
+            "combinational_um2": 3341.7216,
+            "instance": "memory/home/home/cacheQueue",
+            "module": "Queue_7",
+            "noncombinational_um2": 7712.6783,
+            "um2": 11054.3999
+          },
+          {
+            "combinational_um2": 19521.6006,
+            "instance": "memory/home/home/datArb",
+            "module": "RRArbiter_7",
+            "noncombinational_um2": 124.1856,
+            "um2": 19645.7862
+          },
+          {
+            "combinational_um2": 13812.8256,
+            "instance": "memory/home/home/datQueue",
+            "module": "Queue_3_0",
+            "noncombinational_um2": 28654.886,
+            "um2": 42467.7116
+          },
+          {
+            "combinational_um2": 24353.5493,
+            "instance": "memory/home/home/directory",
+            "module": "Directory",
+            "noncombinational_um2": 31791.5127,
+            "um2": 56145.062
+          },
+          {
+            "combinational_um2": 34374.9515,
+            "instance": "memory/home/home/memArb",
+            "module": "RRArbiter_4",
+            "noncombinational_um2": 124.1856,
+            "um2": 34499.1371
+          },
+          {
+            "combinational_um2": 23356.3008,
+            "instance": "memory/home/home/memQueue",
+            "module": "Queue_8",
+            "noncombinational_um2": 47700.4409,
+            "um2": 71056.7417
+          },
+          {
+            "combinational_um2": 15967.2579,
+            "instance": "memory/home/home/mshr",
+            "module": "Mshr",
+            "noncombinational_um2": 27674.5723,
+            "um2": 43641.8302
+          },
+          {
+            "combinational_um2": 2109.2737,
+            "instance": "memory/home/home/rspArb",
+            "module": "RRArbiter_6",
+            "noncombinational_um2": 124.1856,
+            "um2": 2233.4593
+          },
+          {
+            "combinational_um2": 2024.6016,
+            "instance": "memory/home/home/rspQueue",
+            "module": "Queue_2_0",
+            "noncombinational_um2": 4670.1311,
+            "um2": 6694.7327
+          },
+          {
+            "combinational_um2": 3584.4481,
+            "instance": "memory/home/home/snpArb",
+            "module": "RRArbiter_5",
+            "noncombinational_um2": 124.1856,
+            "um2": 3708.6337
+          },
+          {
+            "combinational_um2": 3093.3504,
+            "instance": "memory/home/home/snpQueue",
+            "module": "Queue_9",
+            "noncombinational_um2": 6922.4063,
+            "um2": 10015.7567
+          },
+          {
+            "combinational_um2": 10429.7091,
+            "instance": "memory/icache",
+            "module": "BankedChiCache",
+            "noncombinational_um2": 82.7904,
+            "um2": 1657808.584
+          },
+          {
+            "combinational_um2": 110308.8021,
+            "instance": "memory/icache/caches_0",
+            "module": "ChiCache",
+            "noncombinational_um2": 118915.2365,
+            "um2": 790363.4792
+          },
+          {
+            "combinational_um2": 16.9344,
+            "instance": "memory/icache/caches_0/data",
+            "module": "data",
+            "noncombinational_um2": 0.0,
+            "um2": 468969.264
+          },
+          {
+            "combinational_um2": 51708.2508,
+            "instance": "memory/icache/caches_0/tags_ext",
+            "module": "tags_32x32_2",
+            "noncombinational_um2": 40461.9258,
+            "um2": 92170.1766
+          },
+          {
+            "combinational_um2": 110730.2805,
+            "instance": "memory/icache/caches_1",
+            "module": "ChiCache_1",
+            "noncombinational_um2": 118911.4733,
+            "um2": 790707.812
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "memory/icache/caches_1/data",
+            "module": "data_0",
+            "noncombinational_um2": 0.0,
+            "um2": 468907.1712
+          },
+          {
+            "combinational_um2": 51696.9612,
+            "instance": "memory/icache/caches_1/tags_ext",
+            "module": "tags_32x32_1",
+            "noncombinational_um2": 40461.9258,
+            "um2": 92158.887
+          },
+          {
+            "combinational_um2": 5531.9042,
+            "instance": "memory/icache/datArb",
+            "module": "RRArbiter_2_2",
+            "noncombinational_um2": 41.3952,
+            "um2": 5573.2994
+          },
+          {
+            "combinational_um2": 13487.3088,
+            "instance": "memory/icache/datQueue",
+            "module": "Queue_3_2",
+            "noncombinational_um2": 27983.1548,
+            "um2": 41470.4636
+          },
+          {
+            "combinational_um2": 965.2608,
+            "instance": "memory/icache/reqArb",
+            "module": "RRArbiter_10",
+            "noncombinational_um2": 41.3952,
+            "um2": 1006.656
+          },
+          {
+            "combinational_um2": 3381.2352,
+            "instance": "memory/icache/reqQueue",
+            "module": "Queue_1_1",
+            "noncombinational_um2": 7989.2735,
+            "um2": 11370.5087
+          },
+          {
+            "combinational_um2": 297.2928,
+            "instance": "memory/icache/retirement",
+            "module": "Queue_10",
+            "noncombinational_um2": 252.1344,
+            "um2": 549.4272
+          },
+          {
+            "combinational_um2": 492.9792,
+            "instance": "memory/icache/rspArb",
+            "module": "RRArbiter_1_2",
+            "noncombinational_um2": 41.3952,
+            "um2": 534.3744
+          },
+          {
+            "combinational_um2": 1721.664,
+            "instance": "memory/icache/rspQueue",
+            "module": "Queue_2_2",
+            "noncombinational_um2": 3998.3999,
+            "um2": 5720.064
+          },
+          {
+            "combinational_um2": 20456.7555,
+            "instance": "memory/memory",
+            "module": "VirtualAccess_1",
+            "noncombinational_um2": 10017.6382,
+            "um2": 253921.9213
+          },
+          {
+            "combinational_um2": 7626.125,
+            "instance": "memory/memory/physical",
+            "module": "PhysicalAccess_1",
+            "noncombinational_um2": 895.6416,
+            "um2": 8521.7666
+          },
+          {
+            "combinational_um2": 126264.7703,
+            "instance": "memory/memory/walker",
+            "module": "Walker_0",
+            "noncombinational_um2": 88660.9906,
+            "um2": 214925.761
+          },
+          {
+            "combinational_um2": 12934.1187,
+            "instance": "memory/uncached",
+            "module": "Uncached",
+            "noncombinational_um2": 7633.6511,
+            "um2": 20567.7698
+          },
+          {
+            "combinational_um2": 1924.8768,
+            "instance": "memory/uncachedRequests",
+            "module": "Arbiter_2",
+            "noncombinational_um2": 0.0,
+            "um2": 1924.8768
+          }
+        ],
+        "library": "scc018ug_uhd_rvt_ss_v1p62_125c_ccs.db",
+        "status": "pass",
+        "timing": {
+          "endpoint": "memory/dcache/cache/caches_0/data/data_ext/mem_0_0",
+          "slack_ns": -1.0,
+          "startpoint": "execution/pipeline/csr/reg_bp_0_address_reg_16_"
+        },
+        "tool": "DC",
+        "um2": 11036242.927102,
+        "violations": {
+          "max_delay/setup": 5046,
+          "max_fanout": 2
+        }
+      },
+      "hart": "rocket",
+      "path": "examples/prefab/harts/rocket",
+      "power": {
+        "annotated": {
+          "nets": 24.75,
+          "registers": 91.26
+        },
+        "hierarchy": [
+          {
+            "instance": "Rocket",
+            "internal_w": 0.341,
+            "leakage_w": 0.000136,
+            "module": "Rocket",
+            "switching_w": 0.00223,
+            "total_w": 0.343
+          },
+          {
+            "instance": "execution",
+            "internal_w": 0.0782,
+            "leakage_w": 3.84e-05,
+            "module": "Execution",
+            "switching_w": 0.00129,
+            "total_w": 0.0795
+          },
+          {
+            "instance": "execution/checker_0",
+            "internal_w": 1.66e-05,
+            "leakage_w": 6.02e-07,
+            "module": "PMPChecker_s3_2",
+            "switching_w": 1.1e-05,
+            "total_w": 2.81e-05
+          },
+          {
+            "instance": "execution/checker_1",
+            "internal_w": 6.17e-05,
+            "leakage_w": 7.37e-07,
+            "module": "PMPChecker_s3_1",
+            "switching_w": 4.81e-05,
+            "total_w": 0.000111
+          },
+          {
+            "instance": "execution/fpu",
+            "internal_w": 0.0244,
+            "leakage_w": 1.42e-05,
+            "module": "FPU",
+            "switching_w": 3.75e-06,
+            "total_w": 0.0244
+          },
+          {
+            "instance": "execution/fpu/ifpu",
+            "internal_w": 0.00269,
+            "leakage_w": 1.29e-06,
+            "module": "IntToFP",
+            "switching_w": 7.87e-08,
+            "total_w": 0.00269
+          },
+          {
+            "instance": "execution/fpu/ifpu/i2f_0",
+            "internal_w": 0.00133,
+            "leakage_w": 5.32e-07,
+            "module": "PipelinedINToRecFN",
+            "switching_w": 2.55e-08,
+            "total_w": 0.00133
+          },
+          {
+            "instance": "execution/fpu/ifpu/i2f_0/roundAnyRawFNToRecFN",
+            "internal_w": 4.61e-09,
+            "leakage_w": 1.85e-08,
+            "module": "RoundAnyRawFNToRecFN_ie7_is64_oe8_os24",
+            "switching_w": 5.11e-09,
+            "total_w": 2.82e-08
+          },
+          {
+            "instance": "execution/fpu/ifpu/i2f_1",
+            "internal_w": 0.000704,
+            "leakage_w": 4.03e-07,
+            "module": "PipelinedINToRecFN_1",
+            "switching_w": 2.43e-08,
+            "total_w": 0.000705
+          },
+          {
+            "instance": "execution/fpu/ifpu/i2f_1/roundAnyRawFNToRecFN",
+            "internal_w": 1.15e-08,
+            "leakage_w": 6.21e-08,
+            "module": "RoundAnyRawFNToRecFN_ie7_is64_oe11_os53",
+            "switching_w": 7.2e-09,
+            "total_w": 8.08e-08
+          },
+          {
+            "instance": "execution/fpu/dfma",
+            "internal_w": 0.0054,
+            "leakage_w": 4.95e-06,
+            "module": "FPUFMAPipe_l6_f64",
+            "switching_w": 6.7e-08,
+            "total_w": 0.00541
+          },
+          {
+            "instance": "execution/fpu/dfma/fma",
+            "internal_w": 0.00414,
+            "leakage_w": 4.59e-06,
+            "module": "MulAddRecFNPipe_l4_e11_s53",
+            "switching_w": 6.7e-08,
+            "total_w": 0.00415
+          },
+          {
+            "instance": "execution/fpu/dfma/fma/mulAddRecFNToRaw_preMul",
+            "internal_w": 0.0,
+            "leakage_w": 3.16e-07,
+            "module": "MulAddRecFNToRaw_preMul_e11_s53",
+            "switching_w": 0.0,
+            "total_w": 3.16e-07
+          },
+          {
+            "instance": "execution/fpu/dfma/fma/mulAddRecFNToRaw_postMul",
+            "internal_w": 0.0,
+            "leakage_w": 6.06e-07,
+            "module": "MulAddRecFNToRaw_postMul_e11_s53",
+            "switching_w": 0.0,
+            "total_w": 6.06e-07
+          },
+          {
+            "instance": "execution/fpu/dfma/fma/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 1.84e-07,
+            "module": "RoundRawFNToRecFN_e11_s53_0",
+            "switching_w": 0.0,
+            "total_w": 1.84e-07
+          },
+          {
+            "instance": "execution/fpu/dfma/fma/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 1.84e-07,
+            "module": "RoundAnyRawFNToRecFN_ie11_is55_oe11_os53_0",
+            "switching_w": 0.0,
+            "total_w": 1.84e-07
+          },
+          {
+            "instance": "execution/fpu/fpiu",
+            "internal_w": 0.000648,
+            "leakage_w": 6.93e-07,
+            "module": "FPToInt",
+            "switching_w": 0.0,
+            "total_w": 0.000648
+          },
+          {
+            "instance": "execution/fpu/fpiu/dcmp",
+            "internal_w": 0.0,
+            "leakage_w": 4.99e-08,
+            "module": "CompareRecFN",
+            "switching_w": 0.0,
+            "total_w": 4.99e-08
+          },
+          {
+            "instance": "execution/fpu/fpiu/narrow",
+            "internal_w": 0.0,
+            "leakage_w": 3.43e-08,
+            "module": "RecFNToIN_e11_s53_i32",
+            "switching_w": 0.0,
+            "total_w": 3.43e-08
+          },
+          {
+            "instance": "execution/fpu/fpiu/conv",
+            "internal_w": 0.0,
+            "leakage_w": 2.12e-07,
+            "module": "RecFNToIN_e11_s53_i64",
+            "switching_w": 0.0,
+            "total_w": 2.12e-07
+          },
+          {
+            "instance": "execution/fpu/regfile_ext",
+            "internal_w": 0.00972,
+            "leakage_w": 3.57e-06,
+            "module": "regfile_32x65",
+            "switching_w": 3.43e-08,
+            "total_w": 0.00972
+          },
+          {
+            "instance": "execution/fpu/fpmu",
+            "internal_w": 0.00097,
+            "leakage_w": 3.99e-07,
+            "module": "FPToFP",
+            "switching_w": 2.42e-11,
+            "total_w": 0.00097
+          },
+          {
+            "instance": "execution/fpu/fpmu/narrower",
+            "internal_w": 0.0,
+            "leakage_w": 9.18e-08,
+            "module": "RecFNToRecFN",
+            "switching_w": 0.0,
+            "total_w": 9.18e-08
+          },
+          {
+            "instance": "execution/fpu/fpmu/narrower/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.13e-08,
+            "module": "RoundAnyRawFNToRecFN_ie11_is53_oe8_os24",
+            "switching_w": 0.0,
+            "total_w": 9.13e-08
+          },
+          {
+            "instance": "execution/fpu/fp_decoder",
+            "internal_w": 4.09e-06,
+            "leakage_w": 2.48e-08,
+            "module": "FPUDecoder",
+            "switching_w": 3.4e-06,
+            "total_w": 7.51e-06
+          },
+          {
+            "instance": "execution/fpu/divSqrt",
+            "internal_w": 0.000481,
+            "leakage_w": 3.06e-07,
+            "module": "DivSqrtRecFM_small_e8_s24",
+            "switching_w": 2.02e-08,
+            "total_w": 0.000481
+          },
+          {
+            "instance": "execution/fpu/divSqrt/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.19e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_1",
+            "switching_w": 0.0,
+            "total_w": 9.19e-08
+          },
+          {
+            "instance": "execution/fpu/divSqrt/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 9.19e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_1",
+            "switching_w": 0.0,
+            "total_w": 9.19e-08
+          },
+          {
+            "instance": "execution/fpu/divSqrt/divSqrtRecFNToRaw",
+            "internal_w": 0.000481,
+            "leakage_w": 2.14e-07,
+            "module": "DivSqrtRecFMToRaw_small_e8_s24",
+            "switching_w": 2.02e-08,
+            "total_w": 0.000481
+          },
+          {
+            "instance": "execution/fpu/divSqrt/divSqrtRecFNToRaw/divSqrtRawFN",
+            "internal_w": 0.000481,
+            "leakage_w": 2.12e-07,
+            "module": "DivSqrtRawFN_small_e8_s24",
+            "switching_w": 2.02e-08,
+            "total_w": 0.000481
+          },
+          {
+            "instance": "execution/fpu/sfma",
+            "internal_w": 0.00265,
+            "leakage_w": 1.76e-06,
+            "module": "FPUFMAPipe_l5_f32",
+            "switching_w": 2.24e-08,
+            "total_w": 0.00265
+          },
+          {
+            "instance": "execution/fpu/sfma/fma",
+            "internal_w": 0.00216,
+            "leakage_w": 1.62e-06,
+            "module": "MulAddRecFNPipe_l4_e8_s24",
+            "switching_w": 2.24e-08,
+            "total_w": 0.00217
+          },
+          {
+            "instance": "execution/fpu/sfma/fma/mulAddRecFNToRaw_preMul",
+            "internal_w": 0.0,
+            "leakage_w": 1.11e-07,
+            "module": "MulAddRecFNToRaw_preMul_e8_s24",
+            "switching_w": 0.0,
+            "total_w": 1.11e-07
+          },
+          {
+            "instance": "execution/fpu/sfma/fma/roundRawFNToRecFN",
+            "internal_w": 7.26e-09,
+            "leakage_w": 9.74e-08,
+            "module": "RoundRawFNToRecFN_e8_s24_0",
+            "switching_w": 4.31e-09,
+            "total_w": 1.09e-07
+          },
+          {
+            "instance": "execution/fpu/sfma/fma/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 7.26e-09,
+            "leakage_w": 9.74e-08,
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_0",
+            "switching_w": 4.31e-09,
+            "total_w": 1.09e-07
+          },
+          {
+            "instance": "execution/fpu/sfma/fma/mulAddRecFNToRaw_postMul",
+            "internal_w": 1.27e-12,
+            "leakage_w": 2.45e-07,
+            "module": "MulAddRecFNToRaw_postMul_e8_s24",
+            "switching_w": 0.0,
+            "total_w": 2.45e-07
+          },
+          {
+            "instance": "execution/fpu/divSqrt_1",
+            "internal_w": 0.000905,
+            "leakage_w": 5.96e-07,
+            "module": "DivSqrtRecFM_small_e11_s53",
+            "switching_w": 6.19e-08,
+            "total_w": 0.000905
+          },
+          {
+            "instance": "execution/fpu/divSqrt_1/roundRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 1.85e-07,
+            "module": "RoundRawFNToRecFN_e11_s53_1",
+            "switching_w": 0.0,
+            "total_w": 1.85e-07
+          },
+          {
+            "instance": "execution/fpu/divSqrt_1/roundRawFNToRecFN/roundAnyRawFNToRecFN",
+            "internal_w": 0.0,
+            "leakage_w": 1.85e-07,
+            "module": "RoundAnyRawFNToRecFN_ie11_is55_oe11_os53_1",
+            "switching_w": 0.0,
+            "total_w": 1.85e-07
+          },
+          {
+            "instance": "execution/fpu/divSqrt_1/divSqrtRecFNToRaw",
+            "internal_w": 0.000905,
+            "leakage_w": 4.11e-07,
+            "module": "DivSqrtRecFMToRaw_small_e11_s53",
+            "switching_w": 6.19e-08,
+            "total_w": 0.000905
+          },
+          {
+            "instance": "execution/fpu/divSqrt_1/divSqrtRecFNToRaw/divSqrtRawFN",
+            "internal_w": 0.000905,
+            "leakage_w": 4.1e-07,
+            "module": "DivSqrtRawFN_small_e11_s53",
+            "switching_w": 6.19e-08,
+            "total_w": 0.000905
+          },
+          {
+            "instance": "execution/fetch",
+            "internal_w": 0.00518,
+            "leakage_w": 2.47e-06,
+            "module": "Fetch",
+            "switching_w": 0.000232,
+            "total_w": 0.00542
+          },
+          {
+            "instance": "execution/fetch/array",
+            "internal_w": 1.44e-05,
+            "leakage_w": 3.21e-08,
+            "module": "array",
+            "switching_w": 4.22e-05,
+            "total_w": 5.67e-05
+          },
+          {
+            "instance": "execution/fetch/array/array_ext",
+            "internal_w": 1.44e-05,
+            "leakage_w": 3.21e-08,
+            "module": "array_ext",
+            "switching_w": 4.22e-05,
+            "total_w": 5.67e-05
+          },
+          {
+            "instance": "execution/lsu",
+            "internal_w": 0.0202,
+            "leakage_w": 7.98e-06,
+            "module": "Lsu",
+            "switching_w": 0.000392,
+            "total_w": 0.0206
+          },
+          {
+            "instance": "execution/lsu/checker_0",
+            "internal_w": 0.000108,
+            "leakage_w": 2.23e-06,
+            "module": "PMPChecker_s3_0",
+            "switching_w": 8.79e-05,
+            "total_w": 0.000198
+          },
+          {
+            "instance": "execution/lineChecker",
+            "internal_w": 3.72e-06,
+            "leakage_w": 5.81e-07,
+            "module": "PMPChecker_s6",
+            "switching_w": 2.71e-06,
+            "total_w": 7.02e-06
+          },
+          {
+            "instance": "execution/pipeline",
+            "internal_w": 0.0227,
+            "leakage_w": 1.02e-05,
+            "module": "RocketBB",
+            "switching_w": 0.000593,
+            "total_w": 0.0233
+          },
+          {
+            "instance": "execution/pipeline/alu",
+            "internal_w": 9.03e-05,
+            "leakage_w": 3.66e-07,
+            "module": "RocketALU",
+            "switching_w": 9.39e-05,
+            "total_w": 0.000185
+          },
+          {
+            "instance": "execution/pipeline/ll_arb",
+            "internal_w": 5.54e-08,
+            "leakage_w": 1.16e-08,
+            "module": "Arbiter",
+            "switching_w": 3.46e-08,
+            "total_w": 1.02e-07
+          },
+          {
+            "instance": "execution/pipeline/ibuf",
+            "internal_w": 0.000359,
+            "leakage_w": 2.66e-07,
+            "module": "IBuf",
+            "switching_w": 8.94e-05,
+            "total_w": 0.000449
+          },
+          {
+            "instance": "execution/pipeline/ibuf/exp",
+            "internal_w": 4.78e-05,
+            "leakage_w": 1.28e-07,
+            "module": "RVCExpander",
+            "switching_w": 5.29e-05,
+            "total_w": 0.000101
+          },
+          {
+            "instance": "execution/pipeline/bpu",
+            "internal_w": 2.09e-05,
+            "leakage_w": 2.19e-07,
+            "module": "BreakpointUnit",
+            "switching_w": 1.03e-05,
+            "total_w": 3.15e-05
+          },
+          {
+            "instance": "execution/pipeline/csr",
+            "internal_w": 0.0074,
+            "leakage_w": 3.08e-06,
+            "module": "RocketImpl_Anon",
+            "switching_w": 4.4e-05,
+            "total_w": 0.00745
+          },
+          {
+            "instance": "execution/pipeline/div",
+            "internal_w": 0.00102,
+            "leakage_w": 1.34e-06,
+            "module": "MulDiv",
+            "switching_w": 1.47e-05,
+            "total_w": 0.00104
+          },
+          {
+            "instance": "memory",
+            "internal_w": 0.263,
+            "leakage_w": 9.73e-05,
+            "module": "MemorySystem",
+            "switching_w": 0.000939,
+            "total_w": 0.264
+          },
+          {
+            "instance": "memory/home",
+            "internal_w": 0.146,
+            "leakage_w": 4.92e-05,
+            "module": "Home",
+            "switching_w": 0.000348,
+            "total_w": 0.146
+          },
+          {
+            "instance": "memory/home/fabric",
+            "internal_w": 0.0551,
+            "leakage_w": 1.63e-05,
+            "module": "Fabric",
+            "switching_w": 6.98e-05,
+            "total_w": 0.0552
+          },
+          {
+            "instance": "memory/home/fabric/rx_11",
+            "internal_w": 0.0018,
+            "leakage_w": 5.32e-07,
+            "module": "Rx_3_0",
+            "switching_w": 2.16e-07,
+            "total_w": 0.00181
+          },
+          {
+            "instance": "memory/home/fabric/rx",
+            "internal_w": 0.00275,
+            "leakage_w": 7.96e-07,
+            "module": "Rx_4",
+            "switching_w": 6.32e-06,
+            "total_w": 0.00275
+          },
+          {
+            "instance": "memory/home/fabric/rx_1",
+            "internal_w": 0.00138,
+            "leakage_w": 3.99e-07,
+            "module": "Rx_1_3",
+            "switching_w": 2.14e-06,
+            "total_w": 0.00138
+          },
+          {
+            "instance": "memory/home/fabric/rx_2",
+            "internal_w": 0.00731,
+            "leakage_w": 2.19e-06,
+            "module": "Rx_2_3",
+            "switching_w": 1.07e-07,
+            "total_w": 0.00732
+          },
+          {
+            "instance": "memory/home/fabric/rx_3",
+            "internal_w": 0.00274,
+            "leakage_w": 7.97e-07,
+            "module": "Rx_0",
+            "switching_w": 1.66e-06,
+            "total_w": 0.00274
+          },
+          {
+            "instance": "memory/home/fabric/requests",
+            "internal_w": 9.98e-06,
+            "leakage_w": 5.26e-08,
+            "module": "RRArbiter_0",
+            "switching_w": 3.74e-06,
+            "total_w": 1.38e-05
+          },
+          {
+            "instance": "memory/home/fabric/rx_4",
+            "internal_w": 0.00138,
+            "leakage_w": 3.98e-07,
+            "module": "Rx_1_2",
+            "switching_w": 7.81e-07,
+            "total_w": 0.00138
+          },
+          {
+            "instance": "memory/home/fabric/rx_5",
+            "internal_w": 0.00732,
+            "leakage_w": 2.14e-06,
+            "module": "Rx_2_2",
+            "switching_w": 1.27e-06,
+            "total_w": 0.00733
+          },
+          {
+            "instance": "memory/home/fabric/rx_6",
+            "internal_w": 0.00138,
+            "leakage_w": 4.01e-07,
+            "module": "Rx_1_1",
+            "switching_w": 1.25e-06,
+            "total_w": 0.00138
+          },
+          {
+            "instance": "memory/home/fabric/rx_7",
+            "internal_w": 0.00735,
+            "leakage_w": 2.14e-06,
+            "module": "Rx_2_1",
+            "switching_w": 2.44e-05,
+            "total_w": 0.00737
+          },
+          {
+            "instance": "memory/home/fabric/rx_8",
+            "internal_w": 0.0018,
+            "leakage_w": 5.42e-07,
+            "module": "Rx_3_1",
+            "switching_w": 2e-08,
+            "total_w": 0.0018
+          },
+          {
+            "instance": "memory/home/fabric/responses",
+            "internal_w": 6.21e-06,
+            "leakage_w": 2.7e-08,
+            "module": "RRArbiter_1_0",
+            "switching_w": 1.08e-06,
+            "total_w": 7.33e-06
+          },
+          {
+            "instance": "memory/home/fabric/rx_9",
+            "internal_w": 0.00137,
+            "leakage_w": 4.06e-07,
+            "module": "Rx_1_0",
+            "switching_w": 1.23e-07,
+            "total_w": 0.00137
+          },
+          {
+            "instance": "memory/home/fabric/tx_1",
+            "internal_w": 0.00036,
+            "leakage_w": 1.02e-07,
+            "module": "Tx_1_3",
+            "switching_w": 1.32e-06,
+            "total_w": 0.000361
+          },
+          {
+            "instance": "memory/home/fabric/tx_2",
+            "internal_w": 0.00186,
+            "leakage_w": 5.14e-07,
+            "module": "Tx_2_3",
+            "switching_w": 7.93e-08,
+            "total_w": 0.00186
+          },
+          {
+            "instance": "memory/home/fabric/tx_3",
+            "internal_w": 0.000702,
+            "leakage_w": 2e-07,
+            "module": "Tx_0",
+            "switching_w": 9.69e-07,
+            "total_w": 0.000704
+          },
+          {
+            "instance": "memory/home/fabric/tx_4",
+            "internal_w": 0.000359,
+            "leakage_w": 1.02e-07,
+            "module": "Tx_1_2",
+            "switching_w": 5.03e-07,
+            "total_w": 0.000359
+          },
+          {
+            "instance": "memory/home/fabric/tx_5",
+            "internal_w": 0.00185,
+            "leakage_w": 5.27e-07,
+            "module": "Tx_2_2",
+            "switching_w": 4.5e-07,
+            "total_w": 0.00186
+          },
+          {
+            "instance": "memory/home/fabric/tx_6",
+            "internal_w": 0.000359,
+            "leakage_w": 1.02e-07,
+            "module": "Tx_1_1",
+            "switching_w": 8.12e-07,
+            "total_w": 0.00036
+          },
+          {
+            "instance": "memory/home/fabric/tx_7",
+            "internal_w": 0.00187,
+            "leakage_w": 5.36e-07,
+            "module": "Tx_2_1",
+            "switching_w": 9.16e-06,
+            "total_w": 0.00188
+          },
+          {
+            "instance": "memory/home/fabric/tx_8",
+            "internal_w": 0.000467,
+            "leakage_w": 1.31e-07,
+            "module": "Tx_3_1",
+            "switching_w": 9.18e-09,
+            "total_w": 0.000467
+          },
+          {
+            "instance": "memory/home/fabric/tx_9",
+            "internal_w": 0.000358,
+            "leakage_w": 1.02e-07,
+            "module": "Tx_1_0",
+            "switching_w": 7.24e-08,
+            "total_w": 0.000358
+          },
+          {
+            "instance": "memory/home/fabric/data",
+            "internal_w": 4.89e-06,
+            "leakage_w": 1.62e-07,
+            "module": "RRArbiter_2_0",
+            "switching_w": 6.88e-07,
+            "total_w": 5.74e-06
+          },
+          {
+            "instance": "memory/home/fabric/tx",
+            "internal_w": 0.000706,
+            "leakage_w": 2e-07,
+            "module": "Tx_4",
+            "switching_w": 3.78e-06,
+            "total_w": 0.00071
+          },
+          {
+            "instance": "memory/home/fabric/tx_10",
+            "internal_w": 0.00186,
+            "leakage_w": 5.29e-07,
+            "module": "Tx_2_0",
+            "switching_w": 2.57e-06,
+            "total_w": 0.00186
+          },
+          {
+            "instance": "memory/home/fabric/tx_11",
+            "internal_w": 0.000466,
+            "leakage_w": 1.33e-07,
+            "module": "Tx_3_0",
+            "switching_w": 7.47e-08,
+            "total_w": 0.000466
+          },
+          {
+            "instance": "memory/home/fabric/rx_10",
+            "internal_w": 0.00733,
+            "leakage_w": 2.13e-06,
+            "module": "Rx_2_0",
+            "switching_w": 6.09e-06,
+            "total_w": 0.00734
+          },
+          {
+            "instance": "memory/home/home",
+            "internal_w": 0.0905,
+            "leakage_w": 3.29e-05,
+            "module": "Coherence",
+            "switching_w": 0.000278,
+            "total_w": 0.0908
+          },
+          {
+            "instance": "memory/home/home/memQueue",
+            "internal_w": 0.00566,
+            "leakage_w": 1.64e-06,
+            "module": "Queue_8",
+            "switching_w": 1.2e-05,
+            "total_w": 0.00567
+          },
+          {
+            "instance": "memory/home/home/rspArb",
+            "internal_w": 1.5e-05,
+            "leakage_w": 3.79e-08,
+            "module": "RRArbiter_6",
+            "switching_w": 1.09e-06,
+            "total_w": 1.62e-05
+          },
+          {
+            "instance": "memory/home/home/directory",
+            "internal_w": 0.00362,
+            "leakage_w": 1.15e-06,
+            "module": "Directory",
+            "switching_w": 1.19e-06,
+            "total_w": 0.00362
+          },
+          {
+            "instance": "memory/home/home/cache",
+            "internal_w": 0.0506,
+            "leakage_w": 1.79e-05,
+            "module": "Cache_1",
+            "switching_w": 0.000142,
+            "total_w": 0.0507
+          },
+          {
+            "instance": "memory/home/home/cache/responses",
+            "internal_w": 0.00539,
+            "leakage_w": 1.54e-06,
+            "module": "Queue_6",
+            "switching_w": 3.53e-05,
+            "total_w": 0.00543
+          },
+          {
+            "instance": "memory/home/home/cache/data_0",
+            "internal_w": 6.4e-07,
+            "leakage_w": 6.97e-09,
+            "module": "data_0_0",
+            "switching_w": 4.4e-06,
+            "total_w": 5.05e-06
+          },
+          {
+            "instance": "memory/home/home/cache/data_0/data_0_ext",
+            "internal_w": 6.4e-07,
+            "leakage_w": 6.97e-09,
+            "module": "data_0_ext_3",
+            "switching_w": 4.4e-06,
+            "total_w": 5.05e-06
+          },
+          {
+            "instance": "memory/home/home/cache/data_1",
+            "internal_w": 6.32e-07,
+            "leakage_w": 6.97e-09,
+            "module": "data_1_0",
+            "switching_w": 3.13e-06,
+            "total_w": 3.77e-06
+          },
+          {
+            "instance": "memory/home/home/cache/data_1/data_0_ext",
+            "internal_w": 6.32e-07,
+            "leakage_w": 6.97e-09,
+            "module": "data_0_ext_2",
+            "switching_w": 3.13e-06,
+            "total_w": 3.77e-06
+          },
+          {
+            "instance": "memory/home/home/cache/data_2",
+            "internal_w": 6.23e-07,
+            "leakage_w": 6.97e-09,
+            "module": "data_2_0",
+            "switching_w": 1.06e-06,
+            "total_w": 1.69e-06
+          },
+          {
+            "instance": "memory/home/home/cache/data_2/data_0_ext",
+            "internal_w": 6.23e-07,
+            "leakage_w": 6.97e-09,
+            "module": "data_0_ext_1",
+            "switching_w": 1.06e-06,
+            "total_w": 1.69e-06
+          },
+          {
+            "instance": "memory/home/home/cache/data_3",
+            "internal_w": 6.18e-07,
+            "leakage_w": 6.97e-09,
+            "module": "data_3",
+            "switching_w": 0.0,
+            "total_w": 6.25e-07
+          },
+          {
+            "instance": "memory/home/home/cache/data_3/data_0_ext",
+            "internal_w": 6.18e-07,
+            "leakage_w": 6.97e-09,
+            "module": "data_0_ext_0",
+            "switching_w": 0.0,
+            "total_w": 6.25e-07
+          },
+          {
+            "instance": "memory/home/home/snpArb",
+            "internal_w": 1.42e-05,
+            "leakage_w": 6.28e-08,
+            "module": "RRArbiter_5",
+            "switching_w": 1.19e-07,
+            "total_w": 1.44e-05
+          },
+          {
+            "instance": "memory/home/home/datArb",
+            "internal_w": 2.93e-05,
+            "leakage_w": 3.5e-07,
+            "module": "RRArbiter_7",
+            "switching_w": 2.19e-05,
+            "total_w": 5.16e-05
+          },
+          {
+            "instance": "memory/home/home/mshr",
+            "internal_w": 0.00326,
+            "leakage_w": 9.64e-07,
+            "module": "Mshr",
+            "switching_w": 6.08e-06,
+            "total_w": 0.00326
+          },
+          {
+            "instance": "memory/home/home/datQueue",
+            "internal_w": 0.00341,
+            "leakage_w": 9.68e-07,
+            "module": "Queue_3_0",
+            "switching_w": 1.11e-05,
+            "total_w": 0.00342
+          },
+          {
+            "instance": "memory/home/home/cacheArb",
+            "internal_w": 2.46e-05,
+            "leakage_w": 6.79e-08,
+            "module": "RRArbiter_3",
+            "switching_w": 1.14e-05,
+            "total_w": 3.6e-05
+          },
+          {
+            "instance": "memory/home/home/memArb",
+            "internal_w": 5.57e-05,
+            "leakage_w": 5.94e-07,
+            "module": "RRArbiter_4",
+            "switching_w": 3.72e-05,
+            "total_w": 9.35e-05
+          },
+          {
+            "instance": "memory/home/home/rspQueue",
+            "internal_w": 0.000552,
+            "leakage_w": 1.53e-07,
+            "module": "Queue_2_0",
+            "switching_w": 5.94e-07,
+            "total_w": 0.000553
+          },
+          {
+            "instance": "memory/home/home/snpQueue",
+            "internal_w": 0.000817,
+            "leakage_w": 2.3e-07,
+            "module": "Queue_9",
+            "switching_w": 8.22e-08,
+            "total_w": 0.000817
+          },
+          {
+            "instance": "memory/home/home/cacheQueue",
+            "internal_w": 0.00092,
+            "leakage_w": 2.65e-07,
+            "module": "Queue_7",
+            "switching_w": 6.84e-06,
+            "total_w": 0.000927
+          },
+          {
+            "instance": "memory/memory",
+            "internal_w": 0.0118,
+            "leakage_w": 7e-06,
+            "module": "VirtualAccess_1",
+            "switching_w": 8.53e-05,
+            "total_w": 0.0119
+          },
+          {
+            "instance": "memory/memory/physical",
+            "internal_w": 0.000103,
+            "leakage_w": 1.64e-07,
+            "module": "PhysicalAccess_1",
+            "switching_w": 5.17e-07,
+            "total_w": 0.000104
+          },
+          {
+            "instance": "memory/memory/walker",
+            "internal_w": 0.0105,
+            "leakage_w": 5.95e-06,
+            "module": "Walker_0",
+            "switching_w": 2.47e-05,
+            "total_w": 0.0105
+          },
+          {
+            "instance": "memory/cacheRequests",
+            "internal_w": 4.77e-07,
+            "leakage_w": 3.59e-08,
+            "module": "Arbiter_1",
+            "switching_w": 5.58e-07,
+            "total_w": 1.07e-06
+          },
+          {
+            "instance": "memory/icache",
+            "internal_w": 0.0425,
+            "leakage_w": 1.5e-05,
+            "module": "BankedChiCache",
+            "switching_w": 0.000158,
+            "total_w": 0.0427
+          },
+          {
+            "instance": "memory/icache/reqQueue",
+            "internal_w": 0.000945,
+            "leakage_w": 2.56e-07,
+            "module": "Queue_1_1",
+            "switching_w": 2.52e-06,
+            "total_w": 0.000948
+          },
+          {
+            "instance": "memory/icache/caches_0",
+            "internal_w": 0.0189,
+            "leakage_w": 6.64e-06,
+            "module": "ChiCache",
+            "switching_w": 7.66e-05,
+            "total_w": 0.0189
+          },
+          {
+            "instance": "memory/icache/caches_0/tags_ext",
+            "internal_w": 0.00478,
+            "leakage_w": 1.87e-06,
+            "module": "tags_32x32_2",
+            "switching_w": 1.38e-06,
+            "total_w": 0.00479
+          },
+          {
+            "instance": "memory/icache/caches_0/data",
+            "internal_w": 3.23e-07,
+            "leakage_w": 5.41e-09,
+            "module": "data",
+            "switching_w": 2.98e-05,
+            "total_w": 3.02e-05
+          },
+          {
+            "instance": "memory/icache/caches_0/data/data_ext",
+            "internal_w": 2.84e-07,
+            "leakage_w": 4.15e-09,
+            "module": "data_ext_3",
+            "switching_w": 2.98e-05,
+            "total_w": 3.01e-05
+          },
+          {
+            "instance": "memory/icache/caches_1",
+            "internal_w": 0.0189,
+            "leakage_w": 6.64e-06,
+            "module": "ChiCache_1",
+            "switching_w": 7.21e-05,
+            "total_w": 0.0189
+          },
+          {
+            "instance": "memory/icache/caches_1/tags_ext",
+            "internal_w": 0.00478,
+            "leakage_w": 1.87e-06,
+            "module": "tags_32x32_1",
+            "switching_w": 1.11e-06,
+            "total_w": 0.00479
+          },
+          {
+            "instance": "memory/icache/caches_1/data",
+            "internal_w": 1.39e-07,
+            "leakage_w": 6.04e-10,
+            "module": "data_0",
+            "switching_w": 2.98e-05,
+            "total_w": 3e-05
+          },
+          {
+            "instance": "memory/icache/caches_1/data/data_ext",
+            "internal_w": 1.39e-07,
+            "leakage_w": 6.04e-10,
+            "module": "data_ext_2",
+            "switching_w": 2.98e-05,
+            "total_w": 3e-05
+          },
+          {
+            "instance": "memory/icache/rspQueue",
+            "internal_w": 0.000472,
+            "leakage_w": 1.3e-07,
+            "module": "Queue_2_2",
+            "switching_w": 8.27e-07,
+            "total_w": 0.000473
+          },
+          {
+            "instance": "memory/icache/rspArb",
+            "internal_w": 5.05e-06,
+            "leakage_w": 1.06e-08,
+            "module": "RRArbiter_1_2",
+            "switching_w": 2.6e-07,
+            "total_w": 5.32e-06
+          },
+          {
+            "instance": "memory/icache/reqArb",
+            "internal_w": 6e-06,
+            "leakage_w": 1.99e-08,
+            "module": "RRArbiter_10",
+            "switching_w": 8.56e-07,
+            "total_w": 6.88e-06
+          },
+          {
+            "instance": "memory/icache/retirement",
+            "internal_w": 2.88e-05,
+            "leakage_w": 1.26e-08,
+            "module": "Queue_10",
+            "switching_w": 2.96e-07,
+            "total_w": 2.92e-05
+          },
+          {
+            "instance": "memory/icache/datArb",
+            "internal_w": 4.72e-06,
+            "leakage_w": 1.3e-07,
+            "module": "RRArbiter_2_2",
+            "switching_w": 1.9e-10,
+            "total_w": 4.85e-06
+          },
+          {
+            "instance": "memory/icache/datQueue",
+            "internal_w": 0.0033,
+            "leakage_w": 9.27e-07,
+            "module": "Queue_3_2",
+            "switching_w": 8.52e-10,
+            "total_w": 0.0033
+          },
+          {
+            "instance": "memory/fetch",
+            "internal_w": 0.0111,
+            "leakage_w": 5.14e-06,
+            "module": "VirtualAccess",
+            "switching_w": 2.15e-05,
+            "total_w": 0.0111
+          },
+          {
+            "instance": "memory/fetch/physical",
+            "internal_w": 6.22e-05,
+            "leakage_w": 2.55e-07,
+            "module": "PhysicalAccess",
+            "switching_w": 7.03e-06,
+            "total_w": 6.95e-05
+          },
+          {
+            "instance": "memory/fetch/walker",
+            "internal_w": 0.0102,
+            "leakage_w": 4.41e-06,
+            "module": "Walker_1",
+            "switching_w": 6.7e-07,
+            "total_w": 0.0102
+          },
+          {
+            "instance": "memory/dcache",
+            "internal_w": 0.0506,
+            "leakage_w": 2.04e-05,
+            "module": "Cache",
+            "switching_w": 0.00032,
+            "total_w": 0.0509
+          },
+          {
+            "instance": "memory/dcache/requests",
+            "internal_w": 5.46e-06,
+            "leakage_w": 3.52e-08,
+            "module": "RRArbiter_9",
+            "switching_w": 6.26e-07,
+            "total_w": 6.12e-06
+          },
+          {
+            "instance": "memory/dcache/requestQueue",
+            "internal_w": 0.00136,
+            "leakage_w": 3.86e-07,
+            "module": "Queue_4",
+            "switching_w": 9.99e-07,
+            "total_w": 0.00136
+          },
+          {
+            "instance": "memory/dcache/maintenance",
+            "internal_w": 0.000219,
+            "leakage_w": 6.95e-08,
+            "module": "Maintenance",
+            "switching_w": 1.18e-09,
+            "total_w": 0.000219
+          },
+          {
+            "instance": "memory/dcache/cache",
+            "internal_w": 0.049,
+            "leakage_w": 2e-05,
+            "module": "BankedChiCache_1",
+            "switching_w": 0.000318,
+            "total_w": 0.0493
+          },
+          {
+            "instance": "memory/dcache/cache/rspArb",
+            "internal_w": 4.84e-06,
+            "leakage_w": 1.06e-08,
+            "module": "RRArbiter_1_1",
+            "switching_w": 9.77e-08,
+            "total_w": 4.95e-06
+          },
+          {
+            "instance": "memory/dcache/cache/reqQueue",
+            "internal_w": 0.000944,
+            "leakage_w": 2.58e-07,
+            "module": "Queue_1_0",
+            "switching_w": 7.05e-07,
+            "total_w": 0.000945
+          },
+          {
+            "instance": "memory/dcache/cache/rspQueue",
+            "internal_w": 0.000472,
+            "leakage_w": 1.29e-07,
+            "module": "Queue_2_1",
+            "switching_w": 3.47e-07,
+            "total_w": 0.000472
+          },
+          {
+            "instance": "memory/dcache/cache/datArb",
+            "internal_w": 5.08e-06,
+            "leakage_w": 1.26e-07,
+            "module": "RRArbiter_2_1",
+            "switching_w": 2.31e-07,
+            "total_w": 5.44e-06
+          },
+          {
+            "instance": "memory/dcache/cache/caches_0",
+            "internal_w": 0.0221,
+            "leakage_w": 9.17e-06,
+            "module": "ChiCache_2",
+            "switching_w": 0.000144,
+            "total_w": 0.0222
+          },
+          {
+            "instance": "memory/dcache/cache/caches_0/data",
+            "internal_w": 2.12e-07,
+            "leakage_w": 1.02e-09,
+            "module": "data_1",
+            "switching_w": 6.11e-05,
+            "total_w": 6.14e-05
+          },
+          {
+            "instance": "memory/dcache/cache/caches_0/data/data_ext",
+            "internal_w": 2.12e-07,
+            "leakage_w": 1.02e-09,
+            "module": "data_ext_1",
+            "switching_w": 6.11e-05,
+            "total_w": 6.14e-05
+          },
+          {
+            "instance": "memory/dcache/cache/caches_0/tags_ext",
+            "internal_w": 0.00479,
+            "leakage_w": 2e-06,
+            "module": "tags_32x32_0_1",
+            "switching_w": 5.89e-06,
+            "total_w": 0.00479
+          },
+          {
+            "instance": "memory/dcache/cache/caches_1",
+            "internal_w": 0.0221,
+            "leakage_w": 9.19e-06,
+            "module": "ChiCache_3",
+            "switching_w": 0.000166,
+            "total_w": 0.0223
+          },
+          {
+            "instance": "memory/dcache/cache/caches_1/data",
+            "internal_w": 2.11e-07,
+            "leakage_w": 1.02e-09,
+            "module": "data_2",
+            "switching_w": 6.11e-05,
+            "total_w": 6.13e-05
+          },
+          {
+            "instance": "memory/dcache/cache/caches_1/data/data_ext",
+            "internal_w": 2.11e-07,
+            "leakage_w": 1.02e-09,
+            "module": "data_ext_0",
+            "switching_w": 6.11e-05,
+            "total_w": 6.13e-05
+          },
+          {
+            "instance": "memory/dcache/cache/caches_1/tags_ext",
+            "internal_w": 0.00479,
+            "leakage_w": 2e-06,
+            "module": "tags_32x32_0_0",
+            "switching_w": 5.86e-06,
+            "total_w": 0.00479
+          },
+          {
+            "instance": "memory/dcache/cache/retirement",
+            "internal_w": 2.83e-05,
+            "leakage_w": 1.26e-08,
+            "module": "Queue_0",
+            "switching_w": 9.97e-08,
+            "total_w": 2.84e-05
+          },
+          {
+            "instance": "memory/dcache/cache/reqArb",
+            "internal_w": 5.06e-06,
+            "leakage_w": 2e-08,
+            "module": "RRArbiter_8",
+            "switching_w": 2.28e-07,
+            "total_w": 5.3e-06
+          },
+          {
+            "instance": "memory/dcache/cache/datQueue",
+            "internal_w": 0.0033,
+            "leakage_w": 9.31e-07,
+            "module": "Queue_3_1",
+            "switching_w": 3.59e-07,
+            "total_w": 0.0033
+          },
+          {
+            "instance": "memory/uncached",
+            "internal_w": 0.000901,
+            "leakage_w": 3.9e-07,
+            "module": "Uncached",
+            "switching_w": 5.65e-07,
+            "total_w": 0.000902
+          },
+          {
+            "instance": "memory/uncachedRequests",
+            "internal_w": 1.78e-07,
+            "leakage_w": 2.6e-08,
+            "module": "Arbiter_2",
+            "switching_w": 2.14e-07,
+            "total_w": 4.18e-07
+          },
+          {
+            "instance": "memory/cacheOwners",
+            "internal_w": 2.84e-05,
+            "leakage_w": 1.26e-08,
+            "module": "Queue_5",
+            "switching_w": 9.11e-08,
+            "total_w": 2.85e-05
+          }
+        ],
+        "internal_w": 0.341,
+        "leakage_w": 0.000136,
+        "status": "pass",
+        "switching_w": 0.00223,
+        "total_w": 0.343
+      }
+    }
+  ],
+  "taken": "2026-11-23T11:45:15.621797+00:00"
+}

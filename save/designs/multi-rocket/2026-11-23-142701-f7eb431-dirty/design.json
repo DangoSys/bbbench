@@ -1,0 +1,272 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "multi-rocket",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "elapsed_s": 94.0,
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "pass"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "elapsed_s": 120.1,
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-23-22-28-multi-rocket-bebop-bemu-device-multi-rocket-MultiRocketTapeoutConfig-bare-tests",
+          "passed": 22,
+          "total": 22,
+          "workloads": [
+            {
+              "cycles": 25804,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_aha-mont64-baremetal"
+            },
+            {
+              "cycles": 318595,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_crc32-baremetal"
+            },
+            {
+              "cycles": 285338,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_edn-baremetal"
+            },
+            {
+              "cycles": 1151456,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_huffbench-baremetal"
+            },
+            {
+              "cycles": 788975,
+              "elapsed_s": 0.21,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_matmult-int-baremetal"
+            },
+            {
+              "cycles": 9613,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_minver-baremetal"
+            },
+            {
+              "cycles": 6055,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_nbody-baremetal"
+            },
+            {
+              "cycles": 117797,
+              "elapsed_s": 0.23,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_nettle-aes-baremetal"
+            },
+            {
+              "cycles": 52657,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_nettle-sha256-baremetal"
+            },
+            {
+              "cycles": 43037,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_nsichneu-baremetal"
+            },
+            {
+              "cycles": 4557293,
+              "elapsed_s": 0.23,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_picojpeg-baremetal"
+            },
+            {
+              "cycles": 3935026,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_qrduino-baremetal"
+            },
+            {
+              "cycles": 233382,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_sglib-combined-baremetal"
+            },
+            {
+              "cycles": 111327,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_slre-baremetal"
+            },
+            {
+              "cycles": 135456,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_st-baremetal"
+            },
+            {
+              "cycles": 7437,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_statemate-baremetal"
+            },
+            {
+              "cycles": 35150,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_ud-baremetal"
+            },
+            {
+              "cycles": 1446309,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-benchmark-embench_wikisort-baremetal"
+            },
+            {
+              "cycles": 793972,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-check-embench_matmult-int-baremetal"
+            },
+            {
+              "cycles": 228321,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-check-embench_sglib-combined-baremetal"
+            },
+            {
+              "cycles": 9883,
+              "elapsed_s": 0.25,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-cpu_arithmetic-baremetal"
+            },
+            {
+              "cycles": 17542,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-design-coherent_exchange-multicore-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-23-22-29-multi-rocket-bebop-bemu-device-multi-rocket-MultiRocketTapeoutConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 1216873056,
+              "elapsed_s": 33.23,
+              "status": "pass",
+              "workload": "fw_payload-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "elapsed_s": 0.0,
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "skipped"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketVerilatorConfig.toml",
+      "error": "stopped: the timeline was restarted (its Verilator turn waited on a lock another session's regression held)",
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "failure"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-23T14:27:01.560934+00:00"
+}

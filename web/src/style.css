@@ -1,0 +1,711 @@
+:root {
+  --text: #1f2328;
+  --muted: #59636e;
+  --line: #d1d9e0;
+  --accent: #0969da;
+  --bg: #ffffff;
+  --panel: #f6f8fa;
+  --ok: #1a7f37;
+  --ok-bg: #dafbe1;
+  --bad: #cf222e;
+  --bad-bg: #ffebe9;
+  /* A step that does not apply to the subject. */
+  --na: #8250df;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e6edf3;
+    --muted: #9198a1;
+    --line: #3d444d;
+    --accent: #4493f8;
+    --bg: #0d1117;
+    --panel: #151b23;
+    --ok: #3fb950;
+    --ok-bg: #12261e;
+    --bad: #f85149;
+    --bad-bg: #2d1517;
+    --na: #a371f7;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav.top {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 0.75rem max(1rem, calc((100% - 52rem) / 2));
+  border-bottom: 1px solid var(--line);
+}
+
+nav.top a {
+  color: var(--muted);
+}
+
+nav.top a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+nav.top .brand {
+  color: var(--text);
+  font-weight: 700;
+  margin-right: auto;
+}
+
+main {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin: 0 0 0.25rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 2.5rem 0 0.5rem;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+dl.goals {
+  margin: 0;
+}
+
+dl.goals dt {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+dl.goals dd {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.soon {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+main.wide {
+  max-width: 72rem;
+}
+
+nav.tabs {
+  display: flex;
+  gap: 1.25rem;
+  margin: 1.5rem 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+nav.tabs a {
+  padding: 0.25rem 0;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav.tabs a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+}
+
+button {
+  font: inherit;
+  font-size: 0.75rem;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0.375rem;
+  padding: 0.1rem 0.5rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.fail {
+  color: var(--bad);
+}
+
+#content {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.35rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+th.number,
+td.number {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+nav.top.wide {
+  padding-inline: max(1rem, calc((100% - 72rem) / 2));
+}
+
+/* Prefab: the Balls as cards, grouped by owner. */
+
+.group h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  margin: 1.75rem 0 0.75rem;
+}
+
+.count {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 64rem) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 36rem) {
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  padding: 1rem 1.1rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--bg);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s,
+    transform 0.15s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.08);
+  transform: translateY(-1px);
+}
+
+.card .title {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+  padding-right: 2rem;
+}
+
+.card .status {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.card .status:empty {
+  display: none;
+}
+
+.card .actions {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+button.rerun {
+  border-color: transparent;
+  background: none;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.2rem 0.4rem;
+}
+
+button.rerun:hover {
+  border-color: var(--line);
+  background: var(--panel);
+  color: var(--text);
+}
+
+/* Ball: the analysis of one Ball. */
+
+.back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.panel {
+  margin: 1.25rem 0;
+  min-width: 0;
+}
+
+.panel h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 0 2rem;
+  align-items: start;
+}
+
+table.kv th {
+  font-weight: 500;
+  color: var(--muted);
+  width: 45%;
+}
+
+table.kv td {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.25rem);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 7rem;
+  padding: 0.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.375rem;
+  background: var(--bg);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.12);
+}
+
+.menu[hidden] {
+  display: none;
+}
+
+.menu button {
+  text-align: left;
+  border: 0;
+  background: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.menu button:hover {
+  background: var(--panel);
+}
+
+/* A bar chart: label, bar, value, change; a pressed bar shows its analysis. */
+
+.chart .rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart .row {
+  display: grid;
+  grid-template-columns: minmax(8rem, 16rem) 1fr 6rem 5rem;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: none;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.chart .row:hover,
+.chart .row[aria-pressed="true"] {
+  background: var(--panel);
+}
+
+.chart .label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chart .track {
+  height: 0.6rem;
+}
+
+.chart .track span {
+  display: block;
+  height: 100%;
+  min-width: 2px;
+  border-radius: 0 4px 4px 0;
+  background: var(--accent);
+}
+
+.chart .row .number {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.chart .detail {
+  margin: 0.75rem 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 2px solid var(--accent);
+}
+
+.chart .detail:empty {
+  display: none;
+}
+
+.detail h3 {
+  font-size: 0.95rem;
+  margin: 1rem 0 0.25rem;
+}
+
+@media (max-width: 40rem) {
+  .chart .row {
+    grid-template-columns: 1fr 5rem 4rem;
+  }
+
+  .chart .track {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/* A Ball's results as bars: name, bar, value. */
+
+.figures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+}
+
+.figure {
+  color: var(--text);
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: 2.75rem 1fr 4.75rem;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.figure .name {
+  color: var(--muted);
+}
+
+.figure .track,
+.legend .swatch {
+  height: 0.4rem;
+  border-radius: 4px;
+  background: var(--panel);
+}
+
+.figure .track span {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.figure .value {
+  white-space: nowrap;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.figure.neutral .track span,
+.legend .swatch.clean {
+  background: var(--accent);
+}
+
+.figure.met .track span,
+.legend .swatch.met {
+  background: var(--ok);
+}
+
+.figure.violated .track span,
+.figure.failed .track span,
+.legend .swatch.violated {
+  background: var(--bad);
+}
+
+.figure.failed .value {
+  color: var(--bad);
+}
+
+.ball-head .figures {
+  max-width: 28rem;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+.legend .key {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legend .swatch {
+  display: inline-block;
+  width: 1rem;
+}
+
+.figure:hover {
+  text-decoration: none;
+  background: var(--panel);
+}
+
+nav.pages {
+  display: flex;
+  gap: 1.25rem;
+  margin: 1.75rem 0 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+nav.pages a {
+  padding: 0.25rem 0;
+  color: var(--muted);
+}
+
+nav.pages a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav.pages a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* The history of one evaluation: a plain bar chart. */
+
+.history svg.plot {
+  display: block;
+  width: 100%;
+  max-width: 48rem;
+  height: auto;
+}
+
+.plot .grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.plot .baseline {
+  stroke: var(--muted);
+  stroke-width: 1;
+}
+
+.plot .tick {
+  fill: var(--muted);
+  font-size: 11px;
+}
+
+.plot .hit {
+  fill: transparent;
+}
+
+.plot .bar {
+  cursor: pointer;
+  outline: none;
+}
+
+.plot .bar:hover .hit,
+.plot .bar:focus-visible .hit {
+  fill: var(--panel);
+}
+
+.plot .value {
+  fill: var(--accent);
+  opacity: 0.55;
+}
+
+.plot .value.dirty,
+.legend .swatch.dirty {
+  fill: var(--muted);
+  background: var(--muted);
+}
+
+.plot .bar.selected .value {
+  opacity: 1;
+}
+
+.plot .failed {
+  fill: var(--bad);
+}
+
+/* The Values switch: one for every bar chart of the page. */
+
+.values-switch {
+  margin-left: 0.5rem;
+  padding: 0.05rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.values-switch:hover {
+  color: var(--text);
+}
+
+.values-switch[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+/* A bar's value above it, with the switch on. */
+
+.plot text.number,
+.perf-chart text.number {
+  display: none;
+  fill: var(--text);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+body.show-values .plot text.number,
+body.show-values .perf-chart text.number {
+  display: block;
+}
+
+body.show-values .history svg.plot,
+body.show-values svg.perf-chart {
+  overflow: visible;
+}
+
+body.show-values svg.perf-chart {
+  margin-top: 3rem;
+}
+
+.history .detail {
+  margin: 0.75rem 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 2px solid var(--accent);
+}
+
+/* The host's load in the top bar. */
+nav.top .load {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+nav.top .load meter {
+  width: 3rem;
+  height: 0.4rem;
+  appearance: none;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+nav.top .load meter::-webkit-meter-bar {
+  border: 0;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+nav.top .load meter::-webkit-meter-optimum-value {
+  border-radius: 2px;
+  background: var(--ok);
+}
+
+nav.top .load meter::-moz-meter-bar {
+  border-radius: 2px;
+  background: var(--ok);
+}
+
+nav.top .load.over {
+  color: var(--bad);
+}
+
+nav.top .load.over meter::-webkit-meter-optimum-value {
+  background: var(--bad);
+}
+
+nav.top .load.over meter::-moz-meter-bar {
+  background: var(--bad);
+}

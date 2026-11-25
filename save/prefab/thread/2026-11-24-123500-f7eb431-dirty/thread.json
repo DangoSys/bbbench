@@ -1,0 +1,15 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-24T12:35:00.885056+00:00",
+  "threads": [
+    {
+      "path": "examples/designs/poly/threads/ffn5",
+      "power": {
+        "error": "workload.build: workload_build_failed",
+        "status": "failure"
+      },
+      "thread": "poly/threads/ffn5"
+    }
+  ]
+}

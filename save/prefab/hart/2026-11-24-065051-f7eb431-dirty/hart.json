@@ -1,0 +1,372 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "area": {
+        "constraints_met": true,
+        "hierarchy": [
+          {
+            "combinational_um2": 8644.0704,
+            "instance": "MagiaHart",
+            "module": "MagiaHart",
+            "noncombinational_um2": 2120.5632,
+            "um2": 710179.8151
+          },
+          {
+            "combinational_um2": 40550.3625,
+            "instance": "dma",
+            "module": "DmaRequester",
+            "noncombinational_um2": 50361.0232,
+            "um2": 90911.3857
+          },
+          {
+            "combinational_um2": 5240.2561,
+            "instance": "loom",
+            "module": "Loom",
+            "noncombinational_um2": 10854.9502,
+            "um2": 606513.063
+          },
+          {
+            "combinational_um2": 22458.7783,
+            "instance": "loom/execution",
+            "module": "Execution",
+            "noncombinational_um2": 50101.3624,
+            "um2": 590417.8567
+          },
+          {
+            "combinational_um2": 61214.0934,
+            "instance": "loom/execution/fetch",
+            "module": "Fetch",
+            "noncombinational_um2": 41878.7705,
+            "um2": 103092.8639
+          },
+          {
+            "combinational_um2": 22934.8228,
+            "instance": "loom/execution/fpu",
+            "module": "FPU",
+            "noncombinational_um2": 8380.6463,
+            "um2": 157555.7769
+          },
+          {
+            "combinational_um2": 6041.8178,
+            "instance": "loom/execution/fpu/dfma",
+            "module": "FPUFMAPipe_l6_f64",
+            "noncombinational_um2": 10708.1854,
+            "um2": 16750.0032
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "loom/execution/fpu/divSqrt",
+            "module": "DivSqrtRecFM_small_e5_s11",
+            "noncombinational_um2": 0.0,
+            "um2": 5789.6832
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "loom/execution/fpu/divSqrt_1",
+            "module": "DivSqrtRecFM_small_e8_s24",
+            "noncombinational_um2": 0.0,
+            "um2": 10568.9472
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "loom/execution/fpu/divSqrt_2",
+            "module": "DivSqrtRecFM_small_e11_s53",
+            "noncombinational_um2": 0.0,
+            "um2": 20195.2128
+          },
+          {
+            "combinational_um2": 912.576,
+            "instance": "loom/execution/fpu/fp_decoder",
+            "module": "FPUDecoder",
+            "noncombinational_um2": 0.0,
+            "um2": 912.576
+          },
+          {
+            "combinational_um2": 19485.85,
+            "instance": "loom/execution/fpu/fpiu",
+            "module": "FPToInt",
+            "noncombinational_um2": 5531.9039,
+            "um2": 27779.9427
+          },
+          {
+            "combinational_um2": 2762.1889,
+            "instance": "loom/execution/fpu/fpiu/dcmp",
+            "module": "CompareRecFN",
+            "noncombinational_um2": 0.0,
+            "um2": 2762.1889
+          },
+          {
+            "combinational_um2": 5942.093,
+            "instance": "loom/execution/fpu/fpmu",
+            "module": "FPToFP",
+            "noncombinational_um2": 8260.2239,
+            "um2": 14202.3169
+          },
+          {
+            "combinational_um2": 1337.8176,
+            "instance": "loom/execution/fpu/hfma",
+            "module": "FPUFMAPipe_l5_f16",
+            "noncombinational_um2": 2252.2752,
+            "um2": 3590.0928
+          },
+          {
+            "combinational_um2": 14127.0531,
+            "instance": "loom/execution/fpu/ifpu",
+            "module": "IntToFP",
+            "noncombinational_um2": 5663.6159,
+            "um2": 19790.669
+          },
+          {
+            "combinational_um2": 2511.9361,
+            "instance": "loom/execution/fpu/sfma",
+            "module": "FPUFMAPipe_l5_f32",
+            "noncombinational_um2": 4148.9279,
+            "um2": 6660.864
+          },
+          {
+            "combinational_um2": 83652.1754,
+            "instance": "loom/execution/lsu",
+            "module": "Lsu",
+            "noncombinational_um2": 173556.8997,
+            "um2": 257209.0752
+          },
+          {
+            "combinational_um2": 1787.52,
+            "instance": "memory",
+            "module": "Decoder",
+            "noncombinational_um2": 203.2128,
+            "um2": 1990.7328
+          }
+        ],
+        "library": "scc018ug_uhd_rvt_ss_v1p62_125c_ccs.db",
+        "status": "pass",
+        "timing": {
+          "endpoint": "loom/execution/fpu/fpmu/io_out_pipe_b_data_reg_31_",
+          "slack_ns": 0.01,
+          "startpoint": "loom/execution/fpu/fpiu/in_in2_reg_0_"
+        },
+        "tool": "DC",
+        "um2": 710179.815118,
+        "violations": {}
+      },
+      "hart": "magia",
+      "path": "examples/prefab/harts/magia",
+      "power": {
+        "annotated": {
+          "nets": 46.29,
+          "registers": 99.87
+        },
+        "hierarchy": [
+          {
+            "instance": "MagiaHart",
+            "internal_w": 0.0807,
+            "leakage_w": 1.5e-05,
+            "module": "MagiaHart",
+            "switching_w": 0.183,
+            "total_w": 0.264
+          },
+          {
+            "instance": "memory",
+            "internal_w": 0.000144,
+            "leakage_w": 4.03e-08,
+            "module": "Decoder",
+            "switching_w": 6.94e-06,
+            "total_w": 0.000151
+          },
+          {
+            "instance": "loom",
+            "internal_w": 0.0738,
+            "leakage_w": 1.29e-05,
+            "module": "Loom",
+            "switching_w": 0.178,
+            "total_w": 0.252
+          },
+          {
+            "instance": "loom/execution",
+            "internal_w": 0.0684,
+            "leakage_w": 1.25e-05,
+            "module": "Execution",
+            "switching_w": 0.151,
+            "total_w": 0.219
+          },
+          {
+            "instance": "loom/execution/fpu",
+            "internal_w": 0.0225,
+            "leakage_w": 3.07e-06,
+            "module": "FPU",
+            "switching_w": 0.0222,
+            "total_w": 0.0447
+          },
+          {
+            "instance": "loom/execution/fpu/ifpu",
+            "internal_w": 0.000801,
+            "leakage_w": 3.67e-07,
+            "module": "IntToFP",
+            "switching_w": 1.49e-11,
+            "total_w": 0.000801
+          },
+          {
+            "instance": "loom/execution/fpu/dfma",
+            "internal_w": 0.00127,
+            "leakage_w": 3.76e-07,
+            "module": "FPUFMAPipe_l6_f64",
+            "switching_w": 0.0,
+            "total_w": 0.00127
+          },
+          {
+            "instance": "loom/execution/fpu/hfma",
+            "internal_w": 0.000266,
+            "leakage_w": 8.15e-08,
+            "module": "FPUFMAPipe_l5_f16",
+            "switching_w": 0.0,
+            "total_w": 0.000266
+          },
+          {
+            "instance": "loom/execution/fpu/fpiu",
+            "internal_w": 0.000654,
+            "leakage_w": 5.09e-07,
+            "module": "FPToInt",
+            "switching_w": 0.0,
+            "total_w": 0.000654
+          },
+          {
+            "instance": "loom/execution/fpu/fpiu/dcmp",
+            "internal_w": 0.0,
+            "leakage_w": 6.36e-08,
+            "module": "CompareRecFN",
+            "switching_w": 0.0,
+            "total_w": 6.36e-08
+          },
+          {
+            "instance": "loom/execution/fpu/fpmu",
+            "internal_w": 0.000976,
+            "leakage_w": 3.04e-07,
+            "module": "FPToFP",
+            "switching_w": 1.36e-11,
+            "total_w": 0.000977
+          },
+          {
+            "instance": "loom/execution/fpu/fp_decoder",
+            "internal_w": 0.0102,
+            "leakage_w": 1.34e-08,
+            "module": "FPUDecoder",
+            "switching_w": 0.0146,
+            "total_w": 0.0247
+          },
+          {
+            "instance": "loom/execution/fpu/divSqrt",
+            "internal_w": 0.000281,
+            "leakage_w": 1.17e-07,
+            "module": "DivSqrtRecFM_small_e5_s11",
+            "switching_w": 9.26e-10,
+            "total_w": 0.000281
+          },
+          {
+            "instance": "loom/execution/fpu/divSqrt/divSqrtRecFNToRaw",
+            "internal_w": 0.000281,
+            "leakage_w": 1.17e-07,
+            "module": "DivSqrtRecFMToRaw_small_e5_s11",
+            "switching_w": 9.26e-10,
+            "total_w": 0.000281
+          },
+          {
+            "instance": "loom/execution/fpu/divSqrt/divSqrtRecFNToRaw/divSqrtRawFN",
+            "internal_w": 0.000281,
+            "leakage_w": 1.16e-07,
+            "module": "DivSqrtRawFN_small_e5_s11",
+            "switching_w": 9.26e-10,
+            "total_w": 0.000281
+          },
+          {
+            "instance": "loom/execution/fpu/sfma",
+            "internal_w": 0.00049,
+            "leakage_w": 1.5e-07,
+            "module": "FPUFMAPipe_l5_f32",
+            "switching_w": 0.0,
+            "total_w": 0.000491
+          },
+          {
+            "instance": "loom/execution/fpu/divSqrt_1",
+            "internal_w": 0.000481,
+            "leakage_w": 2.1e-07,
+            "module": "DivSqrtRecFM_small_e8_s24",
+            "switching_w": 1.55e-09,
+            "total_w": 0.000482
+          },
+          {
+            "instance": "loom/execution/fpu/divSqrt_1/divSqrtRecFNToRaw",
+            "internal_w": 0.000481,
+            "leakage_w": 2.1e-07,
+            "module": "DivSqrtRecFMToRaw_small_e8_s24",
+            "switching_w": 1.55e-09,
+            "total_w": 0.000482
+          },
+          {
+            "instance": "loom/execution/fpu/divSqrt_1/divSqrtRecFNToRaw/divSqrtRawFN",
+            "internal_w": 0.000481,
+            "leakage_w": 2.09e-07,
+            "module": "DivSqrtRawFN_small_e8_s24",
+            "switching_w": 1.55e-09,
+            "total_w": 0.000482
+          },
+          {
+            "instance": "loom/execution/fpu/divSqrt_2",
+            "internal_w": 0.000906,
+            "leakage_w": 4.04e-07,
+            "module": "DivSqrtRecFM_small_e11_s53",
+            "switching_w": 1.73e-09,
+            "total_w": 0.000907
+          },
+          {
+            "instance": "loom/execution/fpu/divSqrt_2/divSqrtRecFNToRaw",
+            "internal_w": 0.000906,
+            "leakage_w": 4.04e-07,
+            "module": "DivSqrtRecFMToRaw_small_e11_s53",
+            "switching_w": 1.73e-09,
+            "total_w": 0.000907
+          },
+          {
+            "instance": "loom/execution/fpu/divSqrt_2/divSqrtRecFNToRaw/divSqrtRawFN",
+            "internal_w": 0.000906,
+            "leakage_w": 4.02e-07,
+            "module": "DivSqrtRawFN_small_e11_s53",
+            "switching_w": 1.73e-09,
+            "total_w": 0.000907
+          },
+          {
+            "instance": "loom/execution/fetch",
+            "internal_w": 0.015,
+            "leakage_w": 2.07e-06,
+            "module": "Fetch",
+            "switching_w": 0.0438,
+            "total_w": 0.0588
+          },
+          {
+            "instance": "loom/execution/lsu",
+            "internal_w": 0.0245,
+            "leakage_w": 5.72e-06,
+            "module": "Lsu",
+            "switching_w": 0.000443,
+            "total_w": 0.025
+          },
+          {
+            "instance": "dma",
+            "internal_w": 0.00618,
+            "leakage_w": 1.91e-06,
+            "module": "DmaRequester",
+            "switching_w": 0.00422,
+            "total_w": 0.0104
+          }
+        ],
+        "internal_w": 0.0807,
+        "leakage_w": 1.5e-05,
+        "status": "pass",
+        "switching_w": 0.183,
+        "total_w": 0.264
+      }
+    }
+  ],
+  "taken": "2026-11-24T06:50:51.230219+00:00"
+}

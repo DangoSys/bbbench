@@ -1,0 +1,15 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "magia/harts/magia",
+      "path": "examples/designs/magia/harts/magia",
+      "power": {
+        "error": "",
+        "status": "failure"
+      }
+    }
+  ],
+  "taken": "2026-11-24T06:11:04.956155+00:00"
+}

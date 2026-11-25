@@ -1,0 +1,88 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-24T10:31:08.939492+00:00",
+  "threads": [
+    {
+      "path": "examples/designs/poly/threads/mixed5",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-24-18-36-poly-bebop-bemu-thread-mixed5-default-bare-tests",
+            "passed": 7,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "mixed5-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-mxint8quantize_edges-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-mxint8matmul_small-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-mxint8act_relu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-mxint5gemv_block-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-intsoftmax_rows-baremetal"
+              }
+            ],
+            "total": 7
+          },
+          "verilator": {
+            "log": "2026-11-24-18-36-poly-bebop-verilator-thread-mixed5-default-bare-tests",
+            "passed": 7,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "mixed5-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-mxint8quantize_edges-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-mxint8matmul_small-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-mxint8act_relu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-mxint5gemv_block-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "mixed5-thread-intsoftmax_rows-baremetal"
+              }
+            ],
+            "total": 7
+          }
+        },
+        "status": "pass"
+      },
+      "thread": "poly/threads/mixed5"
+    }
+  ]
+}

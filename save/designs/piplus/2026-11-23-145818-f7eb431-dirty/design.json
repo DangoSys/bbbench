@@ -1,0 +1,582 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "piplus",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "piplus/devices/piplus/configs/PiplusTapeoutConfig.toml",
+      "elapsed_s": 205.9,
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "pass"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusTapeoutConfig.toml",
+      "elapsed_s": 601.1,
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-23-23-01-piplus-bebop-bemu-device-piplus-PiplusTapeoutConfig-bare-tests",
+          "passed": 74,
+          "total": 74,
+          "workloads": [
+            {
+              "cycles": 17358,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "piplus-hart0-ctest-control_hello-baremetal"
+            },
+            {
+              "cycles": 280705,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "piplus-hart1-ctest-dense_thread_sum-baremetal"
+            },
+            {
+              "cycles": 513146,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_attention-baremetal"
+            },
+            {
+              "cycles": 688330,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_attention_masked-baremetal"
+            },
+            {
+              "cycles": 3254448,
+              "elapsed_s": 0.21,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_attention_streamed-baremetal"
+            },
+            {
+              "cycles": 209400,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_attention_tail-baremetal"
+            },
+            {
+              "cycles": 423379768,
+              "elapsed_s": 10.69,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_doubled_blocks-baremetal"
+            },
+            {
+              "cycles": 408395998,
+              "elapsed_s": 5.43,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_doubled_weights-baremetal"
+            },
+            {
+              "cycles": 536645,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_gqa_scores-baremetal"
+            },
+            {
+              "cycles": 9486123,
+              "elapsed_s": 0.21,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_linear_bias-baremetal"
+            },
+            {
+              "cycles": 7329954,
+              "elapsed_s": 0.21,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_mxint8-baremetal"
+            },
+            {
+              "cycles": 424664386,
+              "elapsed_s": 7.33,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_packed_weights-baremetal"
+            },
+            {
+              "cycles": 1794771215,
+              "elapsed_s": 38.08,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_residual_blocks-baremetal"
+            },
+            {
+              "cycles": 1790157445,
+              "elapsed_s": 33.75,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_residual_weights-baremetal"
+            },
+            {
+              "cycles": 378919,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_softmax-baremetal"
+            },
+            {
+              "cycles": 3264751,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_softmax_scale-baremetal"
+            },
+            {
+              "cycles": 3228557,
+              "elapsed_s": 0.23,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_softmax_tail-baremetal"
+            },
+            {
+              "cycles": 936645,
+              "elapsed_s": 0.37,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-mm_accumulate_test-baremetal"
+            },
+            {
+              "cycles": 955895,
+              "elapsed_s": 0.38,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-mm_accumulate_update_test-baremetal"
+            },
+            {
+              "cycles": 932300,
+              "elapsed_s": 0.45,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-mm_bias_test-baremetal"
+            },
+            {
+              "cycles": 231950,
+              "elapsed_s": 0.36,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-mm_extremes_test-baremetal"
+            },
+            {
+              "cycles": 347189,
+              "elapsed_s": 0.24,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-mm_small_test-baremetal"
+            },
+            {
+              "cycles": 1009175,
+              "elapsed_s": 0.33,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-quant_columns_test-baremetal"
+            },
+            {
+              "cycles": 64231,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-quant_edges_test-baremetal"
+            },
+            {
+              "cycles": 423857,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-quant_random_test-baremetal"
+            },
+            {
+              "cycles": 180830,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-quant_transpose_test-baremetal"
+            },
+            {
+              "cycles": 101963,
+              "elapsed_s": 0.23,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-quant_update_test-baremetal"
+            },
+            {
+              "cycles": 106834,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "piplus-hart4-ctest-action_thread_sum-baremetal"
+            },
+            {
+              "cycles": 679194,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_attention_masked-baremetal"
+            },
+            {
+              "cycles": 3245128,
+              "elapsed_s": 0.22,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_attention_streamed-baremetal"
+            },
+            {
+              "cycles": 184738,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_attention_tail-baremetal"
+            },
+            {
+              "cycles": 426781647,
+              "elapsed_s": 5.68,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_doubled_blocks-baremetal"
+            },
+            {
+              "cycles": 408479768,
+              "elapsed_s": 5.88,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_doubled_weights-baremetal"
+            },
+            {
+              "cycles": 528824,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_gqa_scores-baremetal"
+            },
+            {
+              "cycles": 9531712,
+              "elapsed_s": 0.38,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_linear_bias-baremetal"
+            },
+            {
+              "cycles": 7315931,
+              "elapsed_s": 0.29,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_mxint8-baremetal"
+            },
+            {
+              "cycles": 428037923,
+              "elapsed_s": 6.15,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_packed_weights-baremetal"
+            },
+            {
+              "cycles": 1794665116,
+              "elapsed_s": 32.74,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_residual_blocks-baremetal"
+            },
+            {
+              "cycles": 1730873804,
+              "elapsed_s": 26.37,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_residual_weights-baremetal"
+            },
+            {
+              "cycles": 362824,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_softmax-baremetal"
+            },
+            {
+              "cycles": 3248166,
+              "elapsed_s": 0.21,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_softmax_scale-baremetal"
+            },
+            {
+              "cycles": 3177604,
+              "elapsed_s": 0.23,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_softmax_tail-baremetal"
+            },
+            {
+              "cycles": 939162,
+              "elapsed_s": 0.36,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-mm_accumulate_bias_test-baremetal"
+            },
+            {
+              "cycles": 238215,
+              "elapsed_s": 0.23,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-mm_blocks_test-baremetal"
+            },
+            {
+              "cycles": 573401,
+              "elapsed_s": 0.36,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-mm_tiles_test-baremetal"
+            },
+            {
+              "cycles": 74085,
+              "elapsed_s": 0.36,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-rvv_integer_test-baremetal"
+            },
+            {
+              "cycles": 57255,
+              "elapsed_s": 0.26,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-softmax_edges_test-baremetal"
+            },
+            {
+              "cycles": 261909,
+              "elapsed_s": 0.26,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-softmax_random_test-baremetal"
+            },
+            {
+              "cycles": 82950,
+              "elapsed_s": 0.29,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-softmax_scale_test-baremetal"
+            },
+            {
+              "cycles": 943155,
+              "elapsed_s": 0.4,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-mm_accumulate_test-baremetal"
+            },
+            {
+              "cycles": 944425,
+              "elapsed_s": 0.39,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-mm_accumulate_update_test-baremetal"
+            },
+            {
+              "cycles": 331149,
+              "elapsed_s": 0.37,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-mm_small_test-baremetal"
+            },
+            {
+              "cycles": 1024024,
+              "elapsed_s": 0.55,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-quant_columns_test-baremetal"
+            },
+            {
+              "cycles": 52674,
+              "elapsed_s": 0.47,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-quant_edges_test-baremetal"
+            },
+            {
+              "cycles": 411278,
+              "elapsed_s": 0.57,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-quant_random_test-baremetal"
+            },
+            {
+              "cycles": 162981,
+              "elapsed_s": 0.39,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-quant_transpose_test-baremetal"
+            },
+            {
+              "cycles": 93851,
+              "elapsed_s": 0.46,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-quant_update_test-baremetal"
+            },
+            {
+              "cycles": 87284,
+              "elapsed_s": 0.46,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-layernorm_test-baremetal"
+            },
+            {
+              "cycles": 81498,
+              "elapsed_s": 0.56,
+              "status": "pass",
+              "workload": "piplus-hart1-thread0-ctest-rmsnorm_test-baremetal"
+            },
+            {
+              "cycles": 72795,
+              "elapsed_s": 0.65,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-layernorm_test-baremetal"
+            },
+            {
+              "cycles": 921362,
+              "elapsed_s": 0.71,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-mm_accumulate_bias_test-baremetal"
+            },
+            {
+              "cycles": 917459,
+              "elapsed_s": 0.58,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-mm_bias_test-baremetal"
+            },
+            {
+              "cycles": 223453,
+              "elapsed_s": 0.68,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-mm_blocks_test-baremetal"
+            },
+            {
+              "cycles": 216875,
+              "elapsed_s": 0.38,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-mm_extremes_test-baremetal"
+            },
+            {
+              "cycles": 554097,
+              "elapsed_s": 0.48,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-mm_tiles_test-baremetal"
+            },
+            {
+              "cycles": 56688,
+              "elapsed_s": 0.4,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-rvv_integer_test-baremetal"
+            },
+            {
+              "cycles": 44540,
+              "elapsed_s": 0.4,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-softmax_edges_test-baremetal"
+            },
+            {
+              "cycles": 251262,
+              "elapsed_s": 0.54,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-softmax_random_test-baremetal"
+            },
+            {
+              "cycles": 65308,
+              "elapsed_s": 0.48,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-softmax_scale_test-baremetal"
+            },
+            {
+              "cycles": 3876701,
+              "elapsed_s": 0.65,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_layernorm-baremetal"
+            },
+            {
+              "cycles": 3943518,
+              "elapsed_s": 0.66,
+              "status": "pass",
+              "workload": "piplus-hart1-mlirtest-dense_rmsnorm-baremetal"
+            },
+            {
+              "cycles": 3809116,
+              "elapsed_s": 0.66,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_layernorm-baremetal"
+            },
+            {
+              "cycles": 3781647,
+              "elapsed_s": 0.47,
+              "status": "pass",
+              "workload": "piplus-hart4-mlirtest-action_rmsnorm-baremetal"
+            },
+            {
+              "cycles": 65319,
+              "elapsed_s": 0.56,
+              "status": "pass",
+              "workload": "piplus-hart4-thread0-ctest-rmsnorm_test-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-23-23-11-piplus-bebop-bemu-device-piplus-PiplusTapeoutConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 1723778989,
+              "elapsed_s": 24.56,
+              "status": "pass",
+              "workload": "fw_payload-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusTapeoutConfig.toml",
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "running"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusVerilatorConfig.toml",
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "running"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "piplus/devices/piplus/configs/PiplusP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-23T14:58:18.771389+00:00"
+}

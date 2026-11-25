@@ -1,0 +1,419 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "toy/devices/toy/configs/ToyDefaultConfig.toml",
+  "design": "toy",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 685.6,
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-24-22-59-toy-bebop-verilator-device-toy-ToyDefaultConfig-bare-tests",
+          "passed": 45,
+          "total": 45,
+          "workloads": [
+            {
+              "cycles": 8358,
+              "elapsed_s": 177.4,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mxint8act-baremetal"
+            },
+            {
+              "cycles": 68872,
+              "elapsed_s": 182.61,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mxint8act_rows-baremetal"
+            },
+            {
+              "cycles": 12541,
+              "elapsed_s": 178.3,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-redmule_f16_chain_test-baremetal"
+            },
+            {
+              "cycles": 11576,
+              "elapsed_s": 178.24,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-redmule_f16_edges_test-baremetal"
+            },
+            {
+              "cycles": 9976,
+              "elapsed_s": 178.17,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-redmule_f16_fused_test-baremetal"
+            },
+            {
+              "cycles": 15904,
+              "elapsed_s": 110.41,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-redmule_f16_test-baremetal"
+            },
+            {
+              "cycles": 10668,
+              "elapsed_s": 177.99,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_redmule_f16_chain-baremetal"
+            },
+            {
+              "cycles": 8742,
+              "elapsed_s": 93.36,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-bank_mxint8act-baremetal"
+            },
+            {
+              "cycles": 17824,
+              "elapsed_s": 71.6,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-rvv_operator-baremetal"
+            },
+            {
+              "cycles": 28604,
+              "elapsed_s": 68.23,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_2d_pixel_stride_test-baremetal"
+            },
+            {
+              "cycles": 165148,
+              "elapsed_s": 25.33,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_accumulated_16x16_test-baremetal"
+            },
+            {
+              "cycles": 28967,
+              "elapsed_s": 4.53,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_2d_test-baremetal"
+            },
+            {
+              "cycles": 127500,
+              "elapsed_s": 9.63,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_mvout_acc_test-baremetal"
+            },
+            {
+              "cycles": 184999,
+              "elapsed_s": 14.03,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_gemmini_accumulated_command_16x16-baremetal"
+            },
+            {
+              "cycles": 40146,
+              "elapsed_s": 3.79,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_mvout_test-baremetal"
+            },
+            {
+              "cycles": 13495,
+              "elapsed_s": 2.87,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_mvout_unaligned_test-baremetal"
+            },
+            {
+              "cycles": 12608,
+              "elapsed_s": 2.29,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_unaligned_test-baremetal"
+            },
+            {
+              "cycles": 12609,
+              "elapsed_s": 1.72,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-bdb_counter_read_active_test-baremetal"
+            },
+            {
+              "cycles": 12809,
+              "elapsed_s": 1.64,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-bdb_counter_start_stop_test-baremetal"
+            },
+            {
+              "cycles": 12947,
+              "elapsed_s": 1.01,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-bdb_counter_nested_pair_test-baremetal"
+            },
+            {
+              "cycles": 10049,
+              "elapsed_s": 0.71,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-bdb_counter_multi_id_test-baremetal"
+            },
+            {
+              "cycles": 103488,
+              "elapsed_s": 6.73,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_cisc_atranspose_test-baremetal"
+            },
+            {
+              "cycles": 98447,
+              "elapsed_s": 7.84,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_cisc_basic_test-baremetal"
+            },
+            {
+              "cycles": 106401,
+              "elapsed_s": 8.17,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_cisc_btranspose_test-baremetal"
+            },
+            {
+              "cycles": 117692,
+              "elapsed_s": 12.14,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_cisc_shift_test-baremetal"
+            },
+            {
+              "cycles": 1421,
+              "elapsed_s": 0.21,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_bdb_counter_start_read_stop-baremetal"
+            },
+            {
+              "cycles": 27734,
+              "elapsed_s": 3.02,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_ws_cisc_conv_test-baremetal"
+            },
+            {
+              "cycles": 151771,
+              "elapsed_s": 8.75,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_loop_c_overlap_test-baremetal"
+            },
+            {
+              "cycles": 45221,
+              "elapsed_s": 2.31,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-relu_i32_16x16_test-baremetal"
+            },
+            {
+              "cycles": 175934,
+              "elapsed_s": 10.37,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_gemmini_preloaded_command_16x16-baremetal"
+            },
+            {
+              "cycles": 14385,
+              "elapsed_s": 0.91,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_relu_i32_16row-baremetal"
+            },
+            {
+              "cycles": 42993,
+              "elapsed_s": 1.92,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_bare_mode_test-baremetal"
+            },
+            {
+              "cycles": 145109,
+              "elapsed_s": 11.94,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_repeated_sfence_test-baremetal"
+            },
+            {
+              "cycles": 57640,
+              "elapsed_s": 4.92,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sfence_flush_test-baremetal"
+            },
+            {
+              "cycles": 58078,
+              "elapsed_s": 2.62,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sv39_identity_test-baremetal"
+            },
+            {
+              "cycles": 70573,
+              "elapsed_s": 5.72,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sv39_nonidentity_test-baremetal"
+            },
+            {
+              "cycles": 127592,
+              "elapsed_s": 9.63,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sfence_remap_test-baremetal"
+            },
+            {
+              "cycles": 83530,
+              "elapsed_s": 3.82,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sv39_4k_alias_test-baremetal"
+            },
+            {
+              "cycles": 18185,
+              "elapsed_s": 1.01,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_mvout_stride_test-baremetal"
+            },
+            {
+              "cycles": 95429,
+              "elapsed_s": 7.64,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-vecmat16_atranspose_16x16_test-baremetal"
+            },
+            {
+              "cycles": 14725,
+              "elapsed_s": 0.91,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mxfp4_e8m0_two_block_test-baremetal"
+            },
+            {
+              "cycles": 43668,
+              "elapsed_s": 3.62,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-vecmat16_accumulate_k4_test-baremetal"
+            },
+            {
+              "cycles": 178277,
+              "elapsed_s": 11.78,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_matmul_at_i8_16x16-baremetal"
+            },
+            {
+              "cycles": 37057,
+              "elapsed_s": 3.32,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mxfp4_e8m0_scale_range_test-baremetal"
+            },
+            {
+              "cycles": 17321,
+              "elapsed_s": 1.11,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_mxfp4_i8_2blocks-baremetal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T14:52:07.936185+00:00"
+}

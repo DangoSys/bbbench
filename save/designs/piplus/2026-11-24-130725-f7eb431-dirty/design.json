@@ -1,0 +1,157 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "piplus/devices/piplus/configs/PiplusDefaultConfig.toml",
+  "design": "piplus",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 310.1,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 795964101,
+          "elapsed_s": 51.321,
+          "elements": 1600,
+          "log": "2026-11-24-21-07-piplus-bemu-device-piplus-PiplusDefaultConfig-piplus-smolvla-base-baremetal",
+          "max_diff": 0.055886149,
+          "model": "smolvla-base",
+          "os": "baremetal",
+          "relative": 0.026250221,
+          "simulated_cycles": 802833185,
+          "status": "pass"
+        },
+        {
+          "cycles": 11663484209,
+          "elapsed_s": 167.069,
+          "elements": 1600,
+          "log": "2026-11-24-21-09-piplus-bemu-device-piplus-PiplusDefaultConfig-piplus-smolvla-base-linux",
+          "max_diff": 0.055886149,
+          "model": "smolvla-base",
+          "os": "linux",
+          "relative": 0.026250221,
+          "simulated_cycles": 16718809099,
+          "status": "pass"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T13:07:25.162805+00:00"
+}

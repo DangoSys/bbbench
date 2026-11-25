@@ -1,0 +1,162 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-23T08:19:00.547396+00:00",
+  "threads": [
+    {
+      "path": "examples/prefab/threads/attention",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-16-21-attention-bebop-bemu-thread-attention-default-bare-tests",
+            "passed": 3,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "attention-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "attention-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "attention-thread-int2fp_scale-baremetal"
+              }
+            ],
+            "total": 3
+          },
+          "verilator": {
+            "log": "2026-11-23-16-22-attention-bebop-verilator-thread-attention-default-bare-tests",
+            "passed": 3,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "attention-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "attention-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "attention-thread-int2fp_scale-baremetal"
+              }
+            ],
+            "total": 3
+          }
+        },
+        "status": "pass"
+      },
+      "thread": "attention"
+    },
+    {
+      "path": "examples/prefab/threads/ffn",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-16-21-ffn-bebop-bemu-thread-ffn-default-bare-tests",
+            "passed": 3,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "ffn-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-int2fp_scale-baremetal"
+              }
+            ],
+            "total": 3
+          },
+          "verilator": {
+            "log": "2026-11-23-16-21-ffn-bebop-verilator-thread-ffn-default-bare-tests",
+            "passed": 3,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "ffn-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-int2fp_scale-baremetal"
+              }
+            ],
+            "total": 3
+          }
+        },
+        "status": "pass"
+      },
+      "thread": "ffn"
+    },
+    {
+      "path": "examples/prefab/threads/matmul",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-16-21-matmul-bebop-bemu-thread-matmul-default-bare-tests",
+            "passed": 4,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "matmul-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "matmul-thread-smatmul_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "matmul-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "matmul-thread-int2fp_scale-baremetal"
+              }
+            ],
+            "total": 4
+          },
+          "verilator": {
+            "log": "2026-11-23-16-22-matmul-bebop-verilator-thread-matmul-default-bare-tests",
+            "passed": 4,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "matmul-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "matmul-thread-smatmul_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "matmul-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "matmul-thread-int2fp_scale-baremetal"
+              }
+            ],
+            "total": 4
+          }
+        },
+        "status": "pass"
+      },
+      "thread": "matmul"
+    }
+  ]
+}

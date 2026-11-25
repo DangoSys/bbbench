@@ -1,0 +1,28 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 29350000219,
+  "design": "toy",
+  "dirty": true,
+  "elapsed_s": 435.913,
+  "taken": "2026-11-23T07:22:25.289403+00:00",
+  "timeline": "designs/toy/2026-11-23-065731-f7eb431-dirty",
+  "tool": "BEMU",
+  "workloads": [
+    {
+      "cycles": 3047701652,
+      "elapsed_s": 72.46,
+      "status": "pass",
+      "workload": "fw_payload-linux"
+    },
+    {
+      "cycles": 26292652285,
+      "elapsed_s": 363.314,
+      "workload": "alexnet"
+    },
+    {
+      "cycles": 9646282,
+      "elapsed_s": 0.139,
+      "workload": "lenet"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-24T10:24:52.020928+00:00",
+  "threads": [
+    {
+      "path": "examples/designs/poly/threads/ffn",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-24-18-27-poly-bebop-bemu-thread-ffn-default-bare-tests",
+            "passed": 5,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "ffn-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-mxint8quantize_edges-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-mxint8matmul_small-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-mxint8act_relu-baremetal"
+              }
+            ],
+            "total": 5
+          },
+          "verilator": {
+            "log": "2026-11-24-18-27-poly-bebop-verilator-thread-ffn-default-bare-tests",
+            "passed": 5,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "ffn-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-transpose_i8_16x16-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-mxint8quantize_edges-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-mxint8matmul_small-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "ffn-thread-mxint8act_relu-baremetal"
+              }
+            ],
+            "total": 5
+          }
+        },
+        "status": "pass"
+      },
+      "thread": "poly/threads/ffn"
+    }
+  ]
+}

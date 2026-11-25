@@ -1,0 +1,300 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "goban",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "goban/devices/goban/configs/GobanTapeoutConfig.toml",
+      "elapsed_s": 57.3,
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "pass"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanTapeoutConfig.toml",
+      "elapsed_s": 280.1,
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-23-12-59-goban-bebop-bemu-device-goban-GobanTapeoutConfig-bare-tests",
+          "passed": 27,
+          "total": 27,
+          "workloads": [
+            {
+              "cycles": 89013,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-ctest-rvv_gather-baremetal"
+            },
+            {
+              "cycles": 291571,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-ctest-rvv_multiply-baremetal"
+            },
+            {
+              "cycles": 105375,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-ctest-rvv_stride-baremetal"
+            },
+            {
+              "cycles": 300294,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_batched_int8-baremetal"
+            },
+            {
+              "cycles": 33626,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_bias_tail-baremetal"
+            },
+            {
+              "cycles": 16418,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_exp_underflow-baremetal"
+            },
+            {
+              "cycles": 181664,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_int8_tiles-baremetal"
+            },
+            {
+              "cycles": 141832,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_matmul_rows-baremetal"
+            },
+            {
+              "cycles": 59466,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_padded_copy-baremetal"
+            },
+            {
+              "cycles": 262267,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_quantized_rows-baremetal"
+            },
+            {
+              "cycles": 71249,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_erf-baremetal"
+            },
+            {
+              "cycles": 44086,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_exp-baremetal"
+            },
+            {
+              "cycles": 24391,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_max-baremetal"
+            },
+            {
+              "cycles": 49279,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_norm-baremetal"
+            },
+            {
+              "cycles": 72917,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_reduce-baremetal"
+            },
+            {
+              "cycles": 110186,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_rows-baremetal"
+            },
+            {
+              "cycles": 35656,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_slice_pair-baremetal"
+            },
+            {
+              "cycles": 60556,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_strided-baremetal"
+            },
+            {
+              "cycles": 33831,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_transpose_blocks-baremetal"
+            },
+            {
+              "cycles": 76494,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_transpose_f32-baremetal"
+            },
+            {
+              "cycles": 1923,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-soctest-clint_software_interrupt-baremetal"
+            },
+            {
+              "cycles": 201429,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-soctest-clint_timer_interrupt-baremetal"
+            },
+            {
+              "cycles": 1944,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-soctest-plic_register_access-baremetal"
+            },
+            {
+              "cycles": 523267,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-copy_overlap-baremetal"
+            },
+            {
+              "cycles": 46127,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-dataflow-baremetal"
+            },
+            {
+              "cycles": 40144,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-gp_scalar_fmul-baremetal"
+            },
+            {
+              "cycles": 1030431,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-matmul_threads-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-23-13-00-goban-bebop-bemu-device-goban-GobanTapeoutConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 2208914599,
+              "elapsed_s": 223.44,
+              "status": "pass",
+              "workload": "fw_payload-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanTapeoutConfig.toml",
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "running"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanVerilatorConfig.toml",
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "running"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "goban/devices/goban/configs/GobanP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-23T04:58:45.821128+00:00"
+}

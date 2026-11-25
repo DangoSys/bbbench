@@ -1,0 +1,42 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 19776268235,
+  "design": "pebble",
+  "dirty": true,
+  "elapsed_s": 699.1909999999999,
+  "taken": "2026-11-23T06:53:52.124591+00:00",
+  "timeline": "designs/pebble/2026-11-23-045915-f7eb431-dirty",
+  "tool": "BEMU",
+  "workloads": [
+    {
+      "cycles": 18692498454,
+      "elapsed_s": 692.04,
+      "workload": "fw_payload-linux"
+    },
+    {
+      "cycles": 118896649,
+      "elapsed_s": 0.902,
+      "workload": "alexnet"
+    },
+    {
+      "cycles": 851309,
+      "elapsed_s": 0.011,
+      "workload": "lenet"
+    },
+    {
+      "cycles": 57595362,
+      "elapsed_s": 0.395,
+      "workload": "mobilenet-v3-small"
+    },
+    {
+      "cycles": 194498554,
+      "elapsed_s": 1.202,
+      "workload": "resnet18"
+    },
+    {
+      "cycles": 711927907,
+      "elapsed_s": 4.641,
+      "workload": "yolo26n"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketDefaultConfig.toml",
+  "design": "multi-rocket",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 140.1,
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-24-20-24-multi-rocket-bebop-bemu-device-multi-rocket-MultiRocketDefaultConfig-bare-tests",
+          "passed": 3,
+          "total": 3,
+          "workloads": [
+            {
+              "cycles": 10171,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-cpu_arithmetic-baremetal"
+            },
+            {
+              "cycles": 13135,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-design-coherent_exchange-multicore-baremetal"
+            },
+            {
+              "cycles": 11955,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "multi-rocket-hart0-ctest-hello-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-24-20-26-multi-rocket-bebop-bemu-device-multi-rocket-MultiRocketDefaultConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 1210862217,
+              "elapsed_s": 24.25,
+              "status": "pass",
+              "workload": "multi-rocket-test-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T12:24:31.223671+00:00"
+}

@@ -1,0 +1,286 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "poly/devices/poly/configs/PolyDefaultConfig.toml",
+  "design": "poly",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 5217.2,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 2265954000,
+          "elapsed_s": 845.542,
+          "elements": 3200,
+          "log": "2026-11-25-03-26-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-baremetal",
+          "max_diff": 0.243003845,
+          "model": "deepseek-r1-0528-qwen3-8b",
+          "os": "baremetal",
+          "relative": 0.00682638,
+          "simulated_cycles": 2267325004,
+          "status": "pass"
+        },
+        {
+          "cycles": 7008461873,
+          "elapsed_s": 341.687,
+          "elements": 3200,
+          "log": "2026-11-25-03-43-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-linux",
+          "max_diff": 0.243003845,
+          "model": "deepseek-r1-0528-qwen3-8b",
+          "os": "linux",
+          "relative": 0.00682638,
+          "simulated_cycles": 9363595398,
+          "status": "pass"
+        },
+        {
+          "cycles": 1302551000,
+          "elapsed_s": 198.56,
+          "elements": 8,
+          "log": "2026-11-25-03-49-poly-bemu-device-poly-PolyDefaultConfig-poly-gemma4-e2b-it-baremetal",
+          "max_diff": 1.907e-06,
+          "model": "gemma4-e2b-it",
+          "os": "baremetal",
+          "relative": 8.3e-08,
+          "simulated_cycles": 1571813034,
+          "status": "failure"
+        },
+        {
+          "cycles": 3894701155,
+          "elapsed_s": 601.552,
+          "elements": 64,
+          "log": "2026-11-25-03-59-poly-bemu-device-poly-PolyDefaultConfig-poly-gemma4-e2b-it-linux",
+          "max_diff": 0.769055367,
+          "model": "gemma4-e2b-it",
+          "os": "linux",
+          "relative": 0.033330292,
+          "simulated_cycles": 6380230346,
+          "status": "failure"
+        },
+        {
+          "cycles": 451690000,
+          "elapsed_s": 64.292,
+          "elements": 6,
+          "log": "2026-11-25-04-09-poly-bemu-device-poly-PolyDefaultConfig-poly-laya-baremetal",
+          "max_diff": 22.703125,
+          "model": "laya",
+          "os": "baremetal",
+          "relative": 0.00482826,
+          "simulated_cycles": 451934985,
+          "status": "pass"
+        },
+        {
+          "cycles": 11541978296,
+          "elapsed_s": 346.935,
+          "elements": 6,
+          "log": "2026-11-25-04-15-poly-bemu-device-poly-PolyDefaultConfig-poly-laya-linux",
+          "max_diff": 22.703125,
+          "model": "laya",
+          "os": "linux",
+          "relative": 0.00482826,
+          "simulated_cycles": 13417197426,
+          "status": "pass"
+        },
+        {
+          "cycles": 906427000,
+          "elapsed_s": 206.491,
+          "elements": 3200,
+          "log": "2026-11-25-04-21-poly-bemu-device-poly-PolyDefaultConfig-poly-llama3-2-3b-instruct-baremetal",
+          "max_diff": 0.196014404,
+          "model": "llama3-2-3b-instruct",
+          "os": "baremetal",
+          "relative": 0.008381769,
+          "simulated_cycles": 907641113,
+          "status": "pass"
+        },
+        {
+          "cycles": 3105980337,
+          "elapsed_s": 331.583,
+          "elements": 3200,
+          "log": "2026-11-25-04-27-poly-bemu-device-poly-PolyDefaultConfig-poly-llama3-2-3b-instruct-linux",
+          "max_diff": 0.196014404,
+          "model": "llama3-2-3b-instruct",
+          "os": "linux",
+          "relative": 0.008381769,
+          "simulated_cycles": 4877982194,
+          "status": "pass"
+        },
+        {
+          "cycles": 1109365000,
+          "elapsed_s": 172.149,
+          "elements": 1280,
+          "log": "2026-11-25-04-33-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-0-6b-baremetal",
+          "max_diff": 0.0,
+          "model": "qwen3-0-6b",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 1110322496,
+          "status": "pass"
+        },
+        {
+          "cycles": 11539301145,
+          "elapsed_s": 412.858,
+          "elements": 1280,
+          "log": "2026-11-25-04-39-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-0-6b-linux",
+          "max_diff": 0.0,
+          "model": "qwen3-0-6b",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 13866056018,
+          "status": "pass"
+        },
+        {
+          "cycles": 1313131000,
+          "elapsed_s": 135.61,
+          "elements": 1280,
+          "log": "2026-11-25-04-46-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-8b-baremetal",
+          "max_diff": 0.0,
+          "model": "qwen3-8b",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 1314635757,
+          "status": "pass"
+        },
+        {
+          "cycles": 3283819539,
+          "elapsed_s": 153.87,
+          "elements": 1280,
+          "log": "2026-11-25-04-50-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-8b-linux",
+          "max_diff": 0.0,
+          "model": "qwen3-8b",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 5304235114,
+          "status": "pass"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T19:26:03.979808+00:00"
+}

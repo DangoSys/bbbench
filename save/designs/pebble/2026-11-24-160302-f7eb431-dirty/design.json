@@ -1,0 +1,186 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "pebble/devices/pebble/configs/PebbleDefaultConfig.toml",
+  "design": "pebble",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "datasets": [
+        {
+          "accuracy": 0.55312,
+          "elapsed_s": 939.3,
+          "log": "2026-11-25-00-03-02-pebble-dataset-device-pebble-PebbleDefaultConfig-alexnet",
+          "model": "alexnet",
+          "pass_rate": 1.0,
+          "ran": 50000,
+          "reference_accuracy": 0.55312,
+          "samples": 50000,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.9925,
+          "elapsed_s": 62.3,
+          "log": "2026-11-25-00-18-41-pebble-dataset-device-pebble-PebbleDefaultConfig-lenet",
+          "model": "lenet",
+          "pass_rate": 1.0,
+          "ran": 10000,
+          "reference_accuracy": 0.9925,
+          "samples": 10000,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.62168,
+          "elapsed_s": 471.5,
+          "log": "2026-11-25-00-19-43-pebble-dataset-device-pebble-PebbleDefaultConfig-mobilenet-v3-small",
+          "model": "mobilenet-v3-small",
+          "pass_rate": 1.0,
+          "ran": 50000,
+          "reference_accuracy": 0.62168,
+          "samples": 50000,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.67378,
+          "elapsed_s": 1550.7,
+          "log": "2026-11-25-00-27-35-pebble-dataset-device-pebble-PebbleDefaultConfig-resnet18",
+          "model": "resnet18",
+          "pass_rate": 1.0,
+          "ran": 50000,
+          "reference_accuracy": 0.67378,
+          "samples": 50000,
+          "status": "pass"
+        }
+      ],
+      "elapsed_s": 3023.8,
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T16:03:02.231078+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 2520060100,
+  "design": "piplus",
+  "dirty": true,
+  "elapsed_s": 68.914,
+  "taken": "2026-11-23T14:43:46.396993+00:00",
+  "timeline": "designs/piplus/2026-11-23-142721-f7eb431-dirty",
+  "tool": "BEMU",
+  "workloads": [
+    {
+      "cycles": 1715212768,
+      "elapsed_s": 17.34,
+      "status": "pass",
+      "workload": "fw_payload-linux"
+    },
+    {
+      "cycles": 804847332,
+      "elapsed_s": 51.574,
+      "workload": "smolvla-base"
+    }
+  ]
+}

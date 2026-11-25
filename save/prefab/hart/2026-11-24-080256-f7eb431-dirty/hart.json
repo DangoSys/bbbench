@@ -1,0 +1,184 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "reduce",
+      "path": "examples/prefab/harts/reduce",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-24-16-05-prefab-bebop-bemu-hart-reduce-default-bare-tests",
+            "passed": 19,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-f32add_groups-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-f32add_pipeline-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_extreme-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_round-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_signed-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_wide-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_zero-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 19
+          },
+          "verilator": {
+            "log": "2026-11-24-16-05-prefab-bebop-verilator-hart-reduce-default-bare-tests",
+            "passed": 19,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-f32add_groups-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-f32add_pipeline-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_extreme-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_round-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_signed-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_wide-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-intnorm_zero-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "reduce-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 19
+          }
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "taken": "2026-11-24T08:02:56.158989+00:00"
+}

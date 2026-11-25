@@ -1,0 +1,72 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 4584677,
+  "design": "pebble",
+  "dirty": true,
+  "elapsed_s": 143.9,
+  "log": "2026-11-24-22-39-pebble-bebop-verilator-device-pebble-PebbleDefaultConfig-bare-tests",
+  "taken": "2026-11-24T14:41:12.457694+00:00",
+  "tool": "Verilator",
+  "workloads": [
+    {
+      "cycles": 149035,
+      "elapsed_s": 8.71,
+      "status": "pass",
+      "workload": "pebble-hart0-ctest-dma_strided_block2_test-baremetal"
+    },
+    {
+      "cycles": 107138,
+      "elapsed_s": 3.62,
+      "status": "pass",
+      "workload": "pebble-hart0-ctest-dma_strided_test-baremetal"
+    },
+    {
+      "cycles": 77634,
+      "elapsed_s": 5.11,
+      "status": "pass",
+      "workload": "pebble-pebble-mlirtest-hart_conv_k11_groups-baremetal"
+    },
+    {
+      "cycles": 57884,
+      "elapsed_s": 3.91,
+      "status": "pass",
+      "workload": "pebble-pebble-mlirtest-hart_lookup_frontend_channels-baremetal"
+    },
+    {
+      "cycles": 52090,
+      "elapsed_s": 1.91,
+      "status": "pass",
+      "workload": "pebble-pebble-mlirtest-hart_lookup_frontend_i8-baremetal"
+    },
+    {
+      "cycles": 96431,
+      "elapsed_s": 4.31,
+      "status": "pass",
+      "workload": "pebble-pebble-mlirtest-hart_maxpool_i32_border-baremetal"
+    },
+    {
+      "cycles": 201811,
+      "elapsed_s": 7.43,
+      "status": "pass",
+      "workload": "pebble-pebble-mlirtest-hart_pool_quant_flatten-baremetal"
+    },
+    {
+      "cycles": 201672,
+      "elapsed_s": 11.51,
+      "status": "pass",
+      "workload": "pebble-pebble-mlirtest-hart_pool_quant_strided-baremetal"
+    },
+    {
+      "cycles": 206756,
+      "elapsed_s": 7.31,
+      "status": "pass",
+      "workload": "pebble-hart0-ctest-dma_strided_block4_test-baremetal"
+    },
+    {
+      "cycles": 3434226,
+      "elapsed_s": 90.08,
+      "status": "pass",
+      "workload": "pebble-hart0-ctest-dma_blocks_test-baremetal"
+    }
+  ]
+}

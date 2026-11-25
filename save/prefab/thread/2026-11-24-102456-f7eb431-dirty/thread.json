@@ -1,0 +1,88 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-24T10:24:56.057298+00:00",
+  "threads": [
+    {
+      "path": "examples/designs/piplus/threads/dense",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-24-18-28-piplus-bebop-bemu-thread-dense-default-bare-tests",
+            "passed": 7,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "dense-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-mxint8mm_small-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-mxint8mm_bias-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-mxint8quant_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-mxint8quant_columns-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-softmax_exact-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-layernorm_exact-baremetal"
+              }
+            ],
+            "total": 7
+          },
+          "verilator": {
+            "log": "2026-11-24-18-28-piplus-bebop-verilator-thread-dense-default-bare-tests",
+            "passed": 7,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "dense-thread-dma_roundtrip-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-mxint8mm_small-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-mxint8mm_bias-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-mxint8quant_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-mxint8quant_columns-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-softmax_exact-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "dense-thread-layernorm_exact-baremetal"
+              }
+            ],
+            "total": 7
+          }
+        },
+        "status": "pass"
+      },
+      "thread": "piplus/threads/dense"
+    }
+  ]
+}

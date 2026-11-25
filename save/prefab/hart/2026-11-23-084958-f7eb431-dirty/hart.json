@@ -1,0 +1,440 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "toy/harts/toy",
+      "path": "examples/designs/toy/harts/toy",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-16-53-toy-bebop-bemu-hart-toy-default-bare-tests",
+            "passed": 52,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-bdb_counter_multi_id_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-bdb_counter_nested_pair_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-bdb_counter_read_active_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-bdb_counter_start_stop_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_accumulated_16x16_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_loop_c_overlap_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_loop_mmio-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_loop_subrob-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_cisc_atranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_cisc_basic_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_cisc_btranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_cisc_shift_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_abtranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_atranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_basic_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_btranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_shift_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_ws_cisc_conv_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_ws_risc_basic_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_ws_risc_btranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_ws_risc_shift_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-lut_channel_table_lookup_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-lut_i32_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-lut_softmax_i8_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-lut_uniform_lookup_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mmio_minimal_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mxfp4_e8m0_scale_range_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mxfp4_e8m0_two_block_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-redmule_f16_chain_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-redmule_f16_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-redmule_f16_fused_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-redmule_f16_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-relu_i32_16x16_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-rvv_ball-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-rvv_operator-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-vecmat16_accumulate_k4_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-vecmat16_atranspose_16x16_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-trace_events-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-toy-ctest-pipeline-gemmini_relu_trace_pipeline-multicore-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-toy-mlirtest-linalg_conv2d_nchw_fchw-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-toy-mlirtest-linalg_conv2d_nhwc_fhwc-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-toy-mlirtest-linalg_conv2d_nhwc_hwcf-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-toy-mlirtest-linalg_conv2d_nhwc_hwcf_deep-baremetal"
+              }
+            ],
+            "total": 52
+          },
+          "verilator": {
+            "log": "2026-11-23-16-54-toy-bebop-verilator-hart-toy-default-bare-tests",
+            "passed": 50,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-bdb_counter_multi_id_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-bdb_counter_nested_pair_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-bdb_counter_read_active_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-bdb_counter_start_stop_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_accumulated_16x16_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_loop_c_overlap_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_loop_mmio-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_loop_subrob-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_cisc_atranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_cisc_basic_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_cisc_btranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_cisc_shift_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_abtranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_atranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_basic_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_btranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_os_risc_shift_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_ws_cisc_conv_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_ws_risc_basic_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_ws_risc_btranspose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-gemmini_ws_risc_shift_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-lut_channel_table_lookup_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-lut_i32_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-lut_softmax_i8_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-lut_uniform_lookup_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mmio_minimal_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mxfp4_e8m0_scale_range_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mxfp4_e8m0_two_block_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-redmule_f16_chain_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-redmule_f16_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-redmule_f16_fused_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-redmule_f16_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-relu_i32_16x16_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-rvv_operator-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-vecmat16_accumulate_k4_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-ctest-vecmat16_atranspose_16x16_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-hart0-soctest-trace_events-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-toy-mlirtest-linalg_conv2d_nchw_fchw-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-toy-mlirtest-linalg_conv2d_nhwc_fhwc-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-toy-mlirtest-linalg_conv2d_nhwc_hwcf-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "toy-toy-mlirtest-linalg_conv2d_nhwc_hwcf_deep-baremetal"
+              }
+            ],
+            "total": 50
+          }
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "taken": "2026-11-23T08:49:58.992870+00:00"
+}

@@ -1,0 +1,316 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "piplus/harts/dense",
+      "path": "examples/designs/piplus/harts/dense",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-21-53-piplus-bebop-bemu-hart-dense-default-bare-tests",
+            "passed": 45,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_packed_weights-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_mxint8-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_linear_bias-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_doubled_weights-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_doubled_blocks-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_residual_weights-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_residual_blocks-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_attention_tail-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_attention-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_attention_masked-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_attention_streamed-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_gqa_scores-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_softmax-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_softmax_tail-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_softmax_scale-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-dense_thread_sum-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-quant_update_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-quant_columns_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-quant_transpose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_small_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_accumulate_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_accumulate_update_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_extremes_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_bias_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_accumulate_bias_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_tiles_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_blocks_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-softmax_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-softmax_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-softmax_scale_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-rvv_integer_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-layernorm_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-rmsnorm_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_layernorm-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_rmsnorm-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 45
+          },
+          "verilator": {
+            "log": "2026-11-23-21-53-piplus-bebop-verilator-hart-dense-default-bare-tests",
+            "passed": 25,
+            "status": "failure",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-dense_thread_sum-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-quant_update_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-quant_transpose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_small_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_accumulate_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_accumulate_update_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_extremes_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_bias_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_accumulate_bias_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_tiles_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-mm_blocks_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-softmax_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-softmax_scale_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-rvv_integer_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-mlirtest-dense_attention_masked-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-thread0-ctest-layernorm_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "piplus-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 26
+          }
+        },
+        "status": "failure"
+      }
+    }
+  ],
+  "taken": "2026-11-23T13:47:14.196855+00:00"
+}

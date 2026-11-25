@@ -1,0 +1,165 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "magia/devices/magia/configs/MagiaDefaultConfig.toml",
+  "design": "magia",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 310.1,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 1639203317,
+          "elapsed_s": 97.893,
+          "elements": 24,
+          "log": "2026-11-24-20-52-magia-bemu-device-magia-MagiaDefaultConfig-magia-bert-base-uncased-emotion-baremetal",
+          "max_diff": 0.012695313,
+          "model": "bert-base-uncased-emotion",
+          "os": "baremetal",
+          "relative": 0.00183497,
+          "simulated_cycles": 6556931587,
+          "status": "pass"
+        },
+        {
+          "error": "image.build: failure",
+          "model": "bert-base-uncased-emotion",
+          "os": "linux",
+          "status": "failure"
+        },
+        {
+          "elapsed_s": 19.449,
+          "log": "2026-11-24-20-55-magia-bemu-device-magia-MagiaDefaultConfig-magia-qwen3-0-6b-baremetal",
+          "model": "qwen3-0-6b",
+          "os": "baremetal",
+          "simulated_cycles": 1255542872,
+          "status": "failure"
+        },
+        {
+          "error": "image.build: failure",
+          "model": "qwen3-0-6b",
+          "os": "linux",
+          "status": "failure"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T12:52:11.099814+00:00"
+}

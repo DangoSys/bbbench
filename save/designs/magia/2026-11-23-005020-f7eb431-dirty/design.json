@@ -1,0 +1,176 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "magia",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "elapsed_s": 54.5,
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "pass"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "elapsed_s": 210.1,
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-23-08-51-magia-bebop-bemu-device-magia-MagiaTapeoutConfig-bare-tests",
+          "passed": 6,
+          "total": 6,
+          "workloads": [
+            {
+              "cycles": 136059,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_few_columns-baremetal"
+            },
+            {
+              "cycles": 181174,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_one_column-baremetal"
+            },
+            {
+              "cycles": 276821,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_one_row-baremetal"
+            },
+            {
+              "cycles": 378057,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_service-baremetal"
+            },
+            {
+              "cycles": 250151,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_two_columns-baremetal"
+            },
+            {
+              "cycles": 49132,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-half_convert-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-23-08-53-magia-bebop-bemu-device-magia-MagiaTapeoutConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 3759242551,
+              "elapsed_s": 82.86,
+              "status": "pass",
+              "workload": "fw_payload-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaVerilatorConfig.toml",
+      "elapsed_s": 2131.5,
+      "error": "bare-tests: bebop.verilator.batch ran past 30 minutes and was cancelled",
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "failure"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-23T00:50:20.110815+00:00"
+}

@@ -1,0 +1,276 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "goban/harts/goban",
+      "path": "examples/designs/goban/harts/goban",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-24-15-57-goban-bebop-bemu-hart-goban-default-bare-tests",
+            "passed": 32,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "goban-hart0-ctest-rvv_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_slice_pair-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_transpose_blocks-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_exp-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_strided-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_exp_underflow-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_padded_copy-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-ctest-rvv_multiply-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-ctest-rvv_gather-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-matmul-ctest-design-copy_overlap-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-matmul-ctest-design-gp_scalar_fmul-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_int8_tiles-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_batched_int8-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_bias_tail-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_norm-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_erf-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_transpose_f32-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_reduce-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_max-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_matmul_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_quantized_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-matmul-ctest-design-matmul_threads-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-matmul-ctest-design-dataflow-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 32
+          },
+          "verilator": {
+            "log": "2026-11-24-15-58-goban-bebop-verilator-hart-goban-default-bare-tests",
+            "passed": 29,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "goban-hart0-ctest-rvv_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_slice_pair-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_transpose_blocks-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_exp-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_strided-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_exp_underflow-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_padded_copy-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-ctest-rvv_multiply-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-ctest-rvv_gather-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-matmul-ctest-design-copy_overlap_small-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-matmul-ctest-design-gp_scalar_fmul-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-matmul-ctest-design-matmul_threads-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-matmul-ctest-design-dataflow-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_norm-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_erf-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_transpose_f32-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_reduce-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_rvv_max-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_matmul_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-mlirtest-compiler_quantized_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "goban-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 29
+          }
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "taken": "2026-11-24T07:54:17.581732+00:00"
+}

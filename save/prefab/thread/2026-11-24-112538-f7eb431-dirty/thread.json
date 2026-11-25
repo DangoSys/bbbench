@@ -1,0 +1,2461 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-24T11:25:38.193104+00:00",
+  "threads": [
+    {
+      "area": {
+        "constraints_met": false,
+        "hierarchy": [
+          {
+            "combinational_um2": 11.2896,
+            "instance": "ThreadAlone",
+            "module": "ThreadAlone",
+            "noncombinational_um2": 0.0,
+            "um2": 47340496.7148
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "tlink_thread",
+            "module": "FfnThread",
+            "noncombinational_um2": 0.0,
+            "um2": 47340485.4252
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "tlink_thread/acc",
+            "module": "Acc",
+            "noncombinational_um2": 0.0,
+            "um2": 42334870.9532
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "tlink_thread/acc/ballDomain",
+            "module": "BallDomain",
+            "noncombinational_um2": 0.0,
+            "um2": 3274962.4745
+          },
+          {
+            "combinational_um2": 5533.7857,
+            "instance": "tlink_thread/acc/ballDomain/bbus",
+            "module": "BBus",
+            "noncombinational_um2": 11078.8606,
+            "um2": 3274738.5641
+          },
+          {
+            "combinational_um2": 5.6448,
+            "instance": "tlink_thread/acc/frontend",
+            "module": "Frontend",
+            "noncombinational_um2": 0.0,
+            "um2": 1459949.3959
+          },
+          {
+            "combinational_um2": 2478.0672,
+            "instance": "tlink_thread/acc/frontend/boot",
+            "module": "BootRom",
+            "noncombinational_um2": 254.016,
+            "um2": 2732.0832
+          },
+          {
+            "combinational_um2": 3973.9393,
+            "instance": "tlink_thread/acc/frontend/ingress",
+            "module": "Ingress",
+            "noncombinational_um2": 8894.3231,
+            "um2": 12868.2624
+          },
+          {
+            "combinational_um2": 709.3632,
+            "instance": "tlink_thread/acc/memDomain",
+            "module": "ThreadMemDomain",
+            "noncombinational_um2": 662.3232,
+            "um2": 37599959.0828
+          },
+          {
+            "combinational_um2": 114.7776,
+            "instance": "tlink_thread/acc/memDomain/ctrl",
+            "module": "Ctrl",
+            "noncombinational_um2": 0.0,
+            "um2": 6980.736
+          },
+          {
+            "combinational_um2": 15.0528,
+            "instance": "tlink_thread/acc/memDomain/prm",
+            "module": "PRM",
+            "noncombinational_um2": 0.0,
+            "um2": 35956490.6017
+          },
+          {
+            "combinational_um2": 142645.9805,
+            "instance": "tlink_thread/acc/memDomain/toMem",
+            "module": "ToMem",
+            "noncombinational_um2": 201101.6414,
+            "um2": 345017.702
+          },
+          {
+            "combinational_um2": 2289.9073,
+            "instance": "tlink_thread/ant",
+            "module": "Ant",
+            "noncombinational_um2": 0.0,
+            "um2": 5005614.472
+          },
+          {
+            "combinational_um2": 2440.4353,
+            "instance": "tlink_thread/ant/data",
+            "module": "LocalStore_1",
+            "noncombinational_um2": 122.304,
+            "um2": 2309192.4763
+          },
+          {
+            "combinational_um2": 11985.7922,
+            "instance": "tlink_thread/ant/data/memories_0",
+            "module": "Memory_1",
+            "noncombinational_um2": 438.4128,
+            "um2": 2306629.737
+          },
+          {
+            "combinational_um2": 145936.8988,
+            "instance": "tlink_thread/ant/executor",
+            "module": "Executor",
+            "noncombinational_um2": 95242.8273,
+            "um2": 367011.7274
+          },
+          {
+            "combinational_um2": 1337.8176,
+            "instance": "tlink_thread/ant/executor/decoder",
+            "module": "Decode",
+            "noncombinational_um2": 0.0,
+            "um2": 1337.8176
+          },
+          {
+            "combinational_um2": 26748.826,
+            "instance": "tlink_thread/ant/executor/divider",
+            "module": "DivRem",
+            "noncombinational_um2": 13543.7566,
+            "um2": 40292.5826
+          },
+          {
+            "combinational_um2": 1874.0736,
+            "instance": "tlink_thread/ant/image",
+            "module": "LocalStore",
+            "noncombinational_um2": 122.304,
+            "um2": 2308437.9546
+          },
+          {
+            "combinational_um2": 11946.2786,
+            "instance": "tlink_thread/ant/image/memories_0",
+            "module": "Memory",
+            "noncombinational_um2": 359.3856,
+            "um2": 2306441.577
+          },
+          {
+            "combinational_um2": 10772.1602,
+            "instance": "tlink_thread/ant/loader",
+            "module": "Loader",
+            "noncombinational_um2": 7910.2462,
+            "um2": 18682.4064
+          }
+        ],
+        "library": "scc018ug_uhd_rvt_ss_v1p62_125c_ccs.db",
+        "status": "pass",
+        "timing": {
+          "endpoint": "tlink_thread/acc/frontend/scheduler/rob/queue/dependencies_4_reg_6_",
+          "slack_ns": -3.19,
+          "startpoint": "tlink_thread/acc/frontend/scheduler/rob/queue/head_reg_2_"
+        },
+        "tool": "DC",
+        "um2": 47340496.714802,
+        "violations": {
+          "max_delay/setup": 82757,
+          "max_fanout": 1791
+        }
+      },
+      "path": "examples/designs/poly/threads/ffn",
+      "power": {
+        "annotated": {
+          "nets": 18.28,
+          "registers": 98.18
+        },
+        "hierarchy": [
+          {
+            "instance": "ThreadAlone",
+            "internal_w": 0.217,
+            "leakage_w": 0.000159,
+            "module": "ThreadAlone",
+            "switching_w": 0.00236,
+            "total_w": 0.22
+          },
+          {
+            "instance": "tlink_thread",
+            "internal_w": 0.217,
+            "leakage_w": 0.000159,
+            "module": "FfnThread",
+            "switching_w": 0.00236,
+            "total_w": 0.22
+          },
+          {
+            "instance": "tlink_thread/acc",
+            "internal_w": 0.191,
+            "leakage_w": 0.000147,
+            "module": "Acc",
+            "switching_w": 0.00111,
+            "total_w": 0.193
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain",
+            "internal_w": 0.0695,
+            "leakage_w": 4.4e-05,
+            "module": "ThreadMemDomain",
+            "switching_w": 0.0011,
+            "total_w": 0.0707
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/toMem",
+            "internal_w": 0.0236,
+            "leakage_w": 7.68e-06,
+            "module": "ToMem",
+            "switching_w": 8.35e-08,
+            "total_w": 0.0236
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/toMem/completion",
+            "internal_w": 1.73e-09,
+            "leakage_w": 2.94e-08,
+            "module": "Arbiter_3_0",
+            "switching_w": 9.09e-10,
+            "total_w": 3.2e-08
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/ctrl",
+            "internal_w": 0.000183,
+            "leakage_w": 1.21e-07,
+            "module": "Ctrl",
+            "switching_w": 5.19e-09,
+            "total_w": 0.000184
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/ctrl/decoder",
+            "internal_w": 1.05e-09,
+            "leakage_w": 4.03e-08,
+            "module": "Decoder_1",
+            "switching_w": 1.81e-09,
+            "total_w": 4.31e-08
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/ctrl/configer",
+            "internal_w": 0.000183,
+            "leakage_w": 6.48e-08,
+            "module": "Configer",
+            "switching_w": 2.43e-09,
+            "total_w": 0.000183
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/ctrl/completion",
+            "internal_w": 4.89e-10,
+            "leakage_w": 1.27e-08,
+            "module": "Arbiter_3_1",
+            "switching_w": 7.25e-10,
+            "total_w": 1.39e-08
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/transport",
+            "internal_w": 0.01,
+            "leakage_w": 5.79e-06,
+            "module": "Transport",
+            "switching_w": 3.08e-07,
+            "total_w": 0.01
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/transport/writer",
+            "internal_w": 0.0034,
+            "leakage_w": 1.76e-06,
+            "module": "WriteTransport",
+            "switching_w": 1.78e-08,
+            "total_w": 0.0034
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/transport/reader",
+            "internal_w": 0.00378,
+            "leakage_w": 2.88e-06,
+            "module": "ReadTransport",
+            "switching_w": 1.31e-07,
+            "total_w": 0.00379
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/transport/stream",
+            "internal_w": 0.00282,
+            "leakage_w": 1.15e-06,
+            "module": "Stream",
+            "switching_w": 1.59e-07,
+            "total_w": 0.00283
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/transport/stream/write",
+            "internal_w": 1.41e-05,
+            "leakage_w": 6.23e-09,
+            "module": "Send",
+            "switching_w": 5.07e-10,
+            "total_w": 1.42e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/transport/stream/read",
+            "internal_w": 0.00281,
+            "leakage_w": 1.14e-06,
+            "module": "Receive",
+            "switching_w": 1.58e-07,
+            "total_w": 0.00281
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/transport/stream/read/buffer",
+            "internal_w": 0.00281,
+            "leakage_w": 1.14e-06,
+            "module": "Queue4_Beat",
+            "switching_w": 1.57e-07,
+            "total_w": 0.00281
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/transport/stream/read/buffer/ram_ext",
+            "internal_w": 0.00279,
+            "leakage_w": 1.13e-06,
+            "module": "ram_4x151",
+            "switching_w": 1.52e-07,
+            "total_w": 0.00279
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm",
+            "internal_w": 0.0112,
+            "leakage_w": 1.12e-05,
+            "module": "PRM",
+            "switching_w": 0.0011,
+            "total_w": 0.0123
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_0",
+            "internal_w": 0.0007,
+            "leakage_w": 7.03e-07,
+            "module": "Bank_1_15",
+            "switching_w": 6.88e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_0/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.81e-07,
+            "module": "mem_15",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_0/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.81e-07,
+            "module": "memory_ext_15",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_1",
+            "internal_w": 0.000701,
+            "leakage_w": 6.97e-07,
+            "module": "Bank_1_14",
+            "switching_w": 6.88e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_1/mem",
+            "internal_w": 3.62e-05,
+            "leakage_w": 3.8e-07,
+            "module": "mem_14",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_1/mem/memory_ext",
+            "internal_w": 3.62e-05,
+            "leakage_w": 3.8e-07,
+            "module": "memory_ext_14",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_2",
+            "internal_w": 0.0007,
+            "leakage_w": 7.03e-07,
+            "module": "Bank_1_13",
+            "switching_w": 6.88e-05,
+            "total_w": 0.000769
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_2/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.81e-07,
+            "module": "mem_13",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_2/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.81e-07,
+            "module": "memory_ext_13",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_10",
+            "internal_w": 0.0007,
+            "leakage_w": 7e-07,
+            "module": "Bank_1_5",
+            "switching_w": 6.87e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_10/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.76e-07,
+            "module": "mem_5",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_10/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.76e-07,
+            "module": "memory_ext_5",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_3",
+            "internal_w": 0.0007,
+            "leakage_w": 7e-07,
+            "module": "Bank_1_12",
+            "switching_w": 6.87e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_3/mem",
+            "internal_w": 3.64e-05,
+            "leakage_w": 3.77e-07,
+            "module": "mem_12",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_3/mem/memory_ext",
+            "internal_w": 3.64e-05,
+            "leakage_w": 3.77e-07,
+            "module": "memory_ext_12",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_11",
+            "internal_w": 0.0007,
+            "leakage_w": 7.1e-07,
+            "module": "Bank_1_4",
+            "switching_w": 6.91e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_11/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.91e-07,
+            "module": "mem_4",
+            "switching_w": 6.9e-05,
+            "total_w": 0.000106
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_11/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.91e-07,
+            "module": "memory_ext_4",
+            "switching_w": 6.9e-05,
+            "total_w": 0.000106
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_4",
+            "internal_w": 0.0007,
+            "leakage_w": 7.01e-07,
+            "module": "Bank_1_11",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000769
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_4/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.77e-07,
+            "module": "mem_11",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_4/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.77e-07,
+            "module": "memory_ext_11",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_12",
+            "internal_w": 0.0007,
+            "leakage_w": 6.94e-07,
+            "module": "Bank_1_3",
+            "switching_w": 6.88e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_12/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.8e-07,
+            "module": "mem_3",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_12/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.8e-07,
+            "module": "memory_ext_3",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_5",
+            "internal_w": 0.0007,
+            "leakage_w": 7.02e-07,
+            "module": "Bank_1_10",
+            "switching_w": 6.88e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_5/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.79e-07,
+            "module": "mem_10",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_5/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.79e-07,
+            "module": "memory_ext_10",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_13",
+            "internal_w": 0.0007,
+            "leakage_w": 7.01e-07,
+            "module": "Bank_1_2",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000769
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_13/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.78e-07,
+            "module": "mem_2",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_13/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.78e-07,
+            "module": "memory_ext_2",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_6",
+            "internal_w": 0.0007,
+            "leakage_w": 6.99e-07,
+            "module": "Bank_1_9",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000769
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_6/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.77e-07,
+            "module": "mem_9",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_6/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.77e-07,
+            "module": "memory_ext_9",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_14",
+            "internal_w": 0.0007,
+            "leakage_w": 7e-07,
+            "module": "Bank_1_1",
+            "switching_w": 6.87e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_14/mem",
+            "internal_w": 3.62e-05,
+            "leakage_w": 3.78e-07,
+            "module": "mem_1",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_14/mem/memory_ext",
+            "internal_w": 3.62e-05,
+            "leakage_w": 3.78e-07,
+            "module": "memory_ext_1",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_7",
+            "internal_w": 0.0007,
+            "leakage_w": 7.1e-07,
+            "module": "Bank_1_8",
+            "switching_w": 6.89e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_7/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.87e-07,
+            "module": "mem_8",
+            "switching_w": 6.88e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_7/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.87e-07,
+            "module": "memory_ext_8",
+            "switching_w": 6.88e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_15",
+            "internal_w": 0.0007,
+            "leakage_w": 7.02e-07,
+            "module": "Bank_1_0",
+            "switching_w": 6.87e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_15/mem",
+            "internal_w": 3.62e-05,
+            "leakage_w": 3.79e-07,
+            "module": "mem_0",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_15/mem/memory_ext",
+            "internal_w": 3.62e-05,
+            "leakage_w": 3.79e-07,
+            "module": "memory_ext_0",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_8",
+            "internal_w": 0.0007,
+            "leakage_w": 7.02e-07,
+            "module": "Bank_1_7",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000769
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_8/mem",
+            "internal_w": 3.62e-05,
+            "leakage_w": 3.76e-07,
+            "module": "mem_7",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_8/mem/memory_ext",
+            "internal_w": 3.62e-05,
+            "leakage_w": 3.76e-07,
+            "module": "memory_ext_7",
+            "switching_w": 6.86e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_9",
+            "internal_w": 0.0007,
+            "leakage_w": 7.03e-07,
+            "module": "Bank_1_6",
+            "switching_w": 6.88e-05,
+            "total_w": 0.00077
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_9/mem",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.81e-07,
+            "module": "mem_6",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/prm/banks_9/mem/memory_ext",
+            "internal_w": 3.63e-05,
+            "leakage_w": 3.81e-07,
+            "module": "memory_ext_6",
+            "switching_w": 6.87e-05,
+            "total_w": 0.000105
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/commands",
+            "internal_w": 4.72e-06,
+            "leakage_w": 2.37e-07,
+            "module": "RRArbiter_1",
+            "switching_w": 3.7e-08,
+            "total_w": 5e-06
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter",
+            "internal_w": 0.0244,
+            "leakage_w": 1.89e-05,
+            "module": "BankRouter",
+            "switching_w": 4.39e-07,
+            "total_w": 0.0244
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt",
+            "internal_w": 0.0238,
+            "leakage_w": 1.87e-05,
+            "module": "BankLayoutTable",
+            "switching_w": 4.38e-07,
+            "total_w": 0.0238
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.58e-08,
+            "module": "RRArbiter_16",
+            "switching_w": 4.03e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_10",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.91e-08,
+            "module": "RRArbiter_6",
+            "switching_w": 2.09e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_11",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.76e-08,
+            "module": "RRArbiter_5",
+            "switching_w": 2.13e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_12",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.91e-08,
+            "module": "RRArbiter_4",
+            "switching_w": 2.06e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_13",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.67e-08,
+            "module": "RRArbiter_3",
+            "switching_w": 2.02e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_14",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.51e-08,
+            "module": "RRArbiter_2",
+            "switching_w": 1.86e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_15",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.68e-08,
+            "module": "RRArbiter_0",
+            "switching_w": 2.04e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_1",
+            "internal_w": 1.87e-05,
+            "leakage_w": 6.69e-08,
+            "module": "RRArbiter_15",
+            "switching_w": 4.26e-09,
+            "total_w": 1.88e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_2",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.66e-08,
+            "module": "RRArbiter_14",
+            "switching_w": 2.02e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_3",
+            "internal_w": 1.88e-05,
+            "leakage_w": 6.75e-08,
+            "module": "RRArbiter_13",
+            "switching_w": 7.43e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_4",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.69e-08,
+            "module": "RRArbiter_12",
+            "switching_w": 2.07e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_5",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.45e-08,
+            "module": "RRArbiter_11",
+            "switching_w": 1.94e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_6",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.49e-08,
+            "module": "RRArbiter_10",
+            "switching_w": 2.01e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_7",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.52e-08,
+            "module": "RRArbiter_9",
+            "switching_w": 2.25e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_8",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.66e-08,
+            "module": "RRArbiter_8",
+            "switching_w": 2.07e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/arb_9",
+            "internal_w": 1.89e-05,
+            "leakage_w": 6.75e-08,
+            "module": "RRArbiter_7",
+            "switching_w": 2.01e-09,
+            "total_w": 1.89e-05
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/accPipes_0",
+            "internal_w": 0.000614,
+            "leakage_w": 1.85e-07,
+            "module": "AccPipe_8",
+            "switching_w": 1.01e-08,
+            "total_w": 0.000614
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/accPipes_1",
+            "internal_w": 0.000614,
+            "leakage_w": 1.85e-07,
+            "module": "AccPipe_7",
+            "switching_w": 1.82e-08,
+            "total_w": 0.000614
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/accPipes_2",
+            "internal_w": 0.000618,
+            "leakage_w": 1.81e-07,
+            "module": "AccPipe_6",
+            "switching_w": 5.83e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/accPipes_3",
+            "internal_w": 0.000618,
+            "leakage_w": 1.81e-07,
+            "module": "AccPipe_5",
+            "switching_w": 6.22e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/accPipes_4",
+            "internal_w": 0.000618,
+            "leakage_w": 1.81e-07,
+            "module": "AccPipe_4",
+            "switching_w": 3.54e-09,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/accPipes_5",
+            "internal_w": 0.000618,
+            "leakage_w": 1.81e-07,
+            "module": "AccPipe_3",
+            "switching_w": 6.46e-10,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/accPipes_6",
+            "internal_w": 0.000618,
+            "leakage_w": 1.82e-07,
+            "module": "AccPipe_2",
+            "switching_w": 3.72e-09,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/accPipes_7",
+            "internal_w": 0.000616,
+            "leakage_w": 1.73e-07,
+            "module": "AccPipe_1",
+            "switching_w": 4.4e-09,
+            "total_w": 0.000617
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/blt/accPipes_8",
+            "internal_w": 0.000618,
+            "leakage_w": 1.77e-07,
+            "module": "AccPipe_0",
+            "switching_w": 2.92e-09,
+            "total_w": 0.000618
+          },
+          {
+            "instance": "tlink_thread/acc/memDomain/bankRouter/replies",
+            "internal_w": 0.000551,
+            "leakage_w": 1.62e-07,
+            "module": "Queue_3",
+            "switching_w": 8.91e-10,
+            "total_w": 0.000551
+          },
+          {
+            "instance": "tlink_thread/acc/frontend",
+            "internal_w": 0.0513,
+            "leakage_w": 3.23e-05,
+            "module": "Frontend",
+            "switching_w": 1.72e-06,
+            "total_w": 0.0514
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/boot",
+            "internal_w": 2.81e-05,
+            "leakage_w": 7.3e-08,
+            "module": "BootRom",
+            "switching_w": 1.91e-09,
+            "total_w": 2.82e-05
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/ingress",
+            "internal_w": 0.00105,
+            "leakage_w": 2.92e-07,
+            "module": "Ingress",
+            "switching_w": 2.06e-08,
+            "total_w": 0.00105
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler",
+            "internal_w": 0.0503,
+            "leakage_w": 3.19e-05,
+            "module": "Scheduler",
+            "switching_w": 1.69e-06,
+            "total_w": 0.0503
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/scoreboard",
+            "internal_w": 0.000678,
+            "leakage_w": 1.64e-06,
+            "module": "BankScoreboard",
+            "switching_w": 1.47e-08,
+            "total_w": 0.00068
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/completeQueue",
+            "internal_w": 0.000138,
+            "leakage_w": 4.41e-08,
+            "module": "Queue_1",
+            "switching_w": 1.09e-06,
+            "total_w": 0.000139
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/completeQueue/readData_memory",
+            "internal_w": 7.21e-08,
+            "leakage_w": 1.95e-10,
+            "module": "readData_memory",
+            "switching_w": 2.43e-07,
+            "total_w": 3.15e-07
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/completeQueue/readData_memory/readData_memory_ext",
+            "internal_w": 7.21e-08,
+            "leakage_w": 1.95e-10,
+            "module": "readData_memory_ext",
+            "switching_w": 2.43e-07,
+            "total_w": 3.15e-07
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/rob",
+            "internal_w": 0.0458,
+            "leakage_w": 2.77e-05,
+            "module": "GlobalROB",
+            "switching_w": 5.66e-07,
+            "total_w": 0.0458
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/rob/dependencies",
+            "internal_w": 7.03e-09,
+            "leakage_w": 1.31e-06,
+            "module": "DependencyResolver",
+            "switching_w": 9.44e-09,
+            "total_w": 1.32e-06
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/rob/queue",
+            "internal_w": 0.034,
+            "leakage_w": 1.44e-05,
+            "module": "Rob",
+            "switching_w": 1e-07,
+            "total_w": 0.034
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/rob/mappings",
+            "internal_w": 4.53e-09,
+            "leakage_w": 6e-08,
+            "module": "Arbiter",
+            "switching_w": 4.55e-09,
+            "total_w": 6.9e-08
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/bat",
+            "internal_w": 0.00368,
+            "leakage_w": 2.46e-06,
+            "module": "BankAliasTable",
+            "switching_w": 2.29e-08,
+            "total_w": 0.00368
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/scheduler/completeArb",
+            "internal_w": 4.94e-10,
+            "leakage_w": 2.27e-09,
+            "module": "Arbiter_1",
+            "switching_w": 8.62e-11,
+            "total_w": 2.85e-09
+          },
+          {
+            "instance": "tlink_thread/acc/frontend/gDecoder",
+            "internal_w": 3.12e-10,
+            "leakage_w": 1.59e-08,
+            "module": "GlobalDecoder",
+            "switching_w": 6.87e-10,
+            "total_w": 1.69e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain",
+            "internal_w": 0.0706,
+            "leakage_w": 7.05e-05,
+            "module": "BallDomain",
+            "switching_w": 6.45e-06,
+            "total_w": 0.0707
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/decoder",
+            "internal_w": 1.19e-10,
+            "leakage_w": 3.72e-09,
+            "module": "Decoder",
+            "switching_w": 1.06e-10,
+            "total_w": 3.95e-09
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus",
+            "internal_w": 0.0706,
+            "leakage_w": 7.05e-05,
+            "module": "BBus",
+            "switching_w": 6.44e-06,
+            "total_w": 0.0707
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall",
+            "internal_w": 0.00646,
+            "leakage_w": 3.51e-06,
+            "module": "Mxint8quantizeBall",
+            "switching_w": 2.77e-08,
+            "total_w": 0.00647
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_10",
+            "internal_w": 0.0,
+            "leakage_w": 7.31e-08,
+            "module": "Encode_5",
+            "switching_w": 0.0,
+            "total_w": 7.31e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_11",
+            "internal_w": 0.0,
+            "leakage_w": 7.49e-08,
+            "module": "Encode_4",
+            "switching_w": 0.0,
+            "total_w": 7.49e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_12",
+            "internal_w": 0.0,
+            "leakage_w": 7.34e-08,
+            "module": "Encode_3",
+            "switching_w": 0.0,
+            "total_w": 7.34e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_13",
+            "internal_w": 0.0,
+            "leakage_w": 7.14e-08,
+            "module": "Encode_2",
+            "switching_w": 0.0,
+            "total_w": 7.14e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_14",
+            "internal_w": 0.0,
+            "leakage_w": 7.36e-08,
+            "module": "Encode_1",
+            "switching_w": 0.0,
+            "total_w": 7.36e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_15",
+            "internal_w": 0.0,
+            "leakage_w": 7.2e-08,
+            "module": "Encode_0",
+            "switching_w": 0.0,
+            "total_w": 7.2e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_0",
+            "internal_w": 0.0,
+            "leakage_w": 7.21e-08,
+            "module": "Encode_15",
+            "switching_w": 0.0,
+            "total_w": 7.21e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_1",
+            "internal_w": 0.0,
+            "leakage_w": 7.43e-08,
+            "module": "Encode_14",
+            "switching_w": 0.0,
+            "total_w": 7.43e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_2",
+            "internal_w": 0.0,
+            "leakage_w": 7.49e-08,
+            "module": "Encode_13",
+            "switching_w": 0.0,
+            "total_w": 7.49e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_3",
+            "internal_w": 0.0,
+            "leakage_w": 7.53e-08,
+            "module": "Encode_12",
+            "switching_w": 0.0,
+            "total_w": 7.53e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_4",
+            "internal_w": 0.0,
+            "leakage_w": 6.97e-08,
+            "module": "Encode_11",
+            "switching_w": 0.0,
+            "total_w": 6.97e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_5",
+            "internal_w": 0.0,
+            "leakage_w": 7.64e-08,
+            "module": "Encode_10",
+            "switching_w": 0.0,
+            "total_w": 7.64e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_6",
+            "internal_w": 0.0,
+            "leakage_w": 7.16e-08,
+            "module": "Encode_9",
+            "switching_w": 0.0,
+            "total_w": 7.16e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_7",
+            "internal_w": 0.0,
+            "leakage_w": 7.28e-08,
+            "module": "Encode_8",
+            "switching_w": 0.0,
+            "total_w": 7.28e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_8",
+            "internal_w": 0.0,
+            "leakage_w": 7.27e-08,
+            "module": "Encode_7",
+            "switching_w": 0.0,
+            "total_w": 7.27e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8quantizeBall/encoders_9",
+            "internal_w": 0.0,
+            "leakage_w": 7.32e-08,
+            "module": "Encode_6",
+            "switching_w": 0.0,
+            "total_w": 7.32e-08
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall",
+            "internal_w": 0.0359,
+            "leakage_w": 5.29e-05,
+            "module": "Mxint8matmulBall",
+            "switching_w": 6.32e-06,
+            "total_w": 0.0359
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_0",
+            "internal_w": 0.000401,
+            "leakage_w": 1.38e-06,
+            "module": "PE_31",
+            "switching_w": 2.29e-07,
+            "total_w": 0.000402
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_0/adder",
+            "internal_w": 2.58e-08,
+            "leakage_w": 4.52e-07,
+            "module": "AddRecFN_31",
+            "switching_w": 2.39e-08,
+            "total_w": 5.02e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_0/adder/addRawFN",
+            "internal_w": 2.49e-08,
+            "leakage_w": 3.45e-07,
+            "module": "AddRawFN_31",
+            "switching_w": 2.3e-08,
+            "total_w": 3.93e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_0/adder/roundRawFNToRecFN",
+            "internal_w": 9.11e-10,
+            "leakage_w": 1.05e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_31",
+            "switching_w": 9.09e-10,
+            "total_w": 1.06e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_1",
+            "internal_w": 0.000401,
+            "leakage_w": 1.38e-06,
+            "module": "PE_30",
+            "switching_w": 1.84e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_1/adder",
+            "internal_w": 1.83e-08,
+            "leakage_w": 4.55e-07,
+            "module": "AddRecFN_30",
+            "switching_w": 1.72e-08,
+            "total_w": 4.9e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_1/adder/addRawFN",
+            "internal_w": 1.75e-08,
+            "leakage_w": 3.47e-07,
+            "module": "AddRawFN_30",
+            "switching_w": 1.65e-08,
+            "total_w": 3.81e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_1/adder/roundRawFNToRecFN",
+            "internal_w": 8.16e-10,
+            "leakage_w": 1.06e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_30",
+            "switching_w": 6.33e-10,
+            "total_w": 1.07e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_2",
+            "internal_w": 0.000401,
+            "leakage_w": 1.38e-06,
+            "module": "PE_29",
+            "switching_w": 1.73e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_2/adder",
+            "internal_w": 1.4e-08,
+            "leakage_w": 4.55e-07,
+            "module": "AddRecFN_29",
+            "switching_w": 1.27e-08,
+            "total_w": 4.82e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_2/adder/addRawFN",
+            "internal_w": 1.21e-08,
+            "leakage_w": 3.51e-07,
+            "module": "AddRawFN_29",
+            "switching_w": 1.11e-08,
+            "total_w": 3.75e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_2/adder/roundRawFNToRecFN",
+            "internal_w": 1.87e-09,
+            "leakage_w": 1.02e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_29",
+            "switching_w": 1.53e-09,
+            "total_w": 1.05e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_3",
+            "internal_w": 0.000401,
+            "leakage_w": 1.38e-06,
+            "module": "PE_28",
+            "switching_w": 2.34e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_3/adder",
+            "internal_w": 2.17e-08,
+            "leakage_w": 4.57e-07,
+            "module": "AddRecFN_28",
+            "switching_w": 2.28e-08,
+            "total_w": 5.01e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_3/adder/addRawFN",
+            "internal_w": 1.57e-08,
+            "leakage_w": 3.49e-07,
+            "module": "AddRawFN_28",
+            "switching_w": 1.61e-08,
+            "total_w": 3.81e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_3/adder/roundRawFNToRecFN",
+            "internal_w": 5.94e-09,
+            "leakage_w": 1.06e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_28",
+            "switching_w": 6.67e-09,
+            "total_w": 1.19e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_4",
+            "internal_w": 0.000401,
+            "leakage_w": 1.39e-06,
+            "module": "PE_27",
+            "switching_w": 2.07e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_4/adder",
+            "internal_w": 7.1e-09,
+            "leakage_w": 4.62e-07,
+            "module": "AddRecFN_27",
+            "switching_w": 6.98e-09,
+            "total_w": 4.76e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_4/adder/addRawFN",
+            "internal_w": 6.4e-09,
+            "leakage_w": 3.56e-07,
+            "module": "AddRawFN_27",
+            "switching_w": 6.52e-09,
+            "total_w": 3.69e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_4/adder/roundRawFNToRecFN",
+            "internal_w": 6.83e-10,
+            "leakage_w": 1.04e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_27",
+            "switching_w": 4.46e-10,
+            "total_w": 1.05e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_5",
+            "internal_w": 0.000402,
+            "leakage_w": 1.36e-06,
+            "module": "PE_26",
+            "switching_w": 1.51e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_5/adder",
+            "internal_w": 7.7e-09,
+            "leakage_w": 4.58e-07,
+            "module": "AddRecFN_26",
+            "switching_w": 6.56e-09,
+            "total_w": 4.73e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_5/adder/addRawFN",
+            "internal_w": 7.16e-09,
+            "leakage_w": 3.49e-07,
+            "module": "AddRawFN_26",
+            "switching_w": 6.09e-09,
+            "total_w": 3.62e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_5/adder/roundRawFNToRecFN",
+            "internal_w": 5.25e-10,
+            "leakage_w": 1.07e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_26",
+            "switching_w": 4.53e-10,
+            "total_w": 1.08e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_6",
+            "internal_w": 0.000401,
+            "leakage_w": 1.37e-06,
+            "module": "PE_25",
+            "switching_w": 1.67e-07,
+            "total_w": 0.000402
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_6/adder",
+            "internal_w": 7.28e-09,
+            "leakage_w": 4.47e-07,
+            "module": "AddRecFN_25",
+            "switching_w": 6.15e-09,
+            "total_w": 4.61e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_6/adder/addRawFN",
+            "internal_w": 6.46e-09,
+            "leakage_w": 3.43e-07,
+            "module": "AddRawFN_25",
+            "switching_w": 5.62e-09,
+            "total_w": 3.55e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_6/adder/roundRawFNToRecFN",
+            "internal_w": 8.21e-10,
+            "leakage_w": 1.03e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_25",
+            "switching_w": 5.18e-10,
+            "total_w": 1.04e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_7",
+            "internal_w": 0.000402,
+            "leakage_w": 1.38e-06,
+            "module": "PE_24",
+            "switching_w": 2.1e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_7/adder",
+            "internal_w": 6.34e-09,
+            "leakage_w": 4.49e-07,
+            "module": "AddRecFN_24",
+            "switching_w": 5.68e-09,
+            "total_w": 4.61e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_7/adder/addRawFN",
+            "internal_w": 5.11e-09,
+            "leakage_w": 3.44e-07,
+            "module": "AddRawFN_24",
+            "switching_w": 4.43e-09,
+            "total_w": 3.54e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_0_7/adder/roundRawFNToRecFN",
+            "internal_w": 1.19e-09,
+            "leakage_w": 1.03e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_24",
+            "switching_w": 1.21e-09,
+            "total_w": 1.06e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_0",
+            "internal_w": 0.000401,
+            "leakage_w": 1.37e-06,
+            "module": "PE_23",
+            "switching_w": 2.13e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_0/adder",
+            "internal_w": 2.19e-08,
+            "leakage_w": 4.61e-07,
+            "module": "AddRecFN_23",
+            "switching_w": 2.09e-08,
+            "total_w": 5.03e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_0/adder/addRawFN",
+            "internal_w": 2.05e-08,
+            "leakage_w": 3.57e-07,
+            "module": "AddRawFN_23",
+            "switching_w": 1.96e-08,
+            "total_w": 3.97e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_0/adder/roundRawFNToRecFN",
+            "internal_w": 1.43e-09,
+            "leakage_w": 1.01e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_23",
+            "switching_w": 1.3e-09,
+            "total_w": 1.04e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_1",
+            "internal_w": 0.000401,
+            "leakage_w": 1.37e-06,
+            "module": "PE_22",
+            "switching_w": 2.13e-07,
+            "total_w": 0.000402
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_1/adder",
+            "internal_w": 7.81e-09,
+            "leakage_w": 4.52e-07,
+            "module": "AddRecFN_22",
+            "switching_w": 7.49e-09,
+            "total_w": 4.67e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_1/adder/addRawFN",
+            "internal_w": 7.16e-09,
+            "leakage_w": 3.43e-07,
+            "module": "AddRawFN_22",
+            "switching_w": 7.02e-09,
+            "total_w": 3.57e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_1/adder/roundRawFNToRecFN",
+            "internal_w": 6.44e-10,
+            "leakage_w": 1.07e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_22",
+            "switching_w": 4.53e-10,
+            "total_w": 1.08e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_2",
+            "internal_w": 0.000401,
+            "leakage_w": 1.41e-06,
+            "module": "PE_21",
+            "switching_w": 1.63e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_2/adder",
+            "internal_w": 4.81e-09,
+            "leakage_w": 4.75e-07,
+            "module": "AddRecFN_21",
+            "switching_w": 4.42e-09,
+            "total_w": 4.85e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_2/adder/addRawFN",
+            "internal_w": 4.13e-09,
+            "leakage_w": 3.6e-07,
+            "module": "AddRawFN_21",
+            "switching_w": 3.87e-09,
+            "total_w": 3.68e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_2/adder/roundRawFNToRecFN",
+            "internal_w": 6.7e-10,
+            "leakage_w": 1.13e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_21",
+            "switching_w": 5.38e-10,
+            "total_w": 1.14e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_3",
+            "internal_w": 0.000401,
+            "leakage_w": 1.38e-06,
+            "module": "PE_20",
+            "switching_w": 1.97e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_3/adder",
+            "internal_w": 1.19e-08,
+            "leakage_w": 4.61e-07,
+            "module": "AddRecFN_20",
+            "switching_w": 1.16e-08,
+            "total_w": 4.85e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_3/adder/addRawFN",
+            "internal_w": 9.87e-09,
+            "leakage_w": 3.51e-07,
+            "module": "AddRawFN_20",
+            "switching_w": 9.33e-09,
+            "total_w": 3.71e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_3/adder/roundRawFNToRecFN",
+            "internal_w": 1.97e-09,
+            "leakage_w": 1.08e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_20",
+            "switching_w": 2.26e-09,
+            "total_w": 1.12e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_4",
+            "internal_w": 0.000402,
+            "leakage_w": 1.36e-06,
+            "module": "PE_19",
+            "switching_w": 1.76e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_4/adder",
+            "internal_w": 2.57e-08,
+            "leakage_w": 4.47e-07,
+            "module": "AddRecFN_19",
+            "switching_w": 2.51e-08,
+            "total_w": 4.98e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_4/adder/addRawFN",
+            "internal_w": 2.5e-08,
+            "leakage_w": 3.42e-07,
+            "module": "AddRawFN_19",
+            "switching_w": 2.42e-08,
+            "total_w": 3.91e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_4/adder/roundRawFNToRecFN",
+            "internal_w": 6.92e-10,
+            "leakage_w": 1.04e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_19",
+            "switching_w": 8.32e-10,
+            "total_w": 1.05e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_5",
+            "internal_w": 0.000402,
+            "leakage_w": 1.37e-06,
+            "module": "PE_18",
+            "switching_w": 1.53e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_5/adder",
+            "internal_w": 1.76e-08,
+            "leakage_w": 4.56e-07,
+            "module": "AddRecFN_18",
+            "switching_w": 1.63e-08,
+            "total_w": 4.9e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_5/adder/addRawFN",
+            "internal_w": 1.72e-08,
+            "leakage_w": 3.5e-07,
+            "module": "AddRawFN_18",
+            "switching_w": 1.61e-08,
+            "total_w": 3.83e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_5/adder/roundRawFNToRecFN",
+            "internal_w": 3.61e-10,
+            "leakage_w": 1.05e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_18",
+            "switching_w": 2.79e-10,
+            "total_w": 1.05e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_6",
+            "internal_w": 0.000401,
+            "leakage_w": 1.37e-06,
+            "module": "PE_17",
+            "switching_w": 1.81e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_6/adder",
+            "internal_w": 1.53e-08,
+            "leakage_w": 4.58e-07,
+            "module": "AddRecFN_17",
+            "switching_w": 1.38e-08,
+            "total_w": 4.87e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_6/adder/addRawFN",
+            "internal_w": 1.39e-08,
+            "leakage_w": 3.5e-07,
+            "module": "AddRawFN_17",
+            "switching_w": 1.24e-08,
+            "total_w": 3.77e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_6/adder/roundRawFNToRecFN",
+            "internal_w": 1.36e-09,
+            "leakage_w": 1.05e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_17",
+            "switching_w": 1.4e-09,
+            "total_w": 1.08e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_7",
+            "internal_w": 0.000402,
+            "leakage_w": 1.36e-06,
+            "module": "PE_16",
+            "switching_w": 1.74e-07,
+            "total_w": 0.000404
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_7/adder",
+            "internal_w": 1.56e-08,
+            "leakage_w": 4.48e-07,
+            "module": "AddRecFN_16",
+            "switching_w": 1.41e-08,
+            "total_w": 4.77e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_7/adder/addRawFN",
+            "internal_w": 1.42e-08,
+            "leakage_w": 3.42e-07,
+            "module": "AddRawFN_16",
+            "switching_w": 1.32e-08,
+            "total_w": 3.69e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_1_7/adder/roundRawFNToRecFN",
+            "internal_w": 1.31e-09,
+            "leakage_w": 1.04e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_16",
+            "switching_w": 9.32e-10,
+            "total_w": 1.06e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_0",
+            "internal_w": 0.000402,
+            "leakage_w": 1.37e-06,
+            "module": "PE_15",
+            "switching_w": 2.26e-07,
+            "total_w": 0.000404
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_0/adder",
+            "internal_w": 1.84e-08,
+            "leakage_w": 4.55e-07,
+            "module": "AddRecFN_15",
+            "switching_w": 1.78e-08,
+            "total_w": 4.91e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_0/adder/addRawFN",
+            "internal_w": 1.69e-08,
+            "leakage_w": 3.51e-07,
+            "module": "AddRawFN_15",
+            "switching_w": 1.67e-08,
+            "total_w": 3.85e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_0/adder/roundRawFNToRecFN",
+            "internal_w": 1.46e-09,
+            "leakage_w": 1.02e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_15",
+            "switching_w": 1.16e-09,
+            "total_w": 1.05e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_1",
+            "internal_w": 0.000401,
+            "leakage_w": 1.4e-06,
+            "module": "PE_14",
+            "switching_w": 1.96e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_1/adder",
+            "internal_w": 3.52e-09,
+            "leakage_w": 4.7e-07,
+            "module": "AddRecFN_14",
+            "switching_w": 3.22e-09,
+            "total_w": 4.77e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_1/adder/addRawFN",
+            "internal_w": 2.6e-09,
+            "leakage_w": 3.6e-07,
+            "module": "AddRawFN_14",
+            "switching_w": 2.35e-09,
+            "total_w": 3.65e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_1/adder/roundRawFNToRecFN",
+            "internal_w": 8.83e-10,
+            "leakage_w": 1.09e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_14",
+            "switching_w": 8.46e-10,
+            "total_w": 1.1e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_2",
+            "internal_w": 0.000401,
+            "leakage_w": 1.36e-06,
+            "module": "PE_13",
+            "switching_w": 1.48e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_2/adder",
+            "internal_w": 5.34e-09,
+            "leakage_w": 4.59e-07,
+            "module": "AddRecFN_13",
+            "switching_w": 4.79e-09,
+            "total_w": 4.7e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_2/adder/addRawFN",
+            "internal_w": 4.68e-09,
+            "leakage_w": 3.55e-07,
+            "module": "AddRawFN_13",
+            "switching_w": 4.09e-09,
+            "total_w": 3.64e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_2/adder/roundRawFNToRecFN",
+            "internal_w": 6.58e-10,
+            "leakage_w": 1.02e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_13",
+            "switching_w": 6.92e-10,
+            "total_w": 1.04e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_3",
+            "internal_w": 0.000402,
+            "leakage_w": 1.36e-06,
+            "module": "PE_12",
+            "switching_w": 1.94e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_3/adder",
+            "internal_w": 9.95e-09,
+            "leakage_w": 4.52e-07,
+            "module": "AddRecFN_12",
+            "switching_w": 9.42e-09,
+            "total_w": 4.71e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_3/adder/addRawFN",
+            "internal_w": 8.11e-09,
+            "leakage_w": 3.49e-07,
+            "module": "AddRawFN_12",
+            "switching_w": 7.64e-09,
+            "total_w": 3.65e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_3/adder/roundRawFNToRecFN",
+            "internal_w": 1.82e-09,
+            "leakage_w": 1.01e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_12",
+            "switching_w": 1.76e-09,
+            "total_w": 1.04e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_4",
+            "internal_w": 0.000401,
+            "leakage_w": 1.41e-06,
+            "module": "PE_11",
+            "switching_w": 1.87e-07,
+            "total_w": 0.000402
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_4/adder",
+            "internal_w": 1.27e-08,
+            "leakage_w": 4.67e-07,
+            "module": "AddRecFN_11",
+            "switching_w": 1.37e-08,
+            "total_w": 4.94e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_4/adder/addRawFN",
+            "internal_w": 7.55e-09,
+            "leakage_w": 3.53e-07,
+            "module": "AddRawFN_11",
+            "switching_w": 7.05e-09,
+            "total_w": 3.68e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_4/adder/roundRawFNToRecFN",
+            "internal_w": 5.14e-09,
+            "leakage_w": 1.13e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_11",
+            "switching_w": 6.62e-09,
+            "total_w": 1.24e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_5",
+            "internal_w": 0.000401,
+            "leakage_w": 1.42e-06,
+            "module": "PE_10",
+            "switching_w": 2.29e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_5/adder",
+            "internal_w": 1.88e-08,
+            "leakage_w": 4.76e-07,
+            "module": "AddRecFN_10",
+            "switching_w": 1.83e-08,
+            "total_w": 5.13e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_5/adder/addRawFN",
+            "internal_w": 1.65e-08,
+            "leakage_w": 3.66e-07,
+            "module": "AddRawFN_10",
+            "switching_w": 1.62e-08,
+            "total_w": 3.99e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_5/adder/roundRawFNToRecFN",
+            "internal_w": 2.26e-09,
+            "leakage_w": 1.08e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_10",
+            "switching_w": 2.16e-09,
+            "total_w": 1.12e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_6",
+            "internal_w": 0.000401,
+            "leakage_w": 1.39e-06,
+            "module": "PE_9",
+            "switching_w": 2.21e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_6/adder",
+            "internal_w": 1.38e-08,
+            "leakage_w": 4.75e-07,
+            "module": "AddRecFN_9",
+            "switching_w": 1.3e-08,
+            "total_w": 5.02e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_6/adder/addRawFN",
+            "internal_w": 1.34e-08,
+            "leakage_w": 3.64e-07,
+            "module": "AddRawFN_9",
+            "switching_w": 1.27e-08,
+            "total_w": 3.9e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_6/adder/roundRawFNToRecFN",
+            "internal_w": 3.61e-10,
+            "leakage_w": 1.09e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_9",
+            "switching_w": 2.78e-10,
+            "total_w": 1.1e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_7",
+            "internal_w": 0.000402,
+            "leakage_w": 1.38e-06,
+            "module": "PE_8",
+            "switching_w": 2.05e-07,
+            "total_w": 0.000404
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_7/adder",
+            "internal_w": 7.81e-09,
+            "leakage_w": 4.5e-07,
+            "module": "AddRecFN_8",
+            "switching_w": 6.81e-09,
+            "total_w": 4.65e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_7/adder/addRawFN",
+            "internal_w": 7.24e-09,
+            "leakage_w": 3.47e-07,
+            "module": "AddRawFN_8",
+            "switching_w": 6.24e-09,
+            "total_w": 3.6e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_2_7/adder/roundRawFNToRecFN",
+            "internal_w": 5.53e-10,
+            "leakage_w": 1.02e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_8",
+            "switching_w": 5.51e-10,
+            "total_w": 1.03e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_0",
+            "internal_w": 0.0004,
+            "leakage_w": 1.41e-06,
+            "module": "PE_7",
+            "switching_w": 1.38e-07,
+            "total_w": 0.000402
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_0/adder",
+            "internal_w": 7.9e-09,
+            "leakage_w": 4.63e-07,
+            "module": "AddRecFN_7",
+            "switching_w": 7.23e-09,
+            "total_w": 4.78e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_0/adder/addRawFN",
+            "internal_w": 6.78e-09,
+            "leakage_w": 3.49e-07,
+            "module": "AddRawFN_7",
+            "switching_w": 6.32e-09,
+            "total_w": 3.62e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_0/adder/roundRawFNToRecFN",
+            "internal_w": 1.12e-09,
+            "leakage_w": 1.13e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_7",
+            "switching_w": 8.93e-10,
+            "total_w": 1.15e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_1",
+            "internal_w": 0.000401,
+            "leakage_w": 1.4e-06,
+            "module": "PE_6",
+            "switching_w": 2.25e-07,
+            "total_w": 0.000402
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_1/adder",
+            "internal_w": 4.79e-08,
+            "leakage_w": 4.66e-07,
+            "module": "AddRecFN_6",
+            "switching_w": 4.67e-08,
+            "total_w": 5.61e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_1/adder/addRawFN",
+            "internal_w": 4.65e-08,
+            "leakage_w": 3.54e-07,
+            "module": "AddRawFN_6",
+            "switching_w": 4.57e-08,
+            "total_w": 4.46e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_1/adder/roundRawFNToRecFN",
+            "internal_w": 1.28e-09,
+            "leakage_w": 1.11e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_6",
+            "switching_w": 1e-09,
+            "total_w": 1.13e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_2",
+            "internal_w": 0.000401,
+            "leakage_w": 1.41e-06,
+            "module": "PE_5",
+            "switching_w": 1.72e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_2/adder",
+            "internal_w": 2.35e-08,
+            "leakage_w": 4.75e-07,
+            "module": "AddRecFN_5",
+            "switching_w": 2.27e-08,
+            "total_w": 5.21e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_2/adder/addRawFN",
+            "internal_w": 2.11e-08,
+            "leakage_w": 3.63e-07,
+            "module": "AddRawFN_5",
+            "switching_w": 2.1e-08,
+            "total_w": 4.06e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_2/adder/roundRawFNToRecFN",
+            "internal_w": 2.29e-09,
+            "leakage_w": 1.1e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_5",
+            "switching_w": 1.75e-09,
+            "total_w": 1.14e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_3",
+            "internal_w": 0.000402,
+            "leakage_w": 1.38e-06,
+            "module": "PE_4",
+            "switching_w": 2.42e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_3/adder",
+            "internal_w": 4.75e-08,
+            "leakage_w": 4.69e-07,
+            "module": "AddRecFN_4",
+            "switching_w": 4.61e-08,
+            "total_w": 5.62e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_3/adder/addRawFN",
+            "internal_w": 4.58e-08,
+            "leakage_w": 3.58e-07,
+            "module": "AddRawFN_4",
+            "switching_w": 4.47e-08,
+            "total_w": 4.48e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_3/adder/roundRawFNToRecFN",
+            "internal_w": 1.72e-09,
+            "leakage_w": 1.09e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_4",
+            "switching_w": 1.34e-09,
+            "total_w": 1.13e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_4",
+            "internal_w": 0.0004,
+            "leakage_w": 1.37e-06,
+            "module": "PE_3",
+            "switching_w": 2.11e-07,
+            "total_w": 0.000402
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_4/adder",
+            "internal_w": 2.2e-08,
+            "leakage_w": 4.6e-07,
+            "module": "AddRecFN_3",
+            "switching_w": 2.16e-08,
+            "total_w": 5.03e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_4/adder/addRawFN",
+            "internal_w": 1.68e-08,
+            "leakage_w": 3.52e-07,
+            "module": "AddRawFN_3",
+            "switching_w": 1.62e-08,
+            "total_w": 3.85e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_4/adder/roundRawFNToRecFN",
+            "internal_w": 5.17e-09,
+            "leakage_w": 1.06e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_3",
+            "switching_w": 5.29e-09,
+            "total_w": 1.17e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_5",
+            "internal_w": 0.000401,
+            "leakage_w": 1.39e-06,
+            "module": "PE_2",
+            "switching_w": 1.82e-07,
+            "total_w": 0.000402
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_5/adder",
+            "internal_w": 3.91e-08,
+            "leakage_w": 4.74e-07,
+            "module": "AddRecFN_2",
+            "switching_w": 3.81e-08,
+            "total_w": 5.51e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_5/adder/addRawFN",
+            "internal_w": 3.57e-08,
+            "leakage_w": 3.62e-07,
+            "module": "AddRawFN_2",
+            "switching_w": 3.52e-08,
+            "total_w": 4.33e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_5/adder/roundRawFNToRecFN",
+            "internal_w": 3.37e-09,
+            "leakage_w": 1.1e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_2",
+            "switching_w": 2.92e-09,
+            "total_w": 1.17e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_6",
+            "internal_w": 0.0004,
+            "leakage_w": 1.38e-06,
+            "module": "PE_1",
+            "switching_w": 1.66e-07,
+            "total_w": 0.000402
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_6/adder",
+            "internal_w": 1.02e-08,
+            "leakage_w": 4.5e-07,
+            "module": "AddRecFN_1",
+            "switching_w": 1.05e-08,
+            "total_w": 4.71e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_6/adder/addRawFN",
+            "internal_w": 9.25e-09,
+            "leakage_w": 3.38e-07,
+            "module": "AddRawFN_1",
+            "switching_w": 9.21e-09,
+            "total_w": 3.57e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_6/adder/roundRawFNToRecFN",
+            "internal_w": 9.06e-10,
+            "leakage_w": 1.1e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_1",
+            "switching_w": 1.31e-09,
+            "total_w": 1.12e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_7",
+            "internal_w": 0.000402,
+            "leakage_w": 1.36e-06,
+            "module": "PE_0",
+            "switching_w": 1.94e-07,
+            "total_w": 0.000403
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_7/adder",
+            "internal_w": 4e-08,
+            "leakage_w": 4.6e-07,
+            "module": "AddRecFN_0",
+            "switching_w": 3.93e-08,
+            "total_w": 5.4e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_7/adder/addRawFN",
+            "internal_w": 3.65e-08,
+            "leakage_w": 3.49e-07,
+            "module": "AddRawFN_0",
+            "switching_w": 3.63e-08,
+            "total_w": 4.21e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8matmulBall/pes_3_7/adder/roundRawFNToRecFN",
+            "internal_w": 3.47e-09,
+            "leakage_w": 1.1e-07,
+            "module": "RoundRawFNToRecFN_e8_s24_0",
+            "switching_w": 2.97e-09,
+            "total_w": 1.17e-07
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/Mxint8actBall",
+            "internal_w": 0.0164,
+            "leakage_w": 8.46e-06,
+            "module": "Mxint8actBall",
+            "switching_w": 3.8e-09,
+            "total_w": 0.0164
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/responses",
+            "internal_w": 9.95e-11,
+            "leakage_w": 4.46e-09,
+            "module": "Arbiter_2",
+            "switching_w": 2.12e-10,
+            "total_w": 4.77e-09
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/pending",
+            "internal_w": 0.00767,
+            "leakage_w": 2.23e-06,
+            "module": "Queue_2",
+            "switching_w": 3.42e-09,
+            "total_w": 0.00767
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/channels",
+            "internal_w": 0.000377,
+            "leakage_w": 2.15e-06,
+            "module": "Channels",
+            "switching_w": 7.87e-08,
+            "total_w": 0.000379
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/TransposeBall",
+            "internal_w": 0.00251,
+            "leakage_w": 8.75e-07,
+            "module": "TransposeBall",
+            "switching_w": 3.23e-09,
+            "total_w": 0.00252
+          },
+          {
+            "instance": "tlink_thread/acc/ballDomain/bbus/TransposeBall/transposeUnit",
+            "internal_w": 0.00251,
+            "leakage_w": 8.75e-07,
+            "module": "Transpose",
+            "switching_w": 3.23e-09,
+            "total_w": 0.00252
+          },
+          {
+            "instance": "tlink_thread/ant",
+            "internal_w": 0.0256,
+            "leakage_w": 1.19e-05,
+            "module": "Ant",
+            "switching_w": 0.00125,
+            "total_w": 0.0269
+          },
+          {
+            "instance": "tlink_thread/ant/data",
+            "internal_w": 0.00452,
+            "leakage_w": 1.93e-06,
+            "module": "LocalStore_1",
+            "switching_w": 7.98e-05,
+            "total_w": 0.00461
+          },
+          {
+            "instance": "tlink_thread/ant/data/memories_0",
+            "internal_w": 0.00451,
+            "leakage_w": 1.87e-06,
+            "module": "Memory_1",
+            "switching_w": 7.64e-05,
+            "total_w": 0.00458
+          },
+          {
+            "instance": "tlink_thread/ant/data/memories_0/bank",
+            "internal_w": 0.00445,
+            "leakage_w": 1.68e-06,
+            "module": "Bank_0",
+            "switching_w": 6.91e-05,
+            "total_w": 0.00452
+          },
+          {
+            "instance": "tlink_thread/ant/data/memories_0/bank/responses",
+            "internal_w": 0.00439,
+            "leakage_w": 1.28e-06,
+            "module": "Queue_0",
+            "switching_w": 2.41e-08,
+            "total_w": 0.00439
+          },
+          {
+            "instance": "tlink_thread/ant/data/memories_0/bank/memory",
+            "internal_w": 3.67e-05,
+            "leakage_w": 3.67e-07,
+            "module": "memory_0",
+            "switching_w": 6.89e-05,
+            "total_w": 0.000106
+          },
+          {
+            "instance": "tlink_thread/ant/data/memories_0/bank/memory/memory_ext",
+            "internal_w": 3.67e-05,
+            "leakage_w": 3.67e-07,
+            "module": "memory_ext_16",
+            "switching_w": 6.89e-05,
+            "total_w": 0.000106
+          },
+          {
+            "instance": "tlink_thread/ant/executor",
+            "internal_w": 0.0155,
+            "leakage_w": 7.51e-06,
+            "module": "Executor",
+            "switching_w": 0.000964,
+            "total_w": 0.0164
+          },
+          {
+            "instance": "tlink_thread/ant/executor/multiplier",
+            "internal_w": 0.00218,
+            "leakage_w": 1.8e-06,
+            "module": "Multiply",
+            "switching_w": 0.000423,
+            "total_w": 0.0026
+          },
+          {
+            "instance": "tlink_thread/ant/executor/decoder",
+            "internal_w": 4.71e-06,
+            "leakage_w": 2.43e-08,
+            "module": "Decode",
+            "switching_w": 1.06e-05,
+            "total_w": 1.54e-05
+          },
+          {
+            "instance": "tlink_thread/ant/executor/divider",
+            "internal_w": 0.00158,
+            "leakage_w": 8.31e-07,
+            "module": "DivRem",
+            "switching_w": 1.53e-05,
+            "total_w": 0.00159
+          },
+          {
+            "instance": "tlink_thread/ant/loader",
+            "internal_w": 0.000923,
+            "leakage_w": 4.14e-07,
+            "module": "Loader",
+            "switching_w": 5.29e-08,
+            "total_w": 0.000924
+          },
+          {
+            "instance": "tlink_thread/ant/image",
+            "internal_w": 0.00467,
+            "leakage_w": 1.94e-06,
+            "module": "LocalStore",
+            "switching_w": 0.000201,
+            "total_w": 0.00487
+          },
+          {
+            "instance": "tlink_thread/ant/image/memories_0",
+            "internal_w": 0.00465,
+            "leakage_w": 1.9e-06,
+            "module": "Memory",
+            "switching_w": 0.000196,
+            "total_w": 0.00485
+          },
+          {
+            "instance": "tlink_thread/ant/image/memories_0/bank",
+            "internal_w": 0.00457,
+            "leakage_w": 1.71e-06,
+            "module": "Bank_2",
+            "switching_w": 0.000156,
+            "total_w": 0.00473
+          },
+          {
+            "instance": "tlink_thread/ant/image/memories_0/bank/responses",
+            "internal_w": 0.00447,
+            "leakage_w": 1.29e-06,
+            "module": "Queue_4",
+            "switching_w": 6.9e-05,
+            "total_w": 0.00454
+          },
+          {
+            "instance": "tlink_thread/ant/image/memories_0/bank/memory",
+            "internal_w": 5.67e-05,
+            "leakage_w": 3.75e-07,
+            "module": "memory_1",
+            "switching_w": 7.51e-05,
+            "total_w": 0.000132
+          },
+          {
+            "instance": "tlink_thread/ant/image/memories_0/bank/memory/memory_ext",
+            "internal_w": 5.67e-05,
+            "leakage_w": 3.75e-07,
+            "module": "memory_ext_17",
+            "switching_w": 7.51e-05,
+            "total_w": 0.000132
+          }
+        ],
+        "internal_w": 0.217,
+        "leakage_w": 0.000159,
+        "status": "pass",
+        "switching_w": 0.00236,
+        "total_w": 0.22
+      },
+      "thread": "poly/threads/ffn"
+    }
+  ]
+}

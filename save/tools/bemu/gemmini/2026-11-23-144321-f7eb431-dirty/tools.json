@@ -1,0 +1,33 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 901680268,
+  "design": "gemmini",
+  "dirty": true,
+  "elapsed_s": 26.712,
+  "taken": "2026-11-23T14:43:21.834369+00:00",
+  "timeline": "designs/gemmini/2026-11-23-142650-f7eb431-dirty",
+  "tool": "BEMU",
+  "workloads": [
+    {
+      "cycles": 362017479,
+      "elapsed_s": 13.72,
+      "status": "pass",
+      "workload": "fw_payload-linux"
+    },
+    {
+      "cycles": 4508013,
+      "elapsed_s": 0.107,
+      "workload": "lenet"
+    },
+    {
+      "cycles": 208563789,
+      "elapsed_s": 4.58,
+      "workload": "mobilenet-v3-small"
+    },
+    {
+      "cycles": 326590987,
+      "elapsed_s": 8.305,
+      "workload": "resnet18"
+    }
+  ]
+}

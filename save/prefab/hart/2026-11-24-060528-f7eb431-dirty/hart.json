@@ -1,0 +1,512 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "gemmini",
+      "path": "examples/prefab/harts/gemmini",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-24-14-07-prefab-bebop-bemu-hart-gemmini-default-bare-tests",
+            "passed": 60,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-aligned-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_dw-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_first_layer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_rect-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_rect_pool-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_input_3120-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_input_3120_with_kernel_dilation-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_output_1203-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_weight_0132-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_weight_1203-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_with_input_dilation-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_with_input_dilation_and_neg_padding-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_with_input_dilation_and_rot180-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_with_kernel_dilation-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_with_pool-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_with_rot180-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-gemmini_counter-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-global_average-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-matmul-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-matmul_os-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-matmul_ws-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-matrix_add-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc_full-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc_full_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc_zero_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_block_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_zeros-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_scale-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-padded-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-raw_hazard-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-resadd-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-resadd_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-template-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_cpu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_option-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_os-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_At-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_Bt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_full_C-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_igelu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_layernorm-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_low_D-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_softmax-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-transpose-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-transpose_scale-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 60
+          },
+          "verilator": {
+            "log": "2026-11-24-14-07-prefab-bebop-verilator-hart-gemmini-default-bare-tests",
+            "passed": 49,
+            "status": "failure",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-aligned-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_dw-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_first_layer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_rect-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_rect_pool-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_input_3120-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_input_3120_with_kernel_dilation-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_output_1203-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_weight_0132-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_trans_weight_1203-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "gemmini-hart0-ctest-conv_with_input_dilation-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "gemmini-hart0-ctest-conv_with_input_dilation_and_neg_padding-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "gemmini-hart0-ctest-conv_with_input_dilation_and_rot180-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "gemmini-hart0-ctest-conv_with_kernel_dilation-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-conv_with_pool-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "gemmini-hart0-ctest-conv_with_rot180-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-gemmini_counter-baremetal"
+              },
+              {
+                "status": "fail",
+                "test": "gemmini-hart0-ctest-global_average-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "gemmini-hart0-ctest-matmul-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-matmul_os-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-matmul_ws-baremetal"
+              },
+              {
+                "status": "fail",
+                "test": "gemmini-hart0-ctest-matrix_add-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc_full-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc_full_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_acc_zero_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_block_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_mvout_zeros-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-mvin_scale-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-padded-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-raw_hazard-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-resadd-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-resadd_stride-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-template-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_cpu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_option-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_os-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_At-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_Bt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_full_C-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_igelu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_layernorm-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_low_D-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-tiled_matmul_ws_softmax-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-transpose-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-ctest-transpose_scale-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "fail",
+                "test": "gemmini-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "fail",
+                "test": "gemmini-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "fail",
+                "test": "gemmini-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "gemmini-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 60
+          }
+        },
+        "status": "failure"
+      }
+    }
+  ],
+  "taken": "2026-11-24T06:05:28.161532+00:00"
+}

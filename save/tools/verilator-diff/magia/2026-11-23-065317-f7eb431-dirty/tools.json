@@ -1,0 +1,48 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 437739,
+  "design": "magia",
+  "dirty": true,
+  "elapsed_s": 7391.84,
+  "flag": "diff",
+  "taken": "2026-11-23T06:53:17.107382+00:00",
+  "timeline": "designs/magia/2026-11-23-045855-f7eb431-dirty",
+  "tool": "Verilator",
+  "workloads": [
+    {
+      "cycles": 84733,
+      "elapsed_s": 1566.88,
+      "workload": "magia-hart0-ctest-fsync_test_mm-baremetal"
+    },
+    {
+      "cycles": 74841,
+      "elapsed_s": 1362.19,
+      "workload": "magia-hart0-ctest-gemm_one_row-baremetal"
+    },
+    {
+      "cycles": 92610,
+      "elapsed_s": 1542.75,
+      "workload": "magia-hart0-ctest-gemm_service-baremetal"
+    },
+    {
+      "cycles": 75385,
+      "elapsed_s": 1352.76,
+      "workload": "magia-hart0-ctest-gemm_two_columns-baremetal"
+    },
+    {
+      "cycles": 13642,
+      "elapsed_s": 396.12,
+      "workload": "magia-hart0-ctest-half_convert-baremetal"
+    },
+    {
+      "cycles": 54058,
+      "elapsed_s": 768.37,
+      "workload": "magia-hart0-ctest-gemm_one_column-baremetal"
+    },
+    {
+      "cycles": 42470,
+      "elapsed_s": 402.77,
+      "workload": "magia-hart0-ctest-gemm_few_columns-baremetal"
+    }
+  ]
+}

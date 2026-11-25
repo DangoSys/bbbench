@@ -1,0 +1,50 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+  "cycles": 382655,
+  "design": "magia",
+  "dirty": true,
+  "elapsed_s": 0.66,
+  "log": "2026-11-23-12-59-magia-bebop-bemu-device-magia-MagiaTapeoutConfig-bare-tests",
+  "taken": "2026-11-23T06:44:17.169887+00:00",
+  "timeline": "designs/magia/2026-11-23-045855-f7eb431-dirty",
+  "tool": "BEMU",
+  "workloads": [
+    {
+      "cycles": 55592,
+      "elapsed_s": 0.11,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_few_columns-baremetal"
+    },
+    {
+      "cycles": 63689,
+      "elapsed_s": 0.11,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_one_column-baremetal"
+    },
+    {
+      "cycles": 76348,
+      "elapsed_s": 0.11,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_one_row-baremetal"
+    },
+    {
+      "cycles": 96169,
+      "elapsed_s": 0.11,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_service-baremetal"
+    },
+    {
+      "cycles": 77409,
+      "elapsed_s": 0.11,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_two_columns-baremetal"
+    },
+    {
+      "cycles": 13448,
+      "elapsed_s": 0.11,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-half_convert-baremetal"
+    }
+  ]
+}

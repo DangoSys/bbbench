@@ -1,0 +1,128 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "boom",
+      "path": "examples/prefab/harts/boom",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-24-16-38-prefab-bebop-bemu-hart-boom-default-bare-tests",
+            "passed": 12,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-atomics-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-cpu_arithmetic-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-fpu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-memory-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-trace_events-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-clint_supervisor_timer-baremetal"
+              }
+            ],
+            "total": 12
+          },
+          "verilator": {
+            "log": "2026-11-24-16-38-prefab-bebop-verilator-hart-boom-default-bare-tests",
+            "passed": 9,
+            "status": "failure",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-atomics-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-cpu_arithmetic-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-fpu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-memory-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-trace_events-baremetal"
+              },
+              {
+                "status": "fail",
+                "test": "boom-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "fail",
+                "test": "boom-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "fail",
+                "test": "boom-hart0-soctest-clint_supervisor_timer-baremetal"
+              }
+            ],
+            "total": 12
+          }
+        },
+        "status": "failure"
+      }
+    }
+  ],
+  "taken": "2026-11-24T08:09:23.375070+00:00"
+}

@@ -1,0 +1,49 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 352408,
+  "design": "magia",
+  "dirty": true,
+  "elapsed_s": 4184.360000000001,
+  "flag": "diff",
+  "taken": "2026-11-24T03:56:14.232122+00:00",
+  "timeline": "designs/magia/2026-11-23-145808-f7eb431-dirty",
+  "tool": "Verilator",
+  "workloads": [
+    {
+      "cycles": 75535,
+      "elapsed_s": 1025.9,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_one_row-baremetal"
+    },
+    {
+      "cycles": 91621,
+      "elapsed_s": 1052.5,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_service-baremetal"
+    },
+    {
+      "cycles": 75286,
+      "elapsed_s": 1026.64,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_two_columns-baremetal"
+    },
+    {
+      "cycles": 13488,
+      "elapsed_s": 666.06,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-half_convert-baremetal"
+    },
+    {
+      "cycles": 53924,
+      "elapsed_s": 345.98,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_one_column-baremetal"
+    },
+    {
+      "cycles": 42554,
+      "elapsed_s": 67.28,
+      "status": "pass",
+      "workload": "magia-hart0-ctest-gemm_few_columns-baremetal"
+    }
+  ]
+}

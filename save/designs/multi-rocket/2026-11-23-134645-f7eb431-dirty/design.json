@@ -1,0 +1,116 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "multi-rocket",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "elapsed_s": 20.0,
+      "error": "stack.build: command failed (1): nix develop /home/wanghui/Code/buckyball -c ninja -C /home/wanghui/Code/buckyball/examples/designs/multi-rocket/output/sims/device/multi-rocket/MultiRocketTapeoutConfig/stack -j 128\nFAILED: [code=1] hart-rocket-prefix/src/hart-rocket-stamp/hart-rocket-configure /home/wanghui/Code/buckyball/examples/designs/multi-rocket/output/sims/device/multi-rocket/MultiRocketTapeoutConfig/stack/hart-rocket-prefix/src/hart-rocket-stamp/hart-rocket-configure\ncd /home/wanghui/Code/buckyball/examples/designs/multi-rocket/output/sims/device/multi-rocket/MultiRocketTapeoutConfig/stack/hart/rocket && /home/wanghui/Code/buckyball/result/bin/cmake -DDESIGN_CMAKE=/home/wanghui/Code/buckyball/examples/designs/multi-rocket/output/sims/device/multi-rocket/MultiRocketTapeoutConfig/stack/generated/design.cmake -DHART=rocket -GNinja -S /home/wanghui/Code/buckyball/examples/designs/multi-rocket/harts/rocket/stack -B /home/wanghui/Code/buckyball/examples/designs/multi-rocket/output/sims/device/multi-rocket/MultiRocketTapeoutConfig/stack/hart/rocket && /home/wanghui/Code/buckyball/result/bin/cmake -E touch /home/wanghui/Code/buckyball/examples/designs/multi-rocket/output/sims/device/multi-rocket/MultiRocketTapeoutConfig/stack/hart-rocket-prefix/src/hart-rocket-stamp/hart-rocket-configure\nCMake Error: The source \"/home/wanghui/Code/buckyball/examples/designs/multi-rocket/harts/rocket/stack/CMakeLists.txt\" does not match the source \"/home/wanghui/Code/buckyball/examples/prefab/harts/rocket/stack/CMakeLists.txt\" used to generate cache.  Re-run cmake with a different source directory.\nninja: build stopped: subcommand failed.\nwarning: Git tree '/home/wanghui/Code/buckyball' has uncommitted changes\n================= Buckyball Environment Activated =========================\nDevelopment environment loaded:\nVerilator: perl: warning: Setting locale failed.\nRISC-V Embedded GCC: riscv64-none-elf-gcc (GCC) 15.3.0\nRISC-V Linux GCC: riscv64-unknown-linux-gnu-gcc (GCC) 15.3.0\nMill: Mill Build Tool version 0.11.4\nCargo: cargo 1.97.0 (c980f4866 2026-06-30)\npnpm: 11.18.0\nCXX: /nix/store/p6m6bfqjzmj2i6syhxrfrh4mq917340i-clang-wrapper-21.1.8/bin/clang++\nbbdev: /home/wanghui/Code/buckyball/bbdev/bbdev\nRISCV: /home/wanghui/Code/buckyball/result\nYosys: Yosys 0.67+post (git sha1 v0.67, Release, GNU /nix/store/adcz0m6qq2flmshdf0zz2xwjr5zbq1gr-gcc-wrapper-15.3.0/bin/g++ 15.3.0)\nOpenSTA: 3.0.0\n===========================================================================",
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "failure"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketVerilatorConfig.toml",
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-23T13:46:45.503360+00:00"
+}

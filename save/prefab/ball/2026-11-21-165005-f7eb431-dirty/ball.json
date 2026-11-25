@@ -1,0 +1,126 @@
+{
+  "balls": [
+    {
+      "area": {
+        "ball_um2": 13903.1424,
+        "constraints_met": false,
+        "hierarchy": [
+          {
+            "combinational_um2": 24835.2391,
+            "instance": "BallDomain",
+            "module": "BallDomain",
+            "noncombinational_um2": 0.0,
+            "um2": 217960.7822
+          },
+          {
+            "combinational_um2": 2745.2545,
+            "instance": "bbus",
+            "module": "BBus",
+            "noncombinational_um2": 2730.2016,
+            "um2": 192926.0935
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "bbus/ReluBall",
+            "module": "ReluBall",
+            "noncombinational_um2": 0.0,
+            "um2": 13903.1424
+          },
+          {
+            "combinational_um2": 6237.5041,
+            "instance": "bbus/ReluBall/unit",
+            "module": "Relu",
+            "noncombinational_um2": 7665.6382,
+            "um2": 13903.1424
+          },
+          {
+            "combinational_um2": 71566.657,
+            "instance": "bbus/channels",
+            "module": "Channels",
+            "noncombinational_um2": 2773.4783,
+            "um2": 74340.1354
+          },
+          {
+            "combinational_um2": 33949.7097,
+            "instance": "bbus/pending",
+            "module": "Queue",
+            "noncombinational_um2": 65257.6501,
+            "um2": 99207.3598
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "bbus/responses",
+            "module": "Arbiter",
+            "noncombinational_um2": 0.0,
+            "um2": 0.0
+          },
+          {
+            "combinational_um2": 199.4496,
+            "instance": "decoder",
+            "module": "Decoder",
+            "noncombinational_um2": 0.0,
+            "um2": 199.4496
+          }
+        ],
+        "library": "scc018ug_uhd_rvt_ss_v1p62_125c_ccs.db",
+        "status": "pass",
+        "timing": {
+          "endpoint": "io_banks_1_write_req_bits_addr[9]",
+          "slack_ns": 0.01,
+          "startpoint": "bbus/ReluBall/unit/segment_reg_0_"
+        },
+        "tool": "DC",
+        "violations": {}
+      },
+      "ball": "relu",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "RELU"
+        ],
+        "name": "relu",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/relu"
+    }
+  ],
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-21T16:50:05.693793+00:00"
+}

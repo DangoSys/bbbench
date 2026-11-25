@@ -1,0 +1,203 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "magia/devices/magia/configs/MagiaDefaultConfig.toml",
+  "design": "magia",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 8994.1,
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-25-06-09-magia-bebop-verilator-device-magia-MagiaDefaultConfig-bare-tests",
+          "passed": 9,
+          "total": 9,
+          "workloads": [
+            {
+              "cycles": 84806,
+              "elapsed_s": 58.96,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-fsync_test_mm-baremetal"
+            },
+            {
+              "cycles": 391262,
+              "elapsed_s": 269.18,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-redmule_small_mm-baremetal"
+            },
+            {
+              "cycles": 247309,
+              "elapsed_s": 147.05,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_columns_mm-baremetal"
+            },
+            {
+              "cycles": 13905,
+              "elapsed_s": 6.61,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-half_convert-baremetal"
+            },
+            {
+              "cycles": 92529,
+              "elapsed_s": 50.36,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_service-baremetal"
+            },
+            {
+              "cycles": 75830,
+              "elapsed_s": 36.43,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_one_row-baremetal"
+            },
+            {
+              "cycles": 76166,
+              "elapsed_s": 42.77,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_two_columns-baremetal"
+            },
+            {
+              "cycles": 54608,
+              "elapsed_s": 28.13,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_one_column-baremetal"
+            },
+            {
+              "cycles": 43127,
+              "elapsed_s": 25.13,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_few_columns-baremetal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T19:50:52.322678+00:00"
+}

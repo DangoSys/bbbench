@@ -1,0 +1,94 @@
+{
+  "balls": [
+    {
+      "ball": "relu",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "RELU"
+        ],
+        "name": "relu",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/relu",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "74.82",
+          "GROUP": "100.00",
+          "LINE": "60.00",
+          "SCORE": "64.92",
+          "TOGGLE": "56.47"
+        },
+        "groups": [
+          {
+            "group": "relu_pkg::relu_cov::cmd_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "--",
+              "LINE": "--",
+              "SCORE": "52.65",
+              "TOGGLE": "52.65"
+            },
+            "module": "ReluBall"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "74.82",
+              "LINE": "60.00",
+              "SCORE": "64.52",
+              "TOGGLE": "58.74"
+            },
+            "module": "Relu"
+          }
+        ],
+        "status": "pass"
+      }
+    }
+  ],
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-22T17:58:09.272384+00:00"
+}

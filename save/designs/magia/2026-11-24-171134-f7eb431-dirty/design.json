@@ -1,0 +1,198 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "magia/devices/magia/configs/MagiaDefaultConfig.toml",
+  "design": "magia",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 582.0,
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-25-01-12-magia-bebop-bemu-device-magia-MagiaDefaultConfig-bare-tests",
+          "passed": 6,
+          "total": 6,
+          "workloads": [
+            {
+              "cycles": 55427,
+              "elapsed_s": 0.29,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_few_columns-baremetal"
+            },
+            {
+              "cycles": 63318,
+              "elapsed_s": 0.2,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_one_column-baremetal"
+            },
+            {
+              "cycles": 76796,
+              "elapsed_s": 0.2,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_one_row-baremetal"
+            },
+            {
+              "cycles": 95214,
+              "elapsed_s": 0.27,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_service-baremetal"
+            },
+            {
+              "cycles": 77184,
+              "elapsed_s": 0.2,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_two_columns-baremetal"
+            },
+            {
+              "cycles": 13580,
+              "elapsed_s": 0.34,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-half_convert-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-25-01-21-magia-bebop-bemu-device-magia-MagiaDefaultConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 476317340,
+              "elapsed_s": 4.41,
+              "status": "pass",
+              "workload": "magia-test-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-dataset",
+      "name": "BEMU dataset",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T17:11:34.789147+00:00"
+}

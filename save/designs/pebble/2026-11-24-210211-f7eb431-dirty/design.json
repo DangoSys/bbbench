@@ -1,0 +1,2749 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "pebble/devices/pebble/configs/PebbleDefaultConfig.toml",
+  "design": "pebble",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 2411.3,
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "failure",
+      "uvm": [
+        {
+          "ip": "axi4",
+          "log": "2026-11-25-05-02-11-899365-pebble-uvm-axi4",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/generic/axi4/configs/uvm.toml",
+              "ip": "axi4",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 113248,
+                  "comparisons": 13488,
+                  "configuration": "arch/src/main/scala/generic/axi4/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 90.15,
+                      "line": 77.55,
+                      "score": 81.39,
+                      "toggle": 76.48
+                    },
+                    "dut_raw": {
+                      "cond": 90.15,
+                      "line": 77.55,
+                      "score": 81.39,
+                      "toggle": 76.48
+                    },
+                    "functional": {
+                      "interconnect_pkg::routing_model::behavior": 100.0,
+                      "interconnect_pkg::routing_model::load": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-02-11-899365-pebble-uvm-axi4/axi4/uvm/interconnect/coverage"
+                  },
+                  "expected": 13488,
+                  "id": "ip/axi4/uvm/interconnect",
+                  "ip": "axi4",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-02-11-899365-pebble-uvm-axi4/axi4/uvm/interconnect/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 13488,
+                  "status": "pass",
+                  "test": "interconnect"
+                },
+                {
+                  "cancelled": 0,
+                  "checks": 0,
+                  "comparisons": 1165,
+                  "configuration": "arch/src/main/scala/generic/axi4/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 96.48,
+                      "line": 100.0,
+                      "score": 94.21,
+                      "toggle": 86.16
+                    },
+                    "dut_raw": {
+                      "cond": 96.48,
+                      "line": 100.0,
+                      "score": 94.21,
+                      "toggle": 86.16
+                    },
+                    "functional": {
+                      "decoder_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-02-11-899365-pebble-uvm-axi4/axi4/uvm/decoder/coverage"
+                  },
+                  "expected": 1165,
+                  "id": "ip/axi4/uvm/decoder",
+                  "ip": "axi4",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-02-11-899365-pebble-uvm-axi4/axi4/uvm/decoder/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 1165,
+                  "status": "pass",
+                  "test": "decoder"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "bank_router",
+          "log": "2026-11-25-05-03-21-910648-pebble-uvm-bank_router",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/bank_router/configs/uvm.toml",
+              "ip": "bank_router",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 12252,
+                  "comparisons": 136,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/bank_router/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 70.98,
+                      "line": 68.75,
+                      "score": 63.36,
+                      "toggle": 50.35
+                    },
+                    "dut_raw": {
+                      "cond": 70.98,
+                      "line": 68.75,
+                      "score": 63.36,
+                      "toggle": 50.35
+                    },
+                    "functional": {
+                      "router_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-03-21-910648-pebble-uvm-bank_router/bank_router/uvm/bank_router/coverage"
+                  },
+                  "expected": 136,
+                  "id": "ip/bank_router/uvm/bank_router",
+                  "ip": "bank_router",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-03-21-910648-pebble-uvm-bank_router/bank_router/uvm/bank_router/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 136,
+                  "status": "pass",
+                  "test": "bank_router"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "bat",
+          "log": "2026-11-25-05-04-01-925713-pebble-uvm-bat",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/bat/configs/uvm.toml",
+              "ip": "bat",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 1,
+                  "comparisons": 606,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/bat/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 73.85,
+                      "line": 59.72,
+                      "score": 74.55,
+                      "toggle": 90.08
+                    },
+                    "dut_raw": {
+                      "cond": 73.85,
+                      "line": 59.72,
+                      "score": 74.55,
+                      "toggle": 90.08
+                    },
+                    "functional": {
+                      "bat_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-04-01-925713-pebble-uvm-bat/bat/uvm/bat/coverage"
+                  },
+                  "expected": 606,
+                  "id": "ip/bat/uvm/bat",
+                  "ip": "bat",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-04-01-925713-pebble-uvm-bat/bat/uvm/bat/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 606,
+                  "status": "pass",
+                  "test": "bat"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/bat/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/bat/uvm/bad_full",
+                  "ip": "bat",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-04-01-925713-pebble-uvm-bat/bat/uvm/bad_full/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_full"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/bat/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/bat/uvm/bad_reclaim",
+                  "ip": "bat",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-04-01-925713-pebble-uvm-bat/bat/uvm/bad_reclaim/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_reclaim"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/bat/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/bat/uvm/bad_read0",
+                  "ip": "bat",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-04-01-925713-pebble-uvm-bat/bat/uvm/bad_read0/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_read0"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/bat/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/bat/uvm/bad_read1",
+                  "ip": "bat",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-04-01-925713-pebble-uvm-bat/bat/uvm/bad_read1/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_read1"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/bat/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/bat/uvm/bad_update",
+                  "ip": "bat",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-04-01-925713-pebble-uvm-bat/bat/uvm/bad_update/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_update"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/bat/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/bat/uvm/bad_write",
+                  "ip": "bat",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-04-01-925713-pebble-uvm-bat/bat/uvm/bad_write/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_write"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "boot",
+          "log": "2026-11-25-05-05-01-998839-pebble-uvm-boot",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/boot/configs/uvm.toml",
+              "ip": "boot",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 2,
+                  "checks": 14449,
+                  "comparisons": 1805,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/boot/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 97.95,
+                      "line": 75.0,
+                      "score": 88.45,
+                      "toggle": 92.39
+                    },
+                    "dut_raw": {
+                      "cond": 97.95,
+                      "line": 75.0,
+                      "score": 88.45,
+                      "toggle": 92.39
+                    },
+                    "functional": {
+                      "boot_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-05-01-998839-pebble-uvm-boot/boot/uvm/boot/coverage"
+                  },
+                  "expected": 1807,
+                  "id": "ip/boot/uvm/boot",
+                  "ip": "boot",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-05-01-998839-pebble-uvm-boot/boot/uvm/boot/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 1805,
+                  "status": "pass",
+                  "test": "boot"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "cache",
+          "log": "2026-11-25-05-05-42-000858-pebble-uvm-cache",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/generic/cache/configs/uvm.toml",
+              "ip": "cache",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 2,
+                  "checks": 138,
+                  "comparisons": 144,
+                  "configuration": "arch/src/main/scala/generic/cache/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 97.68,
+                      "line": 86.13,
+                      "score": 90.94,
+                      "toggle": 89.0
+                    },
+                    "dut_raw": {
+                      "cond": 97.68,
+                      "line": 86.13,
+                      "score": 90.94,
+                      "toggle": 89.0
+                    },
+                    "functional": {
+                      "cache_pkg::coverage::operations": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-05-42-000858-pebble-uvm-cache/cache/uvm/cache/coverage"
+                  },
+                  "expected": 146,
+                  "id": "ip/cache/uvm/cache",
+                  "ip": "cache",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-05-42-000858-pebble-uvm-cache/cache/uvm/cache/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 144,
+                  "status": "pass",
+                  "test": "cache"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "chi",
+          "log": "2026-11-25-05-06-31-998748-pebble-uvm-chi",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+              "ip": "chi",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 1010,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 92.01,
+                      "line": 87.74,
+                      "score": 86.37,
+                      "toggle": 79.37
+                    },
+                    "dut_raw": {
+                      "cond": 92.01,
+                      "line": 87.74,
+                      "score": 86.37,
+                      "toggle": 79.37
+                    },
+                    "functional": {
+                      "chi_retry_pkg::protocol_model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/retry/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/chi/uvm/retry",
+                  "ip": "chi",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/retry/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "retry"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/chi/uvm/retry_bad_opcode",
+                  "ip": "chi",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/retry_bad_opcode/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "retry_bad_opcode"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/chi/uvm/retry_duplicate_txnid",
+                  "ip": "chi",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/retry_duplicate_txnid/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "retry_duplicate_txnid"
+                },
+                {
+                  "cancelled": 2,
+                  "checks": 0,
+                  "comparisons": 2469,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 91.95,
+                      "line": 77.41,
+                      "score": 85.82,
+                      "toggle": 88.11
+                    },
+                    "dut_raw": {
+                      "cond": 91.95,
+                      "line": 77.41,
+                      "score": 85.82,
+                      "toggle": 88.11
+                    },
+                    "functional": {
+                      "chi_rnf_pkg::protocol_model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/rnf/coverage"
+                  },
+                  "expected": 2471,
+                  "id": "ip/chi/uvm/rnf",
+                  "ip": "chi",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/rnf/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 2469,
+                  "status": "pass",
+                  "test": "rnf"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/chi/uvm/rnf_bad_dbid",
+                  "ip": "chi",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/rnf_bad_dbid/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "rnf_bad_dbid"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/chi/uvm/rnf_bad_dbid_width",
+                  "ip": "chi",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/rnf_bad_dbid_width/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "rnf_bad_dbid_width"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/chi/uvm/rnf_bad_resp",
+                  "ip": "chi",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/rnf_bad_resp/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "rnf_bad_resp"
+                },
+                {
+                  "cancelled": 0,
+                  "checks": 2103,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 90.26,
+                      "line": 79.15,
+                      "score": 87.55,
+                      "toggle": 93.25
+                    },
+                    "dut_raw": {
+                      "cond": 90.26,
+                      "line": 79.15,
+                      "score": 87.55,
+                      "toggle": 93.25
+                    },
+                    "functional": {
+                      "chi_sram_pkg::protocol_model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/sram/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/chi/uvm/sram",
+                  "ip": "chi",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/sram/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "sram"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/chi/uvm/sram_bad_opcode",
+                  "ip": "chi",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/sram_bad_opcode/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "sram_bad_opcode"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/chi/uvm/sram_duplicate_data",
+                  "ip": "chi",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/sram_duplicate_data/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "sram_duplicate_data"
+                },
+                {
+                  "cancelled": 1,
+                  "checks": 2011,
+                  "comparisons": 288,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 66.67,
+                      "line": 60.0,
+                      "score": 75.56,
+                      "toggle": 100.0
+                    },
+                    "dut_raw": {
+                      "cond": 66.67,
+                      "line": 60.0,
+                      "score": 75.56,
+                      "toggle": 100.0
+                    },
+                    "functional": {
+                      "link_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/tx/coverage"
+                  },
+                  "expected": 289,
+                  "id": "ip/chi/uvm/tx",
+                  "ip": "chi",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/tx/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 288,
+                  "status": "pass",
+                  "test": "tx"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/chi/uvm/tx_bad_credit",
+                  "ip": "chi",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/tx_bad_credit/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tx_bad_credit"
+                },
+                {
+                  "cancelled": 4,
+                  "checks": 1616,
+                  "comparisons": 292,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 82.76,
+                      "line": 63.08,
+                      "score": 81.46,
+                      "toggle": 98.56
+                    },
+                    "dut_raw": {
+                      "cond": 82.76,
+                      "line": 63.08,
+                      "score": 81.46,
+                      "toggle": 98.56
+                    },
+                    "functional": {
+                      "link_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/rx/coverage"
+                  },
+                  "expected": 296,
+                  "id": "ip/chi/uvm/rx",
+                  "ip": "chi",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/rx/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 292,
+                  "status": "pass",
+                  "test": "rx"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/chi/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/chi/uvm/rx_bad_credit",
+                  "ip": "chi",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-06-31-998748-pebble-uvm-chi/chi/uvm/rx_bad_credit/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "rx_bad_credit"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "coherence",
+          "log": "2026-11-25-05-09-52-021635-pebble-uvm-coherence",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/generic/coherence/configs/uvm.toml",
+              "ip": "coherence",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 11,
+                  "comparisons": 1021,
+                  "configuration": "arch/src/main/scala/generic/coherence/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 86.06,
+                      "line": 64.9,
+                      "score": 79.26,
+                      "toggle": 86.82
+                    },
+                    "dut_raw": {
+                      "cond": 86.06,
+                      "line": 64.9,
+                      "score": 79.26,
+                      "toggle": 86.82
+                    },
+                    "functional": {
+                      "coherence_pkg::system_model::occupancy": 100.0,
+                      "coherence_pkg::system_model::operations": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-09-52-021635-pebble-uvm-coherence/coherence/uvm/coherence/coverage"
+                  },
+                  "expected": 1021,
+                  "id": "ip/coherence/uvm/coherence",
+                  "ip": "coherence",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-09-52-021635-pebble-uvm-coherence/coherence/uvm/coherence/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 1021,
+                  "status": "pass",
+                  "test": "coherence"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "ddr",
+          "log": "2026-11-25-05-10-52-100766-pebble-uvm-ddr",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/generic/ddr/configs/uvm.toml",
+              "ip": "ddr",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 32,
+                  "checks": 3555,
+                  "comparisons": 191,
+                  "configuration": "arch/src/main/scala/generic/ddr/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 91.88,
+                      "line": 94.98,
+                      "score": 89.63,
+                      "toggle": 82.04
+                    },
+                    "dut_raw": {
+                      "cond": 91.88,
+                      "line": 94.98,
+                      "score": 89.63,
+                      "toggle": 82.04
+                    },
+                    "functional": {
+                      "ddr_pkg::env::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-10-52-100766-pebble-uvm-ddr/ddr/uvm/bridge/coverage"
+                  },
+                  "expected": 223,
+                  "id": "ip/ddr/uvm/bridge",
+                  "ip": "ddr",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-10-52-100766-pebble-uvm-ddr/ddr/uvm/bridge/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 191,
+                  "status": "pass",
+                  "test": "bridge"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/ddr/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/uvm/bad_alignment",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-10-52-100766-pebble-uvm-ddr/ddr/uvm/bad_alignment/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_alignment"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/ddr/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/uvm/bad_early_b",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-10-52-100766-pebble-uvm-ddr/ddr/uvm/bad_early_b/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_early_b"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/ddr/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/uvm/bad_early_rlast",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-10-52-100766-pebble-uvm-ddr/ddr/uvm/bad_early_rlast/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_early_rlast"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/ddr/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/uvm/bad_late_rlast",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-10-52-100766-pebble-uvm-ddr/ddr/uvm/bad_late_rlast/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_late_rlast"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/ddr/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/uvm/bad_read_exokay",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-10-52-100766-pebble-uvm-ddr/ddr/uvm/bad_read_exokay/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_read_exokay"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/ddr/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/uvm/bad_rid",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-10-52-100766-pebble-uvm-ddr/ddr/uvm/bad_rid/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_rid"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/ddr/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/uvm/bad_write_exokay",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-10-52-100766-pebble-uvm-ddr/ddr/uvm/bad_write_exokay/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_write_exokay"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "fpu",
+          "log": "2026-11-25-05-12-12-100456-pebble-uvm-fpu",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/execution/fpu/configs/uvm.toml",
+              "ip": "fpu",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 1,
+                  "checks": 2,
+                  "comparisons": 290,
+                  "configuration": "arch/src/main/scala/hart/execution/fpu/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 74.33,
+                      "line": 98.7,
+                      "score": 82.54,
+                      "toggle": 74.6
+                    },
+                    "dut_raw": {
+                      "cond": 74.33,
+                      "line": 98.7,
+                      "score": 82.54,
+                      "toggle": 74.6
+                    },
+                    "functional": {
+                      "fpu_pkg::coverage::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-12-12-100456-pebble-uvm-fpu/fpu/uvm/fpu/coverage"
+                  },
+                  "expected": 291,
+                  "id": "ip/fpu/uvm/fpu",
+                  "ip": "fpu",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-12-12-100456-pebble-uvm-fpu/fpu/uvm/fpu/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 290,
+                  "status": "pass",
+                  "test": "fpu"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "global_rob",
+          "log": "2026-11-25-05-13-12-107735-pebble-uvm-global_rob",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/rob/global/configs/uvm.toml",
+              "ip": "global_rob",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 2,
+                  "comparisons": 1027,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/rob/global/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 86.05,
+                      "line": 90.12,
+                      "score": 91.45,
+                      "toggle": 98.16
+                    },
+                    "dut_raw": {
+                      "cond": 86.05,
+                      "line": 90.12,
+                      "score": 91.45,
+                      "toggle": 98.16
+                    },
+                    "functional": {
+                      "rob_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-13-12-107735-pebble-uvm-global_rob/global_rob/uvm/rob/coverage"
+                  },
+                  "expected": 1027,
+                  "id": "ip/global_rob/uvm/rob",
+                  "ip": "global_rob",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-13-12-107735-pebble-uvm-global_rob/global_rob/uvm/rob/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 1027,
+                  "status": "pass",
+                  "test": "rob"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/rob/global/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/global_rob/uvm/rob_bad_issue",
+                  "ip": "global_rob",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-13-12-107735-pebble-uvm-global_rob/global_rob/uvm/rob_bad_issue/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "rob_bad_issue"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/rob/global/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/global_rob/uvm/rob_bad_complete",
+                  "ip": "global_rob",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-13-12-107735-pebble-uvm-global_rob/global_rob/uvm/rob_bad_complete/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "rob_bad_complete"
+                },
+                {
+                  "cancelled": 4,
+                  "checks": 179758,
+                  "comparisons": 539,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/rob/global/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 84.52,
+                      "line": 96.64,
+                      "score": 87.54,
+                      "toggle": 81.46
+                    },
+                    "dut_raw": {
+                      "cond": 84.52,
+                      "line": 96.64,
+                      "score": 87.54,
+                      "toggle": 81.46
+                    },
+                    "functional": {
+                      "global_rob_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-13-12-107735-pebble-uvm-global_rob/global_rob/uvm/global_rob/coverage"
+                  },
+                  "expected": 543,
+                  "id": "ip/global_rob/uvm/global_rob",
+                  "ip": "global_rob",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-13-12-107735-pebble-uvm-global_rob/global_rob/uvm/global_rob/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 539,
+                  "status": "pass",
+                  "test": "global_rob"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "hart_cache",
+          "log": "2026-11-25-05-15-02-201993-pebble-uvm-hart_cache",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/cache/configs/uvm.toml",
+              "ip": "hart_cache",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 3,
+                  "checks": 38,
+                  "comparisons": 2478,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/cache/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 91.5,
+                      "line": 73.4,
+                      "score": 82.78,
+                      "toggle": 83.45
+                    },
+                    "dut_raw": {
+                      "cond": 91.5,
+                      "line": 73.4,
+                      "score": 82.78,
+                      "toggle": 83.45
+                    },
+                    "functional": {
+                      "hart_cache_pkg::cache_model::maintenance": 100.0,
+                      "hart_cache_pkg::protocol_model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-15-02-201993-pebble-uvm-hart_cache/hart_cache/uvm/normal/coverage"
+                  },
+                  "expected": 2481,
+                  "id": "ip/hart_cache/uvm/normal",
+                  "ip": "hart_cache",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-15-02-201993-pebble-uvm-hart_cache/hart_cache/uvm/normal/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 2478,
+                  "status": "pass",
+                  "test": "normal"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/cache/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/hart_cache/uvm/bad_maintenance_alignment",
+                  "ip": "hart_cache",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-15-02-201993-pebble-uvm-hart_cache/hart_cache/uvm/bad_maintenance_alignment/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_maintenance_alignment"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/cache/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/hart_cache/uvm/bad_maintenance_range",
+                  "ip": "hart_cache",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-15-02-201993-pebble-uvm-hart_cache/hart_cache/uvm/bad_maintenance_range/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_maintenance_range"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/cache/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/hart_cache/uvm/bad_maintenance_operation",
+                  "ip": "hart_cache",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-15-02-201993-pebble-uvm-hart_cache/hart_cache/uvm/bad_maintenance_operation/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_maintenance_operation"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/cache/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/hart_cache/uvm/bad_maintenance_identity",
+                  "ip": "hart_cache",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-15-02-201993-pebble-uvm-hart_cache/hart_cache/uvm/bad_maintenance_identity/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_maintenance_identity"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/cache/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/hart_cache/uvm/bad_maintenance_opcode",
+                  "ip": "hart_cache",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-15-02-201993-pebble-uvm-hart_cache/hart_cache/uvm/bad_maintenance_opcode/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "bad_maintenance_opcode"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "hart_dataflow",
+          "log": "2026-11-25-05-16-22-207667-pebble-uvm-hart_dataflow",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/memory/configs/uvm.toml",
+              "ip": "hart_dataflow",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 274,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/hart/memory/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 59.65,
+                      "line": 61.54,
+                      "score": 45.72,
+                      "toggle": 15.96
+                    },
+                    "dut_raw": {
+                      "cond": 59.65,
+                      "line": 61.54,
+                      "score": 45.72,
+                      "toggle": 15.96
+                    },
+                    "functional": {},
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-16-22-207667-pebble-uvm-hart_dataflow/hart_dataflow/uvm/routing/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/hart_dataflow/uvm/routing",
+                  "ip": "hart_dataflow",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-16-22-207667-pebble-uvm-hart_dataflow/hart_dataflow/uvm/routing/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "routing"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "home",
+          "log": "2026-11-25-05-17-12-213188-pebble-uvm-home",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/memory/home/configs/uvm.toml",
+              "ip": "home",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 1,
+                  "checks": 11,
+                  "comparisons": 6446,
+                  "configuration": "arch/src/main/scala/hart/memory/home/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 79.51,
+                      "line": 60.87,
+                      "score": 70.87,
+                      "toggle": 72.24
+                    },
+                    "dut_raw": {
+                      "cond": 79.51,
+                      "line": 60.87,
+                      "score": 70.87,
+                      "toggle": 72.24
+                    },
+                    "functional": {
+                      "home_pkg::system_model::occupancy": 100.0,
+                      "home_pkg::system_model::operations": 100.0,
+                      "home_pkg::transport_monitor::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-17-12-213188-pebble-uvm-home/home/uvm/home/coverage"
+                  },
+                  "expected": 6447,
+                  "id": "ip/home/uvm/home",
+                  "ip": "home",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-17-12-213188-pebble-uvm-home/home/uvm/home/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 6446,
+                  "status": "pass",
+                  "test": "home"
+                },
+                {
+                  "cancelled": 0,
+                  "checks": 216,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/hart/memory/home/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 23.74,
+                      "line": 39.42,
+                      "score": 21.44,
+                      "toggle": 1.16
+                    },
+                    "dut_raw": {
+                      "cond": 23.74,
+                      "line": 39.42,
+                      "score": 21.44,
+                      "toggle": 1.16
+                    },
+                    "functional": {
+                      "home_pkg::home_range_test::ranges": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-17-12-213188-pebble-uvm-home/home/uvm/ranges/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/home/uvm/ranges",
+                  "ip": "home",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-17-12-213188-pebble-uvm-home/home/uvm/ranges/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "ranges"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "error": "reference failed: ; see /home/wanghui/Code/buckyball/log/2026-11-25-05-18-42-301285-pebble-uvm-instruction/instruction/uvm/reference.log",
+          "ip": "instruction",
+          "log": "2026-11-25-05-18-42-301285-pebble-uvm-instruction",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/execution/instruction/configs/uvm.toml",
+              "error": "reference failed: ; see /home/wanghui/Code/buckyball/log/2026-11-25-05-18-42-301285-pebble-uvm-instruction/instruction/uvm/reference.log",
+              "ip": "instruction",
+              "profile": "uvm",
+              "status": "failure",
+              "tests": []
+            }
+          ],
+          "status": "failure"
+        },
+        {
+          "ip": "integer",
+          "log": "2026-11-25-05-18-52-300626-pebble-uvm-integer",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/execution/integer/configs/uvm.toml",
+              "ip": "integer",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 1,
+                  "comparisons": 2072,
+                  "configuration": "arch/src/main/scala/hart/execution/integer/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 81.11,
+                      "score": 83.28,
+                      "toggle": 85.45
+                    },
+                    "dut_raw": {
+                      "cond": 81.11,
+                      "score": 83.28,
+                      "toggle": 85.45
+                    },
+                    "functional": {
+                      "integer_pkg::coverage::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-18-52-300626-pebble-uvm-integer/integer/uvm/integer/coverage"
+                  },
+                  "expected": 2072,
+                  "id": "ip/integer/uvm/integer",
+                  "ip": "integer",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-18-52-300626-pebble-uvm-integer/integer/uvm/integer/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 2072,
+                  "status": "pass",
+                  "test": "integer"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "interlock",
+          "log": "2026-11-25-05-19-52-321675-pebble-uvm-interlock",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+              "ip": "interlock",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 798,
+                  "comparisons": 212,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 69.19,
+                      "line": 81.07,
+                      "score": 56.94,
+                      "toggle": 20.57
+                    },
+                    "dut_raw": {
+                      "cond": 69.19,
+                      "line": 81.07,
+                      "score": 56.94,
+                      "toggle": 20.57
+                    },
+                    "functional": {
+                      "interlock_pkg::ownership_model::activity": 100.0,
+                      "interlock_pkg::ownership_model::maintenance_kind": 100.0,
+                      "interlock_pkg::ownership_model::probes": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock/coverage"
+                  },
+                  "expected": 212,
+                  "id": "ip/interlock/uvm/interlock",
+                  "ip": "interlock",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 212,
+                  "status": "pass",
+                  "test": "interlock"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_cancel_info",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_cancel_info/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_cancel_info"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_cancel_sealed",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_cancel_sealed/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_cancel_sealed"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_cancel_unknown",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_cancel_unknown/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_cancel_unknown"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_capacity",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_capacity/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_capacity"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_cpu_alignment",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_cpu_alignment/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_cpu_alignment"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_cpu_size",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_cpu_size/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_cpu_size"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_direction",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_direction/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_direction"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_dma_failed",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_dma_failed/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_dma_failed"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_dma_ungranted",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_dma_ungranted/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_dma_ungranted"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_dma_unknown",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_dma_unknown/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_dma_unknown"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_duplicate",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_duplicate/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_duplicate"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_empty_range",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_empty_range/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_empty_range"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_info_duplicate",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_info_duplicate/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_info_duplicate"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_info_unknown",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_info_unknown/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_info_unknown"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_maint_failed",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_maint_failed/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_maint_failed"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_maint_tag",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_maint_tag/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_maint_tag"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_maint_unknown",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_maint_unknown/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_maint_unknown"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_no_memory_seal",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_no_memory_seal/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_no_memory_seal"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/generic/interlock/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/interlock/uvm/interlock_bad_overflow_range",
+                  "ip": "interlock",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-19-52-321675-pebble-uvm-interlock/interlock/uvm/interlock_bad_overflow_range/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "interlock_bad_overflow_range"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "mem_access",
+          "log": "2026-11-25-05-22-12-400765-pebble-uvm-mem_access",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/memory/access/configs/uvm.toml",
+              "ip": "mem_access",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 2,
+                  "checks": 2306,
+                  "comparisons": 303,
+                  "configuration": "arch/src/main/scala/hart/memory/access/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 76.4,
+                      "line": 76.87,
+                      "score": 65.31,
+                      "toggle": 42.64
+                    },
+                    "dut_raw": {
+                      "cond": 76.4,
+                      "line": 76.87,
+                      "score": 65.31,
+                      "toggle": 42.64
+                    },
+                    "functional": {
+                      "virtual_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/virtual_access/coverage"
+                  },
+                  "expected": 305,
+                  "id": "ip/mem_access/uvm/virtual_access",
+                  "ip": "mem_access",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/virtual_access/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 303,
+                  "status": "pass",
+                  "test": "virtual_access"
+                },
+                {
+                  "cancelled": 4,
+                  "checks": 0,
+                  "comparisons": 634,
+                  "configuration": "arch/src/main/scala/hart/memory/access/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 94.67,
+                      "line": 56.76,
+                      "score": 74.61,
+                      "toggle": 72.42
+                    },
+                    "dut_raw": {
+                      "cond": 94.67,
+                      "line": 56.76,
+                      "score": 74.61,
+                      "toggle": 72.42
+                    },
+                    "functional": {
+                      "mem_access_pkg::env::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/mem_access/coverage"
+                  },
+                  "expected": 638,
+                  "id": "ip/mem_access/uvm/mem_access",
+                  "ip": "mem_access",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/mem_access/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 634,
+                  "status": "pass",
+                  "test": "mem_access"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/mem_access/uvm/mem_access_bad_atomic",
+                  "ip": "mem_access",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/mem_access_bad_atomic/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "mem_access_bad_atomic"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/mem_access/uvm/mem_access_bad_atomic_write",
+                  "ip": "mem_access",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/mem_access_bad_atomic_write/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "mem_access_bad_atomic_write"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/mem_access/uvm/mem_access_bad_fence",
+                  "ip": "mem_access",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/mem_access_bad_fence/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "mem_access_bad_fence"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/mem_access/uvm/mem_access_bad_operand",
+                  "ip": "mem_access",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/mem_access_bad_operand/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "mem_access_bad_operand"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/mem_access/uvm/mem_access_bad_size",
+                  "ip": "mem_access",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/mem_access_bad_size/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "mem_access_bad_size"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/mem_access/uvm/mem_access_bad_tag",
+                  "ip": "mem_access",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-22-12-400765-pebble-uvm-mem_access/mem_access/uvm/mem_access_bad_tag/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "mem_access_bad_tag"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "mmu",
+          "log": "2026-11-25-05-26-42-627732-pebble-uvm-mmu",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/mmu/configs/uvm.toml",
+              "ip": "mmu",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 3,
+                  "checks": 22383,
+                  "comparisons": 449,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/mmu/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 88.03,
+                      "line": 90.85,
+                      "score": 78.24,
+                      "toggle": 55.84
+                    },
+                    "dut_raw": {
+                      "cond": 88.03,
+                      "line": 90.85,
+                      "score": 78.24,
+                      "toggle": 55.84
+                    },
+                    "functional": {
+                      "mmu_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-26-42-627732-pebble-uvm-mmu/mmu/uvm/walker/coverage"
+                  },
+                  "expected": 452,
+                  "id": "ip/mmu/uvm/walker",
+                  "ip": "mmu",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-26-42-627732-pebble-uvm-mmu/mmu/uvm/walker/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 449,
+                  "status": "pass",
+                  "test": "walker"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/mmu/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/mmu/uvm/walker_bad_access",
+                  "ip": "mmu",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-26-42-627732-pebble-uvm-mmu/mmu/uvm/walker_bad_access/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "walker_bad_access"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/mmu/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/mmu/uvm/walker_bad_mode",
+                  "ip": "mmu",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-26-42-627732-pebble-uvm-mmu/mmu/uvm/walker_bad_mode/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "walker_bad_mode"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/mmu/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/mmu/uvm/walker_bad_privilege",
+                  "ip": "mmu",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-26-42-627732-pebble-uvm-mmu/mmu/uvm/walker_bad_privilege/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "walker_bad_privilege"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "muldiv",
+          "log": "2026-11-25-05-28-12-727326-pebble-uvm-muldiv",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/execution/muldiv/configs/uvm.toml",
+              "ip": "muldiv",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 1,
+                  "checks": 2,
+                  "comparisons": 1300,
+                  "configuration": "arch/src/main/scala/hart/execution/muldiv/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 96.15,
+                      "line": 100.0,
+                      "score": 98.51,
+                      "toggle": 99.37
+                    },
+                    "dut_raw": {
+                      "cond": 96.15,
+                      "line": 100.0,
+                      "score": 98.51,
+                      "toggle": 99.37
+                    },
+                    "functional": {
+                      "muldiv_pkg::coverage::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-28-12-727326-pebble-uvm-muldiv/muldiv/uvm/muldiv/coverage"
+                  },
+                  "expected": 1301,
+                  "id": "ip/muldiv/uvm/muldiv",
+                  "ip": "muldiv",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-28-12-727326-pebble-uvm-muldiv/muldiv/uvm/muldiv/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 1300,
+                  "status": "pass",
+                  "test": "muldiv"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "preflight",
+          "log": "2026-11-25-05-29-22-803013-pebble-uvm-preflight",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/preflight/configs/uvm.toml",
+              "ip": "preflight",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 2,
+                  "checks": 3009,
+                  "comparisons": 57,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/preflight/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 62.01,
+                      "line": 78.45,
+                      "score": 49.63,
+                      "toggle": 8.44
+                    },
+                    "dut_raw": {
+                      "cond": 62.01,
+                      "line": 78.45,
+                      "score": 49.63,
+                      "toggle": 8.44
+                    },
+                    "functional": {
+                      "preparation_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-29-22-803013-pebble-uvm-preflight/preflight/uvm/preparation/coverage"
+                  },
+                  "expected": 59,
+                  "id": "ip/preflight/uvm/preparation",
+                  "ip": "preflight",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-29-22-803013-pebble-uvm-preflight/preflight/uvm/preparation/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 57,
+                  "status": "pass",
+                  "test": "preparation"
+                },
+                {
+                  "cancelled": 0,
+                  "checks": 1417,
+                  "comparisons": 52,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/preflight/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 82.03,
+                      "line": 86.99,
+                      "score": 63.45,
+                      "toggle": 21.32
+                    },
+                    "dut_raw": {
+                      "cond": 82.03,
+                      "line": 86.99,
+                      "score": 63.45,
+                      "toggle": 21.32
+                    },
+                    "functional": {
+                      "preflight_pkg::env::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-29-22-803013-pebble-uvm-preflight/preflight/uvm/preflight/coverage"
+                  },
+                  "expected": 52,
+                  "id": "ip/preflight/uvm/preflight",
+                  "ip": "preflight",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-29-22-803013-pebble-uvm-preflight/preflight/uvm/preflight/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 52,
+                  "status": "pass",
+                  "test": "preflight"
+                },
+                {
+                  "cancelled": 0,
+                  "checks": 372,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/hart/memory/access/src/main/scala/preflight/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 66.34,
+                      "line": 72.3,
+                      "score": 50.54,
+                      "toggle": 12.96
+                    },
+                    "dut_raw": {
+                      "cond": 66.34,
+                      "line": 72.3,
+                      "score": 50.54,
+                      "toggle": 12.96
+                    },
+                    "functional": {
+                      "prepared_map_pkg::env::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-29-22-803013-pebble-uvm-preflight/preflight/uvm/prepared_map/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/preflight/uvm/prepared_map",
+                  "ip": "preflight",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-29-22-803013-pebble-uvm-preflight/preflight/uvm/prepared_map/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "prepared_map"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "error": "checking failed: privileged; see /home/wanghui/Code/buckyball/log/2026-11-25-05-31-52-830677-pebble-uvm-privileged/privileged/uvm/privileged/simulation.log",
+          "ip": "privileged",
+          "log": "2026-11-25-05-31-52-830677-pebble-uvm-privileged",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/execution/privileged/configs/uvm.toml",
+              "error": "checking failed: privileged; see /home/wanghui/Code/buckyball/log/2026-11-25-05-31-52-830677-pebble-uvm-privileged/privileged/uvm/privileged/simulation.log",
+              "ip": "privileged",
+              "profile": "uvm",
+              "status": "failure",
+              "tests": []
+            }
+          ],
+          "status": "failure"
+        },
+        {
+          "ip": "prm",
+          "log": "2026-11-25-05-33-02-904674-pebble-uvm-prm",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/prm/configs/uvm.toml",
+              "ip": "prm",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 4,
+                  "checks": 893,
+                  "comparisons": 210,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/prm/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 96.68,
+                      "line": 89.04,
+                      "score": 93.11,
+                      "toggle": 93.6
+                    },
+                    "dut_raw": {
+                      "cond": 96.68,
+                      "line": 89.04,
+                      "score": 93.11,
+                      "toggle": 93.6
+                    },
+                    "functional": {
+                      "prm_pkg::memory_model::accesses": 100.0,
+                      "prm_pkg::memory_model::protocol": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-33-02-904674-pebble-uvm-prm/prm/uvm/prm/coverage"
+                  },
+                  "expected": 214,
+                  "id": "ip/prm/uvm/prm",
+                  "ip": "prm",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-33-02-904674-pebble-uvm-prm/prm/uvm/prm/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 210,
+                  "status": "pass",
+                  "test": "prm"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "register_file",
+          "log": "2026-11-25-05-34-02-962690-pebble-uvm-register_file",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/execution/register_file/configs/uvm.toml",
+              "ip": "register_file",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 1,
+                  "comparisons": 1119,
+                  "configuration": "arch/src/main/scala/hart/execution/register_file/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 98.34,
+                      "line": 98.46,
+                      "score": 76.79,
+                      "toggle": 33.57
+                    },
+                    "dut_raw": {
+                      "cond": 98.34,
+                      "line": 98.46,
+                      "score": 76.79,
+                      "toggle": 33.57
+                    },
+                    "functional": {
+                      "register_file_pkg::coverage::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-34-02-962690-pebble-uvm-register_file/register_file/uvm/register_file/coverage"
+                  },
+                  "expected": 1119,
+                  "id": "ip/register_file/uvm/register_file",
+                  "ip": "register_file",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-34-02-962690-pebble-uvm-register_file/register_file/uvm/register_file/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 1119,
+                  "status": "pass",
+                  "test": "register_file"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "scoreboard",
+          "log": "2026-11-25-05-35-13-002481-pebble-uvm-scoreboard",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/scoreboard/configs/uvm.toml",
+              "ip": "scoreboard",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 0,
+                  "comparisons": 1335,
+                  "configuration": "arch/src/main/scala/custom/frontend/src/main/scala/scheduler/src/main/scala/scoreboard/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 99.74,
+                      "line": 100.0,
+                      "score": 92.3,
+                      "toggle": 77.17
+                    },
+                    "dut_raw": {
+                      "cond": 99.74,
+                      "line": 100.0,
+                      "score": 92.3,
+                      "toggle": 77.17
+                    },
+                    "functional": {
+                      "scoreboard_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-35-13-002481-pebble-uvm-scoreboard/scoreboard/uvm/scoreboard/coverage"
+                  },
+                  "expected": 1335,
+                  "id": "ip/scoreboard/uvm/scoreboard",
+                  "ip": "scoreboard",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-35-13-002481-pebble-uvm-scoreboard/scoreboard/uvm/scoreboard/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 1335,
+                  "status": "pass",
+                  "test": "scoreboard"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "toddr",
+          "log": "2026-11-25-05-36-13-028759-pebble-uvm-toddr",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/toddr/configs/uvm.toml",
+              "ip": "toddr",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 55310,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/toddr/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 57.59,
+                      "line": 74.53,
+                      "score": 52.55,
+                      "toggle": 25.53
+                    },
+                    "dut_raw": {
+                      "cond": 57.59,
+                      "line": 74.53,
+                      "score": 52.55,
+                      "toggle": 25.53
+                    },
+                    "functional": {
+                      "dma_pkg::env::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-36-13-028759-pebble-uvm-toddr/toddr/uvm/dma/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/toddr/uvm/dma",
+                  "ip": "toddr",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-36-13-028759-pebble-uvm-toddr/toddr/uvm/dma/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "dma"
+                },
+                {
+                  "cancelled": 0,
+                  "checks": 64542,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/toddr/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 85.63,
+                      "line": 87.32,
+                      "score": 82.89,
+                      "toggle": 75.72
+                    },
+                    "dut_raw": {
+                      "cond": 85.63,
+                      "line": 87.32,
+                      "score": 82.89,
+                      "toggle": 75.72
+                    },
+                    "functional": {
+                      "dma_pkg::env::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-36-13-028759-pebble-uvm-toddr/toddr/uvm/read_dma/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/toddr/uvm/read_dma",
+                  "ip": "toddr",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-36-13-028759-pebble-uvm-toddr/toddr/uvm/read_dma/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "read_dma"
+                },
+                {
+                  "cancelled": 0,
+                  "checks": 55053,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/toddr/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 69.81,
+                      "line": 89.8,
+                      "score": 62.54,
+                      "toggle": 28.03
+                    },
+                    "dut_raw": {
+                      "cond": 69.81,
+                      "line": 89.8,
+                      "score": 62.54,
+                      "toggle": 28.03
+                    },
+                    "functional": {
+                      "dma_pkg::env::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-36-13-028759-pebble-uvm-toddr/toddr/uvm/write_dma/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/toddr/uvm/write_dma",
+                  "ip": "toddr",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-36-13-028759-pebble-uvm-toddr/toddr/uvm/write_dma/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "write_dma"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "tol1",
+          "log": "2026-11-25-05-38-43-105800-pebble-uvm-tol1",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+              "ip": "tol1",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 798,
+                  "comparisons": 212,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 69.19,
+                      "line": 81.07,
+                      "score": 58.36,
+                      "toggle": 24.82
+                    },
+                    "dut_raw": {
+                      "cond": 69.19,
+                      "line": 81.07,
+                      "score": 58.36,
+                      "toggle": 24.82
+                    },
+                    "functional": {
+                      "interlock_pkg::ownership_model::activity": 100.0,
+                      "interlock_pkg::ownership_model::maintenance_kind": 100.0,
+                      "interlock_pkg::ownership_model::probes": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1/coverage"
+                  },
+                  "expected": 212,
+                  "id": "ip/tol1/uvm/tol1",
+                  "ip": "tol1",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 212,
+                  "status": "pass",
+                  "test": "tol1"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_cancel_info",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_cancel_info/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_cancel_info"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_cancel_sealed",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_cancel_sealed/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_cancel_sealed"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_cancel_unknown",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_cancel_unknown/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_cancel_unknown"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_capacity",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_capacity/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_capacity"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_cpu_alignment",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_cpu_alignment/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_cpu_alignment"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_cpu_size",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_cpu_size/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_cpu_size"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_direction",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_direction/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_direction"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_dma_failed",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_dma_failed/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_dma_failed"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_dma_ungranted",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_dma_ungranted/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_dma_ungranted"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_dma_unknown",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_dma_unknown/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_dma_unknown"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_duplicate",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_duplicate/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_duplicate"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_empty_range",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_empty_range/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_empty_range"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_info_duplicate",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_info_duplicate/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_info_duplicate"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_info_unknown",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_info_unknown/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_info_unknown"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_maint_failed",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_maint_failed/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_maint_failed"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_maint_tag",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_maint_tag/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_maint_tag"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_maint_unknown",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_maint_unknown/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_maint_unknown"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_no_memory_seal",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_no_memory_seal/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_no_memory_seal"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/src/main/scala/tol1/configs/uvm.toml",
+                  "coverage": null,
+                  "id": "ip/tol1/uvm/tol1_bad_overflow_range",
+                  "ip": "tol1",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-38-43-105800-pebble-uvm-tol1/tol1/uvm/tol1_bad_overflow_range/simulation.log",
+                  "profile": "uvm",
+                  "status": "pass",
+                  "test": "tol1_bad_overflow_range"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "tomem",
+          "log": "2026-11-25-05-41-23-206163-pebble-uvm-tomem",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/configs/uvm.toml",
+              "ip": "tomem",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 9,
+                  "checks": 12356,
+                  "comparisons": 315,
+                  "configuration": "arch/src/main/scala/custom/memdomain/src/main/scala/tomem/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 41.3,
+                      "line": 75.64,
+                      "score": 44.77,
+                      "toggle": 17.36
+                    },
+                    "dut_raw": {
+                      "cond": 41.3,
+                      "line": 75.64,
+                      "score": 44.77,
+                      "toggle": 17.36
+                    },
+                    "functional": {
+                      "tomem_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-05-41-23-206163-pebble-uvm-tomem/tomem/uvm/tomem/coverage"
+                  },
+                  "expected": 324,
+                  "id": "ip/tomem/uvm/tomem",
+                  "ip": "tomem",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-05-41-23-206163-pebble-uvm-tomem/tomem/uvm/tomem/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 315,
+                  "status": "pass",
+                  "test": "tomem"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "cbus",
+          "status": "unavailable"
+        },
+        {
+          "ip": "clint",
+          "status": "unavailable"
+        },
+        {
+          "ip": "plic",
+          "status": "unavailable"
+        },
+        {
+          "ip": "scu",
+          "status": "unavailable"
+        },
+        {
+          "ip": "trace",
+          "status": "unavailable"
+        },
+        {
+          "ip": "bootrom",
+          "status": "unavailable"
+        }
+      ]
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T21:02:11.835718+00:00"
+}

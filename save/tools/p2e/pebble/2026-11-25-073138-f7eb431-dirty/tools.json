@@ -1,0 +1,17 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 138428173,
+  "design": "pebble",
+  "dirty": true,
+  "elapsed_s": 40.335,
+  "taken": "2026-11-25T07:31:38.421019+00:00",
+  "timeline": "designs/pebble/2026-11-24-213654-169737-f7eb431-dirty",
+  "tool": "FPGA",
+  "workloads": [
+    {
+      "cycles": 138428173,
+      "elapsed_s": 40.335,
+      "workload": "alexnet-baremetal"
+    }
+  ]
+}

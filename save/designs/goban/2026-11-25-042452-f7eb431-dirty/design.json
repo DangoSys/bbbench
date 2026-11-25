@@ -1,0 +1,175 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "goban/devices/goban/configs/GobanDefaultConfig.toml",
+  "design": "goban",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "datasets": [
+        {
+          "accuracy": 0.429,
+          "elapsed_s": 2062.0,
+          "log": "2026-11-25-12-40-05-goban-accuracy-device-goban-GobanDefaultConfig-laya",
+          "model": "laya",
+          "pass_rate": 0.85,
+          "ran": 1000,
+          "reference_accuracy": 0.433,
+          "samples": 1000,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.9235,
+          "elapsed_s": 2761.0,
+          "log": "2026-11-25-13-14-27-goban-accuracy-device-goban-GobanDefaultConfig-bert-base-uncased-emotion",
+          "model": "bert-base-uncased-emotion",
+          "pass_rate": 0.9935,
+          "ran": 2000,
+          "reference_accuracy": 0.9245,
+          "samples": 2000,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.7044,
+          "elapsed_s": 6564.8,
+          "log": "2026-11-25-14-00-28-goban-accuracy-device-goban-GobanDefaultConfig-mlp-mixer",
+          "model": "mlp-mixer",
+          "pass_rate": 0.8948,
+          "ran": 10000,
+          "reference_accuracy": 0.7042,
+          "samples": 10000,
+          "status": "pass"
+        }
+      ],
+      "elapsed_s": 12301.0,
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-batch",
+      "name": "FPGA batch",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-25T04:24:52.168284+00:00"
+}

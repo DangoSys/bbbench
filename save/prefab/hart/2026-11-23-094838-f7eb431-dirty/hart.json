@@ -1,0 +1,104 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "multi-rocket/harts/rocket",
+      "path": "examples/designs/multi-rocket/harts/rocket",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-17-50-multi-rocket-bebop-bemu-hart-rocket-default-bare-tests",
+            "passed": 9,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-ctest-cpu_arithmetic-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 9
+          },
+          "verilator": {
+            "log": "2026-11-23-17-50-multi-rocket-bebop-verilator-hart-rocket-default-bare-tests",
+            "passed": 9,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-ctest-cpu_arithmetic-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "multi-rocket-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 9
+          }
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "taken": "2026-11-23T09:48:38.511470+00:00"
+}

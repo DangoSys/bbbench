@@ -1,0 +1,181 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "gemmini/devices/gemmini/configs/GemminiDefaultConfig.toml",
+  "design": "gemmini",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "bitstream": "/home/wanghui/Code/buckyball/examples/designs/gemmini/output/sims/device/gemmini/GemminiDefaultConfig/p2e/2026-11-24-22-38/fpgaCompDir/bitstream.bit",
+      "diff": false,
+      "elapsed_s": 435.1,
+      "error": "P2E failure: {'bank_diff': None, 'bdb_trace': '/home/wanghui/Code/buckyball/log/2026-11-25-04-57-gemmini-p2e-device-gemmini-GemminiDefaultConfig-gemmini-lenet-gvn-slice3-tmp18kc07cz/bdb.ndjson', 'bitstream': '/home/wanghui/Code/buckyball/examples/designs/gemmini/output/sims/device/gemmini/GemminiDefaultConfig/p2e/2026-11-24-22-38/fpgaCompDir/bitstream.bit', 'build_dir': '/home/wanghui/Code/buckyball/examples/designs/gemmini/output/sims/device/gemmini/GemminiDefaultConfig/p2e/2026-11-24-22-38', 'diff': False, 'failure': True, 'fpga_location': '0.A', 'image': '/home/wanghui/Code/buckyball/examples/designs/gemmini/output/sims/device/gemmini/GemminiDefaultConfig/workloads/tmp18kc07cz/gemmini-lenet-gvn-slice3-tmp18kc07cz.hex', 'log_dir': '/home/wanghui/Code/buckyball/log/2026-11-25-04-57-gemmini-p2e-device-gemmini-GemminiDefaultConfig-gemmini-lenet-gvn-slice3-tmp18kc07cz', 'processing': False, 'report_path': '/home/wanghui/Code/buckyball/log/2026-11-25-04-57-gemmini-p2e-device-gemmini-GemminiDefaultConfig-gemmini-lenet-gvn-slice3-tmp18kc07cz/report/report.json', 'returncode': -15, 'success': False, 'task': 'runworkload', 'timestamp': '2026-11-25-04-57', 'uart_logs': []}",
+      "estimates": [
+        {
+          "error": "P2E failure: {'bank_diff': None, 'bdb_trace': '/home/wanghui/Code/buckyball/log/2026-11-25-04-57-gemmini-p2e-device-gemmini-GemminiDefaultConfig-gemmini-lenet-gvn-slice3-tmp18kc07cz/bdb.ndjson', 'bitstream': '/home/wanghui/Code/buckyball/examples/designs/gemmini/output/sims/device/gemmini/GemminiDefaultConfig/p2e/2026-11-24-22-38/fpgaCompDir/bitstream.bit', 'build_dir': '/home/wanghui/Code/buckyball/examples/designs/gemmini/output/sims/device/gemmini/GemminiDefaultConfig/p2e/2026-11-24-22-38', 'diff': False, 'failure': True, 'fpga_location': '0.A', 'image': '/home/wanghui/Code/buckyball/examples/designs/gemmini/output/sims/device/gemmini/GemminiDefaultConfig/workloads/tmp18kc07cz/gemmini-lenet-gvn-slice3-tmp18kc07cz.hex', 'log_dir': '/home/wanghui/Code/buckyball/log/2026-11-25-04-57-gemmini-p2e-device-gemmini-GemminiDefaultConfig-gemmini-lenet-gvn-slice3-tmp18kc07cz', 'processing': False, 'report_path': '/home/wanghui/Code/buckyball/log/2026-11-25-04-57-gemmini-p2e-device-gemmini-GemminiDefaultConfig-gemmini-lenet-gvn-slice3-tmp18kc07cz/report/report.json', 'returncode': -15, 'success': False, 'task': 'runworkload', 'timestamp': '2026-11-25-04-57', 'uart_logs': []}",
+          "model": "lenet",
+          "reference_log": "2026-11-25-04-56-17-gemmini-gvn-device-gemmini-GemminiDefaultConfig-lenet",
+          "slices": [
+            {
+              "cycles": 366397,
+              "elapsed_s": 12.145,
+              "exit": 0,
+              "instance": "gemmini-lenet-gvn-slice0",
+              "log": "2026-11-25-04-56-gemmini-p2e-device-gemmini-GemminiDefaultConfig-gemmini-lenet-gvn-slice0-tmpuewpk8wd",
+              "repeats": 1,
+              "total": 366397
+            },
+            {
+              "cycles": 151370,
+              "elapsed_s": 11.438,
+              "exit": 0,
+              "instance": "gemmini-lenet-gvn-slice1",
+              "log": "2026-11-25-04-56-gemmini-p2e-device-gemmini-GemminiDefaultConfig-gemmini-lenet-gvn-slice1-tmpf98gqutb",
+              "repeats": 1,
+              "total": 151370
+            },
+            {
+              "cycles": 477222,
+              "elapsed_s": 11.417,
+              "exit": 0,
+              "instance": "gemmini-lenet-gvn-slice2",
+              "log": "2026-11-25-04-57-gemmini-p2e-device-gemmini-GemminiDefaultConfig-gemmini-lenet-gvn-slice2-tmpk3npv7k7",
+              "repeats": 1,
+              "total": 477222
+            }
+          ],
+          "status": "failure"
+        }
+      ],
+      "fpga_location": "0.A",
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T20:53:47.551723+00:00"
+}

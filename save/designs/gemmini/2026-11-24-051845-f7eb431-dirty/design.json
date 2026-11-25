@@ -1,0 +1,805 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "gemmini",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiTapeoutConfig.toml",
+      "elapsed_s": 52.8,
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "pass"
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiTapeoutConfig.toml",
+      "elapsed_s": 90.0,
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-24-13-19-gemmini-bebop-bemu-device-gemmini-GemminiTapeoutConfig-bare-tests",
+          "passed": 52,
+          "total": 52,
+          "workloads": [
+            {
+              "cycles": 9732,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-aligned-baremetal"
+            },
+            {
+              "cycles": 7771394,
+              "elapsed_s": 0.2,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv-baremetal"
+            },
+            {
+              "cycles": 1377173,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_dw-baremetal"
+            },
+            {
+              "cycles": 2015414,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_first_layer-baremetal"
+            },
+            {
+              "cycles": 1952485,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_rect-baremetal"
+            },
+            {
+              "cycles": 2943569,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_rect_pool-baremetal"
+            },
+            {
+              "cycles": 1564171,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_stride-baremetal"
+            },
+            {
+              "cycles": 9835391,
+              "elapsed_s": 0.4,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_input_3120-baremetal"
+            },
+            {
+              "cycles": 34745491,
+              "elapsed_s": 1.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_input_3120_with_kernel_dilation-baremetal"
+            },
+            {
+              "cycles": 8161827,
+              "elapsed_s": 0.2,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_output_1203-baremetal"
+            },
+            {
+              "cycles": 8167144,
+              "elapsed_s": 0.3,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_weight_0132-baremetal"
+            },
+            {
+              "cycles": 8179117,
+              "elapsed_s": 0.3,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_weight_1203-baremetal"
+            },
+            {
+              "cycles": 95522684,
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_with_input_dilation-baremetal"
+            },
+            {
+              "cycles": 76128747,
+              "elapsed_s": 1.2,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_with_input_dilation_and_neg_padding-baremetal"
+            },
+            {
+              "cycles": 184551268,
+              "elapsed_s": 2.92,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_with_input_dilation_and_rot180-baremetal"
+            },
+            {
+              "cycles": 53466677,
+              "elapsed_s": 1.11,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_with_kernel_dilation-baremetal"
+            },
+            {
+              "cycles": 7936386,
+              "elapsed_s": 0.2,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_with_pool-baremetal"
+            },
+            {
+              "cycles": 48335388,
+              "elapsed_s": 0.8,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_with_rot180-baremetal"
+            },
+            {
+              "cycles": 60815,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-gemmini_counter-baremetal"
+            },
+            {
+              "cycles": 33288,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-global_average-baremetal"
+            },
+            {
+              "cycles": 12178865,
+              "elapsed_s": 0.4,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-matmul-baremetal"
+            },
+            {
+              "cycles": 3794143,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-matmul_os-baremetal"
+            },
+            {
+              "cycles": 4192663,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-matmul_ws-baremetal"
+            },
+            {
+              "cycles": 219902,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-matrix_add-baremetal"
+            },
+            {
+              "cycles": 31375,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout-baremetal"
+            },
+            {
+              "cycles": 234514,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc-baremetal"
+            },
+            {
+              "cycles": 83164,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc_full-baremetal"
+            },
+            {
+              "cycles": 332801,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc_full_stride-baremetal"
+            },
+            {
+              "cycles": 3622061,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc_stride-baremetal"
+            },
+            {
+              "cycles": 39765,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc_zero_stride-baremetal"
+            },
+            {
+              "cycles": 15019,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_block_stride-baremetal"
+            },
+            {
+              "cycles": 364842,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_stride-baremetal"
+            },
+            {
+              "cycles": 2703,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_zeros-baremetal"
+            },
+            {
+              "cycles": 55688,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_scale-baremetal"
+            },
+            {
+              "cycles": 12266,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-padded-baremetal"
+            },
+            {
+              "cycles": 14919,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-raw_hazard-baremetal"
+            },
+            {
+              "cycles": 14540,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-resadd-baremetal"
+            },
+            {
+              "cycles": 183299,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-resadd_stride-baremetal"
+            },
+            {
+              "cycles": 46007,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-template-baremetal"
+            },
+            {
+              "cycles": 13546112,
+              "elapsed_s": 0.5,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_cpu-baremetal"
+            },
+            {
+              "cycles": 29321857,
+              "elapsed_s": 0.8,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_option-baremetal"
+            },
+            {
+              "cycles": 3432600,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_os-baremetal"
+            },
+            {
+              "cycles": 3513314,
+              "elapsed_s": 0.2,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws-baremetal"
+            },
+            {
+              "cycles": 1256666,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_At-baremetal"
+            },
+            {
+              "cycles": 1256392,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_Bt-baremetal"
+            },
+            {
+              "cycles": 970040,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_full_C-baremetal"
+            },
+            {
+              "cycles": 709,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_igelu-baremetal"
+            },
+            {
+              "cycles": 684,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_layernorm-baremetal"
+            },
+            {
+              "cycles": 1041243,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_low_D-baremetal"
+            },
+            {
+              "cycles": 709,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_softmax-baremetal"
+            },
+            {
+              "cycles": 50471,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-transpose-baremetal"
+            },
+            {
+              "cycles": 68010,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-transpose_scale-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-24-13-20-gemmini-bebop-bemu-device-gemmini-GemminiTapeoutConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 364080420,
+              "elapsed_s": 8.91,
+              "status": "pass",
+              "workload": "fw_payload-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiTapeoutConfig.toml",
+      "elapsed_s": 308.2,
+      "id": "bemu-model",
+      "models": [
+        {
+          "error": "binary_not_found",
+          "model": "alexnet",
+          "status": "failure"
+        },
+        {
+          "error": "binary_not_found",
+          "model": "bert-base-uncased-emotion",
+          "status": "failure"
+        },
+        {
+          "cycles": 1116632,
+          "elapsed_s": 0.102,
+          "elements": 40,
+          "log": "2026-11-24-13-23-gemmini-bemu-device-gemmini-GemminiTapeoutConfig-gemmini-lenet-baremetal",
+          "max_diff": 0.0,
+          "model": "lenet",
+          "relative": 0.0,
+          "simulated_cycles": 4508013,
+          "status": "pass"
+        },
+        {
+          "cycles": 208490278,
+          "elapsed_s": 4.343,
+          "elements": 1000,
+          "log": "2026-11-24-13-24-gemmini-bemu-device-gemmini-GemminiTapeoutConfig-gemmini-mobilenet-v3-small-baremetal",
+          "max_diff": 0.0,
+          "model": "mobilenet-v3-small",
+          "relative": 0.0,
+          "simulated_cycles": 208563789,
+          "status": "pass"
+        },
+        {
+          "cycles": 326516803,
+          "elapsed_s": 7.869,
+          "elements": 1000,
+          "log": "2026-11-24-13-25-gemmini-bemu-device-gemmini-GemminiTapeoutConfig-gemmini-resnet18-baremetal",
+          "max_diff": 0.0,
+          "model": "resnet18",
+          "relative": 0.0,
+          "simulated_cycles": 326590987,
+          "status": "pass"
+        },
+        {
+          "error": "binary_not_found",
+          "model": "yolo26n",
+          "status": "failure"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "failure"
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiVerilatorConfig.toml",
+      "elapsed_s": 1808.4,
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "failure",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-24-13-27-gemmini-bebop-verilator-device-gemmini-GemminiVerilatorConfig-bare-tests",
+          "passed": 47,
+          "total": 49,
+          "workloads": [
+            {
+              "cycles": 11639,
+              "elapsed_s": 0.61,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-aligned-baremetal"
+            },
+            {
+              "cycles": 8685942,
+              "elapsed_s": 255.32,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv-baremetal"
+            },
+            {
+              "cycles": 1769433,
+              "elapsed_s": 49.58,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_dw-baremetal"
+            },
+            {
+              "cycles": 2346017,
+              "elapsed_s": 66.29,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_first_layer-baremetal"
+            },
+            {
+              "cycles": 2177048,
+              "elapsed_s": 61.97,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_rect-baremetal"
+            },
+            {
+              "cycles": 3298596,
+              "elapsed_s": 97.58,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_rect_pool-baremetal"
+            },
+            {
+              "cycles": 1803780,
+              "elapsed_s": 46.18,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_stride-baremetal"
+            },
+            {
+              "cycles": 10468617,
+              "elapsed_s": 315.12,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_input_3120-baremetal"
+            },
+            {
+              "cycles": 41293577,
+              "elapsed_s": 956.85,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_input_3120_with_kernel_dilation-baremetal"
+            },
+            {
+              "cycles": 8993984,
+              "elapsed_s": 274.65,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_output_1203-baremetal"
+            },
+            {
+              "cycles": 8993139,
+              "elapsed_s": 254.04,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_weight_0132-baremetal"
+            },
+            {
+              "cycles": 9036902,
+              "elapsed_s": 261.96,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_trans_weight_1203-baremetal"
+            },
+            {
+              "cycles": 61772416,
+              "elapsed_s": 1384.15,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_with_kernel_dilation-baremetal"
+            },
+            {
+              "cycles": 8870902,
+              "elapsed_s": 263.58,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_with_pool-baremetal"
+            },
+            {
+              "cycles": 48097131,
+              "elapsed_s": 1176.5,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-conv_with_rot180-baremetal"
+            },
+            {
+              "cycles": 58448,
+              "elapsed_s": 3.15,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-gemmini_counter-baremetal"
+            },
+            {
+              "cycles": 1032089,
+              "elapsed_s": 30.09,
+              "status": "fail",
+              "workload": "gemmini-hart0-ctest-global_average-baremetal"
+            },
+            {
+              "cycles": 14345650,
+              "elapsed_s": 400.56,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-matmul-baremetal"
+            },
+            {
+              "cycles": 4087216,
+              "elapsed_s": 115.71,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-matmul_os-baremetal"
+            },
+            {
+              "cycles": 5293892,
+              "elapsed_s": 164.41,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-matmul_ws-baremetal"
+            },
+            {
+              "cycles": 1129416,
+              "elapsed_s": 40.34,
+              "status": "fail",
+              "workload": "gemmini-hart0-ctest-matrix_add-baremetal"
+            },
+            {
+              "cycles": 34806,
+              "elapsed_s": 1.63,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout-baremetal"
+            },
+            {
+              "cycles": 344221,
+              "elapsed_s": 13.29,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc-baremetal"
+            },
+            {
+              "cycles": 99605,
+              "elapsed_s": 4.95,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc_full-baremetal"
+            },
+            {
+              "cycles": 385138,
+              "elapsed_s": 16.33,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc_full_stride-baremetal"
+            },
+            {
+              "cycles": 5418301,
+              "elapsed_s": 161.4,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc_stride-baremetal"
+            },
+            {
+              "cycles": 62865,
+              "elapsed_s": 3.04,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_acc_zero_stride-baremetal"
+            },
+            {
+              "cycles": 17564,
+              "elapsed_s": 0.82,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_block_stride-baremetal"
+            },
+            {
+              "cycles": 395455,
+              "elapsed_s": 18.98,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_stride-baremetal"
+            },
+            {
+              "cycles": 3534,
+              "elapsed_s": 0.21,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_mvout_zeros-baremetal"
+            },
+            {
+              "cycles": 75176,
+              "elapsed_s": 3.95,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-mvin_scale-baremetal"
+            },
+            {
+              "cycles": 11120,
+              "elapsed_s": 0.41,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-padded-baremetal"
+            },
+            {
+              "cycles": 16016,
+              "elapsed_s": 0.61,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-raw_hazard-baremetal"
+            },
+            {
+              "cycles": 16210,
+              "elapsed_s": 0.51,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-resadd-baremetal"
+            },
+            {
+              "cycles": 304339,
+              "elapsed_s": 8.71,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-resadd_stride-baremetal"
+            },
+            {
+              "cycles": 48810,
+              "elapsed_s": 2.65,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-template-baremetal"
+            },
+            {
+              "cycles": 18989513,
+              "elapsed_s": 469.14,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_cpu-baremetal"
+            },
+            {
+              "cycles": 33848371,
+              "elapsed_s": 820.82,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_option-baremetal"
+            },
+            {
+              "cycles": 3280857,
+              "elapsed_s": 102.52,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_os-baremetal"
+            },
+            {
+              "cycles": 3756325,
+              "elapsed_s": 116.82,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws-baremetal"
+            },
+            {
+              "cycles": 1408370,
+              "elapsed_s": 42.2,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_At-baremetal"
+            },
+            {
+              "cycles": 1364862,
+              "elapsed_s": 44.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_Bt-baremetal"
+            },
+            {
+              "cycles": 1006539,
+              "elapsed_s": 29.35,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_full_C-baremetal"
+            },
+            {
+              "cycles": 940,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_igelu-baremetal"
+            },
+            {
+              "cycles": 901,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_layernorm-baremetal"
+            },
+            {
+              "cycles": 1104122,
+              "elapsed_s": 30.05,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_low_D-baremetal"
+            },
+            {
+              "cycles": 941,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-tiled_matmul_ws_softmax-baremetal"
+            },
+            {
+              "cycles": 54185,
+              "elapsed_s": 2.76,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-transpose-baremetal"
+            },
+            {
+              "cycles": 70915,
+              "elapsed_s": 3.58,
+              "status": "pass",
+              "workload": "gemmini-hart0-ctest-transpose_scale-baremetal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "gemmini/devices/gemmini/configs/GemminiP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T05:18:45.190432+00:00"
+}

@@ -1,0 +1,2162 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "pebble/devices/pebble/configs/PebbleDefaultConfig.toml",
+  "design": "pebble",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 350.1,
+      "estimates": [
+        {
+          "cycles": 175053153,
+          "log": "2026-11-24-22-03-55-pebble-gvn-estimate-device-pebble-PebbleDefaultConfig-alexnet",
+          "model": "alexnet",
+          "slices": [
+            {
+              "cycles": 42417,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice1-iteration0",
+              "repeats": 1444,
+              "share": 0.3498945717361629,
+              "total": 61250148
+            },
+            {
+              "cycles": 37738,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice4-iteration0",
+              "repeats": 588,
+              "share": 0.1267611786461224,
+              "total": 22189944
+            },
+            {
+              "cycles": 61695,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice14-iteration0",
+              "repeats": 256,
+              "share": 0.09022356769546447,
+              "total": 15793920
+            },
+            {
+              "cycles": 235682,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice9-iteration0",
+              "repeats": 64,
+              "share": 0.08616610293217626,
+              "total": 15083648
+            },
+            {
+              "cycles": 128528,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice7-iteration0",
+              "repeats": 96,
+              "share": 0.0704853799462841,
+              "total": 12338688
+            },
+            {
+              "cycles": 162084,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice11-iteration0",
+              "repeats": 64,
+              "share": 0.05925843563640353,
+              "total": 10373376
+            },
+            {
+              "cycles": 79215,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice2-iteration0",
+              "repeats": 108,
+              "share": 0.04887212742749055,
+              "total": 8555220
+            },
+            {
+              "cycles": 31138,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice18-iteration0",
+              "repeats": 256,
+              "share": 0.04553661481321619,
+              "total": 7971328
+            },
+            {
+              "cycles": 32199,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice0-iteration0",
+              "repeats": 224,
+              "share": 0.04120220559523426,
+              "total": 7212576
+            },
+            {
+              "cycles": 46120,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice5-iteration0",
+              "repeats": 156,
+              "share": 0.041100202291129255,
+              "total": 7194720
+            },
+            {
+              "cycles": 29416,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice12-iteration0",
+              "repeats": 96,
+              "share": 0.01613187738469355,
+              "total": 2823936
+            },
+            {
+              "cycles": 31051,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice22-iteration0",
+              "repeats": 63,
+              "share": 0.011174965811669785,
+              "total": 1956213
+            },
+            {
+              "cycles": 32226,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice8-iteration0",
+              "repeats": 24,
+              "share": 0.004418223760871077,
+              "total": 773424
+            },
+            {
+              "cycles": 29807,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice10-iteration0",
+              "repeats": 16,
+              "share": 0.0027243839475430643,
+              "total": 476912
+            },
+            {
+              "cycles": 88577,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice3-iteration0",
+              "repeats": 4,
+              "share": 0.0020240023897198814,
+              "total": 354308
+            },
+            {
+              "cycles": 28581,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice6-iteration0",
+              "repeats": 12,
+              "share": 0.0019592449157428203,
+              "total": 342972
+            },
+            {
+              "cycles": 151519,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice23-iteration0",
+              "repeats": 1,
+              "share": 0.0008655599593798805,
+              "total": 151519
+            },
+            {
+              "cycles": 48327,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice13-iteration0",
+              "repeats": 1,
+              "share": 0.0002760704344468448,
+              "total": 48327
+            },
+            {
+              "cycles": 19825,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice16-iteration0",
+              "repeats": 2,
+              "share": 0.0002265026326032528,
+              "total": 39650
+            },
+            {
+              "cycles": 36187,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice15-iteration0",
+              "repeats": 1,
+              "share": 0.00020672006976075433,
+              "total": 36187
+            },
+            {
+              "cycles": 36187,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice19-iteration0",
+              "repeats": 1,
+              "share": 0.00020672006976075433,
+              "total": 36187
+            },
+            {
+              "cycles": 24975,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice17-iteration0",
+              "repeats": 1,
+              "share": 0.00014267095206220022,
+              "total": 24975
+            },
+            {
+              "cycles": 24975,
+              "exit": 0,
+              "instance": "pebble-alexnet-gvn-slice21-iteration0",
+              "repeats": 1,
+              "share": 0.00014267095206220022,
+              "total": 24975
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "cycles": 1468349,
+          "log": "2026-11-24-22-04-23-pebble-gvn-estimate-device-pebble-PebbleDefaultConfig-lenet",
+          "model": "lenet",
+          "slices": [
+            {
+              "cycles": 47510,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice1-iteration0",
+              "repeats": 9,
+              "share": 0.291204611437744,
+              "total": 427590
+            },
+            {
+              "cycles": 12872,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice0-iteration0",
+              "repeats": 28,
+              "share": 0.245456631904268,
+              "total": 360416
+            },
+            {
+              "cycles": 39501,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice3-iteration0",
+              "repeats": 8,
+              "share": 0.21521314074514983,
+              "total": 316008
+            },
+            {
+              "cycles": 9645,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice2-iteration0",
+              "repeats": 12,
+              "share": 0.07882322254450407,
+              "total": 115740
+            },
+            {
+              "cycles": 8873,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice6-iteration0",
+              "repeats": 8,
+              "share": 0.04834273050889128,
+              "total": 70984
+            },
+            {
+              "cycles": 13737,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice4-iteration0",
+              "repeats": 4,
+              "share": 0.03742162115409892,
+              "total": 54948
+            },
+            {
+              "cycles": 7922,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice10-iteration0",
+              "repeats": 6,
+              "share": 0.03237105075155838,
+              "total": 47532
+            },
+            {
+              "cycles": 15319,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice15-iteration0",
+              "repeats": 1,
+              "share": 0.010432805824773265,
+              "total": 15319
+            },
+            {
+              "cycles": 7994,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice5-iteration0",
+              "repeats": 1,
+              "share": 0.0054442097893620655,
+              "total": 7994
+            },
+            {
+              "cycles": 7942,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice7-iteration0",
+              "repeats": 1,
+              "share": 0.005408795865288157,
+              "total": 7942
+            },
+            {
+              "cycles": 7738,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice11-iteration0",
+              "repeats": 1,
+              "share": 0.005269864316998207,
+              "total": 7738
+            },
+            {
+              "cycles": 7475,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice13-iteration0",
+              "repeats": 1,
+              "share": 0.005090751585624399,
+              "total": 7475
+            },
+            {
+              "cycles": 7412,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice9-iteration0",
+              "repeats": 1,
+              "share": 0.005047846254534855,
+              "total": 7412
+            },
+            {
+              "cycles": 7293,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice14-iteration0",
+              "repeats": 1,
+              "share": 0.004966802851365718,
+              "total": 7293
+            },
+            {
+              "cycles": 7127,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice8-iteration0",
+              "repeats": 1,
+              "share": 0.004853750709129778,
+              "total": 7127
+            },
+            {
+              "cycles": 6831,
+              "exit": 0,
+              "instance": "pebble-lenet-gvn-slice12-iteration0",
+              "repeats": 1,
+              "share": 0.004652163756709066,
+              "total": 6831
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "cycles": 155194389,
+          "log": "2026-11-24-22-04-48-pebble-gvn-estimate-device-pebble-PebbleDefaultConfig-mobilenet-v3-small",
+          "model": "mobilenet-v3-small",
+          "slices": [
+            {
+              "cycles": 35260,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice149-iteration0",
+              "repeats": 252,
+              "share": 0.05725413178436496,
+              "total": 8885520
+            },
+            {
+              "cycles": 35112,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice130-iteration0",
+              "repeats": 252,
+              "share": 0.05701381381771476,
+              "total": 8848224
+            },
+            {
+              "cycles": 31890,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice0-iteration0",
+              "repeats": 224,
+              "share": 0.04602846820705612,
+              "total": 7143360
+            },
+            {
+              "cycles": 25577,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice127-iteration0",
+              "repeats": 252,
+              "share": 0.041531166439271204,
+              "total": 6445404
+            },
+            {
+              "cycles": 25501,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice165-iteration0",
+              "repeats": 252,
+              "share": 0.04140775991585623,
+              "total": 6426252
+            },
+            {
+              "cycles": 25495,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice146-iteration0",
+              "repeats": 252,
+              "share": 0.041398017295586634,
+              "total": 6424740
+            },
+            {
+              "cycles": 24738,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice15-iteration0",
+              "repeats": 245,
+              "share": 0.03905302272236144,
+              "total": 6060810
+            },
+            {
+              "cycles": 141974,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice143-iteration0",
+              "repeats": 42,
+              "share": 0.03842218805990467,
+              "total": 5962908
+            },
+            {
+              "cycles": 141424,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice162-iteration0",
+              "repeats": 42,
+              "share": 0.038273342472452405,
+              "total": 5939808
+            },
+            {
+              "cycles": 10554,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice141-iteration0",
+              "repeats": 504,
+              "share": 0.034274538108462156,
+              "total": 5319216
+            },
+            {
+              "cycles": 26382,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice1-iteration0",
+              "repeats": 196,
+              "share": 0.0333186788086778,
+              "total": 5170872
+            },
+            {
+              "cycles": 11813,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice57-iteration0",
+              "repeats": 420,
+              "share": 0.03196932590133784,
+              "total": 4961460
+            },
+            {
+              "cycles": 37383,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice115-iteration0",
+              "repeats": 126,
+              "share": 0.030350697794879686,
+              "total": 4710258
+            },
+            {
+              "cycles": 75833,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice125-iteration0",
+              "repeats": 42,
+              "share": 0.02052255896957718,
+              "total": 3184986
+            },
+            {
+              "cycles": 32806,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice23-iteration0",
+              "repeats": 96,
+              "share": 0.02029310479775142,
+              "total": 3149376
+            },
+            {
+              "cycles": 431343,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice97-iteration0",
+              "repeats": 7,
+              "share": 0.019455606735885277,
+              "total": 3019401
+            },
+            {
+              "cycles": 713302,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice44-iteration0",
+              "repeats": 4,
+              "share": 0.018384736834783377,
+              "total": 2853208
+            },
+            {
+              "cycles": 34635,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice17-iteration0",
+              "repeats": 80,
+              "share": 0.017853738255962332,
+              "total": 2770800
+            },
+            {
+              "cycles": 2705765,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice2-iteration0",
+              "repeats": 1,
+              "share": 0.01743468315726286,
+              "total": 2705765
+            },
+            {
+              "cycles": 25007,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice21-iteration0",
+              "repeats": 96,
+              "share": 0.015468806671870077,
+              "total": 2400672
+            },
+            {
+              "cycles": 38782,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice46-iteration0",
+              "repeats": 60,
+              "share": 0.014993583305386124,
+              "total": 2326920
+            },
+            {
+              "cycles": 38780,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice65-iteration0",
+              "repeats": 60,
+              "share": 0.014992810081555204,
+              "total": 2326800
+            },
+            {
+              "cycles": 18282,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice28-iteration0",
+              "repeats": 96,
+              "share": 0.011308862461515926,
+              "total": 1755072
+            },
+            {
+              "cycles": 193900,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice16-iteration0",
+              "repeats": 9,
+              "share": 0.011244607561166403,
+              "total": 1745100
+            },
+            {
+              "cycles": 21680,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice112-iteration0",
+              "repeats": 72,
+              "share": 0.010058095592618365,
+              "total": 1560960
+            },
+            {
+              "cycles": 11855,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice107-iteration0",
+              "repeats": 126,
+              "share": 0.009624896941344961,
+              "total": 1493730
+            },
+            {
+              "cycles": 43096,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice84-iteration0",
+              "repeats": 32,
+              "share": 0.008886094457963942,
+              "total": 1379072
+            },
+            {
+              "cycles": 38168,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice99-iteration0",
+              "repeats": 36,
+              "share": 0.008853722153576054,
+              "total": 1374048
+            },
+            {
+              "cycles": 26875,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice4-iteration0",
+              "repeats": 49,
+              "share": 0.008485326102865742,
+              "total": 1316875
+            },
+            {
+              "cycles": 11742,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice92-iteration0",
+              "repeats": 112,
+              "share": 0.008473914607827735,
+              "total": 1315104
+            },
+            {
+              "cycles": 21787,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice62-iteration0",
+              "repeats": 60,
+              "share": 0.008423113802136235,
+              "total": 1307220
+            },
+            {
+              "cycles": 21633,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice43-iteration0",
+              "repeats": 60,
+              "share": 0.008363575567155331,
+              "total": 1297980
+            },
+            {
+              "cycles": 10268,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice123-iteration0",
+              "repeats": 126,
+              "share": 0.00833643541069001,
+              "total": 1293768
+            },
+            {
+              "cycles": 11862,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice132-iteration0",
+              "repeats": 108,
+              "share": 0.008254782974144767,
+              "total": 1281096
+            },
+            {
+              "cycles": 1114234,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice29-iteration0",
+              "repeats": 1,
+              "share": 0.007179602350185482,
+              "total": 1114234
+            },
+            {
+              "cycles": 34239,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice25-iteration0",
+              "repeats": 32,
+              "share": 0.007059842865839692,
+              "total": 1095648
+            },
+            {
+              "cycles": 31410,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice19-iteration0",
+              "repeats": 32,
+              "share": 0.006476522807793006,
+              "total": 1005120
+            },
+            {
+              "cycles": 40632,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice31-iteration0",
+              "repeats": 24,
+              "share": 0.006283526139595163,
+              "total": 975168
+            },
+            {
+              "cycles": 11495,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice39-iteration0",
+              "repeats": 84,
+              "share": 0.0062217455555045875,
+              "total": 965580
+            },
+            {
+              "cycles": 16785,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice11-iteration0",
+              "repeats": 56,
+              "share": 0.006056662267602987,
+              "total": 939960
+            },
+            {
+              "cycles": 912190,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice3-iteration0",
+              "repeats": 1,
+              "share": 0.005877725386064054,
+              "total": 912190
+            },
+            {
+              "cycles": 846426,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice113-iteration0",
+              "repeats": 1,
+              "share": 0.005453972952591733,
+              "total": 846426
+            },
+            {
+              "cycles": 26049,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice81-iteration0",
+              "repeats": 32,
+              "share": 0.005371122019108564,
+              "total": 833568
+            },
+            {
+              "cycles": 13085,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice173-iteration0",
+              "repeats": 63,
+              "share": 0.0053117577594896164,
+              "total": 824355
+            },
+            {
+              "cycles": 16380,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice13-iteration0",
+              "repeats": 49,
+              "share": 0.005171707593114078,
+              "total": 802620
+            },
+            {
+              "cycles": 20964,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice96-iteration0",
+              "repeats": 36,
+              "share": 0.004862959317427385,
+              "total": 754704
+            },
+            {
+              "cycles": 60216,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice59-iteration0",
+              "repeats": 12,
+              "share": 0.0046560446202729665,
+              "total": 722592
+            },
+            {
+              "cycles": 60213,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice78-iteration0",
+              "repeats": 12,
+              "share": 0.00465581265312369,
+              "total": 722556
+            },
+            {
+              "cycles": 357668,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice82-iteration0",
+              "repeats": 2,
+              "share": 0.004609290352629952,
+              "total": 715336
+            },
+            {
+              "cycles": 10485,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice169-iteration0",
+              "repeats": 64,
+              "share": 0.004323867662509371,
+              "total": 671040
+            },
+            {
+              "cycles": 21316,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice48-iteration0",
+              "repeats": 30,
+              "share": 0.004120509794977188,
+              "total": 639480
+            },
+            {
+              "cycles": 56628,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice22-iteration0",
+              "repeats": 11,
+              "share": 0.0040137275839270195,
+              "total": 622908
+            },
+            {
+              "cycles": 56611,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice24-iteration0",
+              "repeats": 11,
+              "share": 0.004012522643457168,
+              "total": 622721
+            },
+            {
+              "cycles": 33980,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice114-iteration0",
+              "repeats": 18,
+              "share": 0.003941121866203552,
+              "total": 611640
+            },
+            {
+              "cycles": 98217,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice30-iteration0",
+              "repeats": 6,
+              "share": 0.0037971862500776367,
+              "total": 589302
+            },
+            {
+              "cycles": 47385,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice109-iteration0",
+              "repeats": 12,
+              "share": 0.0036639211228184287,
+              "total": 568620
+            },
+            {
+              "cycles": 14879,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice129-iteration0",
+              "repeats": 36,
+              "share": 0.0034514392140813804,
+              "total": 535644
+            },
+            {
+              "cycles": 14874,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice161-iteration0",
+              "repeats": 36,
+              "share": 0.003450279378334999,
+              "total": 535464
+            },
+            {
+              "cycles": 14839,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice148-iteration0",
+              "repeats": 36,
+              "share": 0.00344216052811033,
+              "total": 534204
+            },
+            {
+              "cycles": 14830,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice142-iteration0",
+              "repeats": 36,
+              "share": 0.003440072823766844,
+              "total": 533880
+            },
+            {
+              "cycles": 33601,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice64-iteration0",
+              "repeats": 15,
+              "share": 0.0032476367428464184,
+              "total": 504015
+            },
+            {
+              "cycles": 33598,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice45-iteration0",
+              "repeats": 15,
+              "share": 0.003247346783909823,
+              "total": 503970
+            },
+            {
+              "cycles": 33525,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice58-iteration0",
+              "repeats": 15,
+              "share": 0.00324029111645267,
+              "total": 502875
+            },
+            {
+              "cycles": 33525,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice77-iteration0",
+              "repeats": 15,
+              "share": 0.00324029111645267,
+              "total": 502875
+            },
+            {
+              "cycles": 54424,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice18-iteration0",
+              "repeats": 9,
+              "share": 0.003156145033052709,
+              "total": 489816
+            },
+            {
+              "cycles": 33404,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice94-iteration0",
+              "repeats": 12,
+              "share": 0.002582876884807994,
+              "total": 400848
+            },
+            {
+              "cycles": 32948,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice41-iteration0",
+              "repeats": 12,
+              "share": 0.0025476178781180035,
+              "total": 395376
+            },
+            {
+              "cycles": 20146,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice83-iteration0",
+              "repeats": 15,
+              "share": 0.0019471709122164205,
+              "total": 302190
+            },
+            {
+              "cycles": 20146,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice93-iteration0",
+              "repeats": 15,
+              "share": 0.0019471709122164205,
+              "total": 302190
+            },
+            {
+              "cycles": 7866,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice157-iteration0",
+              "repeats": 36,
+              "share": 0.0018246535962070124,
+              "total": 283176
+            },
+            {
+              "cycles": 7848,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice138-iteration0",
+              "repeats": 36,
+              "share": 0.0018204781875200398,
+              "total": 282528
+            },
+            {
+              "cycles": 278804,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice32-iteration0",
+              "repeats": 1,
+              "share": 0.001796482474633796,
+              "total": 278804
+            },
+            {
+              "cycles": 30710,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice98-iteration0",
+              "repeats": 9,
+              "share": 0.0017809277885684385,
+              "total": 276390
+            },
+            {
+              "cycles": 30688,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice108-iteration0",
+              "repeats": 9,
+              "share": 0.001779651969247419,
+              "total": 276192
+            },
+            {
+              "cycles": 7325,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice133-iteration0",
+              "repeats": 36,
+              "share": 0.001699159368448559,
+              "total": 263700
+            },
+            {
+              "cycles": 7325,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice152-iteration0",
+              "repeats": 36,
+              "share": 0.001699159368448559,
+              "total": 263700
+            },
+            {
+              "cycles": 14075,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice124-iteration0",
+              "repeats": 18,
+              "share": 0.0016324688130316361,
+              "total": 253350
+            },
+            {
+              "cycles": 233218,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice12-iteration0",
+              "repeats": 1,
+              "share": 0.0015027476283308156,
+              "total": 233218
+            },
+            {
+              "cycles": 233218,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice14-iteration0",
+              "repeats": 1,
+              "share": 0.0015027476283308156,
+              "total": 233218
+            },
+            {
+              "cycles": 218031,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice116-iteration0",
+              "repeats": 1,
+              "share": 0.001404889708995858,
+              "total": 218031
+            },
+            {
+              "cycles": 11648,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice117-iteration0",
+              "repeats": 18,
+              "share": 0.0013509766773849021,
+              "total": 209664
+            },
+            {
+              "cycles": 20648,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice101-iteration0",
+              "repeats": 9,
+              "share": 0.0011974144245640221,
+              "total": 185832
+            },
+            {
+              "cycles": 29990,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice40-iteration0",
+              "repeats": 6,
+              "share": 0.0011594491344658086,
+              "total": 179940
+            },
+            {
+              "cycles": 9622,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice121-iteration0",
+              "repeats": 18,
+              "share": 0.001115993955168057,
+              "total": 173196
+            },
+            {
+              "cycles": 21377,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice86-iteration0",
+              "repeats": 8,
+              "share": 0.001101947055572995,
+              "total": 171016
+            },
+            {
+              "cycles": 151460,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice174-iteration0",
+              "repeats": 1,
+              "share": 0.0009759373452605945,
+              "total": 151460
+            },
+            {
+              "cycles": 50455,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice20-iteration0",
+              "repeats": 3,
+              "share": 0.0009753252097277821,
+              "total": 151365
+            },
+            {
+              "cycles": 50455,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice27-iteration0",
+              "repeats": 3,
+              "share": 0.0009753252097277821,
+              "total": 151365
+            },
+            {
+              "cycles": 7091,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice118-iteration0",
+              "repeats": 18,
+              "share": 0.0008224395277589579,
+              "total": 127638
+            },
+            {
+              "cycles": 19627,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice33-iteration0",
+              "repeats": 6,
+              "share": 0.0007588032064741722,
+              "total": 117762
+            },
+            {
+              "cycles": 22791,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice119-iteration0",
+              "repeats": 5,
+              "share": 0.0007342726804382084,
+              "total": 113955
+            },
+            {
+              "cycles": 7419,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice54-iteration0",
+              "repeats": 15,
+              "share": 0.0007170684502002195,
+              "total": 111285
+            },
+            {
+              "cycles": 7417,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice73-iteration0",
+              "repeats": 15,
+              "share": 0.0007168751442424893,
+              "total": 111255
+            },
+            {
+              "cycles": 13893,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice90-iteration0",
+              "repeats": 8,
+              "share": 0.0007161599121988876,
+              "total": 111144
+            },
+            {
+              "cycles": 108785,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice5-iteration0",
+              "repeats": 1,
+              "share": 0.0007009596203893686,
+              "total": 108785
+            },
+            {
+              "cycles": 7130,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice68-iteration0",
+              "repeats": 15,
+              "share": 0.000689135739308204,
+              "total": 106950
+            },
+            {
+              "cycles": 7128,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice49-iteration0",
+              "repeats": 15,
+              "share": 0.0006889424333504738,
+              "total": 106920
+            },
+            {
+              "cycles": 10473,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice134-iteration0",
+              "repeats": 9,
+              "share": 0.0006073479885925515,
+              "total": 94257
+            },
+            {
+              "cycles": 10454,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice153-iteration0",
+              "repeats": 9,
+              "share": 0.0006062461446334893,
+              "total": 94086
+            },
+            {
+              "cycles": 18453,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice42-iteration0",
+              "repeats": 5,
+              "share": 0.0005945124729992655,
+              "total": 92265
+            },
+            {
+              "cycles": 18453,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice61-iteration0",
+              "repeats": 5,
+              "share": 0.0005945124729992655,
+              "total": 92265
+            },
+            {
+              "cycles": 18453,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice80-iteration0",
+              "repeats": 5,
+              "share": 0.0005945124729992655,
+              "total": 92265
+            },
+            {
+              "cycles": 28661,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice111-iteration0",
+              "repeats": 3,
+              "share": 0.0005540342054505591,
+              "total": 85983
+            },
+            {
+              "cycles": 28658,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice95-iteration0",
+              "repeats": 3,
+              "share": 0.0005539762136632401,
+              "total": 85974
+            },
+            {
+              "cycles": 9076,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice105-iteration0",
+              "repeats": 9,
+              "share": 0.0005263334617078199,
+              "total": 81684
+            },
+            {
+              "cycles": 12768,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice126-iteration0",
+              "repeats": 6,
+              "share": 0.0004936260936598681,
+              "total": 76608
+            },
+            {
+              "cycles": 12768,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice145-iteration0",
+              "repeats": 6,
+              "share": 0.0004936260936598681,
+              "total": 76608
+            },
+            {
+              "cycles": 12768,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice164-iteration0",
+              "repeats": 6,
+              "share": 0.0004936260936598681,
+              "total": 76608
+            },
+            {
+              "cycles": 76103,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice26-iteration0",
+              "repeats": 1,
+              "share": 0.0004903721100380762,
+              "total": 76103
+            },
+            {
+              "cycles": 35386,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice60-iteration0",
+              "repeats": 2,
+              "share": 0.0004560216413494176,
+              "total": 70772
+            },
+            {
+              "cycles": 7130,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice102-iteration0",
+              "repeats": 9,
+              "share": 0.00041348144358492237,
+              "total": 64170
+            },
+            {
+              "cycles": 7130,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice137-iteration0",
+              "repeats": 9,
+              "share": 0.00041348144358492237,
+              "total": 64170
+            },
+            {
+              "cycles": 7130,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice156-iteration0",
+              "repeats": 9,
+              "share": 0.00041348144358492237,
+              "total": 64170
+            },
+            {
+              "cycles": 7995,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice91-iteration0",
+              "repeats": 8,
+              "share": 0.0004121283018808109,
+              "total": 63960
+            },
+            {
+              "cycles": 7822,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice87-iteration0",
+              "repeats": 8,
+              "share": 0.0004032104536975238,
+              "total": 62576
+            },
+            {
+              "cycles": 19221,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice103-iteration0",
+              "repeats": 3,
+              "share": 0.0003715533813532395,
+              "total": 57663
+            },
+            {
+              "cycles": 8817,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice37-iteration0",
+              "repeats": 6,
+              "share": 0.00034087572586145496,
+              "total": 52902
+            },
+            {
+              "cycles": 23849,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice144-iteration0",
+              "repeats": 2,
+              "share": 0.0003073435857271876,
+              "total": 47698
+            },
+            {
+              "cycles": 7128,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice34-iteration0",
+              "repeats": 6,
+              "share": 0.0002755769733401895,
+              "total": 42768
+            },
+            {
+              "cycles": 41277,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice110-iteration0",
+              "repeats": 1,
+              "share": 0.000265969667240998,
+              "total": 41277
+            },
+            {
+              "cycles": 7788,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice120-iteration0",
+              "repeats": 5,
+              "share": 0.0002509111331338145,
+              "total": 38940
+            },
+            {
+              "cycles": 8528,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice50-iteration0",
+              "repeats": 4,
+              "share": 0.00021980176100309915,
+              "total": 34112
+            },
+            {
+              "cycles": 8356,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice69-iteration0",
+              "repeats": 4,
+              "share": 0.00021536861103915297,
+              "total": 33424
+            },
+            {
+              "cycles": 14876,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice35-iteration0",
+              "repeats": 2,
+              "share": 0.00019170796181297508,
+              "total": 29752
+            },
+            {
+              "cycles": 7206,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice72-iteration0",
+              "repeats": 4,
+              "share": 0.0001857283641871872,
+              "total": 28824
+            },
+            {
+              "cycles": 7204,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice53-iteration0",
+              "repeats": 4,
+              "share": 0.00018567681593179247,
+              "total": 28816
+            },
+            {
+              "cycles": 11889,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice140-iteration0",
+              "repeats": 2,
+              "share": 0.00015321430209696562,
+              "total": 23778
+            },
+            {
+              "cycles": 7859,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice104-iteration0",
+              "repeats": 3,
+              "share": 0.00015191915218017323,
+              "total": 23577
+            },
+            {
+              "cycles": 21347,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice171-iteration0",
+              "repeats": 1,
+              "share": 0.00013755007598889417,
+              "total": 21347
+            },
+            {
+              "cycles": 10298,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice88-iteration0",
+              "repeats": 2,
+              "share": 0.00013271098351371453,
+              "total": 20596
+            },
+            {
+              "cycles": 8912,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice56-iteration0",
+              "repeats": 2,
+              "share": 0.00011484951301944299,
+              "total": 17824
+            },
+            {
+              "cycles": 8246,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice36-iteration0",
+              "repeats": 2,
+              "share": 0.0001062667284962216,
+              "total": 16492
+            },
+            {
+              "cycles": 7307,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice89-iteration0",
+              "repeats": 2,
+              "share": 9.416577554231036e-05,
+              "total": 14614
+            },
+            {
+              "cycles": 13923,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice170-iteration0",
+              "repeats": 1,
+              "share": 8.971329498259116e-05,
+              "total": 13923
+            },
+            {
+              "cycles": 6913,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice136-iteration0",
+              "repeats": 2,
+              "share": 8.908827238593013e-05,
+              "total": 13826
+            },
+            {
+              "cycles": 6664,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice52-iteration0",
+              "repeats": 2,
+              "share": 8.587939348760862e-05,
+              "total": 13328
+            },
+            {
+              "cycles": 12949,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice7-iteration0",
+              "repeats": 1,
+              "share": 8.343729488828363e-05,
+              "total": 12949
+            },
+            {
+              "cycles": 11129,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice172-iteration0",
+              "repeats": 1,
+              "share": 7.171006678598412e-05,
+              "total": 11129
+            },
+            {
+              "cycles": 10883,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice158-iteration0",
+              "repeats": 1,
+              "share": 7.012495793259639e-05,
+              "total": 10883
+            },
+            {
+              "cycles": 10856,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice139-iteration0",
+              "repeats": 1,
+              "share": 6.99509825706392e-05,
+              "total": 10856
+            },
+            {
+              "cycles": 9757,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice122-iteration0",
+              "repeats": 1,
+              "share": 6.286954098578912e-05,
+              "total": 9757
+            },
+            {
+              "cycles": 9139,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice168-iteration0",
+              "repeats": 1,
+              "share": 5.888743825654676e-05,
+              "total": 9139
+            },
+            {
+              "cycles": 8472,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice55-iteration0",
+              "repeats": 1,
+              "share": 5.4589602463011725e-05,
+              "total": 8472
+            },
+            {
+              "cycles": 8472,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice74-iteration0",
+              "repeats": 1,
+              "share": 5.4589602463011725e-05,
+              "total": 8472
+            },
+            {
+              "cycles": 8120,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice9-iteration0",
+              "repeats": 1,
+              "share": 5.232147922564391e-05,
+              "total": 8120
+            },
+            {
+              "cycles": 7997,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice106-iteration0",
+              "repeats": 1,
+              "share": 5.1528924798950044e-05,
+              "total": 7997
+            },
+            {
+              "cycles": 7771,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice135-iteration0",
+              "repeats": 1,
+              "share": 5.007268658404912e-05,
+              "total": 7771
+            },
+            {
+              "cycles": 7771,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice154-iteration0",
+              "repeats": 1,
+              "share": 5.007268658404912e-05,
+              "total": 7771
+            },
+            {
+              "cycles": 7612,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice38-iteration0",
+              "repeats": 1,
+              "share": 4.9048165008079e-05,
+              "total": 7612
+            },
+            {
+              "cycles": 7461,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice8-iteration0",
+              "repeats": 1,
+              "share": 4.80751916875036e-05,
+              "total": 7461
+            },
+            {
+              "cycles": 7266,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice70-iteration0",
+              "repeats": 1,
+              "share": 4.681870296225722e-05,
+              "total": 7266
+            },
+            {
+              "cycles": 7247,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice51-iteration0",
+              "repeats": 1,
+              "share": 4.6696275855694754e-05,
+              "total": 7247
+            },
+            {
+              "cycles": 7092,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice10-iteration0",
+              "repeats": 1,
+              "share": 4.5697528407422e-05,
+              "total": 7092
+            },
+            {
+              "cycles": 6651,
+              "exit": 0,
+              "instance": "pebble-mobilenet-v3-small-gvn-slice6-iteration0",
+              "repeats": 1,
+              "share": 4.285593082878789e-05,
+              "total": 6651
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "cycles": 507385563,
+          "log": "2026-11-24-22-06-19-pebble-gvn-estimate-device-pebble-PebbleDefaultConfig-resnet18",
+          "model": "resnet18",
+          "slices": [
+            {
+              "cycles": 296613,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice52-iteration0",
+              "repeats": 224,
+              "share": 0.13094836913993943,
+              "total": 66441312
+            },
+            {
+              "cycles": 294863,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice46-iteration0",
+              "repeats": 224,
+              "share": 0.13017578113471076,
+              "total": 66049312
+            },
+            {
+              "cycles": 294558,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice54-iteration0",
+              "repeats": 224,
+              "share": 0.13004113008237092,
+              "total": 65980992
+            },
+            {
+              "cycles": 63747,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice1-iteration0",
+              "repeats": 784,
+              "share": 0.09850033513862515,
+              "total": 49977648
+            },
+            {
+              "cycles": 208646,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice44-iteration0",
+              "repeats": 224,
+              "share": 0.0921127982508245,
+              "total": 46736704
+            },
+            {
+              "cycles": 144010,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice2-iteration0",
+              "repeats": 224,
+              "share": 0.06357737064741828,
+              "total": 32258240
+            },
+            {
+              "cycles": 101453,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice48-iteration0",
+              "repeats": 224,
+              "share": 0.04478935479683721,
+              "total": 22725472
+            },
+            {
+              "cycles": 56875,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice4-iteration0",
+              "repeats": 196,
+              "share": 0.021970471398690544,
+              "total": 11147500
+            },
+            {
+              "cycles": 56875,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice10-iteration0",
+              "repeats": 196,
+              "share": 0.021970471398690544,
+              "total": 11147500
+            },
+            {
+              "cycles": 54387,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice12-iteration0",
+              "repeats": 196,
+              "share": 0.02100937192018607,
+              "total": 10659852
+            },
+            {
+              "cycles": 54273,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice6-iteration0",
+              "repeats": 196,
+              "share": 0.020965334403888036,
+              "total": 10637508
+            },
+            {
+              "cycles": 82087,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice24-iteration0",
+              "repeats": 128,
+              "share": 0.020708385823740908,
+              "total": 10507136
+            },
+            {
+              "cycles": 160625,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice38-iteration0",
+              "repeats": 64,
+              "share": 0.020260726259568405,
+              "total": 10280000
+            },
+            {
+              "cycles": 80201,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice18-iteration0",
+              "repeats": 128,
+              "share": 0.020232597749337222,
+              "total": 10265728
+            },
+            {
+              "cycles": 80183,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice26-iteration0",
+              "repeats": 128,
+              "share": 0.020228056823918737,
+              "total": 10263424
+            },
+            {
+              "cycles": 158878,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice32-iteration0",
+              "repeats": 64,
+              "share": 0.02004036523995461,
+              "total": 10168192
+            },
+            {
+              "cycles": 158671,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice40-iteration0",
+              "repeats": 64,
+              "share": 0.02001425491879831,
+              "total": 10154944
+            },
+            {
+              "cycles": 59894,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice16-iteration0",
+              "repeats": 128,
+              "share": 0.015109677056380888,
+              "total": 7666432
+            },
+            {
+              "cycles": 31956,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice0-iteration0",
+              "repeats": 224,
+              "share": 0.0141078984543358,
+              "total": 7158144
+            },
+            {
+              "cycles": 105307,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice30-iteration0",
+              "repeats": 64,
+              "share": 0.013283089806794523,
+              "total": 6739648
+            },
+            {
+              "cycles": 31951,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice20-iteration0",
+              "repeats": 128,
+              "share": 0.008060394891448656,
+              "total": 4089728
+            },
+            {
+              "cycles": 51963,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice34-iteration0",
+              "repeats": 64,
+              "share": 0.006554447431134338,
+              "total": 3325632
+            },
+            {
+              "cycles": 742681,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice7-iteration0",
+              "repeats": 2,
+              "share": 0.0029274817975063275,
+              "total": 1485362
+            },
+            {
+              "cycles": 353865,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice3-iteration0",
+              "repeats": 4,
+              "share": 0.0027897128007167995,
+              "total": 1415460
+            },
+            {
+              "cycles": 353856,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice9-iteration0",
+              "repeats": 4,
+              "share": 0.0027896418487571356,
+              "total": 1415424
+            },
+            {
+              "cycles": 353856,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice11-iteration0",
+              "repeats": 4,
+              "share": 0.0027896418487571356,
+              "total": 1415424
+            },
+            {
+              "cycles": 353856,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice15-iteration0",
+              "repeats": 4,
+              "share": 0.0027896418487571356,
+              "total": 1415424
+            },
+            {
+              "cycles": 353856,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice19-iteration0",
+              "repeats": 4,
+              "share": 0.0027896418487571356,
+              "total": 1415424
+            },
+            {
+              "cycles": 353854,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice5-iteration0",
+              "repeats": 4,
+              "share": 0.002789626081654988,
+              "total": 1415416
+            },
+            {
+              "cycles": 669538,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice8-iteration0",
+              "repeats": 2,
+              "share": 0.0026391685094122397,
+              "total": 1339076
+            },
+            {
+              "cycles": 99190,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice25-iteration0",
+              "repeats": 8,
+              "share": 0.0015639388620129107,
+              "total": 793520
+            },
+            {
+              "cycles": 99190,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice29-iteration0",
+              "repeats": 8,
+              "share": 0.0015639388620129107,
+              "total": 793520
+            },
+            {
+              "cycles": 99148,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice33-iteration0",
+              "repeats": 8,
+              "share": 0.0015632766437227146,
+              "total": 793184
+            },
+            {
+              "cycles": 99129,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice17-iteration0",
+              "repeats": 8,
+              "share": 0.0015629770687819117,
+              "total": 793032
+            },
+            {
+              "cycles": 99129,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice23-iteration0",
+              "repeats": 8,
+              "share": 0.0015629770687819117,
+              "total": 793032
+            },
+            {
+              "cycles": 338012,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice22-iteration0",
+              "repeats": 2,
+              "share": 0.0013323674327722248,
+              "total": 676024
+            },
+            {
+              "cycles": 9994,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice59-iteration0",
+              "repeats": 63,
+              "share": 0.0012409142985410485,
+              "total": 629622
+            },
+            {
+              "cycles": 32762,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice39-iteration0",
+              "repeats": 16,
+              "share": 0.001033123601114366,
+              "total": 524192
+            },
+            {
+              "cycles": 32762,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice43-iteration0",
+              "repeats": 16,
+              "share": 0.001033123601114366,
+              "total": 524192
+            },
+            {
+              "cycles": 32757,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice37-iteration0",
+              "repeats": 16,
+              "share": 0.0010329659300928908,
+              "total": 524112
+            },
+            {
+              "cycles": 32747,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice47-iteration0",
+              "repeats": 16,
+              "share": 0.0010326505880499403,
+              "total": 523952
+            },
+            {
+              "cycles": 32737,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice31-iteration0",
+              "repeats": 16,
+              "share": 0.0010323352460069898,
+              "total": 523792
+            },
+            {
+              "cycles": 14664,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice45-iteration0",
+              "repeats": 32,
+              "share": 0.0009248351435651708,
+              "total": 469248
+            },
+            {
+              "cycles": 14616,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice51-iteration0",
+              "repeats": 32,
+              "share": 0.0009218078599528462,
+              "total": 467712
+            },
+            {
+              "cycles": 14586,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice53-iteration0",
+              "repeats": 32,
+              "share": 0.0009199158076951433,
+              "total": 466752
+            },
+            {
+              "cycles": 11892,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice57-iteration0",
+              "repeats": 32,
+              "share": 0.0007500095149534241,
+              "total": 380544
+            },
+            {
+              "cycles": 374619,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice21-iteration0",
+              "repeats": 1,
+              "share": 0.0007383320049254141,
+              "total": 374619
+            },
+            {
+              "cycles": 374619,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice27-iteration0",
+              "repeats": 1,
+              "share": 0.0007383320049254141,
+              "total": 374619
+            },
+            {
+              "cycles": 172452,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice36-iteration0",
+              "repeats": 2,
+              "share": 0.0006797670748862044,
+              "total": 344904
+            },
+            {
+              "cycles": 189996,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice35-iteration0",
+              "repeats": 1,
+              "share": 0.0003744607924526225,
+              "total": 189996
+            },
+            {
+              "cycles": 189992,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice41-iteration0",
+              "repeats": 1,
+              "share": 0.0003744529089015487,
+              "total": 189992
+            },
+            {
+              "cycles": 89643,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice50-iteration0",
+              "repeats": 2,
+              "share": 0.0003533525844526246,
+              "total": 179286
+            },
+            {
+              "cycles": 151573,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice60-iteration0",
+              "repeats": 1,
+              "share": 0.00029873337172583287,
+              "total": 151573
+            },
+            {
+              "cycles": 98639,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice49-iteration0",
+              "repeats": 1,
+              "share": 0.00019440639859120312,
+              "total": 98639
+            },
+            {
+              "cycles": 98592,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice55-iteration0",
+              "repeats": 1,
+              "share": 0.00019431376686608641,
+              "total": 98592
+            },
+            {
+              "cycles": 8855,
+              "exit": 0,
+              "instance": "pebble-resnet18-gvn-slice58-iteration0",
+              "repeats": 1,
+              "share": 1.7452211189540683e-05,
+              "total": 8855
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "error": "failure",
+          "model": "yolo26n",
+          "status": "failure"
+        }
+      ],
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T14:03:48.385407+00:00"
+}

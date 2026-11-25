@@ -1,0 +1,220 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "piplus/harts/solo",
+      "path": "examples/designs/piplus/harts/solo",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-21-57-piplus-bebop-bemu-hart-solo-default-bare-tests",
+            "passed": 27,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-solo_hello-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-layernorm_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-rmsnorm_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_accumulate_bias_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_tiles_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_blocks_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_accumulate_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_accumulate_update_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_bias_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_extremes_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_small_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-quant_columns_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-quant_transpose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-quant_update_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-softmax_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-softmax_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-softmax_scale_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 27
+          },
+          "verilator": {
+            "log": "2026-11-23-21-57-piplus-bebop-verilator-hart-solo-default-bare-tests",
+            "passed": 20,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-solo_hello-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-layernorm_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-rmsnorm_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_small_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_bias_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_accumulate_bias_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_tiles_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-mm_blocks_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-quant_transpose_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-softmax_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-ctest-softmax_scale_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "piplus-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 20
+          }
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "taken": "2026-11-23T13:48:50.449691+00:00"
+}

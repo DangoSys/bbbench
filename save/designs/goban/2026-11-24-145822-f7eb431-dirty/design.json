@@ -1,0 +1,353 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "goban/devices/goban/configs/GobanDefaultConfig.toml",
+  "design": "goban",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-dataset",
+      "name": "BEMU dataset",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 8537.4,
+      "estimates": [
+        {
+          "cycles": 6042821754,
+          "elapsed_s": 442.8,
+          "log": "2026-11-24-23-06-32-goban-gvn-verilator-device-goban-GobanDefaultConfig-bert-base-uncased-emotion",
+          "model": "bert-base-uncased-emotion",
+          "slices": [
+            {
+              "cycles": 549047,
+              "exit": 0,
+              "instance": "subgraph0_ht63.0-iteration0",
+              "repeats": 2304,
+              "share": 0.20933999702417833,
+              "total": 1265004288
+            },
+            {
+              "cycles": 315026,
+              "exit": 0,
+              "instance": "subgraph0_ht62.0-iteration0",
+              "repeats": 2304,
+              "share": 0.12011274426877626,
+              "total": 725819904
+            },
+            {
+              "cycles": 253255,
+              "exit": 0,
+              "instance": "subgraph0_ht10.0-iteration0",
+              "repeats": 2304,
+              "share": 0.09656076974531921,
+              "total": 583499520
+            },
+            {
+              "cycles": 105355,
+              "exit": 0,
+              "instance": "subgraph0_ht42.0-iteration0",
+              "repeats": 4608,
+              "share": 0.08033926198115027,
+              "total": 485475840
+            },
+            {
+              "cycles": 105325,
+              "exit": 0,
+              "instance": "subgraph0_ht37.0-iteration0",
+              "repeats": 4608,
+              "share": 0.08031638525143232,
+              "total": 485337600
+            },
+            {
+              "cycles": 103757,
+              "exit": 0,
+              "instance": "subgraph0_ht32.0-iteration0",
+              "repeats": 4608,
+              "share": 0.07912069484484086,
+              "total": 478112256
+            },
+            {
+              "cycles": 697662,
+              "exit": 0,
+              "instance": "subgraph0_ht69.0-iteration0",
+              "repeats": 576,
+              "share": 0.06650093753534865,
+              "total": 401853312
+            },
+            {
+              "cycles": 829987,
+              "exit": 0,
+              "instance": "subgraph0_ht68.0-iteration0",
+              "repeats": 384,
+              "share": 0.0527427451900313,
+              "total": 318715008
+            },
+            {
+              "cycles": 488732,
+              "exit": 0,
+              "instance": "subgraph0_ht43.0-iteration0",
+              "repeats": 576,
+              "share": 0.046585791118802546,
+              "total": 281509632
+            },
+            {
+              "cycles": 19710,
+              "exit": 0,
+              "instance": "subgraph0_ht16.0-iteration0",
+              "repeats": 13824,
+              "share": 0.04509003427407732,
+              "total": 272471040
+            },
+            {
+              "cycles": 909759,
+              "exit": 0,
+              "instance": "subgraph0_ht31.0-iteration0",
+              "repeats": 288,
+              "share": 0.043358980732232266,
+              "total": 262010592
+            },
+            {
+              "cycles": 60006,
+              "exit": 0,
+              "instance": "subgraph0_ht11.0-iteration0",
+              "repeats": 2928,
+              "share": 0.02907541793429507,
+              "total": 175697568
+            },
+            {
+              "cycles": 19714,
+              "exit": 0,
+              "instance": "subgraph0_ht44.0-iteration0",
+              "repeats": 4608,
+              "share": 0.015033061655321499,
+              "total": 90842112
+            },
+            {
+              "cycles": 23881,
+              "exit": 0,
+              "instance": "subgraph0_ht12.0-iteration0",
+              "repeats": 1920,
+              "share": 0.007587766422143585,
+              "total": 45851520
+            },
+            {
+              "cycles": 29340,
+              "exit": 0,
+              "instance": "subgraph0_ht38.0-iteration0",
+              "repeats": 1152,
+              "share": 0.00559336041603851,
+              "total": 33799680
+            },
+            {
+              "cycles": 29313,
+              "exit": 0,
+              "instance": "subgraph0_ht33.0-iteration0",
+              "repeats": 1152,
+              "share": 0.005588213151851972,
+              "total": 33768576
+            },
+            {
+              "cycles": 30682,
+              "exit": 0,
+              "instance": "subgraph0_ht9.0-iteration0",
+              "repeats": 800,
+              "share": 0.0040619434097575735,
+              "total": 24545600
+            },
+            {
+              "cycles": 28419,
+              "exit": 0,
+              "instance": "subgraph0_ht4.0-iteration0",
+              "repeats": 800,
+              "share": 0.003762348274620314,
+              "total": 22735200
+            },
+            {
+              "cycles": 28726,
+              "exit": 0,
+              "instance": "subgraph0_ht51.0-iteration0",
+              "repeats": 768,
+              "share": 0.003650871877098892,
+              "total": 22061568
+            },
+            {
+              "cycles": 50666,
+              "exit": 0,
+              "instance": "subgraph0_ht0.0-iteration0",
+              "repeats": 400,
+              "share": 0.0033537974186620364,
+              "total": 20266400
+            },
+            {
+              "cycles": 27821,
+              "exit": 0,
+              "instance": "subgraph0_ht64.0-iteration0",
+              "repeats": 384,
+              "share": 0.00176792638189738,
+              "total": 10683264
+            },
+            {
+              "cycles": 56357,
+              "exit": 0,
+              "instance": "subgraph0_ht922.0-iteration0",
+              "repeats": 48,
+              "share": 0.000447661061359183,
+              "total": 2705136
+            },
+            {
+              "cycles": 32384,
+              "exit": 0,
+              "instance": "subgraph0_ht924.0-iteration0",
+              "repeats": 1,
+              "share": 5.359085758000996e-06,
+              "total": 32384
+            },
+            {
+              "cycles": 23754,
+              "exit": 0,
+              "instance": "subgraph0_ht925.0-iteration0",
+              "repeats": 1,
+              "share": 3.9309450066562395e-06,
+              "total": 23754
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "error": "failure",
+          "model": "laya",
+          "status": "failure"
+        },
+        {
+          "error": "failure",
+          "model": "mlp-mixer",
+          "status": "failure"
+        }
+      ],
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T14:58:22.558211+00:00"
+}

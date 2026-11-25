@@ -1,0 +1,11 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "toy/harts/toy",
+      "path": "examples/designs/toy/harts/toy"
+    }
+  ],
+  "taken": "2026-11-23T11:45:04.195059+00:00"
+}

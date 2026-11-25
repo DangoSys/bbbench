@@ -1,0 +1,18 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 1216873056,
+  "design": "multi-rocket",
+  "dirty": true,
+  "elapsed_s": 33.23,
+  "taken": "2026-11-23T14:43:57.817294+00:00",
+  "timeline": "designs/multi-rocket/2026-11-23-142701-f7eb431-dirty",
+  "tool": "BEMU",
+  "workloads": [
+    {
+      "cycles": 1216873056,
+      "elapsed_s": 33.23,
+      "status": "pass",
+      "workload": "fw_payload-linux"
+    }
+  ]
+}

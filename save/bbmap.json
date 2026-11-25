@@ -1,0 +1,2239 @@
+{
+  "designs": [
+    {
+      "benches": [],
+      "config": "gemmini/devices/gemmini/configs/GemminiDefaultConfig.toml",
+      "description": "The Berkeley Gemmini systolic array ported onto the framework, as a reference design running CNNs and BERT.",
+      "design": "gemmini",
+      "models": [
+        "alexnet",
+        "bert-base-uncased-emotion",
+        "lenet",
+        "mobilenet-v3-small",
+        "resnet18",
+        "yolo26n"
+      ],
+      "overview": {
+        "harts": [
+          {
+            "balls": [],
+            "component": "gemmini",
+            "id": 0,
+            "threads": 0
+          }
+        ],
+        "ips": [
+          {
+            "has_suite": true,
+            "ip": "axi4"
+          },
+          {
+            "has_suite": false,
+            "ip": "cbus"
+          },
+          {
+            "has_suite": false,
+            "ip": "clint"
+          },
+          {
+            "has_suite": false,
+            "ip": "plic"
+          },
+          {
+            "has_suite": false,
+            "ip": "scu"
+          },
+          {
+            "has_suite": false,
+            "ip": "trace"
+          }
+        ],
+        "threads": []
+      }
+    },
+    {
+      "benches": [],
+      "config": "goban/devices/goban/configs/GobanDefaultConfig.toml",
+      "description": "One RISC-V hart with four matrix hardware threads, each carrying the smatmul, toint8, int2fp and transpose Balls, for Transformer and MLP inference such as BERT and MLP-Mixer.",
+      "design": "goban",
+      "models": [
+        "bert-base-uncased-emotion",
+        "laya",
+        "mlp-mixer"
+      ],
+      "overview": {
+        "harts": [
+          {
+            "balls": [],
+            "component": "goban",
+            "id": 0,
+            "threads": 4
+          }
+        ],
+        "ips": [
+          {
+            "has_suite": true,
+            "ip": "admission"
+          },
+          {
+            "has_suite": true,
+            "ip": "ant"
+          },
+          {
+            "has_suite": true,
+            "ip": "axi4"
+          },
+          {
+            "has_suite": true,
+            "ip": "bank"
+          },
+          {
+            "has_suite": true,
+            "ip": "cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "chi"
+          },
+          {
+            "has_suite": true,
+            "ip": "coherence"
+          },
+          {
+            "has_suite": true,
+            "ip": "ddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "fetch"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_dataflow"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_shm"
+          },
+          {
+            "has_suite": true,
+            "ip": "home"
+          },
+          {
+            "has_suite": true,
+            "ip": "mem_access"
+          },
+          {
+            "has_suite": true,
+            "ip": "mmu"
+          },
+          {
+            "has_suite": true,
+            "ip": "preflight"
+          },
+          {
+            "has_suite": true,
+            "ip": "spm"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_bank_router"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_bat"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_boot"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_global_rob"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_prm"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_scoreboard"
+          },
+          {
+            "has_suite": true,
+            "ip": "tss"
+          },
+          {
+            "has_suite": false,
+            "ip": "cbus"
+          },
+          {
+            "has_suite": false,
+            "ip": "clint"
+          },
+          {
+            "has_suite": false,
+            "ip": "plic"
+          },
+          {
+            "has_suite": false,
+            "ip": "scu"
+          },
+          {
+            "has_suite": false,
+            "ip": "trace"
+          },
+          {
+            "has_suite": false,
+            "ip": "bootrom"
+          },
+          {
+            "has_suite": false,
+            "ip": "hart_dma"
+          },
+          {
+            "has_suite": false,
+            "ip": "thread_tomem"
+          },
+          {
+            "has_suite": false,
+            "ip": "gpdomain"
+          }
+        ],
+        "threads": [
+          {
+            "balls": [
+              "smatmul",
+              "toint8",
+              "int2fp",
+              "transpose"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "smatmul",
+              "toint8",
+              "int2fp",
+              "transpose"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "smatmul",
+              "toint8",
+              "int2fp",
+              "transpose"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "smatmul",
+              "toint8",
+              "int2fp",
+              "transpose"
+            ],
+            "cpu": "ant"
+          }
+        ]
+      }
+    },
+    {
+      "benches": [],
+      "config": "magia/devices/magia/configs/MagiaDefaultConfig.toml",
+      "description": "The MAGIA accelerator array ported onto the framework, running BERT and Qwen3-0.6B.",
+      "design": "magia",
+      "models": [
+        "bert-base-uncased-emotion",
+        "qwen3-0-6b"
+      ],
+      "overview": {
+        "harts": [
+          {
+            "balls": [],
+            "component": "magia",
+            "id": 0,
+            "threads": 0
+          }
+        ],
+        "ips": [
+          {
+            "has_suite": true,
+            "ip": "axi4"
+          },
+          {
+            "has_suite": true,
+            "ip": "cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "chi"
+          },
+          {
+            "has_suite": true,
+            "ip": "coherence"
+          },
+          {
+            "has_suite": true,
+            "ip": "ddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "fetch"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_dataflow"
+          },
+          {
+            "has_suite": true,
+            "ip": "home"
+          },
+          {
+            "has_suite": true,
+            "ip": "mem_access"
+          },
+          {
+            "has_suite": true,
+            "ip": "mmu"
+          },
+          {
+            "has_suite": false,
+            "ip": "cbus"
+          },
+          {
+            "has_suite": false,
+            "ip": "clint"
+          },
+          {
+            "has_suite": false,
+            "ip": "plic"
+          },
+          {
+            "has_suite": false,
+            "ip": "scu"
+          },
+          {
+            "has_suite": false,
+            "ip": "trace"
+          },
+          {
+            "has_suite": false,
+            "ip": "bootrom"
+          }
+        ],
+        "threads": []
+      }
+    },
+    {
+      "benches": [
+        "coremark",
+        "embench"
+      ],
+      "config": "multi-rocket/devices/multi-rocket/configs/MultiRocketDefaultConfig.toml",
+      "description": "A multi-core Rocket CPU system without accelerators, for checking multi-hart system integration.",
+      "design": "multi-rocket",
+      "models": [],
+      "overview": {
+        "harts": [
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 0,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 1,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 2,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 3,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 4,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 5,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 6,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 7,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 8,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 9,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 10,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 11,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 12,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 13,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 14,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 15,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 16,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 17,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 18,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 19,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 20,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 21,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 22,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 23,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 24,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 25,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 26,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 27,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 28,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 29,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 30,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "rocket",
+            "id": 31,
+            "threads": 0
+          }
+        ],
+        "ips": [
+          {
+            "has_suite": true,
+            "ip": "axi4"
+          },
+          {
+            "has_suite": true,
+            "ip": "cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "chi"
+          },
+          {
+            "has_suite": true,
+            "ip": "coherence"
+          },
+          {
+            "has_suite": true,
+            "ip": "ddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "fetch"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_dataflow"
+          },
+          {
+            "has_suite": true,
+            "ip": "home"
+          },
+          {
+            "has_suite": true,
+            "ip": "mem_access"
+          },
+          {
+            "has_suite": true,
+            "ip": "mmu"
+          },
+          {
+            "has_suite": false,
+            "ip": "cbus"
+          },
+          {
+            "has_suite": false,
+            "ip": "clint"
+          },
+          {
+            "has_suite": false,
+            "ip": "plic"
+          },
+          {
+            "has_suite": false,
+            "ip": "scu"
+          },
+          {
+            "has_suite": false,
+            "ip": "trace"
+          },
+          {
+            "has_suite": false,
+            "ip": "bootrom"
+          }
+        ],
+        "threads": []
+      }
+    },
+    {
+      "benches": [
+        "coremark"
+      ],
+      "config": "pebble/devices/pebble/configs/PebbleDefaultConfig.toml",
+      "description": "An INT8 inference chip for edge vision: CNN classification and detection. Tapeout target 28 nm at 1 GHz, with external PSRAM, booting Linux.",
+      "design": "pebble",
+      "models": [
+        "alexnet",
+        "lenet",
+        "mobilenet-v3-small",
+        "resnet18",
+        "yolo26n"
+      ],
+      "overview": {
+        "harts": [
+          {
+            "balls": [
+              "transpose",
+              "smatmul",
+              "im2col",
+              "toint8",
+              "int2fp",
+              "lut",
+              "maxpool",
+              "int8add",
+              "int8mul",
+              "matadd",
+              "fixed"
+            ],
+            "component": "pebble",
+            "id": 0,
+            "threads": 0
+          }
+        ],
+        "ips": [
+          {
+            "has_suite": true,
+            "ip": "axi4"
+          },
+          {
+            "has_suite": true,
+            "ip": "bank_router"
+          },
+          {
+            "has_suite": true,
+            "ip": "bat"
+          },
+          {
+            "has_suite": true,
+            "ip": "boot"
+          },
+          {
+            "has_suite": true,
+            "ip": "cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "chi"
+          },
+          {
+            "has_suite": true,
+            "ip": "coherence"
+          },
+          {
+            "has_suite": true,
+            "ip": "ddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "fpu"
+          },
+          {
+            "has_suite": true,
+            "ip": "global_rob"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_dataflow"
+          },
+          {
+            "has_suite": true,
+            "ip": "home"
+          },
+          {
+            "has_suite": true,
+            "ip": "instruction"
+          },
+          {
+            "has_suite": true,
+            "ip": "integer"
+          },
+          {
+            "has_suite": true,
+            "ip": "interlock"
+          },
+          {
+            "has_suite": true,
+            "ip": "mem_access"
+          },
+          {
+            "has_suite": true,
+            "ip": "mmu"
+          },
+          {
+            "has_suite": true,
+            "ip": "muldiv"
+          },
+          {
+            "has_suite": true,
+            "ip": "preflight"
+          },
+          {
+            "has_suite": true,
+            "ip": "privileged"
+          },
+          {
+            "has_suite": true,
+            "ip": "prm"
+          },
+          {
+            "has_suite": true,
+            "ip": "register_file"
+          },
+          {
+            "has_suite": true,
+            "ip": "scoreboard"
+          },
+          {
+            "has_suite": true,
+            "ip": "toddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "tol1"
+          },
+          {
+            "has_suite": true,
+            "ip": "tomem"
+          },
+          {
+            "has_suite": false,
+            "ip": "cbus"
+          },
+          {
+            "has_suite": false,
+            "ip": "clint"
+          },
+          {
+            "has_suite": false,
+            "ip": "plic"
+          },
+          {
+            "has_suite": false,
+            "ip": "scu"
+          },
+          {
+            "has_suite": false,
+            "ip": "trace"
+          },
+          {
+            "has_suite": false,
+            "ip": "bootrom"
+          }
+        ],
+        "threads": []
+      }
+    },
+    {
+      "benches": [],
+      "config": "piplus/devices/piplus/configs/PiplusDefaultConfig.toml",
+      "description": "A four-core chip designed from scratch for robot vision-language-action models (SmolVLA and the pi0 family), aiming at one SmolVLA step within 50 ms.",
+      "design": "piplus",
+      "models": [
+        "smolvla-base"
+      ],
+      "overview": {
+        "harts": [
+          {
+            "balls": [],
+            "component": "control",
+            "id": 0,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "dense",
+            "id": 1,
+            "threads": 12
+          },
+          {
+            "balls": [],
+            "component": "dense",
+            "id": 2,
+            "threads": 12
+          },
+          {
+            "balls": [],
+            "component": "dense",
+            "id": 3,
+            "threads": 12
+          },
+          {
+            "balls": [],
+            "component": "action",
+            "id": 4,
+            "threads": 4
+          },
+          {
+            "balls": [],
+            "component": "action",
+            "id": 5,
+            "threads": 4
+          }
+        ],
+        "ips": [
+          {
+            "has_suite": true,
+            "ip": "admission"
+          },
+          {
+            "has_suite": true,
+            "ip": "ant"
+          },
+          {
+            "has_suite": true,
+            "ip": "axi4"
+          },
+          {
+            "has_suite": true,
+            "ip": "bank"
+          },
+          {
+            "has_suite": true,
+            "ip": "cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "chi"
+          },
+          {
+            "has_suite": true,
+            "ip": "coherence"
+          },
+          {
+            "has_suite": true,
+            "ip": "ddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "fpu"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_dataflow"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_shm"
+          },
+          {
+            "has_suite": true,
+            "ip": "home"
+          },
+          {
+            "has_suite": true,
+            "ip": "instruction"
+          },
+          {
+            "has_suite": true,
+            "ip": "integer"
+          },
+          {
+            "has_suite": true,
+            "ip": "mem_access"
+          },
+          {
+            "has_suite": true,
+            "ip": "mmu"
+          },
+          {
+            "has_suite": true,
+            "ip": "muldiv"
+          },
+          {
+            "has_suite": true,
+            "ip": "preflight"
+          },
+          {
+            "has_suite": true,
+            "ip": "privileged"
+          },
+          {
+            "has_suite": true,
+            "ip": "register_file"
+          },
+          {
+            "has_suite": true,
+            "ip": "spm"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_bank_router"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_bat"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_boot"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_global_rob"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_prm"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_scoreboard"
+          },
+          {
+            "has_suite": true,
+            "ip": "tss"
+          },
+          {
+            "has_suite": false,
+            "ip": "cbus"
+          },
+          {
+            "has_suite": false,
+            "ip": "clint"
+          },
+          {
+            "has_suite": false,
+            "ip": "plic"
+          },
+          {
+            "has_suite": false,
+            "ip": "scu"
+          },
+          {
+            "has_suite": false,
+            "ip": "trace"
+          },
+          {
+            "has_suite": false,
+            "ip": "bootrom"
+          },
+          {
+            "has_suite": false,
+            "ip": "hart_dma"
+          },
+          {
+            "has_suite": false,
+            "ip": "thread_tomem"
+          },
+          {
+            "has_suite": false,
+            "ip": "gpdomain"
+          }
+        ],
+        "threads": [
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "mxint8mm",
+              "mxint8quant",
+              "softmax",
+              "layernorm"
+            ],
+            "cpu": "ant"
+          }
+        ]
+      }
+    },
+    {
+      "benches": [],
+      "config": "poly/devices/poly/configs/PolyDefaultConfig.toml",
+      "description": "A large-language-model inference chip: tensor parallelism splits the model over one reduction core and eight poly cores, running Qwen3, Llama and Gemma.",
+      "design": "poly",
+      "models": [
+        "deepseek-r1-0528-qwen3-8b",
+        "gemma4-e2b-it",
+        "laya",
+        "llama3-2-3b-instruct",
+        "qwen3-0-6b",
+        "qwen3-8b"
+      ],
+      "overview": {
+        "harts": [
+          {
+            "balls": [
+              "f32add",
+              "mxint8quantize",
+              "intnorm",
+              "mxint8act",
+              "mxint8unpack"
+            ],
+            "component": "reduce-unpack",
+            "id": 0,
+            "threads": 0
+          },
+          {
+            "balls": [],
+            "component": "poly",
+            "id": 1,
+            "threads": 5
+          },
+          {
+            "balls": [],
+            "component": "poly",
+            "id": 2,
+            "threads": 5
+          },
+          {
+            "balls": [],
+            "component": "poly",
+            "id": 3,
+            "threads": 5
+          },
+          {
+            "balls": [],
+            "component": "poly",
+            "id": 4,
+            "threads": 5
+          },
+          {
+            "balls": [],
+            "component": "poly",
+            "id": 5,
+            "threads": 5
+          },
+          {
+            "balls": [],
+            "component": "poly",
+            "id": 6,
+            "threads": 5
+          },
+          {
+            "balls": [],
+            "component": "poly",
+            "id": 7,
+            "threads": 5
+          },
+          {
+            "balls": [],
+            "component": "poly",
+            "id": 8,
+            "threads": 5
+          }
+        ],
+        "ips": [
+          {
+            "has_suite": true,
+            "ip": "coherence"
+          },
+          {
+            "has_suite": true,
+            "ip": "home"
+          },
+          {
+            "has_suite": true,
+            "ip": "ddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "admission"
+          },
+          {
+            "has_suite": true,
+            "ip": "ant"
+          },
+          {
+            "has_suite": true,
+            "ip": "axi4"
+          },
+          {
+            "has_suite": true,
+            "ip": "bank"
+          },
+          {
+            "has_suite": true,
+            "ip": "bank_router"
+          },
+          {
+            "has_suite": true,
+            "ip": "bat"
+          },
+          {
+            "has_suite": true,
+            "ip": "boot"
+          },
+          {
+            "has_suite": true,
+            "ip": "cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "chi"
+          },
+          {
+            "has_suite": true,
+            "ip": "device_shm"
+          },
+          {
+            "has_suite": true,
+            "ip": "fpu"
+          },
+          {
+            "has_suite": true,
+            "ip": "global_rob"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_dataflow"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_shm"
+          },
+          {
+            "has_suite": true,
+            "ip": "instruction"
+          },
+          {
+            "has_suite": true,
+            "ip": "integer"
+          },
+          {
+            "has_suite": true,
+            "ip": "interlock"
+          },
+          {
+            "has_suite": true,
+            "ip": "mem_access"
+          },
+          {
+            "has_suite": true,
+            "ip": "mmu"
+          },
+          {
+            "has_suite": true,
+            "ip": "muldiv"
+          },
+          {
+            "has_suite": true,
+            "ip": "preflight"
+          },
+          {
+            "has_suite": true,
+            "ip": "privileged"
+          },
+          {
+            "has_suite": true,
+            "ip": "prm"
+          },
+          {
+            "has_suite": true,
+            "ip": "register_file"
+          },
+          {
+            "has_suite": true,
+            "ip": "scoreboard"
+          },
+          {
+            "has_suite": true,
+            "ip": "spm"
+          },
+          {
+            "has_suite": true,
+            "ip": "tbus_router"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_bank_router"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_bat"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_boot"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_global_rob"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_prm"
+          },
+          {
+            "has_suite": true,
+            "ip": "thread_scoreboard"
+          },
+          {
+            "has_suite": true,
+            "ip": "toddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "tol1"
+          },
+          {
+            "has_suite": true,
+            "ip": "tomem"
+          },
+          {
+            "has_suite": true,
+            "ip": "tss"
+          },
+          {
+            "has_suite": false,
+            "ip": "cbus"
+          },
+          {
+            "has_suite": false,
+            "ip": "clint"
+          },
+          {
+            "has_suite": false,
+            "ip": "plic"
+          },
+          {
+            "has_suite": false,
+            "ip": "scu"
+          },
+          {
+            "has_suite": false,
+            "ip": "trace"
+          },
+          {
+            "has_suite": false,
+            "ip": "bootrom"
+          },
+          {
+            "has_suite": false,
+            "ip": "hart_dma"
+          },
+          {
+            "has_suite": false,
+            "ip": "thread_tomem"
+          },
+          {
+            "has_suite": false,
+            "ip": "gpdomain"
+          }
+        ],
+        "threads": [
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv",
+              "intsoftmax"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          },
+          {
+            "balls": [
+              "transpose",
+              "mxint8quantize",
+              "mxint8matmul",
+              "mxint8act",
+              "mxint5gemv"
+            ],
+            "cpu": "ant"
+          }
+        ]
+      }
+    },
+    {
+      "benches": [],
+      "config": "toy/devices/toy/configs/ToyDefaultConfig.toml",
+      "description": "Holds the Balls other chips do not take; a test bed for new Balls and framework features, not aimed at a product.",
+      "design": "toy",
+      "models": [
+        "lenet",
+        "mobilenet-v3-small"
+      ],
+      "overview": {
+        "harts": [
+          {
+            "balls": [
+              "gemmini",
+              "trace",
+              "mxint8act",
+              "relu",
+              "redmule",
+              "vector",
+              "mxfp2int",
+              "lut"
+            ],
+            "component": "toy",
+            "id": 0,
+            "threads": 0
+          }
+        ],
+        "ips": [
+          {
+            "has_suite": true,
+            "ip": "axis"
+          },
+          {
+            "has_suite": true,
+            "ip": "axi4"
+          },
+          {
+            "has_suite": true,
+            "ip": "bank_router"
+          },
+          {
+            "has_suite": true,
+            "ip": "bat"
+          },
+          {
+            "has_suite": true,
+            "ip": "boot"
+          },
+          {
+            "has_suite": true,
+            "ip": "cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "chi"
+          },
+          {
+            "has_suite": true,
+            "ip": "coherence"
+          },
+          {
+            "has_suite": true,
+            "ip": "ddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "fetch"
+          },
+          {
+            "has_suite": true,
+            "ip": "global_rob"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_cache"
+          },
+          {
+            "has_suite": true,
+            "ip": "hart_dataflow"
+          },
+          {
+            "has_suite": true,
+            "ip": "home"
+          },
+          {
+            "has_suite": true,
+            "ip": "interlock"
+          },
+          {
+            "has_suite": true,
+            "ip": "mem_access"
+          },
+          {
+            "has_suite": true,
+            "ip": "mmu"
+          },
+          {
+            "has_suite": true,
+            "ip": "preflight"
+          },
+          {
+            "has_suite": true,
+            "ip": "prm"
+          },
+          {
+            "has_suite": true,
+            "ip": "scoreboard"
+          },
+          {
+            "has_suite": true,
+            "ip": "toddr"
+          },
+          {
+            "has_suite": true,
+            "ip": "tol1"
+          },
+          {
+            "has_suite": true,
+            "ip": "tomem"
+          },
+          {
+            "has_suite": false,
+            "ip": "cbus"
+          },
+          {
+            "has_suite": false,
+            "ip": "clint"
+          },
+          {
+            "has_suite": false,
+            "ip": "plic"
+          },
+          {
+            "has_suite": false,
+            "ip": "scu"
+          },
+          {
+            "has_suite": false,
+            "ip": "trace"
+          },
+          {
+            "has_suite": false,
+            "ip": "bootrom"
+          },
+          {
+            "has_suite": false,
+            "ip": "gpdomain"
+          }
+        ],
+        "threads": []
+      }
+    }
+  ]
+}

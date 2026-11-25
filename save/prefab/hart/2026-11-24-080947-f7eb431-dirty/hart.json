@@ -1,0 +1,11 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "magia",
+      "path": "examples/prefab/harts/magia"
+    }
+  ],
+  "taken": "2026-11-24T08:09:47.139379+00:00"
+}

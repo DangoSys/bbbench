@@ -1,0 +1,2356 @@
+{
+  "balls": [
+    {
+      "ball": "f32add",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "F32ADD"
+        ],
+        "name": "f32add",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/f32add",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "73.73",
+          "GROUP": "100.00",
+          "LINE": "75.61",
+          "SCORE": "71.36",
+          "TOGGLE": "74.14"
+        },
+        "groups": [
+          {
+            "group": "f32add_pkg::f32add_cov::cmd_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "73.73",
+              "LINE": "75.61",
+              "SCORE": "74.49",
+              "TOGGLE": "74.14"
+            },
+            "module": "F32AddBall"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "fixed",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "FIXED"
+        ],
+        "name": "fixed",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/fixed",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "74.00",
+          "GROUP": "100.00",
+          "LINE": "61.13",
+          "SCORE": "64.30",
+          "TOGGLE": "53.04"
+        },
+        "groups": [
+          {
+            "group": "fixed_pkg::fixed_cov::cmd_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "74.02",
+              "LINE": "58.71",
+              "SCORE": "61.58",
+              "TOGGLE": "52.01"
+            },
+            "module": "FixedBall"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "85.00",
+              "LINE": "84.62",
+              "SCORE": "80.80",
+              "TOGGLE": "72.79"
+            },
+            "module": "Multiply"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "gemmini",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": false,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": true,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": true
+          }
+        },
+        "instructions": [
+          "GEMMINI_LOOP_WS_CONFIG_BOUNDS",
+          "GEMMINI_LOOP_WS_CONFIG_ADDR_A",
+          "GEMMINI_LOOP_WS_CONFIG_ADDR_B",
+          "GEMMINI_LOOP_WS_CONFIG_ADDR_D",
+          "GEMMINI_LOOP_WS_CONFIG_ADDR_C",
+          "GEMMINI_LOOP_WS_CONFIG_STRIDES_AB",
+          "GEMMINI_LOOP_WS_CONFIG_STRIDES_DC",
+          "GEMMINI_LOOP_WS",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_1",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_2",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_3",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_4",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_5",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_6",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_7",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_8",
+          "GEMMINI_LOOP_CONV_WS_CONFIG_9",
+          "GEMMINI_LOOP_CONV_WS",
+          "GEMMINI_CONFIG",
+          "GEMMINI_FLUSH",
+          "GEMMINI_PRELOAD",
+          "GEMMINI_COMPUTE_PRELOADED",
+          "GEMMINI_COMPUTE_ACCUMULATED"
+        ],
+        "name": "gemmini",
+        "param": {
+          "accWidth": 32,
+          "inputWidth": 8,
+          "meshColumns": 16,
+          "meshRows": 16,
+          "outputDelay": 1,
+          "spatialOutputWidth": 20,
+          "tileColumns": 1,
+          "tileLatency": 0,
+          "tileRows": 1
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 4
+        }
+      },
+      "path": "examples/prefab/balls/gemmini",
+      "uvm": {
+        "error": "vcs failed for gemmini",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "im2col",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "IM2COL"
+        ],
+        "name": "im2col",
+        "param": {
+          "inputWidth": 8,
+          "maxIter": 16,
+          "maxKSize": 7,
+          "maxPadding": 7
+        },
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/im2col",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "79.85",
+          "GROUP": "100.00",
+          "LINE": "71.15",
+          "SCORE": "68.14",
+          "TOGGLE": "56.39"
+        },
+        "groups": [
+          {
+            "group": "im2col_pkg::im2col_cov::cmd_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "--",
+              "LINE": "--",
+              "SCORE": "53.95",
+              "TOGGLE": "53.95"
+            },
+            "module": "Im2colBall"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "76.90",
+              "LINE": "66.81",
+              "SCORE": "63.15",
+              "TOGGLE": "45.72"
+            },
+            "module": "Im2col"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "80.00",
+              "LINE": "100.00",
+              "SCORE": "81.47",
+              "TOGGLE": "64.42"
+            },
+            "module": "RestoringDiv"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "95.08",
+              "LINE": "100.00",
+              "SCORE": "89.96",
+              "TOGGLE": "74.81"
+            },
+            "module": "Queue"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "int2fp",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INT32_TO_FP32"
+        ],
+        "name": "int2fp",
+        "param": {
+          "inputType": "INT32",
+          "outputType": "FP32"
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/int2fp",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "52.43",
+          "GROUP": "100.00",
+          "LINE": "92.31",
+          "SCORE": "64.57",
+          "TOGGLE": "44.80"
+        },
+        "groups": [
+          {
+            "group": "int2fp_pkg::int2fp_cov::cmd_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "--",
+              "LINE": "--",
+              "SCORE": "36.69",
+              "TOGGLE": "36.69"
+            },
+            "module": "RoundRawFNToRecFN_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "--",
+              "LINE": "--",
+              "SCORE": "39.74",
+              "TOGGLE": "39.74"
+            },
+            "module": "Int2FpBall"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "43.94",
+              "LINE": "--",
+              "SCORE": "45.52",
+              "TOGGLE": "47.11"
+            },
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "50.00",
+              "LINE": "--",
+              "SCORE": "47.50",
+              "TOGGLE": "45.00"
+            },
+            "module": "MulAddRecFNToRaw_postMul_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "60.99",
+              "LINE": "67.86",
+              "SCORE": "52.94",
+              "TOGGLE": "29.99"
+            },
+            "module": "Int2Fp"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "50.00",
+              "LINE": "--",
+              "SCORE": "53.59",
+              "TOGGLE": "57.19"
+            },
+            "module": "MulAddRecFNToRaw_preMul_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "33.33",
+              "LINE": "100.00",
+              "SCORE": "63.21",
+              "TOGGLE": "56.29"
+            },
+            "module": "Fma_l3_e8_s24"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "int8add",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INT8ADD",
+          "INT8ADD_RELU"
+        ],
+        "name": "int8add",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/int8add",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "55.42",
+          "GROUP": "100.00",
+          "LINE": "95.24",
+          "SCORE": "66.92",
+          "TOGGLE": "50.60"
+        },
+        "groups": [
+          {
+            "group": "int8add_pkg::int8add_cov::cmd_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "48.15",
+              "LINE": "--",
+              "SCORE": "40.12",
+              "TOGGLE": "32.08"
+            },
+            "module": "RoundAnyRawFNToRecFN_ie4_is8_oe8_os24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "48.00",
+              "LINE": "--",
+              "SCORE": "47.54",
+              "TOGGLE": "47.07"
+            },
+            "module": "MulAddRecFNToRaw_postMul_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "42.11",
+              "LINE": "--",
+              "SCORE": "47.62",
+              "TOGGLE": "53.14"
+            },
+            "module": "MulAddRecFNToRaw_preMul_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "--",
+              "LINE": "--",
+              "SCORE": "48.52",
+              "TOGGLE": "48.52"
+            },
+            "module": "RoundRawFNToRecFN_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "50.00",
+              "LINE": "--",
+              "SCORE": "57.81",
+              "TOGGLE": "65.62"
+            },
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "33.33",
+              "LINE": "100.00",
+              "SCORE": "63.11",
+              "TOGGLE": "55.99"
+            },
+            "module": "Fma_l3_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "69.51",
+              "LINE": "--",
+              "SCORE": "65.72",
+              "TOGGLE": "61.92"
+            },
+            "module": "RecFNToIN_e8_s24_i8"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "65.67",
+              "LINE": "88.41",
+              "SCORE": "67.85",
+              "TOGGLE": "49.46"
+            },
+            "module": "Int8AddBall"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "62.70",
+              "LINE": "100.00",
+              "SCORE": "68.12",
+              "TOGGLE": "41.67"
+            },
+            "module": "PipelinedAddRawFN"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "86.67",
+              "LINE": "100.00",
+              "SCORE": "84.89",
+              "TOGGLE": "68.00"
+            },
+            "module": "IntToFloat"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "int8mul",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INT8MUL"
+        ],
+        "name": "int8mul",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/int8mul",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "60.36",
+          "GROUP": "100.00",
+          "LINE": "90.51",
+          "SCORE": "67.57",
+          "TOGGLE": "53.66"
+        },
+        "groups": [
+          {
+            "group": "int8mul_pkg::int8mul_cov::cmd_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "--",
+              "LINE": "--",
+              "SCORE": "43.79",
+              "TOGGLE": "43.79"
+            },
+            "module": "RoundRawFNToRecFN_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "43.94",
+              "LINE": "--",
+              "SCORE": "47.18",
+              "TOGGLE": "50.41"
+            },
+            "module": "RoundAnyRawFNToRecFN_ie8_is26_oe8_os24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "42.11",
+              "LINE": "--",
+              "SCORE": "48.64",
+              "TOGGLE": "55.17"
+            },
+            "module": "MulAddRecFNToRaw_preMul_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "49.33",
+              "LINE": "--",
+              "SCORE": "49.91",
+              "TOGGLE": "50.50"
+            },
+            "module": "MulAddRecFNToRaw_postMul_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "33.33",
+              "LINE": "100.00",
+              "SCORE": "63.86",
+              "TOGGLE": "58.23"
+            },
+            "module": "Fma_l3_e8_s24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "71.95",
+              "LINE": "--",
+              "SCORE": "64.64",
+              "TOGGLE": "57.32"
+            },
+            "module": "RecFNToIN_e8_s24_i8"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "69.91",
+              "LINE": "85.37",
+              "SCORE": "69.48",
+              "TOGGLE": "53.16"
+            },
+            "module": "Int8MulBall"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "100.00",
+              "LINE": "--",
+              "SCORE": "70.67",
+              "TOGGLE": "41.34"
+            },
+            "module": "RoundAnyRawFNToRecFN_ie5_is16_oe8_os24"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "100.00",
+              "LINE": "--",
+              "SCORE": "83.10",
+              "TOGGLE": "66.19"
+            },
+            "module": "INToRecFN_i16_e8_s24"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "intnorm",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INTNORM"
+        ],
+        "name": "intnorm",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/intnorm",
+      "uvm": {
+        "error": "[Errno 2] No such file or directory: '/home/wanghui/Code/buckyball/examples/prefab/balls/intnorm/verify/filelists/intnorm_ball.f'",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "intsoftmax",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "INTSOFTMAX"
+        ],
+        "name": "intsoftmax",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/intsoftmax",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "65.64",
+          "GROUP": "100.00",
+          "LINE": "72.72",
+          "SCORE": "71.78",
+          "TOGGLE": "87.24"
+        },
+        "groups": [
+          {
+            "group": "intsoftmax_pkg::intsoftmax_scoreboard::contract_cov",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "65.64",
+              "LINE": "72.72",
+              "SCORE": "75.20",
+              "TOGGLE": "87.24"
+            },
+            "module": "IntSoftmaxBall"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "lut",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "LUT"
+        ],
+        "name": "lut",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/lut",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "80.91",
+          "GROUP": "100.00",
+          "LINE": "84.29",
+          "SCORE": "72.48",
+          "TOGGLE": "63.87"
+        },
+        "groups": [
+          {
+            "group": "lut_pkg::lut_cov::cmd_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "74.07",
+              "LINE": "84.00",
+              "SCORE": "67.11",
+              "TOGGLE": "43.26"
+            },
+            "module": "Multiply"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "79.31",
+              "LINE": "95.45",
+              "SCORE": "73.29",
+              "TOGGLE": "45.11"
+            },
+            "module": "DivRem"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "81.38",
+              "LINE": "83.40",
+              "SCORE": "81.11",
+              "TOGGLE": "78.57"
+            },
+            "module": "LutBall"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "matadd",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MATADD"
+        ],
+        "name": "matadd",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/matadd",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "73.48",
+          "LINE": "75.61",
+          "SCORE": "58.73",
+          "TOGGLE": "52.51"
+        },
+        "groups": [],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "--",
+              "LINE": "--",
+              "SCORE": "49.89",
+              "TOGGLE": "49.89"
+            },
+            "module": "MatAddBall"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "73.48",
+              "LINE": "75.61",
+              "SCORE": "67.79",
+              "TOGGLE": "54.28"
+            },
+            "module": "MatAdd"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "maxpool",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MAXPOOL",
+          "TOPK_U32"
+        ],
+        "name": "maxpool",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/maxpool",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "79.56",
+          "GROUP": "100.00",
+          "LINE": "79.60",
+          "SCORE": "75.51",
+          "TOGGLE": "85.04"
+        },
+        "groups": [
+          {
+            "group": "maxpool_pkg::maxpool_cov::cmd_cg",
+            "score": "100.00"
+          },
+          {
+            "group": "maxpool_pkg::maxpool_cov::key_cg",
+            "score": "100.00"
+          },
+          {
+            "group": "maxpool_pkg::maxpool_cov::topk_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "79.56",
+              "LINE": "79.60",
+              "SCORE": "81.40",
+              "TOGGLE": "85.04"
+            },
+            "module": "MaxPoolBall"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "mxfp2int",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXFP2INT"
+        ],
+        "name": "mxfp2int",
+        "param": {
+          "mxfpFormat": "MXFP4"
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxfp2int",
+      "uvm": {
+        "error": "UVM failed for mxfp2int test=mxfp2int_ball_test: errors=0 fatals=1",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "mxint5gemv",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT5GEMV"
+        ],
+        "name": "mxint5gemv",
+        "param": {},
+        "port": {
+          "inBW": 5,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint5gemv",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "48.48",
+          "GROUP": "100.00",
+          "LINE": "55.88",
+          "SCORE": "65.43",
+          "TOGGLE": "89.45"
+        },
+        "groups": [
+          {
+            "group": "mxint5gemv_pkg::mxint5gemv_scoreboard::contract_cov",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "48.48",
+              "LINE": "55.88",
+              "SCORE": "64.60",
+              "TOGGLE": "89.45"
+            },
+            "module": "Mxint5gemvBall"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "mxint8act",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8ACT"
+        ],
+        "name": "mxint8act",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint8act",
+      "uvm": {
+        "error": "[Errno 2] No such file or directory: '/home/wanghui/Code/buckyball/examples/prefab/balls/mxint8act/verify/filelists/mxint8act_ball.f'",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "mxint8gemv",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8GEMV"
+        ],
+        "name": "mxint8gemv",
+        "param": {},
+        "port": {
+          "inBW": 5,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint8gemv",
+      "uvm": {
+        "error": "[Errno 2] No such file or directory: '/home/wanghui/Code/buckyball/examples/prefab/balls/mxint8gemv/verify/filelists/mxint8gemv_ball.f'",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "mxint8matmul",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8MM"
+        ],
+        "name": "mxint8matmul",
+        "param": {
+          "cols": 8,
+          "lanes": 8,
+          "rows": 4
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint8matmul",
+      "uvm": {
+        "error": "[Errno 2] No such file or directory: '/home/wanghui/Code/buckyball/examples/prefab/balls/mxint8matmul/verify/filelists/mxint8matmul_ball.f'",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "mxint8quantize",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8QUANT"
+        ],
+        "name": "mxint8quantize",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxint8quantize",
+      "uvm": {
+        "error": "[Errno 2] No such file or directory: '/home/wanghui/Code/buckyball/examples/prefab/balls/mxint8quantize/verify/filelists/mxint8quantize_ball.f'",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "mxmm",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXMM_MXFP8",
+          "MXMM_MXFP8_WINDOW"
+        ],
+        "name": "mxmm",
+        "param": {
+          "tileCols": 16,
+          "tileRows": 16
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxmm",
+      "uvm": {
+        "error": "UVM failed for mxmm test=mxmm_ball_test: errors=0 fatals=1",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "mxquant",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXQUANT"
+        ],
+        "name": "mxquant",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/mxquant",
+      "uvm": {
+        "error": "UVM failed for mxquant test=mxquant_ball_test: errors=0 fatals=1",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "redmule",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "REDMULE_F16"
+        ],
+        "name": "redmule",
+        "param": {
+          "lanes": 8
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/redmule",
+      "uvm": {
+        "error": "urg failed for redmule",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "relu",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "RELU"
+        ],
+        "name": "relu",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/relu",
+      "uvm": {
+        "coverage": {
+          "ASSERT": "33.33",
+          "COND": "74.82",
+          "GROUP": "100.00",
+          "LINE": "60.00",
+          "SCORE": "64.92",
+          "TOGGLE": "56.47"
+        },
+        "groups": [
+          {
+            "group": "relu_pkg::relu_cov::cmd_cg",
+            "score": "100.00"
+          }
+        ],
+        "modules": [
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "--",
+              "LINE": "--",
+              "SCORE": "52.65",
+              "TOGGLE": "52.65"
+            },
+            "module": "ReluBall"
+          },
+          {
+            "coverage": {
+              "ASSERT": "--",
+              "COND": "74.82",
+              "LINE": "60.00",
+              "SCORE": "64.52",
+              "TOGGLE": "58.74"
+            },
+            "module": "Relu"
+          }
+        ],
+        "status": "pass"
+      }
+    },
+    {
+      "ball": "smatmul",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "SMATMUL_OS",
+          "SMATMUL_BIAS"
+        ],
+        "name": "smatmul",
+        "param": {
+          "tileCols": 16,
+          "tileRows": 16
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/smatmul",
+      "uvm": {
+        "error": "urg failed for smatmul",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "toint8",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "QUANT_F32_TO_I8",
+          "QUANT_I32_TO_I8"
+        ],
+        "name": "toint8",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/toint8",
+      "uvm": {
+        "error": "urg failed for toint8",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "trace",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "BDB_COUNTER"
+        ],
+        "name": "trace",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/trace",
+      "uvm": {
+        "error": "UVM failed for trace test=trace_ball_test",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "transpose",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "TRANSPOSE"
+        ],
+        "name": "transpose",
+        "param": {
+          "InputNum": 16,
+          "inputWidth": 8
+        },
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/prefab/balls/transpose",
+      "uvm": {
+        "error": "UVM failed for transpose test=transpose_ball_test",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "vector",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "VECMAT16"
+        ],
+        "name": "vector",
+        "param": {
+          "InputNum": 16,
+          "inputWidth": 8,
+          "lane": 16,
+          "numCasThreads": 16,
+          "numMulThreads": 16,
+          "outputWidth": 32
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 4
+        }
+      },
+      "path": "examples/prefab/balls/vector",
+      "uvm": {
+        "error": "cargo build failed for vector",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "piplus/balls/layernorm",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "LAYERNORM"
+        ],
+        "name": "layernorm",
+        "param": {},
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/piplus/balls/layernorm",
+      "uvm": {
+        "error": "[Errno 2] No such file or directory: '/home/wanghui/Code/buckyball/examples/designs/piplus/balls/layernorm/verify/filelists/layernorm_ball.f'",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "piplus/balls/mxint8mm",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8MM"
+        ],
+        "name": "mxint8mm",
+        "param": {
+          "cols": 8,
+          "lanes": 16,
+          "rows": 8
+        },
+        "port": {
+          "inBW": 2,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/piplus/balls/mxint8mm",
+      "uvm": {
+        "error": "[Errno 2] No such file or directory: '/home/wanghui/Code/buckyball/examples/designs/piplus/balls/mxint8mm/verify/filelists/mxint8mm_ball.f'",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "piplus/balls/mxint8quant",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8QUANT"
+        ],
+        "name": "mxint8quant",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/piplus/balls/mxint8quant",
+      "uvm": {
+        "error": "[Errno 2] No such file or directory: '/home/wanghui/Code/buckyball/examples/designs/piplus/balls/mxint8quant/verify/filelists/mxint8quant_ball.f'",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "piplus/balls/softmax",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "SOFTMAX"
+        ],
+        "name": "softmax",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/piplus/balls/softmax",
+      "uvm": {
+        "error": "[Errno 2] No such file or directory: '/home/wanghui/Code/buckyball/examples/designs/piplus/balls/softmax/verify/filelists/softmax_ball.f'",
+        "status": "failure"
+      }
+    },
+    {
+      "ball": "poly/balls/mxint8unpack",
+      "config": {
+        "host": {
+          "bank": {
+            "entries": 1024,
+            "maskLen": 16,
+            "num": 24,
+            "requestPorts": 13,
+            "width": 128
+          },
+          "bankAliasEnable": true,
+          "bankIdBits": 10,
+          "dataBits": 64,
+          "iterBits": 34,
+          "memAddrBits": 39,
+          "mmio": {
+            "bankEntries": 1024,
+            "bankNum": 5,
+            "bankWidth": 8,
+            "enable": false,
+            "readWidth": 8
+          },
+          "operators": false,
+          "pmp": {
+            "addressBits": 36,
+            "entries": 16
+          },
+          "robEntries": 8,
+          "subRob": {
+            "depth": 64,
+            "enable": false
+          }
+        },
+        "instructions": [
+          "MXINT8UNPACK"
+        ],
+        "name": "mxint8unpack",
+        "param": {},
+        "port": {
+          "inBW": 1,
+          "mmioReadBW": 0,
+          "mmioWriteBW": 0,
+          "outBW": 1
+        }
+      },
+      "path": "examples/designs/poly/balls/mxint8unpack",
+      "uvm": {
+        "error": "cargo build failed for mxint8unpack",
+        "status": "failure"
+      }
+    }
+  ],
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-22T18:03:39.196748+00:00"
+}

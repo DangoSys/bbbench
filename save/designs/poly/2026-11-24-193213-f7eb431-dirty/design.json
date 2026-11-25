@@ -1,0 +1,456 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "poly/devices/poly/configs/PolyDefaultConfig.toml",
+  "design": "poly",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 990.8,
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "failure",
+      "uvm": [
+        {
+          "ip": "coherence",
+          "log": "2026-11-25-03-32-13-292480-poly-uvm-coherence",
+          "profiles": [
+            {
+              "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/home32.toml",
+              "ip": "coherence",
+              "profile": "home32",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 39,
+                  "comparisons": 18865,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/home32.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 87.24,
+                      "line": 59.65,
+                      "score": 77.51,
+                      "toggle": 85.64
+                    },
+                    "dut_raw": {
+                      "cond": 87.24,
+                      "line": 59.65,
+                      "score": 77.51,
+                      "toggle": 85.64
+                    },
+                    "functional": {
+                      "coherence_pkg::system_model::occupancy": 100.0,
+                      "coherence_pkg::system_model::operations": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-03-32-13-292480-poly-uvm-coherence/coherence/home32/coherence/coverage"
+                  },
+                  "expected": 18865,
+                  "id": "ip/coherence/home32/coherence",
+                  "ip": "coherence",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-32-13-292480-poly-uvm-coherence/coherence/home32/coherence/simulation.log",
+                  "pending": 0,
+                  "profile": "home32",
+                  "received": 18865,
+                  "status": "pass",
+                  "test": "coherence"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "error": "coverage failed: ranges; see /home/wanghui/Code/buckyball/log/2026-11-25-03-40-03-772770-poly-uvm-home/home/home32/ranges/coverage-all.log",
+          "ip": "home",
+          "status": "failure"
+        },
+        {
+          "ip": "ddr",
+          "log": "2026-11-25-03-45-43-974879-poly-uvm-ddr",
+          "profiles": [
+            {
+              "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr128.toml",
+              "ip": "ddr",
+              "profile": "ddr128",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 32,
+                  "checks": 3555,
+                  "comparisons": 191,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr128.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 91.88,
+                      "line": 94.98,
+                      "score": 89.63,
+                      "toggle": 82.04
+                    },
+                    "dut_raw": {
+                      "cond": 91.88,
+                      "line": 94.98,
+                      "score": 89.63,
+                      "toggle": 82.04
+                    },
+                    "functional": {
+                      "ddr_pkg::env::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr128/bridge/coverage"
+                  },
+                  "expected": 223,
+                  "id": "ip/ddr/ddr128/bridge",
+                  "ip": "ddr",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr128/bridge/simulation.log",
+                  "pending": 0,
+                  "profile": "ddr128",
+                  "received": 191,
+                  "status": "pass",
+                  "test": "bridge"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr128.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr128/bad_alignment",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr128/bad_alignment/simulation.log",
+                  "profile": "ddr128",
+                  "status": "pass",
+                  "test": "bad_alignment"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr128.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr128/bad_early_b",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr128/bad_early_b/simulation.log",
+                  "profile": "ddr128",
+                  "status": "pass",
+                  "test": "bad_early_b"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr128.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr128/bad_early_rlast",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr128/bad_early_rlast/simulation.log",
+                  "profile": "ddr128",
+                  "status": "pass",
+                  "test": "bad_early_rlast"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr128.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr128/bad_late_rlast",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr128/bad_late_rlast/simulation.log",
+                  "profile": "ddr128",
+                  "status": "pass",
+                  "test": "bad_late_rlast"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr128.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr128/bad_read_exokay",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr128/bad_read_exokay/simulation.log",
+                  "profile": "ddr128",
+                  "status": "pass",
+                  "test": "bad_read_exokay"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr128.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr128/bad_rid",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr128/bad_rid/simulation.log",
+                  "profile": "ddr128",
+                  "status": "pass",
+                  "test": "bad_rid"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr128.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr128/bad_write_exokay",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr128/bad_write_exokay/simulation.log",
+                  "profile": "ddr128",
+                  "status": "pass",
+                  "test": "bad_write_exokay"
+                }
+              ]
+            },
+            {
+              "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr512.toml",
+              "ip": "ddr",
+              "profile": "ddr512",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 32,
+                  "checks": 2985,
+                  "comparisons": 191,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr512.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 87.99,
+                      "line": 94.18,
+                      "score": 87.85,
+                      "toggle": 81.37
+                    },
+                    "dut_raw": {
+                      "cond": 87.99,
+                      "line": 94.18,
+                      "score": 87.85,
+                      "toggle": 81.37
+                    },
+                    "functional": {
+                      "ddr_pkg::env::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr512/bridge/coverage"
+                  },
+                  "expected": 223,
+                  "id": "ip/ddr/ddr512/bridge",
+                  "ip": "ddr",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr512/bridge/simulation.log",
+                  "pending": 0,
+                  "profile": "ddr512",
+                  "received": 191,
+                  "status": "pass",
+                  "test": "bridge"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr512.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr512/bad_alignment",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr512/bad_alignment/simulation.log",
+                  "profile": "ddr512",
+                  "status": "pass",
+                  "test": "bad_alignment"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr512.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr512/bad_early_b",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr512/bad_early_b/simulation.log",
+                  "profile": "ddr512",
+                  "status": "pass",
+                  "test": "bad_early_b"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr512.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr512/bad_early_rlast",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr512/bad_early_rlast/simulation.log",
+                  "profile": "ddr512",
+                  "status": "pass",
+                  "test": "bad_early_rlast"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr512.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr512/bad_late_rlast",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr512/bad_late_rlast/simulation.log",
+                  "profile": "ddr512",
+                  "status": "pass",
+                  "test": "bad_late_rlast"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr512.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr512/bad_read_exokay",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr512/bad_read_exokay/simulation.log",
+                  "profile": "ddr512",
+                  "status": "pass",
+                  "test": "bad_read_exokay"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr512.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr512/bad_rid",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr512/bad_rid/simulation.log",
+                  "profile": "ddr512",
+                  "status": "pass",
+                  "test": "bad_rid"
+                },
+                {
+                  "checks": 1,
+                  "configuration": "examples/designs/poly/devices/poly/sims/ip/uvm/configs/ddr512.toml",
+                  "coverage": null,
+                  "id": "ip/ddr/ddr512/bad_write_exokay",
+                  "ip": "ddr",
+                  "kind": "assertion",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-25-03-45-43-974879-poly-uvm-ddr/ddr/ddr512/bad_write_exokay/simulation.log",
+                  "profile": "ddr512",
+                  "status": "pass",
+                  "test": "bad_write_exokay"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T19:32:13.170341+00:00"
+}

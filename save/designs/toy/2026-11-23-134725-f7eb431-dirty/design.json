@@ -1,0 +1,560 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "toy",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "toy/devices/toy/configs/ToyTapeoutConfig.toml",
+      "elapsed_s": 103.4,
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "pass"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyTapeoutConfig.toml",
+      "elapsed_s": 130.0,
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-23-21-49-toy-bebop-bemu-device-toy-ToyTapeoutConfig-bare-tests",
+          "passed": 66,
+          "total": 66,
+          "workloads": [
+            {
+              "cycles": 9947,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-bdb_counter_multi_id_test-baremetal"
+            },
+            {
+              "cycles": 12446,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-bdb_counter_nested_pair_test-baremetal"
+            },
+            {
+              "cycles": 12325,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-bdb_counter_read_active_test-baremetal"
+            },
+            {
+              "cycles": 12576,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-bdb_counter_start_stop_test-baremetal"
+            },
+            {
+              "cycles": 438208,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_accumulated_16x16_test-baremetal"
+            },
+            {
+              "cycles": 448763,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_loop_c_overlap_test-baremetal"
+            },
+            {
+              "cycles": 248720,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_cisc_atranspose_test-baremetal"
+            },
+            {
+              "cycles": 246801,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_cisc_basic_test-baremetal"
+            },
+            {
+              "cycles": 251615,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_cisc_btranspose_test-baremetal"
+            },
+            {
+              "cycles": 258526,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_cisc_shift_test-baremetal"
+            },
+            {
+              "cycles": 256216,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_risc_abtranspose_test-baremetal"
+            },
+            {
+              "cycles": 252271,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_risc_atranspose_test-baremetal"
+            },
+            {
+              "cycles": 252552,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_risc_btranspose_test-baremetal"
+            },
+            {
+              "cycles": 259832,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_os_risc_shift_test-baremetal"
+            },
+            {
+              "cycles": 51580,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_ws_cisc_conv_test-baremetal"
+            },
+            {
+              "cycles": 246121,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-gemmini_ws_risc_basic_test-baremetal"
+            },
+            {
+              "cycles": 14751,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mset_transfer_test-baremetal"
+            },
+            {
+              "cycles": 28849,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_2d_pixel_stride_test-baremetal"
+            },
+            {
+              "cycles": 29606,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_2d_test-baremetal"
+            },
+            {
+              "cycles": 176706,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_mvout_acc_test-baremetal"
+            },
+            {
+              "cycles": 13597,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_mvout_group_test-baremetal"
+            },
+            {
+              "cycles": 18192,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_mvout_stride_test-baremetal"
+            },
+            {
+              "cycles": 51462,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_mvout_test-baremetal"
+            },
+            {
+              "cycles": 12415,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_mvout_unaligned_test-baremetal"
+            },
+            {
+              "cycles": 12443,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mvin_unaligned_test-baremetal"
+            },
+            {
+              "cycles": 36253,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mxfp4_e8m0_scale_range_test-baremetal"
+            },
+            {
+              "cycles": 14250,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mxfp4_e8m0_two_block_test-baremetal"
+            },
+            {
+              "cycles": 7528,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mxint8act-baremetal"
+            },
+            {
+              "cycles": 59899,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-mxint8act_rows-baremetal"
+            },
+            {
+              "cycles": 11603,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-redmule_f16_chain_test-baremetal"
+            },
+            {
+              "cycles": 10352,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-redmule_f16_edges_test-baremetal"
+            },
+            {
+              "cycles": 9444,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-redmule_f16_fused_test-baremetal"
+            },
+            {
+              "cycles": 14671,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-redmule_f16_test-baremetal"
+            },
+            {
+              "cycles": 63477,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-relu_i32_16x16_test-baremetal"
+            },
+            {
+              "cycles": 16330,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-rvv_ball-baremetal"
+            },
+            {
+              "cycles": 17877,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-rvv_operator-baremetal"
+            },
+            {
+              "cycles": 55119,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_bare_mode_test-baremetal"
+            },
+            {
+              "cycles": 195531,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_repeated_sfence_test-baremetal"
+            },
+            {
+              "cycles": 70142,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sfence_flush_test-baremetal"
+            },
+            {
+              "cycles": 145301,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sfence_remap_test-baremetal"
+            },
+            {
+              "cycles": 89935,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sv39_4k_alias_test-baremetal"
+            },
+            {
+              "cycles": 70112,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sv39_identity_test-baremetal"
+            },
+            {
+              "cycles": 81870,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-tlb_sv39_nonidentity_test-baremetal"
+            },
+            {
+              "cycles": 81239,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-vecmat16_accumulate_k4_test-baremetal"
+            },
+            {
+              "cycles": 245463,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-hart0-ctest-vecmat16_atranspose_16x16_test-baremetal"
+            },
+            {
+              "cycles": 1388,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_bdb_counter_start_read_stop-baremetal"
+            },
+            {
+              "cycles": 788687,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_gemmini_accumulated_command_16x16-baremetal"
+            },
+            {
+              "cycles": 782971,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_gemmini_preloaded_command_16x16-baremetal"
+            },
+            {
+              "cycles": 784367,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_matmul_at_i8_16x16-baremetal"
+            },
+            {
+              "cycles": 15840,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_mxfp4_i8_2blocks-baremetal"
+            },
+            {
+              "cycles": 9734,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_redmule_f16_chain-baremetal"
+            },
+            {
+              "cycles": 13560,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-ball_relu_i32_16row-baremetal"
+            },
+            {
+              "cycles": 98718766,
+              "elapsed_s": 0.6,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-bank_gemmini_compute_accumulated_bank_tiles-baremetal"
+            },
+            {
+              "cycles": 4621114,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-bank_gemmini_compute_preloaded_bank_tiles-baremetal"
+            },
+            {
+              "cycles": 49217988,
+              "elapsed_s": 0.31,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-bank_matmul_at_i8_bank_depth-baremetal"
+            },
+            {
+              "cycles": 502873,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-bank_mxfp4_i8_bank_blocks-baremetal"
+            },
+            {
+              "cycles": 8103,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-bank_mxint8act-baremetal"
+            },
+            {
+              "cycles": 197161,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-bank_mxint8act_reference-baremetal"
+            },
+            {
+              "cycles": 208282,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-bank_redmule_f16_rows-baremetal"
+            },
+            {
+              "cycles": 702000,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-bank_relu_i32_mixed_sign-baremetal"
+            },
+            {
+              "cycles": 27441,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-base_bank_loop_carried-baremetal"
+            },
+            {
+              "cycles": 16458,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-base_bank_transfer-baremetal"
+            },
+            {
+              "cycles": 287126,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-linalg_conv2d_nchw_fchw-baremetal"
+            },
+            {
+              "cycles": 270284,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-linalg_conv2d_nhwc_fhwc-baremetal"
+            },
+            {
+              "cycles": 270483,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-linalg_conv2d_nhwc_hwcf-baremetal"
+            },
+            {
+              "cycles": 2025481,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "toy-toy-mlirtest-linalg_conv2d_nhwc_hwcf_deep-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-23-21-50-toy-bebop-bemu-device-toy-ToyTapeoutConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 3041437400,
+              "elapsed_s": 54.74,
+              "status": "pass",
+              "workload": "fw_payload-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyTapeoutConfig.toml",
+      "elapsed_s": 510.6,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 26292517004,
+          "elapsed_s": 314.742,
+          "elements": 1000,
+          "log": "2026-11-23-21-52-toy-bemu-device-toy-ToyTapeoutConfig-toy-alexnet-baremetal",
+          "max_diff": 1.3351e-05,
+          "model": "alexnet",
+          "relative": 6.75e-07,
+          "simulated_cycles": 26292652285,
+          "status": "pass"
+        },
+        {
+          "cycles": 9612507,
+          "elapsed_s": 0.338,
+          "elements": 10,
+          "log": "2026-11-23-21-59-toy-bemu-device-toy-ToyTapeoutConfig-toy-lenet-baremetal",
+          "max_diff": 7.629e-06,
+          "model": "lenet",
+          "relative": 8.7e-08,
+          "simulated_cycles": 9646282,
+          "status": "pass"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "pass"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyVerilatorConfig.toml",
+      "error": "stopped: the timeline was restarted (it waited behind another session's Verilator regression)",
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "failure"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "toy/devices/toy/configs/ToyP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-23T13:47:25.698292+00:00"
+}

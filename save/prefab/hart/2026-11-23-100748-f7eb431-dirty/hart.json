@@ -1,0 +1,128 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "rocket",
+      "path": "examples/prefab/harts/rocket",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-18-09-prefab-bebop-bemu-hart-rocket-default-bare-tests",
+            "passed": 12,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "rocket-hart0-ctest-cpu_arithmetic-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-ctest-fpu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-ctest-atomics-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-ctest-memory-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 12
+          },
+          "verilator": {
+            "log": "2026-11-23-18-09-prefab-bebop-verilator-hart-rocket-default-bare-tests",
+            "passed": 12,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "rocket-hart0-ctest-cpu_arithmetic-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-ctest-fpu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-ctest-atomics-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-ctest-memory-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "rocket-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 12
+          }
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "taken": "2026-11-23T10:07:48.844062+00:00"
+}

@@ -1,0 +1,71 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 105127804831,
+  "design": "pebble",
+  "dirty": true,
+  "elapsed_s": 202.48499999999999,
+  "taken": "2026-11-24T13:18:42.485975+00:00",
+  "timelines": {
+    "bemu-model": "designs/pebble/2026-11-24-125454-f7eb431-dirty",
+    "bemu-workload": "designs/pebble/2026-11-24-122651-f7eb431-dirty"
+  },
+  "tool": "BEMU",
+  "workloads": [
+    {
+      "cycles": 18763171468,
+      "elapsed_s": 54.05,
+      "status": "pass",
+      "workload": "pebble-test-linux"
+    },
+    {
+      "cycles": 118896649,
+      "elapsed_s": 0.626,
+      "workload": "alexnet"
+    },
+    {
+      "cycles": 17986881454,
+      "elapsed_s": 31.501,
+      "workload": "alexnet"
+    },
+    {
+      "cycles": 851309,
+      "elapsed_s": 0.008,
+      "workload": "lenet"
+    },
+    {
+      "cycles": 14200302966,
+      "elapsed_s": 23.529,
+      "workload": "lenet"
+    },
+    {
+      "cycles": 57595362,
+      "elapsed_s": 0.24,
+      "workload": "mobilenet-v3-small"
+    },
+    {
+      "cycles": 15091804172,
+      "elapsed_s": 24.832,
+      "workload": "mobilenet-v3-small"
+    },
+    {
+      "cycles": 194498554,
+      "elapsed_s": 0.865,
+      "workload": "resnet18"
+    },
+    {
+      "cycles": 15917693284,
+      "elapsed_s": 26.79,
+      "workload": "resnet18"
+    },
+    {
+      "cycles": 711927907,
+      "elapsed_s": 2.486,
+      "workload": "yolo26n"
+    },
+    {
+      "cycles": 22084181706,
+      "elapsed_s": 37.558,
+      "workload": "yolo26n"
+    }
+  ]
+}

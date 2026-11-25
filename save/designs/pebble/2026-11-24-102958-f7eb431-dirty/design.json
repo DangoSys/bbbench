@@ -1,0 +1,217 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "pebble",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "elapsed_s": 791.7,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 118419598,
+          "elapsed_s": 0.715,
+          "elements": 1000,
+          "log": "2026-11-24-18-30-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-alexnet-baremetal",
+          "max_diff": 0.0,
+          "model": "alexnet",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 118896649,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 30.221,
+          "log": "2026-11-24-18-31-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-alexnet-linux",
+          "model": "alexnet",
+          "os": "linux",
+          "simulated_cycles": 14038300906,
+          "status": "failure"
+        },
+        {
+          "cycles": 739248,
+          "elapsed_s": 0.011,
+          "elements": 10,
+          "log": "2026-11-24-18-32-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-lenet-baremetal",
+          "max_diff": 0.0,
+          "model": "lenet",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 851309,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 23.397,
+          "log": "2026-11-24-18-33-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-lenet-linux",
+          "model": "lenet",
+          "os": "linux",
+          "simulated_cycles": 14255340464,
+          "status": "pass"
+        },
+        {
+          "cycles": 57115619,
+          "elapsed_s": 0.287,
+          "elements": 1000,
+          "log": "2026-11-24-18-34-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-mobilenet-v3-small-baremetal",
+          "max_diff": 0.0,
+          "model": "mobilenet-v3-small",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 57595362,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 23.71,
+          "log": "2026-11-24-18-35-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-mobilenet-v3-small-linux",
+          "model": "mobilenet-v3-small",
+          "os": "linux",
+          "simulated_cycles": 14052318234,
+          "status": "failure"
+        },
+        {
+          "cycles": 194021369,
+          "elapsed_s": 1.483,
+          "elements": 1000,
+          "log": "2026-11-24-18-36-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-resnet18-baremetal",
+          "max_diff": 0.0,
+          "model": "resnet18",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 194498554,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 44.417,
+          "log": "2026-11-24-18-39-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-resnet18-linux",
+          "model": "resnet18",
+          "os": "linux",
+          "simulated_cycles": 22630265610,
+          "status": "pass"
+        },
+        {
+          "cycles": 711455932,
+          "elapsed_s": 2.773,
+          "elements": 1800,
+          "log": "2026-11-24-18-41-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-yolo26n-baremetal",
+          "max_diff": 0.0,
+          "model": "yolo26n",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 711927907,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 22.842,
+          "log": "2026-11-24-18-42-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-yolo26n-linux",
+          "model": "yolo26n",
+          "os": "linux",
+          "simulated_cycles": 14037064192,
+          "status": "failure"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "failure"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleVerilatorConfig.toml",
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T10:29:58.365169+00:00"
+}

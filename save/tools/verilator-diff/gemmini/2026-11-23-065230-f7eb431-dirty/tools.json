@@ -1,0 +1,248 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 313869480,
+  "design": "gemmini",
+  "dirty": true,
+  "elapsed_s": 10104.47,
+  "flag": "diff",
+  "taken": "2026-11-23T06:52:30.437969+00:00",
+  "timeline": "designs/gemmini/2026-11-23-045835-f7eb431-dirty",
+  "tool": "Verilator",
+  "workloads": [
+    {
+      "cycles": 11628,
+      "elapsed_s": 0.62,
+      "workload": "gemmini-hart0-ctest-aligned-baremetal"
+    },
+    {
+      "cycles": 8685969,
+      "elapsed_s": 310.47,
+      "workload": "gemmini-hart0-ctest-conv-baremetal"
+    },
+    {
+      "cycles": 1755411,
+      "elapsed_s": 91.55,
+      "workload": "gemmini-hart0-ctest-conv_dw-baremetal"
+    },
+    {
+      "cycles": 2346194,
+      "elapsed_s": 84.47,
+      "workload": "gemmini-hart0-ctest-conv_first_layer-baremetal"
+    },
+    {
+      "cycles": 2177431,
+      "elapsed_s": 115.37,
+      "workload": "gemmini-hart0-ctest-conv_rect-baremetal"
+    },
+    {
+      "cycles": 3299508,
+      "elapsed_s": 115.59,
+      "workload": "gemmini-hart0-ctest-conv_rect_pool-baremetal"
+    },
+    {
+      "cycles": 1804597,
+      "elapsed_s": 53.82,
+      "workload": "gemmini-hart0-ctest-conv_stride-baremetal"
+    },
+    {
+      "cycles": 10438664,
+      "elapsed_s": 679.74,
+      "workload": "gemmini-hart0-ctest-conv_trans_input_3120-baremetal"
+    },
+    {
+      "cycles": 41286219,
+      "elapsed_s": 1139.22,
+      "workload": "gemmini-hart0-ctest-conv_trans_input_3120_with_kernel_dilation-baremetal"
+    },
+    {
+      "cycles": 8991040,
+      "elapsed_s": 219.8,
+      "workload": "gemmini-hart0-ctest-conv_trans_output_1203-baremetal"
+    },
+    {
+      "cycles": 8993900,
+      "elapsed_s": 539.26,
+      "workload": "gemmini-hart0-ctest-conv_trans_weight_0132-baremetal"
+    },
+    {
+      "cycles": 9051296,
+      "elapsed_s": 401.95,
+      "workload": "gemmini-hart0-ctest-conv_trans_weight_1203-baremetal"
+    },
+    {
+      "cycles": 61765706,
+      "elapsed_s": 1390.91,
+      "workload": "gemmini-hart0-ctest-conv_with_kernel_dilation-baremetal"
+    },
+    {
+      "cycles": 8873449,
+      "elapsed_s": 388.73,
+      "workload": "gemmini-hart0-ctest-conv_with_pool-baremetal"
+    },
+    {
+      "cycles": 48099361,
+      "elapsed_s": 1531.06,
+      "workload": "gemmini-hart0-ctest-conv_with_rot180-baremetal"
+    },
+    {
+      "cycles": 58315,
+      "elapsed_s": 2.85,
+      "workload": "gemmini-hart0-ctest-gemmini_counter-baremetal"
+    },
+    {
+      "cycles": 14340600,
+      "elapsed_s": 474.16,
+      "workload": "gemmini-hart0-ctest-matmul-baremetal"
+    },
+    {
+      "cycles": 4086052,
+      "elapsed_s": 137.92,
+      "workload": "gemmini-hart0-ctest-matmul_os-baremetal"
+    },
+    {
+      "cycles": 5296132,
+      "elapsed_s": 172.46,
+      "workload": "gemmini-hart0-ctest-matmul_ws-baremetal"
+    },
+    {
+      "cycles": 34909,
+      "elapsed_s": 1.74,
+      "workload": "gemmini-hart0-ctest-mvin_mvout-baremetal"
+    },
+    {
+      "cycles": 344538,
+      "elapsed_s": 18.37,
+      "workload": "gemmini-hart0-ctest-mvin_mvout_acc-baremetal"
+    },
+    {
+      "cycles": 99577,
+      "elapsed_s": 2.76,
+      "workload": "gemmini-hart0-ctest-mvin_mvout_acc_full-baremetal"
+    },
+    {
+      "cycles": 384029,
+      "elapsed_s": 26.84,
+      "workload": "gemmini-hart0-ctest-mvin_mvout_acc_full_stride-baremetal"
+    },
+    {
+      "cycles": 5421952,
+      "elapsed_s": 193.92,
+      "workload": "gemmini-hart0-ctest-mvin_mvout_acc_stride-baremetal"
+    },
+    {
+      "cycles": 62873,
+      "elapsed_s": 6.85,
+      "workload": "gemmini-hart0-ctest-mvin_mvout_acc_zero_stride-baremetal"
+    },
+    {
+      "cycles": 17371,
+      "elapsed_s": 0.72,
+      "workload": "gemmini-hart0-ctest-mvin_mvout_block_stride-baremetal"
+    },
+    {
+      "cycles": 393625,
+      "elapsed_s": 13.52,
+      "workload": "gemmini-hart0-ctest-mvin_mvout_stride-baremetal"
+    },
+    {
+      "cycles": 3526,
+      "elapsed_s": 0.32,
+      "workload": "gemmini-hart0-ctest-mvin_mvout_zeros-baremetal"
+    },
+    {
+      "cycles": 75159,
+      "elapsed_s": 1.94,
+      "workload": "gemmini-hart0-ctest-mvin_scale-baremetal"
+    },
+    {
+      "cycles": 11079,
+      "elapsed_s": 0.51,
+      "workload": "gemmini-hart0-ctest-padded-baremetal"
+    },
+    {
+      "cycles": 16097,
+      "elapsed_s": 0.82,
+      "workload": "gemmini-hart0-ctest-raw_hazard-baremetal"
+    },
+    {
+      "cycles": 16313,
+      "elapsed_s": 1.82,
+      "workload": "gemmini-hart0-ctest-resadd-baremetal"
+    },
+    {
+      "cycles": 305173,
+      "elapsed_s": 17.22,
+      "workload": "gemmini-hart0-ctest-resadd_stride-baremetal"
+    },
+    {
+      "cycles": 48934,
+      "elapsed_s": 1.13,
+      "workload": "gemmini-hart0-ctest-template-baremetal"
+    },
+    {
+      "cycles": 19380743,
+      "elapsed_s": 621.13,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_cpu-baremetal"
+    },
+    {
+      "cycles": 33844798,
+      "elapsed_s": 940.45,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_option-baremetal"
+    },
+    {
+      "cycles": 3279351,
+      "elapsed_s": 133.12,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_os-baremetal"
+    },
+    {
+      "cycles": 3755574,
+      "elapsed_s": 115.62,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_ws-baremetal"
+    },
+    {
+      "cycles": 1407985,
+      "elapsed_s": 42.65,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_ws_At-baremetal"
+    },
+    {
+      "cycles": 1364927,
+      "elapsed_s": 29.46,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_ws_Bt-baremetal"
+    },
+    {
+      "cycles": 1006287,
+      "elapsed_s": 38.77,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_ws_full_C-baremetal"
+    },
+    {
+      "cycles": 859,
+      "elapsed_s": 0.21,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_ws_igelu-baremetal"
+    },
+    {
+      "cycles": 898,
+      "elapsed_s": 0.11,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_ws_layernorm-baremetal"
+    },
+    {
+      "cycles": 1105310,
+      "elapsed_s": 38.74,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_ws_low_D-baremetal"
+    },
+    {
+      "cycles": 899,
+      "elapsed_s": 0.2,
+      "workload": "gemmini-hart0-ctest-tiled_matmul_ws_softmax-baremetal"
+    },
+    {
+      "cycles": 54233,
+      "elapsed_s": 3.95,
+      "workload": "gemmini-hart0-ctest-transpose-baremetal"
+    },
+    {
+      "cycles": 70989,
+      "elapsed_s": 1.63,
+      "workload": "gemmini-hart0-ctest-transpose_scale-baremetal"
+    }
+  ]
+}

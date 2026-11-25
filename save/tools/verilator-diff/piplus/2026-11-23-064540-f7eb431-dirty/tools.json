@@ -1,0 +1,21 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "piplus/devices/piplus/configs/PiplusVerilatorConfig.toml",
+  "cycles": 22671,
+  "design": "piplus",
+  "dirty": true,
+  "elapsed_s": 173.08,
+  "flag": "diff",
+  "log": "2026-11-23-10-51-piplus-bebop-verilator-device-piplus-PiplusVerilatorConfig-bare-tests",
+  "taken": "2026-11-23T06:45:40.109816+00:00",
+  "timeline": "designs/piplus/2026-11-23-015411-f7eb431-dirty",
+  "tool": "Verilator",
+  "workloads": [
+    {
+      "cycles": 22671,
+      "elapsed_s": 173.08,
+      "status": "pass",
+      "workload": "piplus-hart0-ctest-control_hello-baremetal"
+    }
+  ]
+}

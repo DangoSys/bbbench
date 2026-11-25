@@ -1,0 +1,253 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "poly/devices/poly/configs/PolyDefaultConfig.toml",
+  "design": "poly",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 1090.4,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 2171009000,
+          "elapsed_s": 111.945,
+          "elements": 3200,
+          "log": "2026-11-24-22-05-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-baremetal",
+          "max_diff": 0.243003845,
+          "model": "deepseek-r1-0528-qwen3-8b",
+          "os": "baremetal",
+          "relative": 0.00682638,
+          "simulated_cycles": 2172379274,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 28.56,
+          "log": "2026-11-24-22-09-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-linux",
+          "model": "deepseek-r1-0528-qwen3-8b",
+          "os": "linux",
+          "simulated_cycles": 3487296184,
+          "status": "failure"
+        },
+        {
+          "cycles": 1271099000,
+          "elapsed_s": 49.738,
+          "elements": 64,
+          "log": "2026-11-24-22-10-poly-bemu-device-poly-PolyDefaultConfig-poly-gemma4-e2b-it-baremetal",
+          "max_diff": 0.769055367,
+          "model": "gemma4-e2b-it",
+          "os": "baremetal",
+          "relative": 0.033330292,
+          "simulated_cycles": 1271846449,
+          "status": "failure"
+        },
+        {
+          "elapsed_s": 31.8,
+          "log": "2026-11-24-22-12-poly-bemu-device-poly-PolyDefaultConfig-poly-gemma4-e2b-it-linux",
+          "model": "gemma4-e2b-it",
+          "os": "linux",
+          "simulated_cycles": 3330841179,
+          "status": "failure"
+        },
+        {
+          "cycles": 441265000,
+          "elapsed_s": 19.743,
+          "elements": 6,
+          "log": "2026-11-24-22-13-poly-bemu-device-poly-PolyDefaultConfig-poly-laya-baremetal",
+          "max_diff": 22.703125,
+          "model": "laya",
+          "os": "baremetal",
+          "relative": 0.00482826,
+          "simulated_cycles": 441509195,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 30.42,
+          "log": "2026-11-24-22-14-poly-bemu-device-poly-PolyDefaultConfig-poly-laya-linux",
+          "model": "laya",
+          "os": "linux",
+          "simulated_cycles": 3005620012,
+          "status": "failure"
+        },
+        {
+          "cycles": 862738000,
+          "elapsed_s": 53.491,
+          "elements": 3200,
+          "log": "2026-11-24-22-15-poly-bemu-device-poly-PolyDefaultConfig-poly-llama3-2-3b-instruct-baremetal",
+          "max_diff": 0.196014404,
+          "model": "llama3-2-3b-instruct",
+          "os": "baremetal",
+          "relative": 0.008381769,
+          "simulated_cycles": 863952101,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 25.661,
+          "log": "2026-11-24-22-17-poly-bemu-device-poly-PolyDefaultConfig-poly-llama3-2-3b-instruct-linux",
+          "model": "llama3-2-3b-instruct",
+          "os": "linux",
+          "simulated_cycles": 3277102852,
+          "status": "failure"
+        },
+        {
+          "cycles": 1089178000,
+          "elapsed_s": 58.272,
+          "elements": 1280,
+          "log": "2026-11-24-22-17-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-0-6b-baremetal",
+          "max_diff": 0.0,
+          "model": "qwen3-0-6b",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 1090134099,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 27.875,
+          "log": "2026-11-24-22-19-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-0-6b-linux",
+          "model": "qwen3-0-6b",
+          "os": "linux",
+          "simulated_cycles": 3521195953,
+          "status": "failure"
+        },
+        {
+          "cycles": 1295700000,
+          "elapsed_s": 96.257,
+          "elements": 1280,
+          "log": "2026-11-24-22-20-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-8b-baremetal",
+          "max_diff": 0.0,
+          "model": "qwen3-8b",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 1297203656,
+          "status": "pass"
+        },
+        {
+          "elapsed_s": 24.833,
+          "log": "2026-11-24-22-23-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-8b-linux",
+          "model": "qwen3-8b",
+          "os": "linux",
+          "simulated_cycles": 3339872238,
+          "status": "failure"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T14:05:55.523904+00:00"
+}

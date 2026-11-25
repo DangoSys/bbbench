@@ -1,0 +1,220 @@
+/* Tools: a chart per measure; each workload a group of bars, one per tool. */
+
+:root {
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --s3: #1baf7a;
+  --s4: #eda100;
+  --s5: #e87ba4;
+  --s6: #008300;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --s1: #3987e5;
+    --s2: #d95926;
+    --s3: #199e70;
+    --s4: #c98500;
+    --s5: #d55181;
+    --s6: #0ca30c;
+  }
+}
+
+.legend .swatch.s1,
+.bar.s1 .track span {
+  background: var(--s1);
+}
+
+.legend .swatch.s2,
+.bar.s2 .track span {
+  background: var(--s2);
+}
+
+.legend .swatch.s3,
+.bar.s3 .track span {
+  background: var(--s3);
+}
+
+.legend .swatch.s4 {
+  background: var(--s4);
+}
+
+.legend .swatch.s5 {
+  background: var(--s5);
+}
+
+.legend .swatch.s6 {
+  background: var(--s6);
+}
+
+.legend .swatch {
+  height: 0.6rem;
+}
+
+main h2 {
+  font-size: 1.15rem;
+  margin: 2.25rem 0 0.25rem;
+}
+
+.chart-block {
+  margin-top: 1.75rem;
+}
+
+.chart-block h3 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+/* The plot: decade grid lines with their labels at left, then the columns. */
+
+.plot {
+  position: relative;
+  height: 15rem;
+  margin-left: 3.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+.grid span {
+  position: absolute;
+  right: calc(100% + 0.5rem);
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.columns {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 4px;
+}
+
+.column {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.column:hover {
+  background: var(--panel);
+}
+
+.vbar {
+  display: block;
+  position: relative;
+  flex: 0 1 0.7rem;
+  border-radius: 4px 4px 0 0;
+}
+
+.vbar.none {
+  height: 0;
+}
+
+.vbar.s1 {
+  background: var(--s1);
+}
+
+.vbar.s2 {
+  background: var(--s2);
+}
+
+.vbar.s3 {
+  background: var(--s3);
+}
+
+.vbar.s4 {
+  background: var(--s4);
+}
+
+.vbar.s5 {
+  background: var(--s5);
+}
+
+.vbar.s6 {
+  background: var(--s6);
+}
+
+.vbar[data-value]:hover::after {
+  content: attr(data-value);
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.xlabels {
+  display: flex;
+  gap: 4px;
+  margin-left: 3.5rem;
+  margin-top: 0.4rem;
+}
+
+.xlabels span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* The designs of the models, each caption as wide as its models. */
+
+.xlabels.sections {
+  margin-top: 0.15rem;
+}
+
+.xlabels.sections span {
+  color: var(--text);
+  font-weight: 600;
+  border-top: 1px solid var(--line);
+  padding-top: 0.15rem;
+}
+
+/* With the Values switch: every bar's value above it, read upwards. */
+
+body.show-values .plot {
+  margin-top: 4rem;
+}
+
+body.show-values .vbar[data-value]::after,
+body.show-values .vbar[data-value]:hover::after {
+  content: attr(data-value);
+  position: absolute;
+  bottom: calc(100% + 3px);
+  left: 50%;
+  writing-mode: vertical-rl;
+  transform: translateX(-50%) rotate(180deg);
+  padding: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+body.show-values .vbar[data-value]:hover::after {
+  color: var(--text);
+}

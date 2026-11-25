@@ -1,0 +1,2258 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "pebble",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "elapsed_s": 68.2,
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "pass"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "elapsed_s": 470.6,
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-23-23-16-pebble-bebop-bemu-device-pebble-PebbleTapeoutConfig-bare-tests",
+          "passed": 182,
+          "total": 182,
+          "workloads": [
+            {
+              "cycles": 174417,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-bank_capacity_rename_test-baremetal"
+            },
+            {
+              "cycles": 61531,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-bank_recycle_test-baremetal"
+            },
+            {
+              "cycles": 82531,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-bank_transfer_recycle_test-baremetal"
+            },
+            {
+              "cycles": 3540526,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dma_blocks_test-baremetal"
+            },
+            {
+              "cycles": 133791,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dma_strided_block2_test-baremetal"
+            },
+            {
+              "cycles": 176290,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dma_strided_block4_test-baremetal"
+            },
+            {
+              "cycles": 96234,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dma_strided_test-baremetal"
+            },
+            {
+              "cycles": 216816,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dual_conv_add_int2fp_test-baremetal"
+            },
+            {
+              "cycles": 802923,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dual_smatmul_matadd_test-baremetal"
+            },
+            {
+              "cycles": 36271,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int8mul_large_gate_row_test-baremetal"
+            },
+            {
+              "cycles": 53034,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-maxpool_im2col_test-baremetal"
+            },
+            {
+              "cycles": 346413,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mega_conv_pipeline_test-baremetal"
+            },
+            {
+              "cycles": 42618,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mset_transfer_test-baremetal"
+            },
+            {
+              "cycles": 93691,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_2d_pixel_stride_test-baremetal"
+            },
+            {
+              "cycles": 111172,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_2d_test-baremetal"
+            },
+            {
+              "cycles": 521883,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_mvout_acc_test-baremetal"
+            },
+            {
+              "cycles": 66312,
+              "elapsed_s": 0.02,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_mvout_stride_test-baremetal"
+            },
+            {
+              "cycles": 145319,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_mvout_test-baremetal"
+            },
+            {
+              "cycles": 39383,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_mvout_unaligned_test-baremetal"
+            },
+            {
+              "cycles": 36994,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_unaligned_test-baremetal"
+            },
+            {
+              "cycles": 25994,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_f32_to_i8_test-baremetal"
+            },
+            {
+              "cycles": 42124,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_i32_to_i8_test-baremetal"
+            },
+            {
+              "cycles": 476709,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_smatmul_int2fp_test-baremetal"
+            },
+            {
+              "cycles": 43827,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-residual_add_lut_test-baremetal"
+            },
+            {
+              "cycles": 42258,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-se_gate_lut_test-baremetal"
+            },
+            {
+              "cycles": 438198,
+              "elapsed_s": 0.08,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_16x16_test-baremetal"
+            },
+            {
+              "cycles": 868340,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_16x16x32_test-baremetal"
+            },
+            {
+              "cycles": 245891,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_1x16x64_test-baremetal"
+            },
+            {
+              "cycles": 764938,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_bias_accumulate_test-baremetal"
+            },
+            {
+              "cycles": 5926354,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_c_groups_test-baremetal"
+            },
+            {
+              "cycles": 646246,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_k_groups_test-baremetal"
+            },
+            {
+              "cycles": 999613,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_mvout_bank_reuse_test-baremetal"
+            },
+            {
+              "cycles": 424526,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_nondefault_banks_test-baremetal"
+            },
+            {
+              "cycles": 148138,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_bare_mode_test-baremetal"
+            },
+            {
+              "cycles": 502127,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_repeated_sfence_test-baremetal"
+            },
+            {
+              "cycles": 196550,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sfence_flush_test-baremetal"
+            },
+            {
+              "cycles": 378960,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sfence_remap_test-baremetal"
+            },
+            {
+              "cycles": 250470,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sv39_4k_alias_test-baremetal"
+            },
+            {
+              "cycles": 197714,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sv39_identity_test-baremetal"
+            },
+            {
+              "cycles": 217047,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sv39_nonidentity_test-baremetal"
+            },
+            {
+              "cycles": 27248,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-toint8_i8_rounding_test-baremetal"
+            },
+            {
+              "cycles": 26833,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-toint8_i8_rows_test-baremetal"
+            },
+            {
+              "cycles": 29245,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-toint8_i8_scale_rows_test-baremetal"
+            },
+            {
+              "cycles": 26444,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-toint8_i8_signed_test-baremetal"
+            },
+            {
+              "cycles": 46698,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-transpose_i32_8x16_test-baremetal"
+            },
+            {
+              "cycles": 61952,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-transpose_i8_16x16_test-baremetal"
+            },
+            {
+              "cycles": 97024,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-transpose_i8_16x32_test-baremetal"
+            },
+            {
+              "cycles": 7775,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-soctest-trace_events-baremetal"
+            },
+            {
+              "cycles": 497112,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_smatmul_bias_accumulate-baremetal"
+            },
+            {
+              "cycles": 60936,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_transpose_16x16_i8-baremetal"
+            },
+            {
+              "cycles": 2095529,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_im2col_k3_two_blocks-baremetal"
+            },
+            {
+              "cycles": 262193,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_int2fp_unit_scale-baremetal"
+            },
+            {
+              "cycles": 936621,
+              "elapsed_s": 0.14,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_int8add_identity_scale-baremetal"
+            },
+            {
+              "cycles": 682931,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_int8mul_unit_gate-baremetal"
+            },
+            {
+              "cycles": 810390,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_lut_identity_table-baremetal"
+            },
+            {
+              "cycles": 277081,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_matadd_i32_elementwise-baremetal"
+            },
+            {
+              "cycles": 1633068,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_maxpool_k3_padded_spatial-baremetal"
+            },
+            {
+              "cycles": 296896,
+              "elapsed_s": 0.02,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_quant_f32_pack16-baremetal"
+            },
+            {
+              "cycles": 273978,
+              "elapsed_s": 0.15,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_quant_i32_pack16-baremetal"
+            },
+            {
+              "cycles": 353903,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_smatmul_bias_two_terms-baremetal"
+            },
+            {
+              "cycles": 966816,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_transpose_i8_packed_matrix-baremetal"
+            },
+            {
+              "cycles": 104816,
+              "elapsed_s": 0.02,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-base_dma_blocks-baremetal"
+            },
+            {
+              "cycles": 55495,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-base_dma_strided-baremetal"
+            },
+            {
+              "cycles": 68660,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_conv_k11_groups-baremetal"
+            },
+            {
+              "cycles": 370840,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_generic_matmul_i8-baremetal"
+            },
+            {
+              "cycles": 539463,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_linear_chain_i8-baremetal"
+            },
+            {
+              "cycles": 358907,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_linear_int8-baremetal"
+            },
+            {
+              "cycles": 383496,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_lookup_channel_i8-baremetal"
+            },
+            {
+              "cycles": 723572,
+              "elapsed_s": 0.15,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_lookup_channel_tail_i8-baremetal"
+            },
+            {
+              "cycles": 50934,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_lookup_frontend_channels-baremetal"
+            },
+            {
+              "cycles": 45547,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_lookup_frontend_i8-baremetal"
+            },
+            {
+              "cycles": 82593,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_maxpool_i32_border-baremetal"
+            },
+            {
+              "cycles": 2411919,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_conv2d-baremetal"
+            },
+            {
+              "cycles": 8650224,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_conv2d_flatten_linear-baremetal"
+            },
+            {
+              "cycles": 236175,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_conv2d_k5_tail-baremetal"
+            },
+            {
+              "cycles": 6575439,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_conv2d_resident-baremetal"
+            },
+            {
+              "cycles": 452171,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_conv2d_s2_depthwise_s2-baremetal"
+            },
+            {
+              "cycles": 174307,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_global_avg_7x7_c288_exact-baremetal"
+            },
+            {
+              "cycles": 2351051,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_global_avg_conv2_exact-baremetal"
+            },
+            {
+              "cycles": 102048,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_global_avg_conv_exact-baremetal"
+            },
+            {
+              "cycles": 127420,
+              "elapsed_s": 0.14,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_matmul-baremetal"
+            },
+            {
+              "cycles": 4795124,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_matmul_m17_k65_n17-baremetal"
+            },
+            {
+              "cycles": 920819,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_se_gate_conv-baremetal"
+            },
+            {
+              "cycles": 176496,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_pool_quant_flatten-baremetal"
+            },
+            {
+              "cycles": 170842,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_pool_quant_strided-baremetal"
+            },
+            {
+              "cycles": 783577,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-linalg_mega_conv2d_k3_c16-baremetal"
+            },
+            {
+              "cycles": 25625,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_add-baremetal"
+            },
+            {
+              "cycles": 29392,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_hardsigmoid-baremetal"
+            },
+            {
+              "cycles": 28643,
+              "elapsed_s": 0.02,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_hardswish-baremetal"
+            },
+            {
+              "cycles": 24888,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_mean-baremetal"
+            },
+            {
+              "cycles": 38777,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_mul_broadcast-baremetal"
+            },
+            {
+              "cycles": 24948,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_relu-baremetal"
+            },
+            {
+              "cycles": 37548,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_requant-baremetal"
+            },
+            {
+              "cycles": 48196,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_stream-baremetal"
+            },
+            {
+              "cycles": 27622,
+              "elapsed_s": 0.03,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_sum-baremetal"
+            },
+            {
+              "cycles": 37591,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k1_test-baremetal"
+            },
+            {
+              "cycles": 104591,
+              "elapsed_s": 0.15,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k3_asym_pad_test-baremetal"
+            },
+            {
+              "cycles": 69208,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k3_pad_test-baremetal"
+            },
+            {
+              "cycles": 46125,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k3_partial_test-baremetal"
+            },
+            {
+              "cycles": 132327,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k3_test-baremetal"
+            },
+            {
+              "cycles": 67376,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k5_test-baremetal"
+            },
+            {
+              "cycles": 376370,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k7_test-baremetal"
+            },
+            {
+              "cycles": 8495,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_large_input-baremetal"
+            },
+            {
+              "cycles": 56648,
+              "elapsed_s": 0.15,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_window_test-baremetal"
+            },
+            {
+              "cycles": 27044,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_channel_base_test-baremetal"
+            },
+            {
+              "cycles": 27446,
+              "elapsed_s": 0.14,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_channel_lanes_test-baremetal"
+            },
+            {
+              "cycles": 30181,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_channel_two_rows_test-baremetal"
+            },
+            {
+              "cycles": 48092,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_groups_test-baremetal"
+            },
+            {
+              "cycles": 27446,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_tensor_groups_test-baremetal"
+            },
+            {
+              "cycles": 26066,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_tensor_rows_test-baremetal"
+            },
+            {
+              "cycles": 25886,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_tensor_values_test-baremetal"
+            },
+            {
+              "cycles": 60586,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int8add_relu_test-baremetal"
+            },
+            {
+              "cycles": 58730,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int8add_scaled_test-baremetal"
+            },
+            {
+              "cycles": 69344,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int8mul_per_channel_gate_test-baremetal"
+            },
+            {
+              "cycles": 525132,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-lut_channel_table_lookup_test-baremetal"
+            },
+            {
+              "cycles": 58401,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-lut_i32_test-baremetal"
+            },
+            {
+              "cycles": 6453,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-lut_softmax_i8_test-baremetal"
+            },
+            {
+              "cycles": 45876,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-lut_uniform_lookup_test-baremetal"
+            },
+            {
+              "cycles": 51278,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-matadd_i32_16row_test-baremetal"
+            },
+            {
+              "cycles": 118644,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-maxpool_groups_test-baremetal"
+            },
+            {
+              "cycles": 25535,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-maxpool_offset_test-baremetal"
+            },
+            {
+              "cycles": 110721,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-maxpool_window_test-baremetal"
+            },
+            {
+              "cycles": 62511,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_f32_channels_test-baremetal"
+            },
+            {
+              "cycles": 53103,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_f32_groups_test-baremetal"
+            },
+            {
+              "cycles": 77798,
+              "elapsed_s": 0.02,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_i32_groups_test-baremetal"
+            },
+            {
+              "cycles": 147419,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-topk_u32_test-baremetal"
+            },
+            {
+              "cycles": 52139,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-bank_dma_pingpong-multicore-baremetal"
+            },
+            {
+              "cycles": 125358,
+              "elapsed_s": 0.17,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-bank_dma_reuse-multicore-baremetal"
+            },
+            {
+              "cycles": 52517,
+              "elapsed_s": 0.14,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-bank_rename_overlap-multicore-baremetal"
+            },
+            {
+              "cycles": 49637,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-maxpool_partial_update-multicore-baremetal"
+            },
+            {
+              "cycles": 48206,
+              "elapsed_s": 0.06,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-read_bank_shared-multicore-baremetal"
+            },
+            {
+              "cycles": 47932,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-read_bank_split-multicore-baremetal"
+            },
+            {
+              "cycles": 142126,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-rob_window_probe-multicore-baremetal"
+            },
+            {
+              "cycles": 55809,
+              "elapsed_s": 0.03,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-same_ball_independent-multicore-baremetal"
+            },
+            {
+              "cycles": 32203,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-write_bank_versions-multicore-baremetal"
+            },
+            {
+              "cycles": 31392,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_fixed_hardswish-baremetal"
+            },
+            {
+              "cycles": 27614,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_fixed_mean-baremetal"
+            },
+            {
+              "cycles": 31539,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_fixed_stream-baremetal"
+            },
+            {
+              "cycles": 242614,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_im2col_6x6_k3-baremetal"
+            },
+            {
+              "cycles": 32053,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_int2fp_4x4-baremetal"
+            },
+            {
+              "cycles": 28011,
+              "elapsed_s": 0.02,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_int2fp_relu_4x4-baremetal"
+            },
+            {
+              "cycles": 31487,
+              "elapsed_s": 0.14,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_int8add_relu-baremetal"
+            },
+            {
+              "cycles": 32046,
+              "elapsed_s": 0.15,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_int8mul_gate-baremetal"
+            },
+            {
+              "cycles": 36915,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_lut_identity-baremetal"
+            },
+            {
+              "cycles": 33995,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_matadd_i32-baremetal"
+            },
+            {
+              "cycles": 44892,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_maxpool_6x6_s2-baremetal"
+            },
+            {
+              "cycles": 28821,
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_quant_f32_to_i8-baremetal"
+            },
+            {
+              "cycles": 37868,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_quant_i32_to_i8-baremetal"
+            },
+            {
+              "cycles": 24549,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_topk_u32_keys-baremetal"
+            },
+            {
+              "cycles": 31406,
+              "elapsed_s": 0.01,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_fixed_hardswish-baremetal"
+            },
+            {
+              "cycles": 50677,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_lut_i32-baremetal"
+            },
+            {
+              "cycles": 34646,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_lut_softmax_i8-baremetal"
+            },
+            {
+              "cycles": 25687,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_topk_u32_packed-baremetal"
+            },
+            {
+              "cycles": 124216,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-base_bank_loop_carried-baremetal"
+            },
+            {
+              "cycles": 49383,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-base_bank_transfer-baremetal"
+            },
+            {
+              "cycles": 137296,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_batch_matmul_i8-baremetal"
+            },
+            {
+              "cycles": 72787,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_concat_columns_stream-baremetal"
+            },
+            {
+              "cycles": 39038,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_concat_columns_tail-baremetal"
+            },
+            {
+              "cycles": 49596,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_conv_fixed_requant-baremetal"
+            },
+            {
+              "cycles": 53993,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_data_movement_i8-baremetal"
+            },
+            {
+              "cycles": 108108,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_fixed_channel_tail-baremetal"
+            },
+            {
+              "cycles": 48705,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_fixed_mean_tail-baremetal"
+            },
+            {
+              "cycles": 305267,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_fixed_requant_stream_tail-baremetal"
+            },
+            {
+              "cycles": 30408,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_fixed_vector_stream-baremetal"
+            },
+            {
+              "cycles": 46290,
+              "elapsed_s": 0.01,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_gather_rows-baremetal"
+            },
+            {
+              "cycles": 198565,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_linear_dma_span-baremetal"
+            },
+            {
+              "cycles": 323958,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_linear_weight_dma_span-baremetal"
+            },
+            {
+              "cycles": 36399,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_matmul_bias_i32-baremetal"
+            },
+            {
+              "cycles": 38944,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_maxpool_i8_border-baremetal"
+            },
+            {
+              "cycles": 38075,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_nonlinear_i32-baremetal"
+            },
+            {
+              "cycles": 43190,
+              "elapsed_s": 0.02,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_pointwise_matrix_i8-baremetal"
+            },
+            {
+              "cycles": 46364,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_pointwise_spatial_i8-baremetal"
+            },
+            {
+              "cycles": 1002488,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_f32_channels-baremetal"
+            },
+            {
+              "cycles": 76643,
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_fp32_periodic-baremetal"
+            },
+            {
+              "cycles": 529942,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_i32_dma_span-baremetal"
+            },
+            {
+              "cycles": 37002,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_i32_tail-baremetal"
+            },
+            {
+              "cycles": 37551,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_i32_uniform-baremetal"
+            },
+            {
+              "cycles": 37029,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_row_max_u32-baremetal"
+            },
+            {
+              "cycles": 38373,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_scaled_add_i8-baremetal"
+            },
+            {
+              "cycles": 41994,
+              "elapsed_s": 0.01,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_topk_i32_scores-baremetal"
+            },
+            {
+              "cycles": 40542,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_topk_scores-baremetal"
+            },
+            {
+              "cycles": 218236,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_transpose_batch_tiled-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-23-23-21-pebble-bebop-bemu-device-pebble-PebbleTapeoutConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 18713205446,
+              "elapsed_s": 143.02,
+              "status": "pass",
+              "workload": "fw_payload-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "elapsed_s": 278.6,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 118419598,
+          "elapsed_s": 1.147,
+          "elements": 1000,
+          "log": "2026-11-23-23-25-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-alexnet-baremetal",
+          "max_diff": 0.0,
+          "model": "alexnet",
+          "relative": 0.0,
+          "simulated_cycles": 118896649,
+          "status": "pass"
+        },
+        {
+          "cycles": 739248,
+          "elapsed_s": 0.013,
+          "elements": 10,
+          "log": "2026-11-23-23-26-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-lenet-baremetal",
+          "max_diff": 0.0,
+          "model": "lenet",
+          "relative": 0.0,
+          "simulated_cycles": 851309,
+          "status": "pass"
+        },
+        {
+          "cycles": 57115619,
+          "elapsed_s": 0.318,
+          "elements": 1000,
+          "log": "2026-11-23-23-26-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-mobilenet-v3-small-baremetal",
+          "max_diff": 0.0,
+          "model": "mobilenet-v3-small",
+          "relative": 0.0,
+          "simulated_cycles": 57595362,
+          "status": "pass"
+        },
+        {
+          "cycles": 194021369,
+          "elapsed_s": 1.691,
+          "elements": 1000,
+          "log": "2026-11-23-23-27-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-resnet18-baremetal",
+          "max_diff": 0.0,
+          "model": "resnet18",
+          "relative": 0.0,
+          "simulated_cycles": 194498554,
+          "status": "pass"
+        },
+        {
+          "cycles": 711455932,
+          "elapsed_s": 4.183,
+          "elements": 1800,
+          "log": "2026-11-23-23-28-pebble-bemu-device-pebble-PebbleTapeoutConfig-pebble-yolo26n-baremetal",
+          "max_diff": 0.0,
+          "model": "yolo26n",
+          "relative": 0.0,
+          "simulated_cycles": 711927907,
+          "status": "pass"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "pass"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleVerilatorConfig.toml",
+      "elapsed_s": 5062.8,
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-24-00-45-pebble-bebop-verilator-device-pebble-PebbleVerilatorConfig-bare-tests",
+          "passed": 160,
+          "total": 160,
+          "workloads": [
+            {
+              "cycles": 3434229,
+              "elapsed_s": 113.88,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dma_blocks_test-baremetal"
+            },
+            {
+              "cycles": 149038,
+              "elapsed_s": 5.62,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dma_strided_block2_test-baremetal"
+            },
+            {
+              "cycles": 206759,
+              "elapsed_s": 11.52,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dma_strided_block4_test-baremetal"
+            },
+            {
+              "cycles": 107141,
+              "elapsed_s": 3.81,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dma_strided_test-baremetal"
+            },
+            {
+              "cycles": 9232,
+              "elapsed_s": 0.41,
+              "status": "pass",
+              "workload": "pebble-hart0-soctest-trace_events-baremetal"
+            },
+            {
+              "cycles": 125587,
+              "elapsed_s": 4.66,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-base_dma_blocks-baremetal"
+            },
+            {
+              "cycles": 63165,
+              "elapsed_s": 4.33,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-base_dma_strided-baremetal"
+            },
+            {
+              "cycles": 77801,
+              "elapsed_s": 2.91,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_conv_k11_groups-baremetal"
+            },
+            {
+              "cycles": 57938,
+              "elapsed_s": 2.31,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_lookup_frontend_channels-baremetal"
+            },
+            {
+              "cycles": 52093,
+              "elapsed_s": 1.91,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_lookup_frontend_i8-baremetal"
+            },
+            {
+              "cycles": 96684,
+              "elapsed_s": 3.41,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_maxpool_i32_border-baremetal"
+            },
+            {
+              "cycles": 2344448,
+              "elapsed_s": 87.52,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_conv2d-baremetal"
+            },
+            {
+              "cycles": 261229,
+              "elapsed_s": 8.93,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_conv2d_k5_tail-baremetal"
+            },
+            {
+              "cycles": 128233,
+              "elapsed_s": 8.13,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_matmul-baremetal"
+            },
+            {
+              "cycles": 4426871,
+              "elapsed_s": 140.94,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_matmul_m17_k65_n17-baremetal"
+            },
+            {
+              "cycles": 201921,
+              "elapsed_s": 8.12,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_pool_quant_flatten-baremetal"
+            },
+            {
+              "cycles": 201778,
+              "elapsed_s": 9.83,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_pool_quant_strided-baremetal"
+            },
+            {
+              "cycles": 350725,
+              "elapsed_s": 13.32,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_generic_matmul_i8-baremetal"
+            },
+            {
+              "cycles": 395123,
+              "elapsed_s": 14.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_lookup_channel_i8-baremetal"
+            },
+            {
+              "cycles": 526341,
+              "elapsed_s": 19.63,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_linear_chain_i8-baremetal"
+            },
+            {
+              "cycles": 340538,
+              "elapsed_s": 12.73,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_linear_int8-baremetal"
+            },
+            {
+              "cycles": 186466,
+              "elapsed_s": 11.23,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-bank_capacity_rename_test-baremetal"
+            },
+            {
+              "cycles": 116603,
+              "elapsed_s": 4.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-bank_transfer_recycle_test-baremetal"
+            },
+            {
+              "cycles": 49305,
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mset_transfer_test-baremetal"
+            },
+            {
+              "cycles": 90297,
+              "elapsed_s": 6.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-bank_recycle_test-baremetal"
+            },
+            {
+              "cycles": 118746,
+              "elapsed_s": 4.71,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_2d_test-baremetal"
+            },
+            {
+              "cycles": 100410,
+              "elapsed_s": 4.91,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_2d_pixel_stride_test-baremetal"
+            },
+            {
+              "cycles": 538768,
+              "elapsed_s": 29.22,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_mvout_acc_test-baremetal"
+            },
+            {
+              "cycles": 155589,
+              "elapsed_s": 10.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_mvout_test-baremetal"
+            },
+            {
+              "cycles": 72641,
+              "elapsed_s": 3.61,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_mvout_stride_test-baremetal"
+            },
+            {
+              "cycles": 45487,
+              "elapsed_s": 1.61,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_mvout_unaligned_test-baremetal"
+            },
+            {
+              "cycles": 42616,
+              "elapsed_s": 1.51,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_unaligned_test-baremetal"
+            },
+            {
+              "cycles": 161263,
+              "elapsed_s": 10.61,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_bare_mode_test-baremetal"
+            },
+            {
+              "cycles": 541007,
+              "elapsed_s": 19.95,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_repeated_sfence_test-baremetal"
+            },
+            {
+              "cycles": 214994,
+              "elapsed_s": 10.62,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sfence_flush_test-baremetal"
+            },
+            {
+              "cycles": 431011,
+              "elapsed_s": 15.63,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sfence_remap_test-baremetal"
+            },
+            {
+              "cycles": 284790,
+              "elapsed_s": 12.82,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sv39_4k_alias_test-baremetal"
+            },
+            {
+              "cycles": 216169,
+              "elapsed_s": 12.32,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sv39_identity_test-baremetal"
+            },
+            {
+              "cycles": 243676,
+              "elapsed_s": 12.82,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-tlb_sv39_nonidentity_test-baremetal"
+            },
+            {
+              "cycles": 68900,
+              "elapsed_s": 2.71,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-transpose_i8_16x16_test-baremetal"
+            },
+            {
+              "cycles": 483282,
+              "elapsed_s": 15.93,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_conv2d_s2_depthwise_s2-baremetal"
+            },
+            {
+              "cycles": 740987,
+              "elapsed_s": 26.95,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-linalg_mega_conv2d_k3_c16-baremetal"
+            },
+            {
+              "cycles": 105439,
+              "elapsed_s": 4.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-transpose_i8_16x32_test-baremetal"
+            },
+            {
+              "cycles": 54820,
+              "elapsed_s": 2.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-transpose_i32_8x16_test-baremetal"
+            },
+            {
+              "cycles": 69455,
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_transpose_16x16_i8-baremetal"
+            },
+            {
+              "cycles": 237359,
+              "elapsed_s": 12.33,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_1x16x64_test-baremetal"
+            },
+            {
+              "cycles": 714670,
+              "elapsed_s": 27.77,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_bias_accumulate_test-baremetal"
+            },
+            {
+              "cycles": 413025,
+              "elapsed_s": 18.32,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_16x16_test-baremetal"
+            },
+            {
+              "cycles": 812538,
+              "elapsed_s": 29.06,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_16x16x32_test-baremetal"
+            },
+            {
+              "cycles": 399629,
+              "elapsed_s": 15.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_nondefault_banks_test-baremetal"
+            },
+            {
+              "cycles": 603449,
+              "elapsed_s": 26.34,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_k_groups_test-baremetal"
+            },
+            {
+              "cycles": 1007235,
+              "elapsed_s": 37.16,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-smatmul_mvout_bank_reuse_test-baremetal"
+            },
+            {
+              "cycles": 31320,
+              "elapsed_s": 1.71,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_f32_to_i8_test-baremetal"
+            },
+            {
+              "cycles": 456635,
+              "elapsed_s": 17.54,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_smatmul_bias_accumulate-baremetal"
+            },
+            {
+              "cycles": 47382,
+              "elapsed_s": 1.71,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_i32_to_i8_test-baremetal"
+            },
+            {
+              "cycles": 32689,
+              "elapsed_s": 1.81,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-toint8_i8_rounding_test-baremetal"
+            },
+            {
+              "cycles": 32127,
+              "elapsed_s": 2.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-toint8_i8_rows_test-baremetal"
+            },
+            {
+              "cycles": 34537,
+              "elapsed_s": 1.3,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-toint8_i8_scale_rows_test-baremetal"
+            },
+            {
+              "cycles": 82148,
+              "elapsed_s": 5.31,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_i32_groups_test-baremetal"
+            },
+            {
+              "cycles": 31875,
+              "elapsed_s": 1.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-toint8_i8_signed_test-baremetal"
+            },
+            {
+              "cycles": 67081,
+              "elapsed_s": 2.62,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_f32_channels_test-baremetal"
+            },
+            {
+              "cycles": 57780,
+              "elapsed_s": 2.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_f32_groups_test-baremetal"
+            },
+            {
+              "cycles": 36268,
+              "elapsed_s": 2.21,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_quant_f32_to_i8-baremetal"
+            },
+            {
+              "cycles": 45939,
+              "elapsed_s": 1.8,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_quant_i32_to_i8-baremetal"
+            },
+            {
+              "cycles": 42604,
+              "elapsed_s": 1.61,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k1_test-baremetal"
+            },
+            {
+              "cycles": 138574,
+              "elapsed_s": 9.13,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k3_test-baremetal"
+            },
+            {
+              "cycles": 10111,
+              "elapsed_s": 0.4,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_large_input-baremetal"
+            },
+            {
+              "cycles": 62568,
+              "elapsed_s": 2.31,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_window_test-baremetal"
+            },
+            {
+              "cycles": 110103,
+              "elapsed_s": 4.12,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k3_asym_pad_test-baremetal"
+            },
+            {
+              "cycles": 75061,
+              "elapsed_s": 5.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k3_pad_test-baremetal"
+            },
+            {
+              "cycles": 51821,
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k3_partial_test-baremetal"
+            },
+            {
+              "cycles": 73126,
+              "elapsed_s": 4.91,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k5_test-baremetal"
+            },
+            {
+              "cycles": 384503,
+              "elapsed_s": 17.34,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-im2col_k7_test-baremetal"
+            },
+            {
+              "cycles": 253279,
+              "elapsed_s": 9.93,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_im2col_6x6_k3-baremetal"
+            },
+            {
+              "cycles": 30961,
+              "elapsed_s": 1.3,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_tensor_values_test-baremetal"
+            },
+            {
+              "cycles": 32742,
+              "elapsed_s": 1.3,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_channel_lanes_test-baremetal"
+            },
+            {
+              "cycles": 32742,
+              "elapsed_s": 1.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_tensor_groups_test-baremetal"
+            },
+            {
+              "cycles": 31422,
+              "elapsed_s": 1.3,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_tensor_rows_test-baremetal"
+            },
+            {
+              "cycles": 32367,
+              "elapsed_s": 1.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_channel_base_test-baremetal"
+            },
+            {
+              "cycles": 35537,
+              "elapsed_s": 2.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_channel_two_rows_test-baremetal"
+            },
+            {
+              "cycles": 53859,
+              "elapsed_s": 3.91,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int2fp_groups_test-baremetal"
+            },
+            {
+              "cycles": 51238,
+              "elapsed_s": 3.63,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-lut_uniform_lookup_test-baremetal"
+            },
+            {
+              "cycles": 39784,
+              "elapsed_s": 2.91,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_int2fp_4x4-baremetal"
+            },
+            {
+              "cycles": 35960,
+              "elapsed_s": 2.31,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_int2fp_relu_4x4-baremetal"
+            },
+            {
+              "cycles": 62501,
+              "elapsed_s": 2.41,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-lut_i32_test-baremetal"
+            },
+            {
+              "cycles": 534894,
+              "elapsed_s": 22.43,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-lut_channel_table_lookup_test-baremetal"
+            },
+            {
+              "cycles": 8155,
+              "elapsed_s": 0.31,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-lut_softmax_i8_test-baremetal"
+            },
+            {
+              "cycles": 61455,
+              "elapsed_s": 2.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_lut_i32-baremetal"
+            },
+            {
+              "cycles": 46355,
+              "elapsed_s": 1.71,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_lut_softmax_i8-baremetal"
+            },
+            {
+              "cycles": 45426,
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_lut_identity-baremetal"
+            },
+            {
+              "cycles": 66290,
+              "elapsed_s": 4.25,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int8add_scaled_test-baremetal"
+            },
+            {
+              "cycles": 120991,
+              "elapsed_s": 4.31,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-maxpool_groups_test-baremetal"
+            },
+            {
+              "cycles": 30716,
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-maxpool_offset_test-baremetal"
+            },
+            {
+              "cycles": 116794,
+              "elapsed_s": 6.22,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-maxpool_window_test-baremetal"
+            },
+            {
+              "cycles": 53509,
+              "elapsed_s": 3.02,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_maxpool_6x6_s2-baremetal"
+            },
+            {
+              "cycles": 68126,
+              "elapsed_s": 4.73,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int8add_relu_test-baremetal"
+            },
+            {
+              "cycles": 42419,
+              "elapsed_s": 1.51,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int8mul_large_gate_row_test-baremetal"
+            },
+            {
+              "cycles": 77404,
+              "elapsed_s": 5.22,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-int8mul_per_channel_gate_test-baremetal"
+            },
+            {
+              "cycles": 40094,
+              "elapsed_s": 1.61,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_int8add_relu-baremetal"
+            },
+            {
+              "cycles": 58203,
+              "elapsed_s": 2.11,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-matadd_i32_16row_test-baremetal"
+            },
+            {
+              "cycles": 41111,
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_int8mul_gate-baremetal"
+            },
+            {
+              "cycles": 337400,
+              "elapsed_s": 12.41,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mega_conv_pipeline_test-baremetal"
+            },
+            {
+              "cycles": 42370,
+              "elapsed_s": 1.51,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_matadd_i32-baremetal"
+            },
+            {
+              "cycles": 2393223,
+              "elapsed_s": 99.24,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_global_avg_conv2_exact-baremetal"
+            },
+            {
+              "cycles": 92193,
+              "elapsed_s": 3.31,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_global_avg_conv_exact-baremetal"
+            },
+            {
+              "cycles": 963530,
+              "elapsed_s": 40.47,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_se_gate_conv-baremetal"
+            },
+            {
+              "cycles": 58929,
+              "elapsed_s": 3.62,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-maxpool_im2col_test-baremetal"
+            },
+            {
+              "cycles": 49482,
+              "elapsed_s": 1.81,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-residual_add_lut_test-baremetal"
+            },
+            {
+              "cycles": 195177,
+              "elapsed_s": 7.61,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_global_avg_7x7_c288_exact-baremetal"
+            },
+            {
+              "cycles": 748637,
+              "elapsed_s": 29.54,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dual_smatmul_matadd_test-baremetal"
+            },
+            {
+              "cycles": 47810,
+              "elapsed_s": 1.81,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-se_gate_lut_test-baremetal"
+            },
+            {
+              "cycles": 237742,
+              "elapsed_s": 9.32,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dual_conv_add_int2fp_test-baremetal"
+            },
+            {
+              "cycles": 463190,
+              "elapsed_s": 16.49,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-quant_smatmul_int2fp_test-baremetal"
+            },
+            {
+              "cycles": 140304,
+              "elapsed_s": 9.71,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-bank_dma_reuse-multicore-baremetal"
+            },
+            {
+              "cycles": 63199,
+              "elapsed_s": 3.71,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-bank_rename_overlap-multicore-baremetal"
+            },
+            {
+              "cycles": 55798,
+              "elapsed_s": 3.11,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-maxpool_partial_update-multicore-baremetal"
+            },
+            {
+              "cycles": 62710,
+              "elapsed_s": 4.51,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-bank_dma_pingpong-multicore-baremetal"
+            },
+            {
+              "cycles": 57655,
+              "elapsed_s": 3.31,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-read_bank_shared-multicore-baremetal"
+            },
+            {
+              "cycles": 57794,
+              "elapsed_s": 4.21,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-read_bank_split-multicore-baremetal"
+            },
+            {
+              "cycles": 67281,
+              "elapsed_s": 2.61,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-same_ball_independent-multicore-baremetal"
+            },
+            {
+              "cycles": 169882,
+              "elapsed_s": 6.32,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-rob_window_probe-multicore-baremetal"
+            },
+            {
+              "cycles": 33838,
+              "elapsed_s": 1.41,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_hardswish-baremetal"
+            },
+            {
+              "cycles": 42776,
+              "elapsed_s": 3.01,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_requant-baremetal"
+            },
+            {
+              "cycles": 41687,
+              "elapsed_s": 1.51,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-write_bank_versions-multicore-baremetal"
+            },
+            {
+              "cycles": 30666,
+              "elapsed_s": 1.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_add-baremetal"
+            },
+            {
+              "cycles": 34563,
+              "elapsed_s": 1.31,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_hardsigmoid-baremetal"
+            },
+            {
+              "cycles": 44167,
+              "elapsed_s": 1.81,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_mul_broadcast-baremetal"
+            },
+            {
+              "cycles": 30002,
+              "elapsed_s": 1.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_relu-baremetal"
+            },
+            {
+              "cycles": 30264,
+              "elapsed_s": 1.21,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_mean-baremetal"
+            },
+            {
+              "cycles": 52597,
+              "elapsed_s": 2.91,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_stream-baremetal"
+            },
+            {
+              "cycles": 33923,
+              "elapsed_s": 1.31,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-fixed_sum-baremetal"
+            },
+            {
+              "cycles": 37010,
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_fixed_stream-baremetal"
+            },
+            {
+              "cycles": 38608,
+              "elapsed_s": 2.41,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_fixed_hardswish-baremetal"
+            },
+            {
+              "cycles": 34598,
+              "elapsed_s": 1.52,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-ball_fixed_mean-baremetal"
+            },
+            {
+              "cycles": 37450,
+              "elapsed_s": 2.71,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_fixed_hardswish-baremetal"
+            },
+            {
+              "cycles": 113919,
+              "elapsed_s": 5.21,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_fixed_channel_tail-baremetal"
+            },
+            {
+              "cycles": 36653,
+              "elapsed_s": 1.41,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_fixed_vector_stream-baremetal"
+            },
+            {
+              "cycles": 56476,
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_fixed_mean_tail-baremetal"
+            },
+            {
+              "cycles": 45582,
+              "elapsed_s": 1.61,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_nonlinear_i32-baremetal"
+            },
+            {
+              "cycles": 543439,
+              "elapsed_s": 19.0,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_i32_dma_span-baremetal"
+            },
+            {
+              "cycles": 43236,
+              "elapsed_s": 1.61,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_i32_tail-baremetal"
+            },
+            {
+              "cycles": 43540,
+              "elapsed_s": 2.36,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_i32_uniform-baremetal"
+            },
+            {
+              "cycles": 44431,
+              "elapsed_s": 3.9,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_row_max_u32-baremetal"
+            },
+            {
+              "cycles": 46115,
+              "elapsed_s": 1.85,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_scaled_add_i8-baremetal"
+            },
+            {
+              "cycles": 88601,
+              "elapsed_s": 6.27,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_concat_columns_stream-baremetal"
+            },
+            {
+              "cycles": 46957,
+              "elapsed_s": 3.79,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_concat_columns_tail-baremetal"
+            },
+            {
+              "cycles": 350469,
+              "elapsed_s": 16.22,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_fixed_requant_stream_tail-baremetal"
+            },
+            {
+              "cycles": 64500,
+              "elapsed_s": 6.25,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_data_movement_i8-baremetal"
+            },
+            {
+              "cycles": 58482,
+              "elapsed_s": 2.83,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_gather_rows-baremetal"
+            },
+            {
+              "cycles": 241023,
+              "elapsed_s": 10.75,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_linear_dma_span-baremetal"
+            },
+            {
+              "cycles": 354848,
+              "elapsed_s": 15.03,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_linear_weight_dma_span-baremetal"
+            },
+            {
+              "cycles": 55721,
+              "elapsed_s": 3.17,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_conv_fixed_requant-baremetal"
+            },
+            {
+              "cycles": 45232,
+              "elapsed_s": 2.25,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_maxpool_i8_border-baremetal"
+            },
+            {
+              "cycles": 80728,
+              "elapsed_s": 7.06,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_fp32_periodic-baremetal"
+            },
+            {
+              "cycles": 44892,
+              "elapsed_s": 1.81,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_matmul_bias_i32-baremetal"
+            },
+            {
+              "cycles": 50492,
+              "elapsed_s": 3.72,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_pointwise_matrix_i8-baremetal"
+            },
+            {
+              "cycles": 149282,
+              "elapsed_s": 10.38,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_batch_matmul_i8-baremetal"
+            },
+            {
+              "cycles": 53807,
+              "elapsed_s": 4.51,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_pointwise_spatial_i8-baremetal"
+            },
+            {
+              "cycles": 993855,
+              "elapsed_s": 29.75,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_quant_f32_channels-baremetal"
+            },
+            {
+              "cycles": 237423,
+              "elapsed_s": 13.05,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_transpose_batch_tiled-baremetal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "pebble/devices/pebble/configs/PebbleP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-23T15:14:53.008080+00:00"
+}

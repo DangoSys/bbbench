@@ -1,0 +1,205 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "goban/devices/goban/configs/GobanDefaultConfig.toml",
+  "design": "goban",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 560.1,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 443893560,
+          "elapsed_s": 6.252,
+          "elements": 6,
+          "log": "2026-11-24-20-42-goban-bemu-device-goban-GobanDefaultConfig-goban-bert-base-uncased-emotion-baremetal",
+          "max_diff": 4.77e-07,
+          "model": "bert-base-uncased-emotion",
+          "os": "baremetal",
+          "relative": 9e-08,
+          "simulated_cycles": 447585359,
+          "status": "pass"
+        },
+        {
+          "cycles": 503596904,
+          "elapsed_s": 70.321,
+          "elements": 6,
+          "log": "2026-11-24-20-43-goban-bemu-device-goban-GobanDefaultConfig-goban-bert-base-uncased-emotion-linux",
+          "max_diff": 4.77e-07,
+          "model": "bert-base-uncased-emotion",
+          "os": "linux",
+          "relative": 9e-08,
+          "simulated_cycles": 8990160661,
+          "status": "pass"
+        },
+        {
+          "cycles": 2978305521,
+          "elapsed_s": 57.98,
+          "elements": 18,
+          "log": "2026-11-24-20-45-goban-bemu-device-goban-GobanDefaultConfig-goban-laya-baremetal",
+          "max_diff": 63.130371094,
+          "model": "laya",
+          "os": "baremetal",
+          "relative": 0.006313037,
+          "simulated_cycles": 2984752578,
+          "status": "pass"
+        },
+        {
+          "cycles": 3199921253,
+          "elapsed_s": 74.996,
+          "elements": 18,
+          "log": "2026-11-24-20-47-goban-bemu-device-goban-GobanDefaultConfig-goban-laya-linux",
+          "max_diff": 63.130371094,
+          "model": "laya",
+          "os": "linux",
+          "relative": 0.006313037,
+          "simulated_cycles": 5536428726,
+          "status": "pass"
+        },
+        {
+          "cycles": 564200272,
+          "elapsed_s": 9.648,
+          "elements": 1000,
+          "log": "2026-11-24-20-49-goban-bemu-device-goban-GobanDefaultConfig-goban-mlp-mixer-baremetal",
+          "max_diff": 1.621833801,
+          "model": "mlp-mixer",
+          "os": "baremetal",
+          "relative": 0.119125046,
+          "simulated_cycles": 567275599,
+          "status": "pass"
+        },
+        {
+          "cycles": 674799195,
+          "elapsed_s": 51.73,
+          "elements": 1000,
+          "log": "2026-11-24-20-50-goban-bemu-device-goban-GobanDefaultConfig-goban-mlp-mixer-linux",
+          "max_diff": 1.621833801,
+          "model": "mlp-mixer",
+          "os": "linux",
+          "relative": 0.119125046,
+          "simulated_cycles": 5532977940,
+          "status": "pass"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T12:42:29.772836+00:00"
+}

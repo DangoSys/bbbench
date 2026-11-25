@@ -1,0 +1,319 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "goban/devices/goban/configs/GobanSmallConfig.toml",
+  "design": "goban",
+  "device": "goban",
+  "dirty": true,
+  "nodes": [
+    {
+      "elapsed_s": 44.7,
+      "id": "build",
+      "name": "Build",
+      "needs": [],
+      "status": "pass"
+    },
+    {
+      "elapsed_s": 290.1,
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-23-03-40-goban-bebop-bemu-device-goban-GobanSmallConfig-bare-tests",
+          "passed": 29,
+          "total": 29,
+          "workloads": [
+            {
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "goban-hart0-ctest-rvv_gather-baremetal"
+            },
+            {
+              "elapsed_s": 0.14,
+              "status": "pass",
+              "workload": "goban-hart0-ctest-rvv_multiply-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-ctest-rvv_stride-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_batched_int8-baremetal"
+            },
+            {
+              "elapsed_s": 0.13,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_bias_tail-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_exp_underflow-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_int8_tiles-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_matmul_rows-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_padded_copy-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_quantized_rows-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_erf-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_exp-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_max-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_norm-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_reduce-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_rows-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_slice_pair-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_rvv_strided-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_transpose_blocks-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-mlirtest-compiler_transpose_f32-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-soctest-clint_software_interrupt-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-soctest-clint_timer_interrupt-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-hart0-soctest-plic_register_access-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-ant_cycles-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-ball_cycles-baremetal"
+            },
+            {
+              "elapsed_s": 0.14,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-copy_overlap-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-dataflow-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-gp_scalar_fmul-baremetal"
+            },
+            {
+              "elapsed_s": 0.12,
+              "status": "pass",
+              "workload": "goban-matmul-ctest-design-matmul_threads-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-23-03-41-goban-bebop-bemu-device-goban-GobanSmallConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "elapsed_s": 182.34,
+              "status": "pass",
+              "workload": "fw_payload-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "overview": {
+    "harts": [
+      {
+        "component": "goban",
+        "id": 0,
+        "threads": 4
+      }
+    ],
+    "threads": [
+      {
+        "balls": [
+          "smatmul",
+          "toint8",
+          "int2fp",
+          "transpose"
+        ],
+        "cpu": "ant"
+      },
+      {
+        "balls": [
+          "smatmul",
+          "toint8",
+          "int2fp",
+          "transpose"
+        ],
+        "cpu": "ant"
+      },
+      {
+        "balls": [
+          "smatmul",
+          "toint8",
+          "int2fp",
+          "transpose"
+        ],
+        "cpu": "ant"
+      },
+      {
+        "balls": [
+          "smatmul",
+          "toint8",
+          "int2fp",
+          "transpose"
+        ],
+        "cpu": "ant"
+      }
+    ]
+  },
+  "taken": "2026-11-22T19:45:04.718613+00:00"
+}

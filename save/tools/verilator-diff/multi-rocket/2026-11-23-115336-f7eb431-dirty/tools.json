@@ -1,0 +1,109 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 1197520,
+  "design": "multi-rocket",
+  "dirty": true,
+  "elapsed_s": 572.25,
+  "flag": "diff",
+  "taken": "2026-11-23T11:53:36.807238+00:00",
+  "timeline": "designs/multi-rocket/2026-11-23-065650-f7eb431-dirty",
+  "tool": "Verilator",
+  "workloads": [
+    {
+      "cycles": 22555,
+      "elapsed_s": 20.79,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_aha-mont64-baremetal"
+    },
+    {
+      "cycles": 133461,
+      "elapsed_s": 67.6,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_crc32-baremetal"
+    },
+    {
+      "cycles": 86120,
+      "elapsed_s": 35.76,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_edn-baremetal"
+    },
+    {
+      "cycles": 9938,
+      "elapsed_s": 14.13,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_minver-baremetal"
+    },
+    {
+      "cycles": 8170,
+      "elapsed_s": 11.76,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_nbody-baremetal"
+    },
+    {
+      "cycles": 230226,
+      "elapsed_s": 71.3,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-check-embench_matmult-int-baremetal"
+    },
+    {
+      "cycles": 11933,
+      "elapsed_s": 15.14,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-cpu_arithmetic-baremetal"
+    },
+    {
+      "cycles": 49609,
+      "elapsed_s": 37.64,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-design-coherent_exchange-multicore-baremetal"
+    },
+    {
+      "cycles": 118305,
+      "elapsed_s": 63.06,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_nettle-aes-baremetal"
+    },
+    {
+      "cycles": 57403,
+      "elapsed_s": 42.8,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_nettle-sha256-baremetal"
+    },
+    {
+      "cycles": 50397,
+      "elapsed_s": 35.03,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_nsichneu-baremetal"
+    },
+    {
+      "cycles": 197083,
+      "elapsed_s": 60.04,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-check-embench_sglib-combined-baremetal"
+    },
+    {
+      "cycles": 107821,
+      "elapsed_s": 44.63,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_slre-baremetal"
+    },
+    {
+      "cycles": 86444,
+      "elapsed_s": 35.61,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_st-baremetal"
+    },
+    {
+      "cycles": 9395,
+      "elapsed_s": 6.76,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_statemate-baremetal"
+    },
+    {
+      "cycles": 18660,
+      "elapsed_s": 10.2,
+      "status": "pass",
+      "workload": "multi-rocket-hart0-ctest-benchmark-embench_ud-baremetal"
+    }
+  ]
+}

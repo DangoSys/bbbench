@@ -1,0 +1,204 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "taken": "2026-11-24T11:00:25.998347+00:00",
+  "threads": [
+    {
+      "area": {
+        "constraints_met": false,
+        "hierarchy": [
+          {
+            "combinational_um2": 11.2896,
+            "instance": "ThreadAlone",
+            "module": "ThreadAlone",
+            "noncombinational_um2": 0.0,
+            "um2": 58022379.1041
+          },
+          {
+            "combinational_um2": 0.0,
+            "instance": "tlink_thread",
+            "module": "SoftmaxThread",
+            "noncombinational_um2": 0.0,
+            "um2": 58022367.8145
+          },
+          {
+            "combinational_um2": 5.6448,
+            "instance": "tlink_thread/acc",
+            "module": "Acc",
+            "noncombinational_um2": 0.0,
+            "um2": 53015471.973
+          },
+          {
+            "combinational_um2": 11.2896,
+            "instance": "tlink_thread/acc/ballDomain",
+            "module": "BallDomain",
+            "noncombinational_um2": 0.0,
+            "um2": 3750839.8154
+          },
+          {
+            "combinational_um2": 8092.7617,
+            "instance": "tlink_thread/acc/ballDomain/bbus",
+            "module": "BBus",
+            "noncombinational_um2": 14055.5518,
+            "um2": 3750233.9401
+          },
+          {
+            "combinational_um2": 5.6448,
+            "instance": "tlink_thread/acc/frontend",
+            "module": "Frontend",
+            "noncombinational_um2": 0.0,
+            "um2": 1413263.1392
+          },
+          {
+            "combinational_um2": 2498.7648,
+            "instance": "tlink_thread/acc/frontend/boot",
+            "module": "BootRom",
+            "noncombinational_um2": 248.3712,
+            "um2": 2747.136
+          },
+          {
+            "combinational_um2": 3975.8209,
+            "instance": "tlink_thread/acc/frontend/ingress",
+            "module": "Ingress",
+            "noncombinational_um2": 8892.4415,
+            "um2": 12868.2624
+          },
+          {
+            "combinational_um2": 26.3424,
+            "instance": "tlink_thread/acc/gpDomain",
+            "module": "GpDomain",
+            "noncombinational_um2": 0.0,
+            "um2": 9920406.383
+          },
+          {
+            "combinational_um2": 97.8432,
+            "instance": "tlink_thread/acc/gpDomain/decoder",
+            "module": "Decoder_2",
+            "noncombinational_um2": 0.0,
+            "um2": 191285.3374
+          },
+          {
+            "combinational_um2": 38871.9753,
+            "instance": "tlink_thread/acc/gpDomain/loader",
+            "module": "Loader_1",
+            "noncombinational_um2": 51937.8039,
+            "um2": 129156.7872
+          },
+          {
+            "combinational_um2": 12604.8387,
+            "instance": "tlink_thread/acc/gpDomain/memory",
+            "module": "Memory_2",
+            "noncombinational_um2": 0.0,
+            "um2": 1494571.5111
+          },
+          {
+            "combinational_um2": 703.7184,
+            "instance": "tlink_thread/acc/memDomain",
+            "module": "ThreadMemDomain",
+            "noncombinational_um2": 662.3232,
+            "um2": 37930956.9906
+          },
+          {
+            "combinational_um2": 114.7776,
+            "instance": "tlink_thread/acc/memDomain/ctrl",
+            "module": "Ctrl",
+            "noncombinational_um2": 0.0,
+            "um2": 6873.4848
+          },
+          {
+            "combinational_um2": 15.0528,
+            "instance": "tlink_thread/acc/memDomain/prm",
+            "module": "PRM",
+            "noncombinational_um2": 0.0,
+            "um2": 35963158.9928
+          },
+          {
+            "combinational_um2": 145073.2446,
+            "instance": "tlink_thread/acc/memDomain/toMem",
+            "module": "ToMem",
+            "noncombinational_um2": 201590.8577,
+            "um2": 347934.1823
+          },
+          {
+            "combinational_um2": 2323.7761,
+            "instance": "tlink_thread/ant",
+            "module": "Ant",
+            "noncombinational_um2": 0.0,
+            "um2": 5006895.8415
+          },
+          {
+            "combinational_um2": 2419.7377,
+            "instance": "tlink_thread/ant/data",
+            "module": "LocalStore_1",
+            "noncombinational_um2": 122.304,
+            "um2": 2309207.5291
+          },
+          {
+            "combinational_um2": 12002.7266,
+            "instance": "tlink_thread/ant/data/memories_0",
+            "module": "Memory_1",
+            "noncombinational_um2": 438.4128,
+            "um2": 2306665.4874
+          },
+          {
+            "combinational_um2": 148659.574,
+            "instance": "tlink_thread/ant/executor",
+            "module": "Executor",
+            "noncombinational_um2": 95246.5905,
+            "um2": 368707.0489
+          },
+          {
+            "combinational_um2": 1392.384,
+            "instance": "tlink_thread/ant/executor/decoder",
+            "module": "Decode",
+            "noncombinational_um2": 0.0,
+            "um2": 1392.384
+          },
+          {
+            "combinational_um2": 26011.2387,
+            "instance": "tlink_thread/ant/executor/divider",
+            "module": "DivRem_6",
+            "noncombinational_um2": 13543.7566,
+            "um2": 39554.9953
+          },
+          {
+            "combinational_um2": 1845.8496,
+            "instance": "tlink_thread/ant/image",
+            "module": "LocalStore",
+            "noncombinational_um2": 122.304,
+            "um2": 2308537.6794
+          },
+          {
+            "combinational_um2": 11919.9362,
+            "instance": "tlink_thread/ant/image/memories_0",
+            "module": "Memory",
+            "noncombinational_um2": 359.3856,
+            "um2": 2306569.5258
+          },
+          {
+            "combinational_um2": 10205.7986,
+            "instance": "tlink_thread/ant/loader",
+            "module": "Loader",
+            "noncombinational_um2": 7914.0094,
+            "um2": 18119.808
+          }
+        ],
+        "library": "scc018ug_uhd_rvt_ss_v1p62_125c_ccs.db",
+        "status": "pass",
+        "timing": {
+          "endpoint": "tlink_thread/acc/gpDomain/execution/registers/x_24_reg_34_",
+          "slack_ns": -7.66,
+          "startpoint": "tlink_thread/acc/gpDomain/execution/heldInstruction_reg_20_"
+        },
+        "tool": "DC",
+        "um2": 58022379.104108,
+        "violations": {
+          "max_delay/setup": 101203,
+          "max_fanout": 2793
+        }
+      },
+      "path": "examples/designs/poly/threads/softmax",
+      "thread": "poly/threads/softmax"
+    }
+  ]
+}

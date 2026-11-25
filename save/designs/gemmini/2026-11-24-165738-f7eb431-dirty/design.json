@@ -1,0 +1,286 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "gemmini/devices/gemmini/configs/GemminiDefaultConfig.toml",
+  "design": "gemmini",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 1562.6,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 524583673,
+          "elapsed_s": 7.735,
+          "elements": 1000,
+          "log": "2026-11-25-00-57-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-alexnet-baremetal",
+          "max_diff": 0.0,
+          "model": "alexnet",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 524651275,
+          "status": "pass"
+        },
+        {
+          "cycles": 640337855,
+          "elapsed_s": 31.006,
+          "elements": 1000,
+          "log": "2026-11-25-00-59-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-alexnet-linux",
+          "max_diff": 0.0,
+          "model": "alexnet",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 1191197271,
+          "status": "pass"
+        },
+        {
+          "cycles": 1180371464,
+          "elapsed_s": 24.169,
+          "elements": 6,
+          "log": "2026-11-25-00-59-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-bert-base-uncased-emotion-baremetal",
+          "max_diff": 0.038078904,
+          "model": "bert-base-uncased-emotion",
+          "os": "baremetal",
+          "relative": 0.005484675,
+          "simulated_cycles": 1180392873,
+          "status": "pass"
+        },
+        {
+          "cycles": 1201354481,
+          "elapsed_s": 32.685,
+          "elements": 6,
+          "log": "2026-11-25-01-02-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-bert-base-uncased-emotion-linux",
+          "max_diff": 0.038078904,
+          "model": "bert-base-uncased-emotion",
+          "os": "linux",
+          "relative": 0.005484675,
+          "simulated_cycles": 1423793911,
+          "status": "pass"
+        },
+        {
+          "cycles": 1116632,
+          "elapsed_s": 0.107,
+          "elements": 40,
+          "log": "2026-11-25-01-03-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-lenet-baremetal",
+          "max_diff": 0.0,
+          "model": "lenet",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 4508013,
+          "status": "pass"
+        },
+        {
+          "cycles": 1129137,
+          "elapsed_s": 4.511,
+          "elements": 40,
+          "log": "2026-11-25-01-05-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-lenet-linux",
+          "max_diff": 0.0,
+          "model": "lenet",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 186234271,
+          "status": "pass"
+        },
+        {
+          "cycles": 208490278,
+          "elapsed_s": 4.864,
+          "elements": 1000,
+          "log": "2026-11-25-01-05-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-mobilenet-v3-small-baremetal",
+          "max_diff": 0.0,
+          "model": "mobilenet-v3-small",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 208563789,
+          "status": "pass"
+        },
+        {
+          "cycles": 309638067,
+          "elapsed_s": 9.794,
+          "elements": 1000,
+          "log": "2026-11-25-01-07-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-mobilenet-v3-small-linux",
+          "max_diff": 0.0,
+          "model": "mobilenet-v3-small",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 516068296,
+          "status": "pass"
+        },
+        {
+          "cycles": 326516803,
+          "elapsed_s": 7.65,
+          "elements": 1000,
+          "log": "2026-11-25-01-08-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-resnet18-baremetal",
+          "max_diff": 0.0,
+          "model": "resnet18",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 326590987,
+          "status": "pass"
+        },
+        {
+          "cycles": 595321825,
+          "elapsed_s": 20.007,
+          "elements": 1000,
+          "log": "2026-11-25-01-10-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-resnet18-linux",
+          "max_diff": 0.0,
+          "model": "resnet18",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 859040271,
+          "status": "pass"
+        },
+        {
+          "cycles": 4180952995,
+          "elapsed_s": 238.302,
+          "elements": 1800,
+          "log": "2026-11-25-01-11-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-yolo26n-baremetal",
+          "max_diff": 0.0,
+          "model": "yolo26n",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 4181022945,
+          "status": "pass"
+        },
+        {
+          "cycles": 5703773162,
+          "elapsed_s": 137.234,
+          "elements": 1800,
+          "log": "2026-11-25-01-21-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-yolo26n-linux",
+          "max_diff": 0.0,
+          "model": "yolo26n",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 5953066358,
+          "status": "pass"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-dataset",
+      "name": "BEMU dataset",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T16:57:38.678651+00:00"
+}

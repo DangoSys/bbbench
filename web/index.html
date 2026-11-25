@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3BBench</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/cover.css" />
+  </head>
+  <body>
+    <nav class="top wide">
+      <a class="brand" href="./index.html">3BBench</a>
+      <a href="./index.html" aria-current="page">About</a>
+      <a href="./prefab.html">Prefab</a>
+      <a href="./abstract.html">Abstract</a>
+      <a href="./designs.html">Designs</a>
+      <a href="./tools.html">Tools</a>
+      <a href="./agent.html">Agent</a>
+    </nav>
+
+    <main class="wide cover">
+      <header class="hero">
+        <h1>3BBench</h1>
+        <p class="lead">The bench of hardware–software co-design.</p>
+        <ul class="logos">
+          <li>
+            <a href="https://github.com/DangoSys/buckyball">
+              <img src="./src/logos/buckyball.png" alt="" />
+              <span><b>B</b>uckyball</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/buddy-compiler/buddy-mlir">
+              <img src="./src/logos/buddy-compiler.png" alt="" />
+              <span><b>B</b>uddy Compiler</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/DangoSys/bloom">
+              <img src="./src/logos/bloom.png" alt="" />
+              <span><b>B</b>loom</span>
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <section>
+        <h2>What it evaluates</h2>
+        <p>
+          3BBench evaluates hardware–software co-design as one system: the chips
+          built with Buckyball, the software compiled for them by Buddy Compiler,
+          and the architecture exploration of Bloom are measured together, on the
+          same designs and the same workloads.
+        </p>
+        <div class="goals">
+          <a class="goal" href="./prefab.html">
+            <h3>Prefab</h3>
+            <p>The quality of the reusable components distilled from different designs.</p>
+            <span class="go">Open →</span>
+          </a>
+          <a class="goal" href="./abstract.html">
+            <h3>Abstract</h3>
+            <p>Whether the implementation of the abstractions limits the designs.</p>
+            <span class="go">Open →</span>
+          </a>
+          <a class="goal" href="./designs.html">
+            <h3>Designs</h3>
+            <p>The performance of the concrete chips and their customized software stacks designed on the framework.</p>
+            <span class="go">Open →</span>
+          </a>
+          <a class="goal" href="./tools.html">
+            <h3>Tools</h3>
+            <p>Whether the toolchain reports more accurate data, faster.</p>
+            <span class="go">Open →</span>
+          </a>
+          <a class="goal" href="./agent.html">
+            <h3>Agent</h3>
+            <p>The performance of the models.</p>
+            <span class="go">Open →</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/load.ts"></script>
+  </body>
+</html>

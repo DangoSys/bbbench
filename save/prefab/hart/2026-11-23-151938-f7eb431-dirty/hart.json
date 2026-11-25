@@ -1,0 +1,144 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "magia",
+      "path": "examples/prefab/harts/magia",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-23-52-prefab-bebop-bemu-hart-magia-default-bare-tests",
+            "passed": 14,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-gemm_few_columns-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-gemm_one_column-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-gemm_one_row-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-gemm_service-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-gemm_two_columns-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-half_convert-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 14
+          },
+          "verilator": {
+            "log": "2026-11-23-23-53-prefab-bebop-verilator-hart-magia-default-bare-tests",
+            "passed": 11,
+            "status": "failure",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-gemm_few_columns-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-gemm_one_column-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-gemm_one_row-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "magia-hart0-ctest-gemm_service-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "magia-hart0-ctest-gemm_two_columns-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-ctest-half_convert-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "crash",
+                "test": "magia-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "magia-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 14
+          }
+        },
+        "status": "failure"
+      }
+    }
+  ],
+  "taken": "2026-11-23T15:19:38.244165+00:00"
+}

@@ -1,0 +1,268 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "poly/harts/poly",
+      "path": "examples/designs/poly/harts/poly",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-24-02-03-poly-bebop-bemu-hart-poly-default-bare-tests",
+            "passed": 51,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-bank_paths-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-dma_partial-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-ctest-kernel_empty-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-trace_events-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread0-ctest-mm_accumulate_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread0-ctest-mm_extremes_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread0-ctest-mm_long_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread0-ctest-mm_small_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread0-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread0-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread0-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread0-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread1-ctest-mm_accumulate_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread1-ctest-mm_extremes_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread1-ctest-mm_long_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread1-ctest-mm_small_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread1-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread1-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread1-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread1-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread2-ctest-mm_accumulate_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread2-ctest-mm_extremes_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread2-ctest-mm_long_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread2-ctest-mm_small_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread2-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread2-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread2-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread2-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread3-ctest-mm_accumulate_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread3-ctest-mm_extremes_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread3-ctest-mm_long_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread3-ctest-mm_small_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread3-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread3-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread3-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread3-ctest-quant_random_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread4-ctest-mm_accumulate_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread4-ctest-mm_extremes_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread4-ctest-mm_long_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread4-ctest-mm_small_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread4-ctest-mxint8act-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread4-ctest-mxint8act_rows-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread4-ctest-quant_edges_test-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-thread4-ctest-quant_random_test-baremetal"
+              }
+            ],
+            "total": 51
+          },
+          "verilator": {
+            "log": "2026-11-24-02-04-poly-bebop-verilator-hart-poly-default-bare-tests",
+            "passed": 8,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_supervisor_timer-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-time_csr_clock-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-time_csr_permissions-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "poly-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 8
+          }
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "taken": "2026-11-23T17:42:07.359904+00:00"
+}

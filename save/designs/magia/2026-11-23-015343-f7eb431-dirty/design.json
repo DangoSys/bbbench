@@ -1,0 +1,247 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "design": "magia",
+  "dirty": true,
+  "nodes": [
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "elapsed_s": 53.6,
+      "id": "build",
+      "name": "Stack & workloads",
+      "needs": [],
+      "status": "pass"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "elapsed_s": 140.0,
+      "id": "bemu-batch",
+      "name": "BEMU batch",
+      "needs": [
+        "build"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-23-09-54-magia-bebop-bemu-device-magia-MagiaTapeoutConfig-bare-tests",
+          "passed": 6,
+          "total": 6,
+          "workloads": [
+            {
+              "cycles": 136059,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_few_columns-baremetal"
+            },
+            {
+              "cycles": 181174,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_one_column-baremetal"
+            },
+            {
+              "cycles": 276821,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_one_row-baremetal"
+            },
+            {
+              "cycles": 378057,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_service-baremetal"
+            },
+            {
+              "cycles": 250151,
+              "elapsed_s": 0.1,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_two_columns-baremetal"
+            },
+            {
+              "cycles": 49132,
+              "elapsed_s": 0.11,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-half_convert-baremetal"
+            }
+          ]
+        },
+        "linux-tests": {
+          "log": "2026-11-23-09-55-magia-bebop-bemu-device-magia-MagiaTapeoutConfig-linux-tests",
+          "passed": 1,
+          "total": 1,
+          "workloads": [
+            {
+              "cycles": 3762147083,
+              "elapsed_s": 84.39,
+              "status": "pass",
+              "workload": "fw_payload-linux"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "elapsed_s": 74.1,
+      "id": "bemu-model",
+      "models": [
+        {
+          "error": "model.build: Model build failed (1): cmake -S /home/wanghui/Code/buckyball/stack/models -B /home/wanghui/Code/buckyball/stack/models/build/magia/device/magia/MagiaTapeoutConfig/bert-base-uncased-emotion -G Ninja -DARCH=buckyball -DDESIGN_CMAKE=/home/wanghui/Code/buckyball/examples/designs/magia/output/sims/device/magia/MagiaTapeoutConfig/stack/generated/design.cmake -DMODEL=bert-base-uncased-emotion",
+          "model": "bert-base-uncased-emotion",
+          "status": "failure"
+        },
+        {
+          "error": "model.build: Model build failed (1): cmake -S /home/wanghui/Code/buckyball/stack/models -B /home/wanghui/Code/buckyball/stack/models/build/magia/device/magia/MagiaTapeoutConfig/qwen3-0-6b -G Ninja -DARCH=buckyball -DDESIGN_CMAKE=/home/wanghui/Code/buckyball/examples/designs/magia/output/sims/device/magia/MagiaTapeoutConfig/stack/generated/design.cmake -DMODEL=qwen3-0-6b",
+          "model": "qwen3-0-6b",
+          "status": "failure"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "failure"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaVerilatorConfig.toml",
+      "elapsed_s": 2745.3,
+      "id": "verilator-batch",
+      "name": "Verilator batch",
+      "needs": [
+        "bemu-batch"
+      ],
+      "status": "failure",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-23-10-01-magia-bebop-verilator-device-magia-MagiaVerilatorConfig-bare-tests",
+          "passed": 2,
+          "total": 10,
+          "workloads": [
+            {
+              "elapsed_s": 1800.1,
+              "status": "crash",
+              "workload": "magia-hart0-ctest-fsync_test_mm-baremetal"
+            },
+            {
+              "elapsed_s": 1800.11,
+              "status": "crash",
+              "workload": "magia-hart0-ctest-gemm_columns_mm-baremetal"
+            },
+            {
+              "elapsed_s": 1800.11,
+              "status": "crash",
+              "workload": "magia-hart0-ctest-gemm_one_row-baremetal"
+            },
+            {
+              "elapsed_s": 1800.11,
+              "status": "crash",
+              "workload": "magia-hart0-ctest-gemm_service-baremetal"
+            },
+            {
+              "elapsed_s": 1800.11,
+              "status": "crash",
+              "workload": "magia-hart0-ctest-gemm_two_columns-baremetal"
+            },
+            {
+              "elapsed_s": 1800.1,
+              "status": "crash",
+              "workload": "magia-hart0-ctest-half_convert-baremetal"
+            },
+            {
+              "elapsed_s": 1800.11,
+              "status": "crash",
+              "workload": "magia-hart0-ctest-redmule_small_mm-baremetal"
+            },
+            {
+              "elapsed_s": 1800.11,
+              "status": "crash",
+              "workload": "magia-hart0-ctest-redmule_test_mm-baremetal"
+            },
+            {
+              "elapsed_s": 467.09,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_few_columns-baremetal"
+            },
+            {
+              "elapsed_s": 672.93,
+              "status": "pass",
+              "workload": "magia-hart0-ctest-gemm_one_column-baremetal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaVerilatorConfig.toml",
+      "id": "verilator-slices",
+      "name": "Verilator slices",
+      "needs": [
+        "verilator-batch"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaTapeoutConfig.toml",
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaP2EConfig.toml",
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-slices"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaP2EConfig.toml",
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaP2EConfig.toml",
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "config": "magia/devices/magia/configs/MagiaP2EConfig.toml",
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-23T01:53:43.821755+00:00"
+}

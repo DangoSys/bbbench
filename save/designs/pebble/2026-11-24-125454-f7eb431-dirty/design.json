@@ -1,0 +1,253 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "pebble/devices/pebble/configs/PebbleDefaultConfig.toml",
+  "design": "pebble",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 700.2,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 118419598,
+          "elapsed_s": 0.626,
+          "elements": 1000,
+          "log": "2026-11-24-20-54-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-alexnet-baremetal",
+          "max_diff": 0.0,
+          "model": "alexnet",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 118896649,
+          "status": "pass"
+        },
+        {
+          "cycles": 120997274,
+          "elapsed_s": 31.501,
+          "elements": 1000,
+          "log": "2026-11-24-20-56-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-alexnet-linux",
+          "max_diff": 0.0,
+          "model": "alexnet",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 17986881454,
+          "status": "pass"
+        },
+        {
+          "cycles": 739248,
+          "elapsed_s": 0.008,
+          "elements": 10,
+          "log": "2026-11-24-20-57-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-lenet-baremetal",
+          "max_diff": 0.0,
+          "model": "lenet",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 851309,
+          "status": "pass"
+        },
+        {
+          "cycles": 927287,
+          "elapsed_s": 23.529,
+          "elements": 10,
+          "log": "2026-11-24-20-58-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-lenet-linux",
+          "max_diff": 0.0,
+          "model": "lenet",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 14200302966,
+          "status": "pass"
+        },
+        {
+          "cycles": 57115619,
+          "elapsed_s": 0.24,
+          "elements": 1000,
+          "log": "2026-11-24-20-58-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-mobilenet-v3-small-baremetal",
+          "max_diff": 0.0,
+          "model": "mobilenet-v3-small",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 57595362,
+          "status": "pass"
+        },
+        {
+          "cycles": 599040470,
+          "elapsed_s": 24.832,
+          "elements": 1000,
+          "log": "2026-11-24-21-00-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-mobilenet-v3-small-linux",
+          "max_diff": 0.0,
+          "model": "mobilenet-v3-small",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 15091804172,
+          "status": "pass"
+        },
+        {
+          "cycles": 194021369,
+          "elapsed_s": 0.865,
+          "elements": 1000,
+          "log": "2026-11-24-21-00-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-resnet18-baremetal",
+          "max_diff": 0.0,
+          "model": "resnet18",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 194498554,
+          "status": "pass"
+        },
+        {
+          "cycles": 923925656,
+          "elapsed_s": 26.79,
+          "elements": 1000,
+          "log": "2026-11-24-21-02-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-resnet18-linux",
+          "max_diff": 0.0,
+          "model": "resnet18",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 15917693284,
+          "status": "pass"
+        },
+        {
+          "cycles": 711455932,
+          "elapsed_s": 2.486,
+          "elements": 1800,
+          "log": "2026-11-24-21-03-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-yolo26n-baremetal",
+          "max_diff": 0.0,
+          "model": "yolo26n",
+          "os": "baremetal",
+          "relative": 0.0,
+          "simulated_cycles": 711927907,
+          "status": "pass"
+        },
+        {
+          "cycles": 6779110801,
+          "elapsed_s": 37.558,
+          "elements": 1800,
+          "log": "2026-11-24-21-05-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-yolo26n-linux",
+          "max_diff": 0.0,
+          "model": "yolo26n",
+          "os": "linux",
+          "relative": 0.0,
+          "simulated_cycles": 22084181706,
+          "status": "pass"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T12:54:54.125185+00:00"
+}

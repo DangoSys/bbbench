@@ -1,0 +1,566 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "poly/devices/poly/configs/PolyDefaultConfig.toml",
+  "design": "poly",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 4300.3,
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pass",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-24-21-05-poly-bebop-verilator-device-poly-PolyDefaultConfig-bare-tests",
+          "passed": 71,
+          "total": 71,
+          "workloads": [
+            {
+              "cycles": 32745,
+              "elapsed_s": 24.25,
+              "status": "pass",
+              "workload": "poly-main-ctest-ant_coherence-multicore-baremetal"
+            },
+            {
+              "cycles": 30692,
+              "elapsed_s": 22.33,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-physical_threads-multicore-baremetal"
+            },
+            {
+              "cycles": 60727,
+              "elapsed_s": 44.94,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_native_edges-baremetal"
+            },
+            {
+              "cycles": 97999,
+              "elapsed_s": 65.65,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_activation_destination-baremetal"
+            },
+            {
+              "cycles": 529168,
+              "elapsed_s": 361.26,
+              "status": "pass",
+              "workload": "poly-main-ctest-program_heap-multicore-baremetal"
+            },
+            {
+              "cycles": 6955,
+              "elapsed_s": 4.81,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-dma_unaligned_stream-baremetal"
+            },
+            {
+              "cycles": 49341,
+              "elapsed_s": 34.43,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-intnorm_round-baremetal"
+            },
+            {
+              "cycles": 23461,
+              "elapsed_s": 16.86,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-intnorm_extreme-baremetal"
+            },
+            {
+              "cycles": 157731,
+              "elapsed_s": 102.21,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-service_payload-baremetal"
+            },
+            {
+              "cycles": 157731,
+              "elapsed_s": 110.63,
+              "status": "pass",
+              "workload": "poly-hart1-thread2-ctest-service_payload-baremetal"
+            },
+            {
+              "cycles": 144343,
+              "elapsed_s": 96.31,
+              "status": "pass",
+              "workload": "poly-hart0-mlirtest-compiler_gp_reduce-baremetal"
+            },
+            {
+              "cycles": 215597,
+              "elapsed_s": 143.6,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_gp_rows-baremetal"
+            },
+            {
+              "cycles": 79557,
+              "elapsed_s": 51.55,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_gp_permute-baremetal"
+            },
+            {
+              "cycles": 20964,
+              "elapsed_s": 13.82,
+              "status": "pass",
+              "workload": "poly-hart1-ctest-kernel_empty-baremetal"
+            },
+            {
+              "cycles": 28061,
+              "elapsed_s": 18.22,
+              "status": "pass",
+              "workload": "poly-hart1-ctest-bank_paths-baremetal"
+            },
+            {
+              "cycles": 145146,
+              "elapsed_s": 95.88,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_square_sum-baremetal"
+            },
+            {
+              "cycles": 129695,
+              "elapsed_s": 84.79,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_tanh-baremetal"
+            },
+            {
+              "cycles": 88459,
+              "elapsed_s": 61.55,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_broadcast_power-baremetal"
+            },
+            {
+              "cycles": 12767,
+              "elapsed_s": 10.63,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-reduce_quant-baremetal"
+            },
+            {
+              "cycles": 439441,
+              "elapsed_s": 350.54,
+              "status": "pass",
+              "workload": "poly-main-mlirtest-ball_mxint8quantize_random-baremetal"
+            },
+            {
+              "cycles": 7079,
+              "elapsed_s": 5.01,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-dma_partial_rows_test-baremetal"
+            },
+            {
+              "cycles": 17045,
+              "elapsed_s": 12.13,
+              "status": "pass",
+              "workload": "poly-hart1-ctest-dma_partial-baremetal"
+            },
+            {
+              "cycles": 103816,
+              "elapsed_s": 72.46,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_direct_output_rows-baremetal"
+            },
+            {
+              "cycles": 125575,
+              "elapsed_s": 96.09,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_resident_rows-baremetal"
+            },
+            {
+              "cycles": 85537,
+              "elapsed_s": 76.43,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_packed_input-baremetal"
+            },
+            {
+              "cycles": 82888,
+              "elapsed_s": 56.74,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_packed_short-baremetal"
+            },
+            {
+              "cycles": 145136,
+              "elapsed_s": 97.3,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_heterogeneous-baremetal"
+            },
+            {
+              "cycles": 106908,
+              "elapsed_s": 80.26,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_quant_row352-baremetal"
+            },
+            {
+              "cycles": 111736,
+              "elapsed_s": 86.87,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_quant_row544-baremetal"
+            },
+            {
+              "cycles": 284972,
+              "elapsed_s": 191.42,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_quant_planes-baremetal"
+            },
+            {
+              "cycles": 177956,
+              "elapsed_s": 131.89,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_matrix_columns-baremetal"
+            },
+            {
+              "cycles": 201752,
+              "elapsed_s": 146.3,
+              "status": "pass",
+              "workload": "poly-hart1-mlirtest-compiler_matrix_columns_rows-baremetal"
+            },
+            {
+              "cycles": 284799,
+              "elapsed_s": 201.84,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-dataflow-multicore-baremetal"
+            },
+            {
+              "cycles": 657053,
+              "elapsed_s": 435.27,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-dataflow_serial-multicore-baremetal"
+            },
+            {
+              "cycles": 116483,
+              "elapsed_s": 90.17,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-dataflow_multibank-multicore-baremetal"
+            },
+            {
+              "cycles": 70755,
+              "elapsed_s": 53.29,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-dataflow_high_banks-multicore-baremetal"
+            },
+            {
+              "cycles": 139872,
+              "elapsed_s": 99.88,
+              "status": "pass",
+              "workload": "poly-main-ctest-device_dataflow-multicore-baremetal"
+            },
+            {
+              "cycles": 21060,
+              "elapsed_s": 15.84,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-f32add_groups-baremetal"
+            },
+            {
+              "cycles": 35232,
+              "elapsed_s": 26.43,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-f32add_pipeline-baremetal"
+            },
+            {
+              "cycles": 5020,
+              "elapsed_s": 3.91,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-device_storage-baremetal"
+            },
+            {
+              "cycles": 41219,
+              "elapsed_s": 28.73,
+              "status": "pass",
+              "workload": "poly-main-ctest-device_transfer-multicore-baremetal"
+            },
+            {
+              "cycles": 9356,
+              "elapsed_s": 6.52,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-controllers-multicore-baremetal"
+            },
+            {
+              "cycles": 30905,
+              "elapsed_s": 22.63,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-ant_shared-multicore-baremetal"
+            },
+            {
+              "cycles": 17148,
+              "elapsed_s": 11.53,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-ant_bank_rows-multicore-baremetal"
+            },
+            {
+              "cycles": 33653,
+              "elapsed_s": 22.13,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-ant_parallel-multicore-baremetal"
+            },
+            {
+              "cycles": 190863,
+              "elapsed_s": 121.59,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-ant_bank-multicore-baremetal"
+            },
+            {
+              "cycles": 37089,
+              "elapsed_s": 24.55,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-ant_highpa-multicore-baremetal"
+            },
+            {
+              "cycles": 32385,
+              "elapsed_s": 23.33,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-quant_edges_test-baremetal"
+            },
+            {
+              "cycles": 424971,
+              "elapsed_s": 276.68,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-quant_random_test-baremetal"
+            },
+            {
+              "cycles": 69113,
+              "elapsed_s": 44.64,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-quant_edges_test-baremetal"
+            },
+            {
+              "cycles": 471091,
+              "elapsed_s": 295.39,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-quant_random_test-baremetal"
+            },
+            {
+              "cycles": 296558,
+              "elapsed_s": 206.33,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-mm_small_test-baremetal"
+            },
+            {
+              "cycles": 218278,
+              "elapsed_s": 137.39,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-mm_extremes_test-baremetal"
+            },
+            {
+              "cycles": 70238,
+              "elapsed_s": 44.94,
+              "status": "pass",
+              "workload": "poly-hart1-thread2-ctest-quant_edges_test-baremetal"
+            },
+            {
+              "cycles": 471559,
+              "elapsed_s": 296.77,
+              "status": "pass",
+              "workload": "poly-hart1-thread2-ctest-quant_random_test-baremetal"
+            },
+            {
+              "cycles": 297614,
+              "elapsed_s": 188.52,
+              "status": "pass",
+              "workload": "poly-hart1-thread2-ctest-mm_small_test-baremetal"
+            },
+            {
+              "cycles": 220008,
+              "elapsed_s": 139.5,
+              "status": "pass",
+              "workload": "poly-hart1-thread2-ctest-mm_extremes_test-baremetal"
+            },
+            {
+              "cycles": 536763,
+              "elapsed_s": 343.1,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-mlir_bank_mxint8quantize_random-multicore-baremetal"
+            },
+            {
+              "cycles": 20324,
+              "elapsed_s": 13.13,
+              "status": "pass",
+              "workload": "poly-main-ctest-design-mlir_bank_mxint8matmul_accumulate-multicore-baremetal"
+            },
+            {
+              "cycles": 3533,
+              "elapsed_s": 2.61,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-mxint8unpack_single-baremetal"
+            },
+            {
+              "cycles": 5830,
+              "elapsed_s": 3.92,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-mxint8unpack_metadata_tail-baremetal"
+            },
+            {
+              "cycles": 22453,
+              "elapsed_s": 14.62,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-mxint8unpack_full_bank-baremetal"
+            },
+            {
+              "cycles": 4544,
+              "elapsed_s": 3.12,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-mxint8unpack_extremes-baremetal"
+            },
+            {
+              "cycles": 3533,
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "poly-hart0-ctest-mxint8unpack_unused_field-baremetal"
+            },
+            {
+              "cycles": 3760,
+              "elapsed_s": 2.62,
+              "status": "pass",
+              "workload": "poly-main-mlirtest-ball_mxint8unpack_single-baremetal"
+            },
+            {
+              "cycles": 6205,
+              "elapsed_s": 4.42,
+              "status": "pass",
+              "workload": "poly-main-mlirtest-bank_mxint8unpack_blocks-baremetal"
+            },
+            {
+              "cycles": 37667,
+              "elapsed_s": 24.13,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-ddr_raw-baremetal"
+            },
+            {
+              "cycles": 35559,
+              "elapsed_s": 23.23,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-ddr_war-baremetal"
+            },
+            {
+              "cycles": 37473,
+              "elapsed_s": 24.04,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-ddr_waw-baremetal"
+            },
+            {
+              "cycles": 35666,
+              "elapsed_s": 22.84,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-ddr_read_bypass-baremetal"
+            },
+            {
+              "cycles": 56402,
+              "elapsed_s": 35.83,
+              "status": "pass",
+              "workload": "poly-hart1-thread0-ctest-ddr_independent_threads-baremetal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-slices",
+      "name": "FPGA slices",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-slices"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T12:46:20.852790+00:00"
+}

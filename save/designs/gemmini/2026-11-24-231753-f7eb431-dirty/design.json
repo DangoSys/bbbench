@@ -1,0 +1,197 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "gemmini/devices/gemmini/configs/GemminiDefaultConfig.toml",
+  "design": "gemmini",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "datasets": [
+        {
+          "accuracy": 0.925,
+          "elapsed_s": 880.8,
+          "log": "2026-11-25-07-43-57-gemmini-accuracy-device-gemmini-GemminiDefaultConfig-bert-base-uncased-emotion",
+          "model": "bert-base-uncased-emotion",
+          "pass_rate": 0.9955,
+          "ran": 2000,
+          "reference_accuracy": 0.926,
+          "samples": 2000,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.5504,
+          "elapsed_s": 1791.3,
+          "log": "2026-11-25-07-58-38-gemmini-accuracy-device-gemmini-GemminiDefaultConfig-alexnet",
+          "model": "alexnet",
+          "pass_rate": 1.0,
+          "ran": 10000,
+          "reference_accuracy": 0.5504,
+          "samples": 10000,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.9927,
+          "elapsed_s": 164.3,
+          "log": "2026-11-25-08-28-29-gemmini-accuracy-device-gemmini-GemminiDefaultConfig-lenet",
+          "model": "lenet",
+          "pass_rate": 1.0,
+          "ran": 10000,
+          "reference_accuracy": 0.9927,
+          "samples": 10000,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.6222,
+          "elapsed_s": 779.6,
+          "log": "2026-11-25-08-31-14-gemmini-accuracy-device-gemmini-GemminiDefaultConfig-mobilenet-v3-small",
+          "model": "mobilenet-v3-small",
+          "pass_rate": 1.0,
+          "ran": 10000,
+          "reference_accuracy": 0.6222,
+          "samples": 10000,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.6738,
+          "elapsed_s": 1357.2,
+          "log": "2026-11-25-08-44-13-gemmini-accuracy-device-gemmini-GemminiDefaultConfig-resnet18",
+          "model": "resnet18",
+          "pass_rate": 1.0,
+          "ran": 10000,
+          "reference_accuracy": 0.6738,
+          "samples": 10000,
+          "status": "pass"
+        }
+      ],
+      "elapsed_s": 6537.9,
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T23:17:53.271816+00:00"
+}

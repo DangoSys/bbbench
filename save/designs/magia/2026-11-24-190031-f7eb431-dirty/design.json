@@ -1,0 +1,178 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "magia/devices/magia/configs/MagiaDefaultConfig.toml",
+  "design": "magia",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 4276.5,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 1589163345,
+          "elapsed_s": 151.757,
+          "elements": 24,
+          "log": "2026-11-25-03-00-magia-bemu-device-magia-MagiaDefaultConfig-magia-bert-base-uncased-emotion-baremetal",
+          "max_diff": 0.012695313,
+          "model": "bert-base-uncased-emotion",
+          "os": "baremetal",
+          "relative": 0.00183497,
+          "simulated_cycles": 6356761370,
+          "status": "pass"
+        },
+        {
+          "cycles": 1541789269,
+          "elapsed_s": 204.986,
+          "elements": 24,
+          "log": "2026-11-25-03-06-magia-bemu-device-magia-MagiaDefaultConfig-magia-bert-base-uncased-emotion-linux",
+          "max_diff": 0.01953125,
+          "model": "bert-base-uncased-emotion",
+          "os": "linux",
+          "relative": 0.002823031,
+          "simulated_cycles": 6819126808,
+          "status": "pass"
+        },
+        {
+          "error": "bebop.bemu.sim ran past 30 minutes and was cancelled",
+          "model": "qwen3-0-6b",
+          "os": "baremetal",
+          "status": "timeout"
+        },
+        {
+          "error": "bebop.bemu.sim ran past 30 minutes and was cancelled",
+          "model": "qwen3-0-6b",
+          "os": "linux",
+          "status": "timeout"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T19:00:31.686415+00:00"
+}

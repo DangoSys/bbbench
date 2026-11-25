@@ -1,0 +1,104 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "boom",
+      "path": "examples/prefab/harts/boom",
+      "test": {
+        "backends": {
+          "bemu": {
+            "log": "2026-11-23-23-17-prefab-bebop-bemu-hart-boom-default-bare-tests",
+            "passed": 9,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-atomics-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-cpu_arithmetic-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-fpu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-memory-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 9
+          },
+          "verilator": {
+            "log": "2026-11-23-23-17-prefab-bebop-verilator-hart-boom-default-bare-tests",
+            "passed": 9,
+            "status": "pass",
+            "tests": [
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-atomics-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-cpu_arithmetic-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-fpu-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-ctest-memory-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-clint_software_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-clint_timer_interrupt-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-lrsc_word-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-plic_register_access-baremetal"
+              },
+              {
+                "status": "pass",
+                "test": "boom-hart0-soctest-trace_events-baremetal"
+              }
+            ],
+            "total": 9
+          }
+        },
+        "status": "pass"
+      }
+    }
+  ],
+  "taken": "2026-11-23T15:07:48.167628+00:00"
+}

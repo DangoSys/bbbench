@@ -1,0 +1,18 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "cycles": 4635263459,
+  "design": "poly",
+  "dirty": true,
+  "elapsed_s": 78.05,
+  "taken": "2026-11-23T07:22:13.962530+00:00",
+  "timeline": "designs/poly/2026-11-23-070301-f7eb431-dirty",
+  "tool": "BEMU",
+  "workloads": [
+    {
+      "cycles": 4635263459,
+      "elapsed_s": 78.05,
+      "status": "pass",
+      "workload": "fw_payload-linux"
+    }
+  ]
+}

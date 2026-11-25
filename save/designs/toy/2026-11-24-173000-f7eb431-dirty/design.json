@@ -1,0 +1,190 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "config": "toy/devices/toy/configs/ToyDefaultConfig.toml",
+  "design": "toy",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 1121.9,
+      "id": "bemu-model",
+      "models": [
+        {
+          "cycles": 9612507,
+          "elapsed_s": 0.138,
+          "elements": 10,
+          "log": "2026-11-25-01-30-toy-bemu-device-toy-ToyDefaultConfig-toy-lenet-baremetal",
+          "max_diff": 7.629e-06,
+          "model": "lenet",
+          "os": "baremetal",
+          "relative": 8.7e-08,
+          "simulated_cycles": 9646282,
+          "status": "pass"
+        },
+        {
+          "cycles": 10666695,
+          "elapsed_s": 9.997,
+          "elements": 10,
+          "log": "2026-11-25-01-40-toy-bemu-device-toy-ToyDefaultConfig-toy-lenet-linux",
+          "max_diff": 7.629e-06,
+          "model": "lenet",
+          "os": "linux",
+          "relative": 8.7e-08,
+          "simulated_cycles": 688534620,
+          "status": "pass"
+        },
+        {
+          "cycles": 2472457062,
+          "elapsed_s": 24.858,
+          "elements": 1000,
+          "log": "2026-11-25-01-41-toy-bemu-device-toy-ToyDefaultConfig-toy-mobilenet-v3-small-baremetal",
+          "max_diff": 3.9101e-05,
+          "model": "mobilenet-v3-small",
+          "os": "baremetal",
+          "relative": 2.981e-06,
+          "simulated_cycles": 2472592879,
+          "status": "pass"
+        },
+        {
+          "cycles": 2494938561,
+          "elapsed_s": 33.607,
+          "elements": 1000,
+          "log": "2026-11-25-01-47-toy-bemu-device-toy-ToyDefaultConfig-toy-mobilenet-v3-small-linux",
+          "max_diff": 3.9101e-05,
+          "model": "mobilenet-v3-small",
+          "os": "linux",
+          "relative": 2.981e-06,
+          "simulated_cycles": 3400607940,
+          "status": "pass"
+        }
+      ],
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-24T17:30:00.774153+00:00"
+}

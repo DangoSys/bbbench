@@ -1,0 +1,15 @@
+{
+  "commit": "f7eb4312724a3e2d1702e0e89fea7e041dcdfe73",
+  "dirty": true,
+  "harts": [
+    {
+      "hart": "reduce",
+      "path": "examples/prefab/harts/reduce",
+      "test": {
+        "error": "bebop.verilator.verilog: failure",
+        "status": "failure"
+      }
+    }
+  ],
+  "taken": "2026-11-23T16:49:16.393182+00:00"
+}
