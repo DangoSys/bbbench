@@ -61,13 +61,38 @@
       "status": "pending"
     },
     {
+      "datasets": [
+        {
+          "accuracy": 0.39069767441860465,
+          "elapsed_s": 2277.5,
+          "log": "2026-11-25-15-49-53-poly-accuracy-device-poly-PolyDefaultConfig-qwen3-0-6b",
+          "model": "qwen3-0-6b",
+          "pass_rate": 0.9302325581395349,
+          "ran": 645,
+          "reference_accuracy": 0.4062015503875969,
+          "samples": 645,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.431,
+          "elapsed_s": 2470.4,
+          "log": "2026-11-25-16-27-50-poly-accuracy-device-poly-PolyDefaultConfig-laya",
+          "model": "laya",
+          "pass_rate": 0.984,
+          "ran": 1000,
+          "reference_accuracy": 0.43,
+          "samples": 1000,
+          "status": "pass"
+        }
+      ],
+      "elapsed_s": 16106.0,
       "id": "bemu-accuracy",
       "name": "BEMU accuracy",
       "needs": [
         "bemu-workload",
         "model-build"
       ],
-      "status": "running"
+      "status": "pass"
     },
     {
       "id": "verilator-gvn",
@@ -111,8 +136,8 @@
       "status": "pending"
     },
     {
-      "id": "fpga-workload",
-      "name": "FPGA workload",
+      "id": "fpga-batch",
+      "name": "FPGA batch",
       "needs": [
         "fpga-bitstream"
       ],
@@ -122,7 +147,7 @@
       "id": "fpga-gvn",
       "name": "FPGA GVN",
       "needs": [
-        "fpga-workload"
+        "fpga-batch"
       ],
       "status": "pending"
     },

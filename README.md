@@ -4,7 +4,7 @@ The bench of hardware–software co-design: Buckyball, Buddy Compiler and Bloom,
 measured together on the same designs and the same workloads.
 
 ## 评估prefab
-1. ball 面积，验证。功耗
+1. ball 
 
 **开发者**
 bbdev dc --area '--ball relu'
