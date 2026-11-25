@@ -61,13 +61,38 @@
       "status": "pending"
     },
     {
+      "datasets": [
+        {
+          "accuracy": 0.38080495356037153,
+          "elapsed_s": 3108.7,
+          "log": "2026-11-25-17-09-01-magia-accuracy-device-magia-MagiaDefaultConfig-qwen3-0-6b",
+          "model": "qwen3-0-6b",
+          "pass_rate": 0.9566563467492261,
+          "ran": 323,
+          "reference_accuracy": 0.3993808049535604,
+          "samples": 323,
+          "status": "pass"
+        },
+        {
+          "accuracy": 0.9255,
+          "elapsed_s": 1507.0,
+          "log": "2026-11-25-18-00-49-magia-accuracy-device-magia-MagiaDefaultConfig-bert-base-uncased-emotion",
+          "model": "bert-base-uncased-emotion",
+          "pass_rate": 0.9995,
+          "ran": 2000,
+          "reference_accuracy": 0.926,
+          "samples": 2000,
+          "status": "pass"
+        }
+      ],
+      "elapsed_s": 8606.6,
       "id": "bemu-accuracy",
       "name": "BEMU accuracy",
       "needs": [
         "bemu-workload",
         "model-build"
       ],
-      "status": "running"
+      "status": "pass"
     },
     {
       "id": "verilator-gvn",
