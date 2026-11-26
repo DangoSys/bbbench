@@ -103,12 +103,15 @@
       "status": "pending"
     },
     {
+      "bitstream": "/home/wanghui/Code/buckyball/examples/designs/pebble/output/sims/device/pebble/PebbleDefaultConfig/p2e/2026-11-25-14-50-diff/fpgaCompDir/bitstream.bit",
+      "diff": true,
+      "elapsed_s": 19420.0,
       "id": "fpga-bitstream",
       "name": "FPGA bitstream",
       "needs": [
         "verilator-workload"
       ],
-      "status": "running"
+      "status": "pass"
     },
     {
       "id": "fpga-workload",

@@ -1,0 +1,301 @@
+{
+  "commit": "27464723b8e22e84dc612d6011d0da8f92fcdc28",
+  "config": "pebble/devices/pebble/configs/PebbleDefaultConfig.toml",
+  "design": "pebble",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "bitstream": "/home/wanghui/Code/buckyball/examples/designs/pebble/output/sims/device/pebble/PebbleDefaultConfig/p2e/2026-11-25-14-50-diff/fpgaCompDir/bitstream.bit",
+      "diff": true,
+      "elapsed_s": 490.2,
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "failure",
+      "suites": {
+        "bare-tests": {
+          "log": "2026-11-25-20-25-pebble-bebop-p2e-device-pebble-PebbleDefaultConfig-bare-tests",
+          "passed": 29,
+          "total": 30,
+          "workloads": [
+            {
+              "elapsed_s": 13.79,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mvin_2d_pixel_stride_test-baremetal"
+            },
+            {
+              "elapsed_s": 14.09,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-mega_conv_pipeline_test-baremetal"
+            },
+            {
+              "elapsed_s": 14.11,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_conv2d_s2_depthwise_s2-baremetal"
+            },
+            {
+              "elapsed_s": 14.45,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_se_gate_conv-baremetal"
+            },
+            {
+              "elapsed_s": 14.07,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_global_avg_conv_exact-baremetal"
+            },
+            {
+              "elapsed_s": 14.91,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_global_avg_conv2_exact-baremetal"
+            },
+            {
+              "elapsed_s": 14.02,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-hart_mega_global_avg_7x7_c288_exact-baremetal"
+            },
+            {
+              "elapsed_s": 14.46,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-residual_add_lut_test-baremetal"
+            },
+            {
+              "elapsed_s": 14.38,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-maxpool_im2col_test-baremetal"
+            },
+            {
+              "elapsed_s": 14.76,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-se_gate_lut_test-baremetal"
+            },
+            {
+              "elapsed_s": 13.73,
+              "status": "pass",
+              "workload": "pebble-hart0-ctest-dual_conv_add_int2fp_test-baremetal"
+            },
+            {
+              "elapsed_s": 14.7,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_matadd_i32_elementwise-baremetal"
+            },
+            {
+              "elapsed_s": 14.43,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_int8add_identity_scale-baremetal"
+            },
+            {
+              "elapsed_s": 14.35,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_lut_identity_table-baremetal"
+            },
+            {
+              "elapsed_s": 14.76,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_int8mul_unit_gate-baremetal"
+            },
+            {
+              "elapsed_s": 14.69,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_maxpool_k3_padded_spatial-baremetal"
+            },
+            {
+              "elapsed_s": 14.09,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_smatmul_bias_two_terms-baremetal"
+            },
+            {
+              "elapsed_s": 13.63,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_int2fp_unit_scale-baremetal"
+            },
+            {
+              "elapsed_s": 14.4,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_quant_i32_pack16-baremetal"
+            },
+            {
+              "elapsed_s": 14.64,
+              "status": "fail",
+              "workload": "pebble-pebble-mlirtest-bank_quant_f32_pack16-baremetal"
+            },
+            {
+              "elapsed_s": 13.93,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_im2col_k3_two_blocks-baremetal"
+            },
+            {
+              "elapsed_s": 14.65,
+              "status": "pass",
+              "workload": "pebble-pebble-mlirtest-bank_transpose_i8_packed_matrix-baremetal"
+            },
+            {
+              "elapsed_s": 14.43,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-bank_dma_reuse-multicore-baremetal"
+            },
+            {
+              "elapsed_s": 14.18,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-maxpool_partial_update-multicore-baremetal"
+            },
+            {
+              "elapsed_s": 14.74,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-bank_dma_pingpong-multicore-baremetal"
+            },
+            {
+              "elapsed_s": 13.71,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-read_bank_shared-multicore-baremetal"
+            },
+            {
+              "elapsed_s": 13.99,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-read_bank_split-multicore-baremetal"
+            },
+            {
+              "elapsed_s": 14.63,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-same_ball_independent-multicore-baremetal"
+            },
+            {
+              "elapsed_s": 14.41,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-rob_window_probe-multicore-baremetal"
+            },
+            {
+              "elapsed_s": 14.06,
+              "status": "pass",
+              "workload": "pebble-pebble-ctest-pipeline-write_bank_versions-multicore-baremetal"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-25T12:24:53.102655+00:00"
+}
