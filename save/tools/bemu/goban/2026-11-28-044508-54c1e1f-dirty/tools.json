@@ -1,0 +1,71 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 20503474468,
+  "design": "goban",
+  "dirty": true,
+  "elapsed_s": 154.216,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-28T04:45:08.531854+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 7,
+  "workloads": [
+    {
+      "cycles": 2201885841,
+      "elapsed_s": 13.008,
+      "frequency_hz": 169271666.74354243,
+      "log": "2026-11-28-12-45-08-goban-bemu-device-goban-GobanDefaultConfig-goban-test-linux",
+      "status": "below_target",
+      "workload": "goban-test-linux"
+    },
+    {
+      "cycles": 447576839,
+      "elapsed_s": 3.88,
+      "frequency_hz": 115354855.41237114,
+      "log": "2026-11-28-12-45-38-goban-bemu-device-goban-GobanDefaultConfig-goban-bert-base-uncased-emotion-baremetal",
+      "status": "below_target",
+      "workload": "bert-base-uncased-emotion-baremetal"
+    },
+    {
+      "cycles": 6088217892,
+      "elapsed_s": 30.033,
+      "frequency_hz": 202717607.0322645,
+      "log": "2026-11-28-12-46-08-goban-bemu-device-goban-GobanDefaultConfig-goban-bert-base-uncased-emotion-linux",
+      "status": "pass",
+      "workload": "bert-base-uncased-emotion-linux"
+    },
+    {
+      "cycles": 2840336354,
+      "elapsed_s": 36.795,
+      "frequency_hz": 77193541.35072699,
+      "log": "2026-11-28-12-46-48-goban-bemu-device-goban-GobanDefaultConfig-goban-laya-baremetal",
+      "status": "below_target",
+      "workload": "laya-baremetal"
+    },
+    {
+      "cycles": 4551166075,
+      "elapsed_s": 46.688,
+      "frequency_hz": 97480424.84150103,
+      "log": "2026-11-28-12-47-38-goban-bemu-device-goban-GobanDefaultConfig-goban-laya-linux",
+      "status": "below_target",
+      "workload": "laya-linux"
+    },
+    {
+      "cycles": 567688739,
+      "elapsed_s": 6.202,
+      "frequency_hz": 91533173.00870687,
+      "log": "2026-11-28-12-48-38-goban-bemu-device-goban-GobanDefaultConfig-goban-mlp-mixer-baremetal",
+      "status": "below_target",
+      "workload": "mlp-mixer-baremetal"
+    },
+    {
+      "cycles": 3806602728,
+      "elapsed_s": 17.61,
+      "frequency_hz": 216161426.9165247,
+      "log": "2026-11-28-12-48-58-goban-bemu-device-goban-GobanDefaultConfig-goban-mlp-mixer-linux",
+      "status": "pass",
+      "workload": "mlp-mixer-linux"
+    }
+  ]
+}

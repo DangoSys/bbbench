@@ -1,0 +1,795 @@
+{
+  "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+  "config": "goban/devices/goban/configs/GobanDefaultConfig.toml",
+  "design": "goban",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 2540.9,
+      "estimates": [
+        {
+          "error": "GVN estimate was not produced",
+          "model": "bert-base-uncased-emotion",
+          "status": "failure"
+        },
+        {
+          "error": "GVN estimate was not produced",
+          "model": "laya",
+          "status": "failure"
+        },
+        {
+          "cycles": 13445480233,
+          "elapsed_s": 552.3,
+          "failed": 0,
+          "log": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+          "measured": 29,
+          "model": "mlp-mixer",
+          "not_run": 48,
+          "slices": [
+            {
+              "cycles": 549898,
+              "exit": 0,
+              "instance": "subgraph0_ht67.0-iteration0",
+              "repeats": 2304,
+              "share": 0.094229805856277,
+              "total": 1266964992
+            },
+            {
+              "cycles": 478731,
+              "exit": 0,
+              "instance": "subgraph0_ht68.0-iteration0",
+              "repeats": 2352,
+              "share": 0.08374377801965417,
+              "total": 1125975312
+            },
+            {
+              "cycles": 67809,
+              "exit": 0,
+              "instance": "subgraph0_ht30.0-iteration0",
+              "repeats": 9216,
+              "share": 0.04647864807879488,
+              "total": 624927744
+            },
+            {
+              "cycles": 65804,
+              "exit": 0,
+              "instance": "subgraph0_ht38.0-iteration0",
+              "repeats": 9216,
+              "share": 0.04510435131290859,
+              "total": 606449664
+            },
+            {
+              "cycles": 974133,
+              "exit": 0,
+              "instance": "subgraph0_ht504.0-iteration0",
+              "repeats": 288,
+              "share": 0.020865770440198154,
+              "total": 280550304
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht432.0-iteration0",
+              "repeats": 288,
+              "share": 0.020863735555647668,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht576.0-iteration0",
+              "repeats": 288,
+              "share": 0.020863735555647668,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht648.0-iteration0",
+              "repeats": 288,
+              "share": 0.020863735555647668,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht720.0-iteration0",
+              "repeats": 288,
+              "share": 0.020863735555647668,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht792.0-iteration0",
+              "repeats": 288,
+              "share": 0.020863735555647668,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht864.0-iteration0",
+              "repeats": 288,
+              "share": 0.020863735555647668,
+              "total": 280522944
+            },
+            {
+              "cycles": 973838,
+              "exit": 0,
+              "instance": "subgraph0_ht288.0-iteration0",
+              "repeats": 288,
+              "share": 0.02085945158817296,
+              "total": 280465344
+            },
+            {
+              "cycles": 973838,
+              "exit": 0,
+              "instance": "subgraph0_ht360.0-iteration0",
+              "repeats": 288,
+              "share": 0.02085945158817296,
+              "total": 280465344
+            },
+            {
+              "cycles": 973202,
+              "exit": 0,
+              "instance": "subgraph0_ht72.0-iteration0",
+              "repeats": 288,
+              "share": 0.02084582857160339,
+              "total": 280282176
+            },
+            {
+              "cycles": 973202,
+              "exit": 0,
+              "instance": "subgraph0_ht144.0-iteration0",
+              "repeats": 288,
+              "share": 0.02084582857160339,
+              "total": 280282176
+            },
+            {
+              "cycles": 973202,
+              "exit": 0,
+              "instance": "subgraph0_ht216.0-iteration0",
+              "repeats": 288,
+              "share": 0.02084582857160339,
+              "total": 280282176
+            },
+            {
+              "cycles": 355611,
+              "exit": 0,
+              "instance": "subgraph0_ht495.0-iteration0",
+              "repeats": 576,
+              "share": 0.01523425957648351,
+              "total": 204831936
+            },
+            {
+              "cycles": 355422,
+              "exit": 0,
+              "instance": "subgraph0_ht567.0-iteration0",
+              "repeats": 576,
+              "share": 0.015226162877956313,
+              "total": 204723072
+            },
+            {
+              "cycles": 355408,
+              "exit": 0,
+              "instance": "subgraph0_ht279.0-iteration0",
+              "repeats": 576,
+              "share": 0.015225563122509854,
+              "total": 204715008
+            },
+            {
+              "cycles": 355408,
+              "exit": 0,
+              "instance": "subgraph0_ht351.0-iteration0",
+              "repeats": 576,
+              "share": 0.015225563122509854,
+              "total": 204715008
+            },
+            {
+              "cycles": 355369,
+              "exit": 0,
+              "instance": "subgraph0_ht711.0-iteration0",
+              "repeats": 576,
+              "share": 0.015223892375194718,
+              "total": 204692544
+            },
+            {
+              "cycles": 355364,
+              "exit": 0,
+              "instance": "subgraph0_ht423.0-iteration0",
+              "repeats": 576,
+              "share": 0.015223678176820982,
+              "total": 204689664
+            },
+            {
+              "cycles": 355364,
+              "exit": 0,
+              "instance": "subgraph0_ht639.0-iteration0",
+              "repeats": 576,
+              "share": 0.015223678176820982,
+              "total": 204689664
+            },
+            {
+              "cycles": 355364,
+              "exit": 0,
+              "instance": "subgraph0_ht783.0-iteration0",
+              "repeats": 576,
+              "share": 0.015223678176820982,
+              "total": 204689664
+            },
+            {
+              "cycles": 355364,
+              "exit": 0,
+              "instance": "subgraph0_ht855.0-iteration0",
+              "repeats": 576,
+              "share": 0.015223678176820982,
+              "total": 204689664
+            },
+            {
+              "cycles": 355247,
+              "exit": 0,
+              "instance": "subgraph0_ht63.0-iteration0",
+              "repeats": 576,
+              "share": 0.015218665934875574,
+              "total": 204622272
+            },
+            {
+              "cycles": 355247,
+              "exit": 0,
+              "instance": "subgraph0_ht135.0-iteration0",
+              "repeats": 576,
+              "share": 0.015218665934875574,
+              "total": 204622272
+            },
+            {
+              "cycles": 355247,
+              "exit": 0,
+              "instance": "subgraph0_ht207.0-iteration0",
+              "repeats": 576,
+              "share": 0.015218665934875574,
+              "total": 204622272
+            },
+            {
+              "cycles": 36525,
+              "exit": 0,
+              "instance": "subgraph0_ht21.0-iteration0",
+              "repeats": 4900,
+              "share": 0.013310978626165967,
+              "total": 178972500
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht252.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht253.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht324.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht325.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht247.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht319.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht396.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht397.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht468.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht469.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht540.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht541.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht612.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht613.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht684.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht685.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht756.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht757.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht828.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht829.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht391.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht463.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht535.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht607.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht679.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht751.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht823.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht251.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht323.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht395.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht467.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht539.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht611.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht683.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht755.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht827.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht108.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht109.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht180.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht181.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht103.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht175.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht36.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht37.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht31.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht107.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht179.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": -2,
+              "instance": "subgraph0_ht35.0-iteration0",
+              "repeats": 192,
+              "share": null,
+              "total": null
+            }
+          ],
+          "status": "failure",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 26373369408,
+            "timed_out": 0
+          }
+        }
+      ],
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T04:30:19.755505+00:00"
+}

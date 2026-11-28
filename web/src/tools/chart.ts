@@ -34,11 +34,11 @@ export function legend(series: Series[]): HTMLElement {
   );
 }
 
-export function chart(title: string, series: Series[], groups: Group[], format: (v: number) => string): HTMLElement {
+export function chart(title: string, series: Series[], groups: Group[], format: (v: number) => string, link?: (group: Group, series: number) => string | undefined): HTMLElement {
   const values = groups.flatMap((g) => g.values.flatMap((v) => v ?? []));
-  if (!values.length)
+  if (!values.length && !groups.some((g) => series.some((_, i) => link?.(g, i))))
     return element("div", { class: "chart-block" }, element("h3", {}, title), element("p", { class: "muted" }, "Not measured yet."));
-  const { y, ticks } = axis(values);
+  const { y, ticks } = values.length ? axis(values) : { y: () => 0, ticks: [] };
   const name = (g: Group) => (g.section ? `${g.section} · ${g.label}` : g.label);
   const columns = groups.map((g) =>
     element(
@@ -46,14 +46,16 @@ export function chart(title: string, series: Series[], groups: Group[], format: 
       { class: "column" },
       ...series.map((s, i) => {
         const v = g.values[i];
-        return v === undefined
-          ? element("span", { class: "vbar none", title: `${name(g)} · ${s.name}: not measured` })
-          : element("span", {
-              class: `vbar ${s.tone}`,
-              style: `height: ${Math.max(y(v), 0.8)}%`,
-              title: `${name(g)} · ${s.name}: ${format(v)}`,
-              "data-value": format(v),
-            });
+        const href = link?.(g, i);
+        if (v === undefined) {
+          const label = `${name(g)} · ${s.name}: not measured`;
+          return href
+            ? element("a", { class: "vbar pending", href, title: label, "aria-label": label })
+            : element("span", { class: "vbar none", title: label });
+        }
+        const label = `${name(g)} · ${s.name}: ${format(v)}`;
+        const attrs = { class: `vbar ${s.tone}`, style: `height: ${Math.max(y(v), 0.8)}%`, title: label, "data-value": format(v) };
+        return href ? element("a", { ...attrs, href, "aria-label": label }) : element("span", attrs);
       }),
     ),
   );

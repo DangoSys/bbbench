@@ -1,0 +1,63 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 21869368148,
+  "design": "poly",
+  "dirty": true,
+  "elapsed_s": 355.56800000000004,
+  "min_elapsed_s": 1,
+  "status": "running",
+  "taken": "2026-11-28T06:18:31.069640+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 13,
+  "workloads": [
+    {
+      "cycles": 2360324966,
+      "elapsed_s": 10.447,
+      "frequency_hz": 225933279.02747202,
+      "log": "2026-11-28-14-18-32-poly-bemu-device-poly-PolyDefaultConfig-poly-test-linux",
+      "status": "pass",
+      "workload": "poly-test-linux"
+    },
+    {
+      "cycles": 2172659984,
+      "elapsed_s": 94.12,
+      "frequency_hz": 23083935.23161921,
+      "log": "2026-11-28-14-19-02-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-baremetal",
+      "status": "below_target",
+      "workload": "deepseek-r1-0528-qwen3-8b-baremetal"
+    },
+    {
+      "cycles": 9314275668,
+      "elapsed_s": 147.084,
+      "frequency_hz": 63326233.091294765,
+      "log": "2026-11-28-14-20-52-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-linux",
+      "status": "below_target",
+      "workload": "deepseek-r1-0528-qwen3-8b-linux"
+    },
+    {
+      "cycles": 1267774932,
+      "elapsed_s": 34.09,
+      "frequency_hz": 37189056.38017014,
+      "log": "2026-11-28-14-23-32-poly-bemu-device-poly-PolyDefaultConfig-poly-gemma4-e2b-it-baremetal",
+      "status": "below_target",
+      "workload": "gemma4-e2b-it-baremetal"
+    },
+    {
+      "cycles": 6314165428,
+      "elapsed_s": 55.886,
+      "frequency_hz": 112982955.08714168,
+      "log": "2026-11-28-14-24-22-poly-bemu-device-poly-PolyDefaultConfig-poly-gemma4-e2b-it-linux",
+      "status": "below_target",
+      "workload": "gemma4-e2b-it-linux"
+    },
+    {
+      "cycles": 440167170,
+      "elapsed_s": 13.941,
+      "frequency_hz": 31573572.197116416,
+      "log": "2026-11-28-14-25-42-poly-bemu-device-poly-PolyDefaultConfig-poly-laya-baremetal",
+      "status": "below_target",
+      "workload": "laya-baremetal"
+    }
+  ]
+}

@@ -1,0 +1,1046 @@
+{
+  "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+  "config": "goban/devices/goban/configs/GobanDefaultConfig.toml",
+  "design": "goban",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 5237.9,
+      "estimates": [
+        {
+          "cycles": 5943062625,
+          "elapsed_s": 276.6,
+          "failed": 0,
+          "log": "2026-11-27-13-09-06-goban-gvn-verilator-device-goban-GobanDefaultConfig-bert-base-uncased-emotion",
+          "manifest_sha256": "25beecd41753dc373ad6d749f9e3a0a42d80b35dcb7591c48c5f3ba0cc037b82",
+          "measured": 11,
+          "model": "bert-base-uncased-emotion",
+          "not_run": 0,
+          "rare": 13,
+          "rare_bemu_cycles": 383253633,
+          "simulator_sha256": "36c5b84531bcfebd330a13d9e650bdd1d1bc62dd0a807b1e92aa8dd545a05c47",
+          "slices": [
+            {
+              "cycles": 549047,
+              "exit": 0,
+              "instance": "subgraph0_ht63.0-iteration0",
+              "repeats": 2304,
+              "share": 0.21285393875518854,
+              "total": 1265004288
+            },
+            {
+              "cycles": 315026,
+              "exit": 0,
+              "instance": "subgraph0_ht62.0-iteration0",
+              "repeats": 2304,
+              "share": 0.12212893415371001,
+              "total": 725819904
+            },
+            {
+              "cycles": 253255,
+              "exit": 0,
+              "instance": "subgraph0_ht10.0-iteration0",
+              "repeats": 2304,
+              "share": 0.09818162062527483,
+              "total": 583499520
+            },
+            {
+              "cycles": 105355,
+              "exit": 0,
+              "instance": "subgraph0_ht42.0-iteration0",
+              "repeats": 4608,
+              "share": 0.08168782168941052,
+              "total": 485475840
+            },
+            {
+              "cycles": 105325,
+              "exit": 0,
+              "instance": "subgraph0_ht37.0-iteration0",
+              "repeats": 4608,
+              "share": 0.08166456095521962,
+              "total": 485337600
+            },
+            {
+              "cycles": 103757,
+              "exit": 0,
+              "instance": "subgraph0_ht32.0-iteration0",
+              "repeats": 4608,
+              "share": 0.08044879991484188,
+              "total": 478112256
+            },
+            {
+              "cycles": 697662,
+              "exit": 0,
+              "instance": "subgraph0_ht69.0-iteration0",
+              "repeats": 576,
+              "share": 0.06761720973788325,
+              "total": 401853312
+            },
+            {
+              "cycles": 829987,
+              "exit": 0,
+              "instance": "subgraph0_ht68.0-iteration0",
+              "repeats": 384,
+              "share": 0.05362807496917467,
+              "total": 318715008
+            },
+            {
+              "cycles": 488732,
+              "exit": 0,
+              "instance": "subgraph0_ht43.0-iteration0",
+              "repeats": 576,
+              "share": 0.04736777142744647,
+              "total": 281509632
+            },
+            {
+              "cycles": 19710,
+              "exit": 0,
+              "instance": "subgraph0_ht16.0-iteration0",
+              "repeats": 13824,
+              "share": 0.04584690709026476,
+              "total": 272471040
+            },
+            {
+              "cycles": 909759,
+              "exit": 0,
+              "instance": "subgraph0_ht31.0-iteration0",
+              "repeats": 288,
+              "share": 0.044086796409957066,
+              "total": 262010592
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        },
+        {
+          "cycles": 237522111981,
+          "elapsed_s": 1800.0,
+          "failed": 0,
+          "log": "2026-11-27-13-01-17-goban-gvn-verilator-device-goban-GobanDefaultConfig-laya",
+          "manifest_sha256": "78c5f06ade303e5249f3731ba61deeac0cabea0bb99ee4143c84106dd108c0f7",
+          "measured": 11,
+          "model": "laya",
+          "not_run": 0,
+          "rare": 43,
+          "rare_bemu_cycles": 13031092717,
+          "simulator_sha256": "36c5b84531bcfebd330a13d9e650bdd1d1bc62dd0a807b1e92aa8dd545a05c47",
+          "slices": [
+            {
+              "cycles": 446430,
+              "exit": 0,
+              "instance": "subgraph0_ht17.0-iteration0",
+              "repeats": 114688,
+              "share": 0.21555956796180573,
+              "total": 51200163840
+            },
+            {
+              "cycles": 374954,
+              "exit": 0,
+              "instance": "subgraph0_ht21.0-iteration0",
+              "repeats": 114688,
+              "share": 0.1810472464788453,
+              "total": 43002724352
+            },
+            {
+              "cycles": 475116,
+              "exit": 0,
+              "instance": "subgraph0_ht29.0-iteration0",
+              "repeats": 61440,
+              "share": 0.12289856635467722,
+              "total": 29191127040
+            },
+            {
+              "cycles": 477118,
+              "exit": 0,
+              "instance": "subgraph0_ht34.0-iteration0",
+              "repeats": 57344,
+              "share": 0.11518866333669425,
+              "total": 27359854592
+            },
+            {
+              "cycles": 458543,
+              "exit": 0,
+              "instance": "subgraph0_ht84.0-iteration0",
+              "repeats": 36864,
+              "share": 0.0711669705654696,
+              "total": 16903729152
+            },
+            {
+              "cycles": 433180,
+              "exit": 0,
+              "instance": "subgraph0_ht52.0-iteration0",
+              "repeats": 36736,
+              "share": 0.06699713280283119,
+              "total": 15913300480
+            },
+            {
+              "cycles": 457785,
+              "exit": 0,
+              "instance": "subgraph0_ht24.0-iteration0",
+              "repeats": 20480,
+              "share": 0.03947184841784316,
+              "total": 9375436800
+            },
+            {
+              "cycles": 369452,
+              "exit": 0,
+              "instance": "subgraph0_ht12.0-iteration0",
+              "repeats": 23040,
+              "share": 0.0358373963965128,
+              "total": 8512174080
+            },
+            {
+              "cycles": 571023,
+              "exit": 0,
+              "instance": "subgraph0_ht57.0-iteration0",
+              "repeats": 14336,
+              "share": 0.03446494164153792,
+              "total": 8186185728
+            },
+            {
+              "cycles": 1959579,
+              "exit": 0,
+              "instance": "subgraph0_ht23.0-iteration0",
+              "repeats": 3840,
+              "share": 0.031680348819910824,
+              "total": 7524783360
+            },
+            {
+              "cycles": 3813302,
+              "exit": 0,
+              "instance": "subgraph0_ht35.0-iteration0",
+              "repeats": 1920,
+              "share": 0.030824666297113713,
+              "total": 7321539840
+            },
+            {
+              "cycles": null,
+              "exit": -1,
+              "instance": "subgraph0_ht56.0-iteration0",
+              "repeats": 3584,
+              "share": null,
+              "total": null
+            }
+          ],
+          "status": "failure",
+          "timed_out": 1,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 16445793280
+          }
+        },
+        {
+          "cycles": 42050502505,
+          "elapsed_s": 3161.3,
+          "failed": 0,
+          "log": "2026-11-27-13-15-10-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+          "manifest_sha256": "03a6540814a46ddf6ba15f3daf66a9006c2710fd022085e0816fc31bfd7c8eb2",
+          "measured": 77,
+          "model": "mlp-mixer",
+          "not_run": 0,
+          "rare": 87,
+          "rare_bemu_cycles": 3820421797,
+          "simulator_sha256": "36c5b84531bcfebd330a13d9e650bdd1d1bc62dd0a807b1e92aa8dd545a05c47",
+          "slices": [
+            {
+              "cycles": 549898,
+              "exit": 0,
+              "instance": "subgraph0_ht67.0-iteration0",
+              "repeats": 2304,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.030129604083788345,
+              "total": 1266964992
+            },
+            {
+              "cycles": 478731,
+              "exit": 0,
+              "instance": "subgraph0_ht68.0-iteration0",
+              "repeats": 2352,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.026776738562544318,
+              "total": 1125975312
+            },
+            {
+              "cycles": 67809,
+              "exit": 0,
+              "instance": "subgraph0_ht30.0-iteration0",
+              "repeats": 9216,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.01486136209491654,
+              "total": 624927744
+            },
+            {
+              "cycles": 65804,
+              "exit": 0,
+              "instance": "subgraph0_ht38.0-iteration0",
+              "repeats": 9216,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.014421936192745623,
+              "total": 606449664
+            },
+            {
+              "cycles": 3107893,
+              "exit": 0,
+              "instance": "subgraph0_ht35.0-iteration0",
+              "repeats": 192,
+              "share": 0.014190447686779671,
+              "total": 596715456
+            },
+            {
+              "cycles": 3105605,
+              "exit": 0,
+              "instance": "subgraph0_ht31.0-iteration0",
+              "repeats": 192,
+              "share": 0.014180000819945018,
+              "total": 596276160
+            },
+            {
+              "cycles": 3105590,
+              "exit": 0,
+              "instance": "subgraph0_ht36.0-iteration0",
+              "repeats": 192,
+              "share": 0.01417993233087049,
+              "total": 596273280
+            },
+            {
+              "cycles": 3105590,
+              "exit": 0,
+              "instance": "subgraph0_ht37.0-iteration0",
+              "repeats": 192,
+              "share": 0.01417993233087049,
+              "total": 596273280
+            },
+            {
+              "cycles": 3104749,
+              "exit": 0,
+              "instance": "subgraph0_ht107.0-iteration0",
+              "repeats": 192,
+              "share": 0.014176092376758626,
+              "total": 596111808
+            },
+            {
+              "cycles": 3104749,
+              "exit": 0,
+              "instance": "subgraph0_ht179.0-iteration0",
+              "repeats": 192,
+              "share": 0.014176092376758626,
+              "total": 596111808
+            },
+            {
+              "cycles": 3104247,
+              "exit": 0,
+              "instance": "subgraph0_ht103.0-iteration0",
+              "repeats": 192,
+              "share": 0.014173800275731093,
+              "total": 596015424
+            },
+            {
+              "cycles": 3104247,
+              "exit": 0,
+              "instance": "subgraph0_ht175.0-iteration0",
+              "repeats": 192,
+              "share": 0.014173800275731093,
+              "total": 596015424
+            },
+            {
+              "cycles": 3104232,
+              "exit": 0,
+              "instance": "subgraph0_ht108.0-iteration0",
+              "repeats": 192,
+              "share": 0.014173731786656565,
+              "total": 596012544
+            },
+            {
+              "cycles": 3104232,
+              "exit": 0,
+              "instance": "subgraph0_ht109.0-iteration0",
+              "repeats": 192,
+              "share": 0.014173731786656565,
+              "total": 596012544
+            },
+            {
+              "cycles": 3104232,
+              "exit": 0,
+              "instance": "subgraph0_ht180.0-iteration0",
+              "repeats": 192,
+              "share": 0.014173731786656565,
+              "total": 596012544
+            },
+            {
+              "cycles": 3104232,
+              "exit": 0,
+              "instance": "subgraph0_ht181.0-iteration0",
+              "repeats": 192,
+              "share": 0.014173731786656565,
+              "total": 596012544
+            },
+            {
+              "cycles": 3104053,
+              "exit": 0,
+              "instance": "subgraph0_ht251.0-iteration0",
+              "repeats": 192,
+              "share": 0.014172914483700533,
+              "total": 595978176
+            },
+            {
+              "cycles": 3104053,
+              "exit": 0,
+              "instance": "subgraph0_ht323.0-iteration0",
+              "repeats": 192,
+              "share": 0.014172914483700533,
+              "total": 595978176
+            },
+            {
+              "cycles": 3103921,
+              "exit": 0,
+              "instance": "subgraph0_ht395.0-iteration0",
+              "repeats": 192,
+              "share": 0.014172311779844687,
+              "total": 595952832
+            },
+            {
+              "cycles": 3103921,
+              "exit": 0,
+              "instance": "subgraph0_ht467.0-iteration0",
+              "repeats": 192,
+              "share": 0.014172311779844687,
+              "total": 595952832
+            },
+            {
+              "cycles": 3103921,
+              "exit": 0,
+              "instance": "subgraph0_ht539.0-iteration0",
+              "repeats": 192,
+              "share": 0.014172311779844687,
+              "total": 595952832
+            },
+            {
+              "cycles": 3103921,
+              "exit": 0,
+              "instance": "subgraph0_ht611.0-iteration0",
+              "repeats": 192,
+              "share": 0.014172311779844687,
+              "total": 595952832
+            },
+            {
+              "cycles": 3103921,
+              "exit": 0,
+              "instance": "subgraph0_ht683.0-iteration0",
+              "repeats": 192,
+              "share": 0.014172311779844687,
+              "total": 595952832
+            },
+            {
+              "cycles": 3103921,
+              "exit": 0,
+              "instance": "subgraph0_ht755.0-iteration0",
+              "repeats": 192,
+              "share": 0.014172311779844687,
+              "total": 595952832
+            },
+            {
+              "cycles": 3103921,
+              "exit": 0,
+              "instance": "subgraph0_ht827.0-iteration0",
+              "repeats": 192,
+              "share": 0.014172311779844687,
+              "total": 595952832
+            },
+            {
+              "cycles": 3103462,
+              "exit": 0,
+              "instance": "subgraph0_ht247.0-iteration0",
+              "repeats": 192,
+              "share": 0.014170216014164133,
+              "total": 595864704
+            },
+            {
+              "cycles": 3103462,
+              "exit": 0,
+              "instance": "subgraph0_ht319.0-iteration0",
+              "repeats": 192,
+              "share": 0.014170216014164133,
+              "total": 595864704
+            },
+            {
+              "cycles": 3103447,
+              "exit": 0,
+              "instance": "subgraph0_ht252.0-iteration0",
+              "repeats": 192,
+              "share": 0.014170147525089605,
+              "total": 595861824
+            },
+            {
+              "cycles": 3103447,
+              "exit": 0,
+              "instance": "subgraph0_ht253.0-iteration0",
+              "repeats": 192,
+              "share": 0.014170147525089605,
+              "total": 595861824
+            },
+            {
+              "cycles": 3103447,
+              "exit": 0,
+              "instance": "subgraph0_ht324.0-iteration0",
+              "repeats": 192,
+              "share": 0.014170147525089605,
+              "total": 595861824
+            },
+            {
+              "cycles": 3103447,
+              "exit": 0,
+              "instance": "subgraph0_ht325.0-iteration0",
+              "repeats": 192,
+              "share": 0.014170147525089605,
+              "total": 595861824
+            },
+            {
+              "cycles": 3103278,
+              "exit": 0,
+              "instance": "subgraph0_ht391.0-iteration0",
+              "repeats": 192,
+              "share": 0.01416937588151659,
+              "total": 595829376
+            },
+            {
+              "cycles": 3103278,
+              "exit": 0,
+              "instance": "subgraph0_ht463.0-iteration0",
+              "repeats": 192,
+              "share": 0.01416937588151659,
+              "total": 595829376
+            },
+            {
+              "cycles": 3103278,
+              "exit": 0,
+              "instance": "subgraph0_ht535.0-iteration0",
+              "repeats": 192,
+              "share": 0.01416937588151659,
+              "total": 595829376
+            },
+            {
+              "cycles": 3103278,
+              "exit": 0,
+              "instance": "subgraph0_ht607.0-iteration0",
+              "repeats": 192,
+              "share": 0.01416937588151659,
+              "total": 595829376
+            },
+            {
+              "cycles": 3103278,
+              "exit": 0,
+              "instance": "subgraph0_ht679.0-iteration0",
+              "repeats": 192,
+              "share": 0.01416937588151659,
+              "total": 595829376
+            },
+            {
+              "cycles": 3103278,
+              "exit": 0,
+              "instance": "subgraph0_ht751.0-iteration0",
+              "repeats": 192,
+              "share": 0.01416937588151659,
+              "total": 595829376
+            },
+            {
+              "cycles": 3103278,
+              "exit": 0,
+              "instance": "subgraph0_ht823.0-iteration0",
+              "repeats": 192,
+              "share": 0.01416937588151659,
+              "total": 595829376
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht396.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht397.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht468.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht469.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht540.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht541.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht612.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht613.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht684.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht685.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht756.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht757.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht828.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 3103263,
+              "exit": 0,
+              "instance": "subgraph0_ht829.0-iteration0",
+              "repeats": 192,
+              "share": 0.014169307392442064,
+              "total": 595826496
+            },
+            {
+              "cycles": 974133,
+              "exit": 0,
+              "instance": "subgraph0_ht504.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006671746763707313,
+              "total": 280550304
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht432.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006671096117499298,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht576.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006671096117499298,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht648.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006671096117499298,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht720.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006671096117499298,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht792.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006671096117499298,
+              "total": 280522944
+            },
+            {
+              "cycles": 974038,
+              "exit": 0,
+              "instance": "subgraph0_ht864.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006671096117499298,
+              "total": 280522944
+            },
+            {
+              "cycles": 973838,
+              "exit": 0,
+              "instance": "subgraph0_ht288.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.00666972633600874,
+              "total": 280465344
+            },
+            {
+              "cycles": 973838,
+              "exit": 0,
+              "instance": "subgraph0_ht360.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.00666972633600874,
+              "total": 280465344
+            },
+            {
+              "cycles": 973202,
+              "exit": 0,
+              "instance": "subgraph0_ht72.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006665370430868766,
+              "total": 280282176
+            },
+            {
+              "cycles": 973202,
+              "exit": 0,
+              "instance": "subgraph0_ht144.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006665370430868766,
+              "total": 280282176
+            },
+            {
+              "cycles": 973202,
+              "exit": 0,
+              "instance": "subgraph0_ht216.0-iteration0",
+              "repeats": 288,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.006665370430868766,
+              "total": 280282176
+            },
+            {
+              "cycles": 355611,
+              "exit": 0,
+              "instance": "subgraph0_ht495.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.00487109365638721,
+              "total": 204831936
+            },
+            {
+              "cycles": 355422,
+              "exit": 0,
+              "instance": "subgraph0_ht567.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.0048685047693700564,
+              "total": 204723072
+            },
+            {
+              "cycles": 355408,
+              "exit": 0,
+              "instance": "subgraph0_ht279.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.004868312999961378,
+              "total": 204715008
+            },
+            {
+              "cycles": 355408,
+              "exit": 0,
+              "instance": "subgraph0_ht351.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.004868312999961378,
+              "total": 204715008
+            },
+            {
+              "cycles": 355369,
+              "exit": 0,
+              "instance": "subgraph0_ht711.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.00486777878518006,
+              "total": 204692544
+            },
+            {
+              "cycles": 355364,
+              "exit": 0,
+              "instance": "subgraph0_ht423.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.004867710296105533,
+              "total": 204689664
+            },
+            {
+              "cycles": 355364,
+              "exit": 0,
+              "instance": "subgraph0_ht639.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.004867710296105533,
+              "total": 204689664
+            },
+            {
+              "cycles": 355364,
+              "exit": 0,
+              "instance": "subgraph0_ht783.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.004867710296105533,
+              "total": 204689664
+            },
+            {
+              "cycles": 355364,
+              "exit": 0,
+              "instance": "subgraph0_ht855.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.004867710296105533,
+              "total": 204689664
+            },
+            {
+              "cycles": 355247,
+              "exit": 0,
+              "instance": "subgraph0_ht63.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.00486610765176158,
+              "total": 204622272
+            },
+            {
+              "cycles": 355247,
+              "exit": 0,
+              "instance": "subgraph0_ht135.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.00486610765176158,
+              "total": 204622272
+            },
+            {
+              "cycles": 355247,
+              "exit": 0,
+              "instance": "subgraph0_ht207.0-iteration0",
+              "repeats": 576,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.00486610765176158,
+              "total": 204622272
+            },
+            {
+              "cycles": 36525,
+              "exit": 0,
+              "instance": "subgraph0_ht21.0-iteration0",
+              "repeats": 4900,
+              "reused": "2026-11-27-12-57-44-goban-gvn-verilator-device-goban-GobanDefaultConfig-mlp-mixer",
+              "share": 0.00425613225379933,
+              "total": 178972500
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        }
+      ],
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T07:52:48.308680+00:00"
+}

@@ -1,0 +1,480 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "config": "gemmini/devices/gemmini/configs/GemminiDefaultConfig.toml",
+  "design": "gemmini",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 540.6,
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pass",
+      "uvm": [
+        {
+          "ip": "axi4",
+          "log": "2026-11-27-20-36-46-882389-gemmini-uvm-axi4",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/generic/axi4/configs/uvm.toml",
+              "ip": "axi4",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 113248,
+                  "comparisons": 13488,
+                  "configuration": "arch/src/main/scala/generic/axi4/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 90.15,
+                      "line": 77.55,
+                      "score": 81.39,
+                      "toggle": 76.48
+                    },
+                    "dut_raw": {
+                      "cond": 90.15,
+                      "line": 77.55,
+                      "score": 81.39,
+                      "toggle": 76.48
+                    },
+                    "functional": {
+                      "interconnect_pkg::routing_model::behavior": 100.0,
+                      "interconnect_pkg::routing_model::load": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-27-20-36-46-882389-gemmini-uvm-axi4/axi4/uvm/interconnect/coverage"
+                  },
+                  "expected": 13488,
+                  "id": "ip/axi4/uvm/interconnect",
+                  "ip": "axi4",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-27-20-36-46-882389-gemmini-uvm-axi4/axi4/uvm/interconnect/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 13488,
+                  "status": "pass",
+                  "test": "interconnect"
+                },
+                {
+                  "cancelled": 0,
+                  "checks": 0,
+                  "comparisons": 1165,
+                  "configuration": "arch/src/main/scala/generic/axi4/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 96.48,
+                      "line": 100.0,
+                      "score": 94.21,
+                      "toggle": 86.16
+                    },
+                    "dut_raw": {
+                      "cond": 96.48,
+                      "line": 100.0,
+                      "score": 94.21,
+                      "toggle": 86.16
+                    },
+                    "functional": {
+                      "decoder_pkg::model::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-27-20-36-46-882389-gemmini-uvm-axi4/axi4/uvm/decoder/coverage"
+                  },
+                  "expected": 1165,
+                  "id": "ip/axi4/uvm/decoder",
+                  "ip": "axi4",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-27-20-36-46-882389-gemmini-uvm-axi4/axi4/uvm/decoder/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 1165,
+                  "status": "pass",
+                  "test": "decoder"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "cbus",
+          "log": "2026-11-27-20-39-06-958405-gemmini-uvm-cbus",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/hart/cbus/configs/uvm.toml",
+              "ip": "cbus",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 21,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/hart/cbus/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 27.76,
+                      "line": 67.39,
+                      "score": 32.5,
+                      "toggle": 2.36
+                    },
+                    "dut_raw": {
+                      "cond": 27.76,
+                      "line": 67.39,
+                      "score": 32.5,
+                      "toggle": 2.36
+                    },
+                    "functional": {
+                      "cbus_pkg::coverage::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-27-20-39-06-958405-gemmini-uvm-cbus/cbus/uvm/route/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/cbus/uvm/route",
+                  "ip": "cbus",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-27-20-39-06-958405-gemmini-uvm-cbus/cbus/uvm/route/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "route"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "clint",
+          "log": "2026-11-27-20-40-26-990867-gemmini-uvm-clint",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/device/peripherals/clint/configs/uvm.toml",
+              "ip": "clint",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 210,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/device/peripherals/clint/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 88.57,
+                      "line": 94.44,
+                      "score": 86.63,
+                      "toggle": 76.86
+                    },
+                    "dut_raw": {
+                      "cond": 88.57,
+                      "line": 94.44,
+                      "score": 86.63,
+                      "toggle": 76.86
+                    },
+                    "functional": {
+                      "clint_pkg::coverage::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-27-20-40-26-990867-gemmini-uvm-clint/clint/uvm/registers/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/clint/uvm/registers",
+                  "ip": "clint",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-27-20-40-26-990867-gemmini-uvm-clint/clint/uvm/registers/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "registers"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "plic",
+          "log": "2026-11-27-20-41-47-058187-gemmini-uvm-plic",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/device/peripherals/plic/configs/uvm.toml",
+              "ip": "plic",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 57,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/device/peripherals/plic/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 49.02,
+                      "line": 79.71,
+                      "score": 50.88,
+                      "toggle": 23.9
+                    },
+                    "dut_raw": {
+                      "cond": 49.02,
+                      "line": 79.71,
+                      "score": 50.88,
+                      "toggle": 23.9
+                    },
+                    "functional": {
+                      "plic_pkg::coverage::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-27-20-41-47-058187-gemmini-uvm-plic/plic/uvm/registers/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/plic/uvm/registers",
+                  "ip": "plic",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-27-20-41-47-058187-gemmini-uvm-plic/plic/uvm/registers/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "registers"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "scu",
+          "log": "2026-11-27-20-43-07-076259-gemmini-uvm-scu",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/device/peripherals/scu/configs/uvm.toml",
+              "ip": "scu",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 108,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/device/peripherals/scu/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 91.11,
+                      "line": 96.67,
+                      "score": 82.77,
+                      "toggle": 60.54
+                    },
+                    "dut_raw": {
+                      "cond": 91.11,
+                      "line": 96.67,
+                      "score": 82.77,
+                      "toggle": 60.54
+                    },
+                    "functional": {
+                      "scu_pkg::coverage::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-27-20-43-07-076259-gemmini-uvm-scu/scu/uvm/registers/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/scu/uvm/registers",
+                  "ip": "scu",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-27-20-43-07-076259-gemmini-uvm-scu/scu/uvm/registers/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "registers"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "ip": "trace",
+          "log": "2026-11-27-20-44-27-272239-gemmini-uvm-trace",
+          "profiles": [
+            {
+              "configuration": "arch/src/main/scala/device/peripherals/trace/configs/uvm.toml",
+              "ip": "trace",
+              "profile": "uvm",
+              "status": "pass",
+              "tests": [
+                {
+                  "cancelled": 0,
+                  "checks": 160,
+                  "comparisons": 0,
+                  "configuration": "arch/src/main/scala/device/peripherals/trace/configs/uvm.toml",
+                  "coverage": {
+                    "dut": {
+                      "cond": 94.12,
+                      "line": 66.67,
+                      "score": 71.29,
+                      "toggle": 53.1
+                    },
+                    "dut_raw": {
+                      "cond": 94.12,
+                      "line": 66.67,
+                      "score": 71.29,
+                      "toggle": 53.1
+                    },
+                    "functional": {
+                      "trace_pkg::coverage::behavior": 100.0
+                    },
+                    "report": "/home/wanghui/Code/buckyball/log/2026-11-27-20-44-27-272239-gemmini-uvm-trace/trace/uvm/registers/coverage"
+                  },
+                  "expected": 0,
+                  "id": "ip/trace/uvm/registers",
+                  "ip": "trace",
+                  "kind": "functional",
+                  "log": "/home/wanghui/Code/buckyball/log/2026-11-27-20-44-27-272239-gemmini-uvm-trace/trace/uvm/registers/simulation.log",
+                  "pending": 0,
+                  "profile": "uvm",
+                  "received": 0,
+                  "status": "pass",
+                  "test": "registers"
+                }
+              ]
+            }
+          ],
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T12:36:46.737121+00:00"
+}

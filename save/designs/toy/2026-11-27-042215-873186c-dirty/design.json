@@ -1,0 +1,306 @@
+{
+  "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+  "config": "toy/devices/toy/configs/ToyDefaultConfig.toml",
+  "design": "toy",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 1720.5,
+      "estimates": [
+        {
+          "cycles": 4931702,
+          "elapsed_s": 141.7,
+          "failed": 0,
+          "log": "2026-11-27-12-22-27-toy-gvn-verilator-device-toy-ToyDefaultConfig-lenet",
+          "measured": 3,
+          "model": "lenet",
+          "not_run": 0,
+          "slices": [
+            {
+              "cycles": 2315122,
+              "exit": 0,
+              "instance": "toy-lenet-gvn-slice2-iteration0",
+              "repeats": 1,
+              "share": 0.46943671779032875,
+              "total": 2315122
+            },
+            {
+              "cycles": 1044367,
+              "exit": 0,
+              "instance": "toy-lenet-gvn-slice0-iteration0",
+              "repeats": 1,
+              "share": 0.21176603939167452,
+              "total": 1044367
+            },
+            {
+              "cycles": 966387,
+              "exit": 0,
+              "instance": "toy-lenet-gvn-slice1-iteration0",
+              "repeats": 1,
+              "share": 0.19595405399596327,
+              "total": 966387
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        },
+        {
+          "cycles": 93295867,
+          "elapsed_s": 1215.7,
+          "failed": 13,
+          "log": "2026-11-27-12-25-49-toy-gvn-verilator-device-toy-ToyDefaultConfig-mobilenet-v3-small",
+          "measured": 0,
+          "model": "mobilenet-v3-small",
+          "not_run": 0,
+          "slices": [
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice16-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice4-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice22-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice2-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice6-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice12-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice14-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice23-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice18-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice20-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice10-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice8-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            },
+            {
+              "cycles": null,
+              "exit": 1,
+              "instance": "toy-mobilenet-v3-small-gvn-slice0-iteration0",
+              "repeats": 1,
+              "share": null,
+              "total": null
+            }
+          ],
+          "status": "failure",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 942511108,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        }
+      ],
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T04:22:15.407214+00:00"
+}

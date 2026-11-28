@@ -1,0 +1,320 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "config": "toy/devices/toy/configs/ToyDefaultConfig.toml",
+  "design": "toy",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 11743.4,
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pass",
+      "suites": {
+        "lenet": {
+          "log": "2026-11-28-01-40-38-toy-gvn-verilator-debug-device-toy-ToyDefaultConfig-lenet",
+          "passed": 6,
+          "total": 6,
+          "workloads": [
+            {
+              "elapsed_s": 0.517,
+              "status": "pass",
+              "workload": "toy-lenet-gvn-slice5-iteration0"
+            },
+            {
+              "elapsed_s": 2.417,
+              "status": "pass",
+              "workload": "toy-lenet-gvn-slice4-iteration0"
+            },
+            {
+              "elapsed_s": 13.731,
+              "status": "pass",
+              "workload": "toy-lenet-gvn-slice3-iteration0"
+            },
+            {
+              "elapsed_s": 17.624,
+              "status": "pass",
+              "workload": "toy-lenet-gvn-slice2-iteration0"
+            },
+            {
+              "elapsed_s": 42.75,
+              "status": "pass",
+              "workload": "toy-lenet-gvn-slice0-iteration0"
+            },
+            {
+              "elapsed_s": 45.01,
+              "status": "pass",
+              "workload": "toy-lenet-gvn-slice1-iteration0"
+            }
+          ]
+        },
+        "mobilenet-v3-small": {
+          "log": "2026-11-28-04-07-41-toy-gvn-verilator-debug-device-toy-ToyDefaultConfig-mobilenet-v3-small",
+          "passed": 25,
+          "total": 25,
+          "workloads": [
+            {
+              "elapsed_s": 3.01,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice24-iteration0"
+            },
+            {
+              "elapsed_s": 107.983,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice6-iteration0"
+            },
+            {
+              "elapsed_s": 94.983,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice12-iteration0"
+            },
+            {
+              "elapsed_s": 81.567,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice16-iteration0"
+            },
+            {
+              "elapsed_s": 124.599,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice14-iteration0"
+            },
+            {
+              "elapsed_s": 156.84,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice11-iteration0"
+            },
+            {
+              "elapsed_s": 136.335,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice8-iteration0"
+            },
+            {
+              "elapsed_s": 141.02,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice10-iteration0"
+            },
+            {
+              "elapsed_s": 205.601,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice13-iteration0"
+            },
+            {
+              "elapsed_s": 273.309,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice2-iteration0"
+            },
+            {
+              "elapsed_s": 156.032,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice18-iteration0"
+            },
+            {
+              "elapsed_s": 145.839,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice20-iteration0"
+            },
+            {
+              "elapsed_s": 234.997,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice4-iteration0"
+            },
+            {
+              "elapsed_s": 244.985,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice19-iteration0"
+            },
+            {
+              "elapsed_s": 219.97,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice21-iteration0"
+            },
+            {
+              "elapsed_s": 227.872,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice17-iteration0"
+            },
+            {
+              "elapsed_s": 332.434,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice7-iteration0"
+            },
+            {
+              "elapsed_s": 279.19,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice9-iteration0"
+            },
+            {
+              "elapsed_s": 315.09,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice0-iteration0"
+            },
+            {
+              "elapsed_s": 320.716,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice15-iteration0"
+            },
+            {
+              "elapsed_s": 394.043,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice3-iteration0"
+            },
+            {
+              "elapsed_s": 506.218,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice5-iteration0"
+            },
+            {
+              "elapsed_s": 334.207,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice22-iteration0"
+            },
+            {
+              "elapsed_s": 681.516,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice23-iteration0"
+            },
+            {
+              "elapsed_s": 1281.945,
+              "status": "pass",
+              "workload": "toy-mobilenet-v3-small-gvn-slice1-iteration0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T17:40:30.994618+00:00"
+}

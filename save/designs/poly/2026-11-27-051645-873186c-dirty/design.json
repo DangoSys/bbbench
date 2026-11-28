@@ -1,0 +1,783 @@
+{
+  "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+  "config": "poly/devices/poly/configs/PolyDefaultConfig.toml",
+  "design": "poly",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 35920.0,
+      "estimates": [
+        {
+          "cycles": 39483904584,
+          "elapsed_s": 2047.3,
+          "failed": 0,
+          "log": "2026-11-27-13-33-35-poly-gvn-verilator-device-poly-PolyDefaultConfig-deepseek-r1-0528-qwen3-8b",
+          "measured": 32,
+          "model": "deepseek-r1-0528-qwen3-8b",
+          "not_run": 0,
+          "slices": [
+            {
+              "cycles": 36499,
+              "exit": 0,
+              "instance": "lm_head_ht2.0-step0-launch730-iteration0",
+              "repeats": 91392,
+              "share": 0.08448294673854842,
+              "total": 3335716608
+            },
+            {
+              "cycles": 36289,
+              "exit": 0,
+              "instance": "lm_head_1_ht3.0-step0-launch734-iteration0",
+              "repeats": 60928,
+              "share": 0.055997911434928514,
+              "total": 2211016192
+            },
+            {
+              "cycles": 466125,
+              "exit": 0,
+              "instance": "mlp_ht3.0-step0-launch20-iteration0",
+              "repeats": 4608,
+              "share": 0.05439948309647146,
+              "total": 2147904000
+            },
+            {
+              "cycles": 466125,
+              "exit": 0,
+              "instance": "mlp_ht8.0-step0-launch20-iteration0",
+              "repeats": 4608,
+              "share": 0.05439948309647146,
+              "total": 2147904000
+            },
+            {
+              "cycles": 395236,
+              "exit": 0,
+              "instance": "mlp_ht16.0-step0-launch20-iteration0",
+              "repeats": 4608,
+              "share": 0.04612632684605416,
+              "total": 1821247488
+            },
+            {
+              "cycles": 342715,
+              "exit": 0,
+              "instance": "attention_ht40.0-step0-launch10-iteration0",
+              "repeats": 4608,
+              "share": 0.03999682241760733,
+              "total": 1579230720
+            },
+            {
+              "cycles": 313030,
+              "exit": 0,
+              "instance": "attention_ht39.0-step0-launch10-iteration0",
+              "repeats": 4608,
+              "share": 0.03653241124953277,
+              "total": 1442442240
+            },
+            {
+              "cycles": 307241,
+              "exit": 0,
+              "instance": "mlp_ht10.0-step0-launch20-iteration0",
+              "repeats": 4608,
+              "share": 0.035856801471800454,
+              "total": 1415766528
+            },
+            {
+              "cycles": 36195,
+              "exit": 0,
+              "instance": "lm_head_1_ht2.0-step0-launch734-iteration0",
+              "repeats": 30208,
+              "share": 0.02769175367836007,
+              "total": 1093378560
+            },
+            {
+              "cycles": 35835,
+              "exit": 0,
+              "instance": "lm_head_ht1.0-step0-launch730-iteration0",
+              "repeats": 30464,
+              "share": 0.027648669793472722,
+              "total": 1091677440
+            },
+            {
+              "cycles": 35792,
+              "exit": 0,
+              "instance": "lm_head_1_ht1.0-step0-launch734-iteration0",
+              "repeats": 30464,
+              "share": 0.027615492932830353,
+              "total": 1090367488
+            },
+            {
+              "cycles": 35759,
+              "exit": 0,
+              "instance": "lm_head_ht0.0-step0-launch730-iteration0",
+              "repeats": 30208,
+              "share": 0.027358182615954626,
+              "total": 1080207872
+            },
+            {
+              "cycles": 35724,
+              "exit": 0,
+              "instance": "lm_head_1_ht0.0-step0-launch734-iteration0",
+              "repeats": 30208,
+              "share": 0.027331405122412906,
+              "total": 1079150592
+            },
+            {
+              "cycles": 467585,
+              "exit": 0,
+              "instance": "mlp_ht1.0-step0-launch20-iteration0",
+              "repeats": 2304,
+              "share": 0.027284936769818833,
+              "total": 1077315840
+            },
+            {
+              "cycles": 467555,
+              "exit": 0,
+              "instance": "mlp_ht6.0-step0-launch20-iteration0",
+              "repeats": 2304,
+              "share": 0.027283186183073977,
+              "total": 1077246720
+            },
+            {
+              "cycles": 423228,
+              "exit": 0,
+              "instance": "mlp_ht0.0-step0-launch20-iteration0",
+              "repeats": 2304,
+              "share": 0.024696577561762856,
+              "total": 975117312
+            },
+            {
+              "cycles": 423198,
+              "exit": 0,
+              "instance": "mlp_ht5.0-step0-launch20-iteration0",
+              "repeats": 2304,
+              "share": 0.024694826975018,
+              "total": 975048192
+            },
+            {
+              "cycles": 422213,
+              "exit": 0,
+              "instance": "mlp_ht2.0-step0-launch20-iteration0",
+              "repeats": 2304,
+              "share": 0.02463734937689515,
+              "total": 972778752
+            },
+            {
+              "cycles": 422213,
+              "exit": 0,
+              "instance": "mlp_ht7.0-step0-launch20-iteration0",
+              "repeats": 2304,
+              "share": 0.02463734937689515,
+              "total": 972778752
+            },
+            {
+              "cycles": 204682,
+              "exit": 0,
+              "instance": "attention_ht0.0-step0-launch10-iteration0",
+              "repeats": 4608,
+              "share": 0.023887573074072344,
+              "total": 943174656
+            },
+            {
+              "cycles": 395263,
+              "exit": 0,
+              "instance": "mlp_ht14.0-step0-launch20-iteration0",
+              "repeats": 2304,
+              "share": 0.023064738951097452,
+              "total": 910685952
+            },
+            {
+              "cycles": 381919,
+              "exit": 0,
+              "instance": "mlp_ht13.0-step0-launch20-iteration0",
+              "repeats": 2304,
+              "share": 0.022286077966984483,
+              "total": 879941376
+            },
+            {
+              "cycles": 380911,
+              "exit": 0,
+              "instance": "mlp_ht15.0-step0-launch20-iteration0",
+              "repeats": 2304,
+              "share": 0.022227258252357242,
+              "total": 877618944
+            },
+            {
+              "cycles": 353922,
+              "exit": 0,
+              "instance": "attention_ht38.0-step0-launch10-iteration0",
+              "repeats": 2304,
+              "share": 0.020652372063791228,
+              "total": 815436288
+            },
+            {
+              "cycles": 159972,
+              "exit": 0,
+              "instance": "attention_ht2.0-step0-launch10-iteration0",
+              "repeats": 4608,
+              "share": 0.018669657516564724,
+              "total": 737150976
+            },
+            {
+              "cycles": 159868,
+              "exit": 0,
+              "instance": "attention_ht4.0-step0-launch10-iteration0",
+              "repeats": 4608,
+              "share": 0.01865752011513371,
+              "total": 736671744
+            },
+            {
+              "cycles": 148165,
+              "exit": 0,
+              "instance": "attention_ht49.0-step0-launch10-iteration0",
+              "repeats": 4608,
+              "share": 0.017291712336795266,
+              "total": 682744320
+            },
+            {
+              "cycles": 36305,
+              "exit": 0,
+              "instance": "attention_ht43.0-step0-launch10-iteration0",
+              "repeats": 18432,
+              "share": 0.01694801380588809,
+              "total": 669173760
+            },
+            {
+              "cycles": 204148,
+              "exit": 0,
+              "instance": "attention_ht6.0-step0-launch10-iteration0",
+              "repeats": 2304,
+              "share": 0.011912626092977694,
+              "total": 470356992
+            },
+            {
+              "cycles": 42602,
+              "exit": 0,
+              "instance": "attention_ht31.0-step0-launch10-iteration0",
+              "repeats": 9216,
+              "share": 0.009943799533927067,
+              "total": 392620032
+            },
+            {
+              "cycles": 150742,
+              "exit": 0,
+              "instance": "attention_ht46.0-step0-launch10-iteration0",
+              "repeats": 2304,
+              "share": 0.00879623156978096,
+              "total": 347309568
+            },
+            {
+              "cycles": 150396,
+              "exit": 0,
+              "instance": "attention_ht48.0-step0-launch10-iteration0",
+              "repeats": 2304,
+              "share": 0.008776041469323596,
+              "total": 346512384
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        },
+        {
+          "cycles": 26212252856,
+          "elapsed_s": 2344.5,
+          "failed": 0,
+          "log": "2026-11-27-17-19-56-poly-gvn-verilator-device-poly-PolyDefaultConfig-gemma4-e2b-it",
+          "measured": 40,
+          "model": "gemma4-e2b-it",
+          "not_run": 0,
+          "slices": [
+            {
+              "cycles": 33267,
+              "exit": 0,
+              "instance": "lm_head_ht2.0-step0-launch1068-iteration0",
+              "repeats": 157440,
+              "share": 0.19981328994394773,
+              "total": 5237556480
+            },
+            {
+              "cycles": 1288860,
+              "exit": 0,
+              "instance": "attention_3_ht32.0-step0-launch151-iteration0",
+              "repeats": 3584,
+              "share": 0.17622576225616737,
+              "total": 4619274240
+            },
+            {
+              "cycles": 560010,
+              "exit": 0,
+              "instance": "attention_ht37.0-step0-launch10-iteration0",
+              "repeats": 7168,
+              "share": 0.15314027764237587,
+              "total": 4014151680
+            },
+            {
+              "cycles": 32500,
+              "exit": 0,
+              "instance": "lm_head_ht1.0-step0-launch1068-iteration0",
+              "repeats": 52480,
+              "share": 0.06506880615603353,
+              "total": 1705600000
+            },
+            {
+              "cycles": 30964,
+              "exit": 0,
+              "instance": "lm_head_ht0.0-step0-launch1068-iteration0",
+              "repeats": 52224,
+              "share": 0.061691146689432805,
+              "total": 1617063936
+            },
+            {
+              "cycles": 287507,
+              "exit": 0,
+              "instance": "mlp_3_ht10.0-step0-launch537-iteration0",
+              "repeats": 2560,
+              "share": 0.028079155349347434,
+              "total": 736017920
+            },
+            {
+              "cycles": 163287,
+              "exit": 0,
+              "instance": "mlp_3_ht3.0-step0-launch537-iteration0",
+              "repeats": 2560,
+              "share": 0.0159473022901317,
+              "total": 418014720
+            },
+            {
+              "cycles": 163287,
+              "exit": 0,
+              "instance": "mlp_3_ht8.0-step0-launch537-iteration0",
+              "repeats": 2560,
+              "share": 0.0159473022901317,
+              "total": 418014720
+            },
+            {
+              "cycles": 162858,
+              "exit": 0,
+              "instance": "mlp_3_ht16.0-step0-launch537-iteration0",
+              "repeats": 2560,
+              "share": 0.015905404327143425,
+              "total": 416916480
+            },
+            {
+              "cycles": 381738,
+              "exit": 0,
+              "instance": "mlp_ht12.0-step0-launch20-iteration0",
+              "repeats": 960,
+              "share": 0.013980808212603333,
+              "total": 366468480
+            },
+            {
+              "cycles": 155275,
+              "exit": 0,
+              "instance": "mlp_ht10.0-step0-launch20-iteration0",
+              "repeats": 1920,
+              "share": 0.011373612243014752,
+              "total": 298128000
+            },
+            {
+              "cycles": 91459,
+              "exit": 0,
+              "instance": "mlp_ht2.0-step0-launch20-iteration0",
+              "repeats": 2880,
+              "share": 0.010048808908071674,
+              "total": 263401920
+            },
+            {
+              "cycles": 91459,
+              "exit": 0,
+              "instance": "mlp_ht7.0-step0-launch20-iteration0",
+              "repeats": 2880,
+              "share": 0.010048808908071674,
+              "total": 263401920
+            },
+            {
+              "cycles": 164086,
+              "exit": 0,
+              "instance": "mlp_3_ht6.0-step0-launch537-iteration0",
+              "repeats": 1280,
+              "share": 0.008012668012697123,
+              "total": 210030080
+            },
+            {
+              "cycles": 164030,
+              "exit": 0,
+              "instance": "mlp_3_ht1.0-step0-launch537-iteration0",
+              "repeats": 1280,
+              "share": 0.008009933413714206,
+              "total": 209958400
+            },
+            {
+              "cycles": 163284,
+              "exit": 0,
+              "instance": "mlp_3_ht14.0-step0-launch537-iteration0",
+              "repeats": 1280,
+              "share": 0.007973504648691765,
+              "total": 209003520
+            },
+            {
+              "cycles": 150079,
+              "exit": 0,
+              "instance": "mlp_3_ht0.0-step0-launch537-iteration0",
+              "repeats": 1280,
+              "share": 0.007328676442094825,
+              "total": 192101120
+            },
+            {
+              "cycles": 150079,
+              "exit": 0,
+              "instance": "mlp_3_ht5.0-step0-launch537-iteration0",
+              "repeats": 1280,
+              "share": 0.007328676442094825,
+              "total": 192101120
+            },
+            {
+              "cycles": 149641,
+              "exit": 0,
+              "instance": "mlp_3_ht13.0-step0-launch537-iteration0",
+              "repeats": 1280,
+              "share": 0.007307287971478433,
+              "total": 191540480
+            },
+            {
+              "cycles": 148526,
+              "exit": 0,
+              "instance": "mlp_3_ht15.0-step0-launch537-iteration0",
+              "repeats": 1280,
+              "share": 0.007252840152443553,
+              "total": 190113280
+            },
+            {
+              "cycles": 148373,
+              "exit": 0,
+              "instance": "mlp_3_ht2.0-step0-launch537-iteration0",
+              "repeats": 1280,
+              "share": 0.007245368837365224,
+              "total": 189917440
+            },
+            {
+              "cycles": 148343,
+              "exit": 0,
+              "instance": "mlp_3_ht7.0-step0-launch537-iteration0",
+              "repeats": 1280,
+              "share": 0.007243903873624375,
+              "total": 189879040
+            },
+            {
+              "cycles": 91064,
+              "exit": 0,
+              "instance": "cache_ht0.0-step0-launch0-iteration0",
+              "repeats": 2048,
+              "share": 0.0071149577651548656,
+              "total": 186499072
+            },
+            {
+              "cycles": 37571,
+              "exit": 0,
+              "instance": "per_layer_ht5.0-step0-launch29-iteration0",
+              "repeats": 4480,
+              "share": 0.00642135114920013,
+              "total": 168318080
+            },
+            {
+              "cycles": 150140,
+              "exit": 0,
+              "instance": "attention_ht38.0-step0-launch10-iteration0",
+              "repeats": 1120,
+              "share": 0.0064151983014885654,
+              "total": 168156800
+            },
+            {
+              "cycles": 322244,
+              "exit": 0,
+              "instance": "lm_head_ht5.0-step0-launch1068-iteration0",
+              "repeats": 512,
+              "share": 0.006294343676081011,
+              "total": 164988928
+            },
+            {
+              "cycles": 69382,
+              "exit": 0,
+              "instance": "attention_ht23.0-step0-launch10-iteration0",
+              "repeats": 2240,
+              "share": 0.005929123332274939,
+              "total": 155415680
+            },
+            {
+              "cycles": 53909,
+              "exit": 0,
+              "instance": "per_layer_ht7.0-step0-launch29-iteration0",
+              "repeats": 2240,
+              "share": 0.004606859267815999,
+              "total": 120756160
+            },
+            {
+              "cycles": 151147,
+              "exit": 0,
+              "instance": "attention_1_ht15.0-step0-launch12-iteration0",
+              "repeats": 672,
+              "share": 0.003874935304416247,
+              "total": 101570784
+            },
+            {
+              "cycles": 46746,
+              "exit": 0,
+              "instance": "attention_9_ht7.0-step0-launch528-iteration0",
+              "repeats": 2048,
+              "share": 0.003652330401584922,
+              "total": 95735808
+            },
+            {
+              "cycles": 67667,
+              "exit": 0,
+              "instance": "attention_1_ht0.0-step0-launch12-iteration0",
+              "repeats": 1344,
+              "share": 0.003469539550820515,
+              "total": 90944448
+            },
+            {
+              "cycles": 91534,
+              "exit": 0,
+              "instance": "mlp_ht6.0-step0-launch20-iteration0",
+              "repeats": 960,
+              "share": 0.0033523497763713163,
+              "total": 87872640
+            },
+            {
+              "cycles": 91483,
+              "exit": 0,
+              "instance": "mlp_ht1.0-step0-launch20-iteration0",
+              "repeats": 960,
+              "share": 0.0033504819476017343,
+              "total": 87823680
+            },
+            {
+              "cycles": 40826,
+              "exit": 0,
+              "instance": "attention_9_ht11.0-step0-launch528-iteration0",
+              "repeats": 2048,
+              "share": 0.0031897925164742656,
+              "total": 83611648
+            },
+            {
+              "cycles": 39264,
+              "exit": 0,
+              "instance": "attention_9_ht22.0-step0-launch528-iteration0",
+              "repeats": 2048,
+              "share": 0.003067751270436623,
+              "total": 80412672
+            },
+            {
+              "cycles": 38059,
+              "exit": 0,
+              "instance": "attention_9_ht13.0-step0-launch528-iteration0",
+              "repeats": 2048,
+              "share": 0.0029736029340247413,
+              "total": 77944832
+            },
+            {
+              "cycles": 37395,
+              "exit": 0,
+              "instance": "attention_9_ht26.0-step0-launch528-iteration0",
+              "repeats": 2048,
+              "share": 0.002921723684748816,
+              "total": 76584960
+            },
+            {
+              "cycles": 37395,
+              "exit": 0,
+              "instance": "attention_9_ht30.0-step0-launch528-iteration0",
+              "repeats": 2048,
+              "share": 0.002921723684748816,
+              "total": 76584960
+            },
+            {
+              "cycles": 76859,
+              "exit": 0,
+              "instance": "mlp_ht5.0-step0-launch20-iteration0",
+              "repeats": 960,
+              "share": 0.0028148912039474183,
+              "total": 73784640
+            },
+            {
+              "cycles": 76808,
+              "exit": 0,
+              "instance": "mlp_ht0.0-step0-launch20-iteration0",
+              "repeats": 960,
+              "share": 0.0028130233751778363,
+              "total": 73735680
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        },
+        {
+          "error": "GVN estimate was not produced",
+          "model": "laya",
+          "status": "failure"
+        },
+        {
+          "error": "GVN estimate was not produced",
+          "model": "llama3-2-3b-instruct",
+          "status": "failure"
+        },
+        {
+          "error": "GVN estimate was not produced",
+          "model": "qwen3-0-6b",
+          "status": "failure"
+        },
+        {
+          "error": "GVN estimate was not produced",
+          "model": "qwen3-8b",
+          "status": "failure"
+        }
+      ],
+      "id": "verilator-gvn",
+      "name": "Verilator GVN",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T05:16:45.428983+00:00"
+}

@@ -28,23 +28,23 @@
             "ip": "axi4"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "cbus"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "clint"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "plic"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "scu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "trace"
           }
         ],
@@ -168,39 +168,39 @@
             "ip": "tss"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "cbus"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "clint"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "plic"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "scu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "trace"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "bootrom"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "hart_dma"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "thread_tomem"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "gpdomain"
           }
         ],
@@ -308,27 +308,27 @@
             "ip": "mmu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "cbus"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "clint"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "plic"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "scu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "trace"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "bootrom"
           }
         ],
@@ -585,27 +585,27 @@
             "ip": "mmu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "cbus"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "clint"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "plic"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "scu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "trace"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "bootrom"
           }
         ],
@@ -757,27 +757,27 @@
             "ip": "tomem"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "cbus"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "clint"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "plic"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "scu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "trace"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "bootrom"
           }
         ],
@@ -949,39 +949,39 @@
             "ip": "tss"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "cbus"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "clint"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "plic"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "scu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "trace"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "bootrom"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "hart_dma"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "thread_tomem"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "gpdomain"
           }
         ],
@@ -1627,39 +1627,39 @@
             "ip": "tss"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "cbus"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "clint"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "plic"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "scu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "trace"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "bootrom"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "hart_dma"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "thread_tomem"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "gpdomain"
           }
         ],
@@ -2204,31 +2204,31 @@
             "ip": "tomem"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "cbus"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "clint"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "plic"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "scu"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "trace"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "bootrom"
           },
           {
-            "has_suite": false,
+            "has_suite": true,
             "ip": "gpdomain"
           }
         ],

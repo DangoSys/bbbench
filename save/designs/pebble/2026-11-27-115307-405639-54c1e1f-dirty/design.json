@@ -1,0 +1,3527 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "config": "pebble/devices/pebble/configs/PebbleDefaultConfig.toml",
+  "design": "pebble",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "collection": "verified existing full RTL suites",
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pass",
+      "suites": {
+        "alexnet": {
+          "log": "2026-11-27-12-38-23-pebble-gvn-verilator-debug-device-pebble-PebbleDefaultConfig-alexnet",
+          "passed": 23,
+          "total": 23,
+          "workloads": [
+            {
+              "elapsed_s": 6.017,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice16-iteration0"
+            },
+            {
+              "elapsed_s": 4.717,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice17-iteration0"
+            },
+            {
+              "elapsed_s": 2.109,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice21-iteration0"
+            },
+            {
+              "elapsed_s": 20.235,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice12-iteration0"
+            },
+            {
+              "elapsed_s": 11.815,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice6-iteration0"
+            },
+            {
+              "elapsed_s": 15.621,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice10-iteration0"
+            },
+            {
+              "elapsed_s": 23.124,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice8-iteration0"
+            },
+            {
+              "elapsed_s": 12.419,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice15-iteration0"
+            },
+            {
+              "elapsed_s": 6.412,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice19-iteration0"
+            },
+            {
+              "elapsed_s": 13.427,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice18-iteration0"
+            },
+            {
+              "elapsed_s": 4.111,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice22-iteration0"
+            },
+            {
+              "elapsed_s": 195.318,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice4-iteration0"
+            },
+            {
+              "elapsed_s": 74.353,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice0-iteration0"
+            },
+            {
+              "elapsed_s": 39.632,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice5-iteration0"
+            },
+            {
+              "elapsed_s": 335.798,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice1-iteration0"
+            },
+            {
+              "elapsed_s": 4.415,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice13-iteration0"
+            },
+            {
+              "elapsed_s": 9.218,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice14-iteration0"
+            },
+            {
+              "elapsed_s": 64.278,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice2-iteration0"
+            },
+            {
+              "elapsed_s": 16.822,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice3-iteration0"
+            },
+            {
+              "elapsed_s": 78.349,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice7-iteration0"
+            },
+            {
+              "elapsed_s": 9.525,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice23-iteration0"
+            },
+            {
+              "elapsed_s": 54.641,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice11-iteration0"
+            },
+            {
+              "elapsed_s": 84.753,
+              "status": "pass",
+              "workload": "pebble-alexnet-gvn-slice9-iteration0"
+            }
+          ]
+        },
+        "lenet": {
+          "log": "2026-11-27-12-30-52-pebble-gvn-verilator-debug-device-pebble-PebbleDefaultConfig-lenet",
+          "passed": 16,
+          "total": 16,
+          "workloads": [
+            {
+              "elapsed_s": 1.731,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice12-iteration0"
+            },
+            {
+              "elapsed_s": 1.516,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice8-iteration0"
+            },
+            {
+              "elapsed_s": 0.616,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice13-iteration0"
+            },
+            {
+              "elapsed_s": 0.707,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice9-iteration0"
+            },
+            {
+              "elapsed_s": 1.041,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice14-iteration0"
+            },
+            {
+              "elapsed_s": 0.716,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice5-iteration0"
+            },
+            {
+              "elapsed_s": 0.741,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice10-iteration0"
+            },
+            {
+              "elapsed_s": 1.44,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice6-iteration0"
+            },
+            {
+              "elapsed_s": 1.632,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice11-iteration0"
+            },
+            {
+              "elapsed_s": 1.328,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice2-iteration0"
+            },
+            {
+              "elapsed_s": 1.522,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice7-iteration0"
+            },
+            {
+              "elapsed_s": 1.223,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice4-iteration0"
+            },
+            {
+              "elapsed_s": 2.141,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice0-iteration0"
+            },
+            {
+              "elapsed_s": 1.017,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice15-iteration0"
+            },
+            {
+              "elapsed_s": 6.871,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice3-iteration0"
+            },
+            {
+              "elapsed_s": 8.587,
+              "status": "pass",
+              "workload": "pebble-lenet-gvn-slice1-iteration0"
+            }
+          ]
+        },
+        "mobilenet-v3-small": {
+          "log": "2026-11-27-12-53-46-pebble-gvn-verilator-debug-device-pebble-PebbleDefaultConfig-mobilenet-v3-small",
+          "passed": 154,
+          "total": 154,
+          "workloads": [
+            {
+              "elapsed_s": 1.009,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice52-iteration0"
+            },
+            {
+              "elapsed_s": 0.607,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice6-iteration0"
+            },
+            {
+              "elapsed_s": 1.006,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice10-iteration0"
+            },
+            {
+              "elapsed_s": 1.208,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice136-iteration0"
+            },
+            {
+              "elapsed_s": 0.605,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice89-iteration0"
+            },
+            {
+              "elapsed_s": 0.605,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice34-iteration0"
+            },
+            {
+              "elapsed_s": 1.209,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice49-iteration0"
+            },
+            {
+              "elapsed_s": 0.605,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice53-iteration0"
+            },
+            {
+              "elapsed_s": 0.607,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice68-iteration0"
+            },
+            {
+              "elapsed_s": 0.908,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice72-iteration0"
+            },
+            {
+              "elapsed_s": 1.007,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice102-iteration0"
+            },
+            {
+              "elapsed_s": 1.109,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice118-iteration0"
+            },
+            {
+              "elapsed_s": 0.908,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice137-iteration0"
+            },
+            {
+              "elapsed_s": 1.006,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice156-iteration0"
+            },
+            {
+              "elapsed_s": 1.208,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice133-iteration0"
+            },
+            {
+              "elapsed_s": 0.71,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice152-iteration0"
+            },
+            {
+              "elapsed_s": 1.108,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice51-iteration0"
+            },
+            {
+              "elapsed_s": 1.108,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice70-iteration0"
+            },
+            {
+              "elapsed_s": 0.906,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice8-iteration0"
+            },
+            {
+              "elapsed_s": 0.906,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice54-iteration0"
+            },
+            {
+              "elapsed_s": 1.508,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice73-iteration0"
+            },
+            {
+              "elapsed_s": 0.707,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice135-iteration0"
+            },
+            {
+              "elapsed_s": 1.01,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice154-iteration0"
+            },
+            {
+              "elapsed_s": 1.307,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice38-iteration0"
+            },
+            {
+              "elapsed_s": 1.208,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice91-iteration0"
+            },
+            {
+              "elapsed_s": 0.806,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice36-iteration0"
+            },
+            {
+              "elapsed_s": 1.01,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice87-iteration0"
+            },
+            {
+              "elapsed_s": 0.91,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice104-iteration0"
+            },
+            {
+              "elapsed_s": 1.008,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice120-iteration0"
+            },
+            {
+              "elapsed_s": 0.506,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice9-iteration0"
+            },
+            {
+              "elapsed_s": 2.608,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice138-iteration0"
+            },
+            {
+              "elapsed_s": 2.41,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice157-iteration0"
+            },
+            {
+              "elapsed_s": 0.707,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice106-iteration0"
+            },
+            {
+              "elapsed_s": 1.707,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice55-iteration0"
+            },
+            {
+              "elapsed_s": 1.114,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice74-iteration0"
+            },
+            {
+              "elapsed_s": 0.606,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice69-iteration0"
+            },
+            {
+              "elapsed_s": 0.61,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice50-iteration0"
+            },
+            {
+              "elapsed_s": 0.708,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice37-iteration0"
+            },
+            {
+              "elapsed_s": 0.706,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice105-iteration0"
+            },
+            {
+              "elapsed_s": 1.911,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice56-iteration0"
+            },
+            {
+              "elapsed_s": 2.007,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice121-iteration0"
+            },
+            {
+              "elapsed_s": 1.51,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice168-iteration0"
+            },
+            {
+              "elapsed_s": 1.807,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice122-iteration0"
+            },
+            {
+              "elapsed_s": 1.208,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice88-iteration0"
+            },
+            {
+              "elapsed_s": 44.003,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice141-iteration0"
+            },
+            {
+              "elapsed_s": 26.875,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice123-iteration0"
+            },
+            {
+              "elapsed_s": 2.609,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice139-iteration0"
+            },
+            {
+              "elapsed_s": 1.207,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice158-iteration0"
+            },
+            {
+              "elapsed_s": 1.608,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice153-iteration0"
+            },
+            {
+              "elapsed_s": 3.808,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice169-iteration0"
+            },
+            {
+              "elapsed_s": 0.906,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice134-iteration0"
+            },
+            {
+              "elapsed_s": 1.71,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice172-iteration0"
+            },
+            {
+              "elapsed_s": 1.809,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice117-iteration0"
+            },
+            {
+              "elapsed_s": 2.711,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice132-iteration0"
+            },
+            {
+              "elapsed_s": 53.456,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice107-iteration0"
+            },
+            {
+              "elapsed_s": 71.158,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice57-iteration0"
+            },
+            {
+              "elapsed_s": 33.395,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice39-iteration0"
+            },
+            {
+              "elapsed_s": 36.629,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice92-iteration0"
+            },
+            {
+              "elapsed_s": 1.208,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice7-iteration0"
+            },
+            {
+              "elapsed_s": 1.507,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice140-iteration0"
+            },
+            {
+              "elapsed_s": 0.906,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice90-iteration0"
+            },
+            {
+              "elapsed_s": 2.208,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice170-iteration0"
+            },
+            {
+              "elapsed_s": 3.911,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice173-iteration0"
+            },
+            {
+              "elapsed_s": 4.11,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice126-iteration0"
+            },
+            {
+              "elapsed_s": 3.813,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice145-iteration0"
+            },
+            {
+              "elapsed_s": 4.808,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice164-iteration0"
+            },
+            {
+              "elapsed_s": 8.157,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice124-iteration0"
+            },
+            {
+              "elapsed_s": 17.543,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice148-iteration0"
+            },
+            {
+              "elapsed_s": 1.607,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice35-iteration0"
+            },
+            {
+              "elapsed_s": 11.279,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice142-iteration0"
+            },
+            {
+              "elapsed_s": 15.488,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice161-iteration0"
+            },
+            {
+              "elapsed_s": 17.118,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice129-iteration0"
+            },
+            {
+              "elapsed_s": 73.753,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice13-iteration0"
+            },
+            {
+              "elapsed_s": 82.38,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice11-iteration0"
+            },
+            {
+              "elapsed_s": 169.334,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice28-iteration0"
+            },
+            {
+              "elapsed_s": 1.734,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice103-iteration0"
+            },
+            {
+              "elapsed_s": 1.962,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice33-iteration0"
+            },
+            {
+              "elapsed_s": 4.846,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice42-iteration0"
+            },
+            {
+              "elapsed_s": 4.751,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice61-iteration0"
+            },
+            {
+              "elapsed_s": 7.285,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice80-iteration0"
+            },
+            {
+              "elapsed_s": 2.352,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice119-iteration0"
+            },
+            {
+              "elapsed_s": 13.772,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice83-iteration0"
+            },
+            {
+              "elapsed_s": 10.973,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice93-iteration0"
+            },
+            {
+              "elapsed_s": 2.124,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice48-iteration0"
+            },
+            {
+              "elapsed_s": 1.561,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice101-iteration0"
+            },
+            {
+              "elapsed_s": 76.779,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice43-iteration0"
+            },
+            {
+              "elapsed_s": 1.519,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice86-iteration0"
+            },
+            {
+              "elapsed_s": 78.754,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice62-iteration0"
+            },
+            {
+              "elapsed_s": 43.451,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice96-iteration0"
+            },
+            {
+              "elapsed_s": 133.293,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice112-iteration0"
+            },
+            {
+              "elapsed_s": 9.772,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice144-iteration0"
+            },
+            {
+              "elapsed_s": 386.626,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice15-iteration0"
+            },
+            {
+              "elapsed_s": 4.112,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice171-iteration0"
+            },
+            {
+              "elapsed_s": 145.287,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice21-iteration0"
+            },
+            {
+              "elapsed_s": 35.054,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice81-iteration0"
+            },
+            {
+              "elapsed_s": 117.657,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice4-iteration0"
+            },
+            {
+              "elapsed_s": 52.568,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice146-iteration0"
+            },
+            {
+              "elapsed_s": 49.844,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice127-iteration0"
+            },
+            {
+              "elapsed_s": 45.465,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice165-iteration0"
+            },
+            {
+              "elapsed_s": 304.21,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice1-iteration0"
+            },
+            {
+              "elapsed_s": 158.984,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice23-iteration0"
+            },
+            {
+              "elapsed_s": 17.215,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice60-iteration0"
+            },
+            {
+              "elapsed_s": 57.477,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice19-iteration0"
+            },
+            {
+              "elapsed_s": 9.714,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice40-iteration0"
+            },
+            {
+              "elapsed_s": 16.024,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice108-iteration0"
+            },
+            {
+              "elapsed_s": 12.335,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice98-iteration0"
+            },
+            {
+              "elapsed_s": 4.718,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice111-iteration0"
+            },
+            {
+              "elapsed_s": 5.412,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice95-iteration0"
+            },
+            {
+              "elapsed_s": 48.802,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice77-iteration0"
+            },
+            {
+              "elapsed_s": 62.143,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice45-iteration0"
+            },
+            {
+              "elapsed_s": 57.422,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice58-iteration0"
+            },
+            {
+              "elapsed_s": 60.791,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice64-iteration0"
+            },
+            {
+              "elapsed_s": 62.815,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice114-iteration0"
+            },
+            {
+              "elapsed_s": 70.952,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice25-iteration0"
+            },
+            {
+              "elapsed_s": 52.432,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice41-iteration0"
+            },
+            {
+              "elapsed_s": 55.738,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice94-iteration0"
+            },
+            {
+              "elapsed_s": 112.163,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice17-iteration0"
+            },
+            {
+              "elapsed_s": 55.73,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice130-iteration0"
+            },
+            {
+              "elapsed_s": 49.538,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice149-iteration0"
+            },
+            {
+              "elapsed_s": 23.723,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice110-iteration0"
+            },
+            {
+              "elapsed_s": 89.064,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice46-iteration0"
+            },
+            {
+              "elapsed_s": 96.292,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice65-iteration0"
+            },
+            {
+              "elapsed_s": 52.508,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice99-iteration0"
+            },
+            {
+              "elapsed_s": 39.409,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice115-iteration0"
+            },
+            {
+              "elapsed_s": 52.064,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice0-iteration0"
+            },
+            {
+              "elapsed_s": 35.601,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice84-iteration0"
+            },
+            {
+              "elapsed_s": 33.147,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice31-iteration0"
+            },
+            {
+              "elapsed_s": 16.527,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice109-iteration0"
+            },
+            {
+              "elapsed_s": 29.218,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice18-iteration0"
+            },
+            {
+              "elapsed_s": 29.98,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice22-iteration0"
+            },
+            {
+              "elapsed_s": 31.148,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice24-iteration0"
+            },
+            {
+              "elapsed_s": 12.829,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice20-iteration0"
+            },
+            {
+              "elapsed_s": 12.099,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice27-iteration0"
+            },
+            {
+              "elapsed_s": 20.549,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice59-iteration0"
+            },
+            {
+              "elapsed_s": 12.35,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice78-iteration0"
+            },
+            {
+              "elapsed_s": 30.496,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice26-iteration0"
+            },
+            {
+              "elapsed_s": 15.127,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice125-iteration0"
+            },
+            {
+              "elapsed_s": 3.806,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice5-iteration0"
+            },
+            {
+              "elapsed_s": 36.107,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice30-iteration0"
+            },
+            {
+              "elapsed_s": 11.112,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice162-iteration0"
+            },
+            {
+              "elapsed_s": 14.913,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice143-iteration0"
+            },
+            {
+              "elapsed_s": 8.811,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice174-iteration0"
+            },
+            {
+              "elapsed_s": 77.679,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice16-iteration0"
+            },
+            {
+              "elapsed_s": 36.484,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice12-iteration0"
+            },
+            {
+              "elapsed_s": 33.643,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice14-iteration0"
+            },
+            {
+              "elapsed_s": 27.792,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice116-iteration0"
+            },
+            {
+              "elapsed_s": 40.303,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice32-iteration0"
+            },
+            {
+              "elapsed_s": 46.293,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice82-iteration0"
+            },
+            {
+              "elapsed_s": 50.383,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice97-iteration0"
+            },
+            {
+              "elapsed_s": 84.111,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice44-iteration0"
+            },
+            {
+              "elapsed_s": 85.694,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice3-iteration0"
+            },
+            {
+              "elapsed_s": 86.251,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice113-iteration0"
+            },
+            {
+              "elapsed_s": 122.09,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice29-iteration0"
+            },
+            {
+              "elapsed_s": 314.372,
+              "status": "pass",
+              "workload": "pebble-mobilenet-v3-small-gvn-slice2-iteration0"
+            }
+          ]
+        },
+        "resnet18": {
+          "log": "2026-11-27-13-06-02-pebble-gvn-verilator-debug-device-pebble-PebbleDefaultConfig-resnet18",
+          "passed": 56,
+          "total": 56,
+          "workloads": [
+            {
+              "elapsed_s": 1.109,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice58-iteration0"
+            },
+            {
+              "elapsed_s": 2.308,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice59-iteration0"
+            },
+            {
+              "elapsed_s": 1.508,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice57-iteration0"
+            },
+            {
+              "elapsed_s": 8.621,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice53-iteration0"
+            },
+            {
+              "elapsed_s": 9.921,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice51-iteration0"
+            },
+            {
+              "elapsed_s": 13.717,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice45-iteration0"
+            },
+            {
+              "elapsed_s": 16.516,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice31-iteration0"
+            },
+            {
+              "elapsed_s": 28.623,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice37-iteration0"
+            },
+            {
+              "elapsed_s": 18.33,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice39-iteration0"
+            },
+            {
+              "elapsed_s": 28.024,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice43-iteration0"
+            },
+            {
+              "elapsed_s": 25.523,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice47-iteration0"
+            },
+            {
+              "elapsed_s": 135.487,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice20-iteration0"
+            },
+            {
+              "elapsed_s": 61.444,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice0-iteration0"
+            },
+            {
+              "elapsed_s": 244.463,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice6-iteration0"
+            },
+            {
+              "elapsed_s": 324.505,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice12-iteration0"
+            },
+            {
+              "elapsed_s": 357.346,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice4-iteration0"
+            },
+            {
+              "elapsed_s": 285.569,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice10-iteration0"
+            },
+            {
+              "elapsed_s": 88.369,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice34-iteration0"
+            },
+            {
+              "elapsed_s": 166.331,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice16-iteration0"
+            },
+            {
+              "elapsed_s": 1194.589,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice1-iteration0"
+            },
+            {
+              "elapsed_s": 43.23,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice50-iteration0"
+            },
+            {
+              "elapsed_s": 30.546,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice55-iteration0"
+            },
+            {
+              "elapsed_s": 42.03,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice49-iteration0"
+            },
+            {
+              "elapsed_s": 121.088,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice26-iteration0"
+            },
+            {
+              "elapsed_s": 148.0,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice18-iteration0"
+            },
+            {
+              "elapsed_s": 123.987,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice24-iteration0"
+            },
+            {
+              "elapsed_s": 39.737,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice17-iteration0"
+            },
+            {
+              "elapsed_s": 39.73,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice23-iteration0"
+            },
+            {
+              "elapsed_s": 45.432,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice33-iteration0"
+            },
+            {
+              "elapsed_s": 36.653,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice25-iteration0"
+            },
+            {
+              "elapsed_s": 39.43,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice29-iteration0"
+            },
+            {
+              "elapsed_s": 36.427,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice48-iteration0"
+            },
+            {
+              "elapsed_s": 80.153,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice30-iteration0"
+            },
+            {
+              "elapsed_s": 307.799,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice2-iteration0"
+            },
+            {
+              "elapsed_s": 9.617,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice60-iteration0"
+            },
+            {
+              "elapsed_s": 84.555,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice36-iteration0"
+            },
+            {
+              "elapsed_s": 80.353,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice41-iteration0"
+            },
+            {
+              "elapsed_s": 74.352,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice35-iteration0"
+            },
+            {
+              "elapsed_s": 83.564,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice40-iteration0"
+            },
+            {
+              "elapsed_s": 60.547,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice32-iteration0"
+            },
+            {
+              "elapsed_s": 68.149,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice38-iteration0"
+            },
+            {
+              "elapsed_s": 42.93,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice44-iteration0"
+            },
+            {
+              "elapsed_s": 128.485,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice22-iteration0"
+            },
+            {
+              "elapsed_s": 42.837,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice54-iteration0"
+            },
+            {
+              "elapsed_s": 53.037,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice46-iteration0"
+            },
+            {
+              "elapsed_s": 43.036,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice52-iteration0"
+            },
+            {
+              "elapsed_s": 149.888,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice21-iteration0"
+            },
+            {
+              "elapsed_s": 166.601,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice27-iteration0"
+            },
+            {
+              "elapsed_s": 71.548,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice5-iteration0"
+            },
+            {
+              "elapsed_s": 66.95,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice9-iteration0"
+            },
+            {
+              "elapsed_s": 81.558,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice11-iteration0"
+            },
+            {
+              "elapsed_s": 76.949,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice15-iteration0"
+            },
+            {
+              "elapsed_s": 72.65,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice19-iteration0"
+            },
+            {
+              "elapsed_s": 75.954,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice3-iteration0"
+            },
+            {
+              "elapsed_s": 342.198,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice8-iteration0"
+            },
+            {
+              "elapsed_s": 244.342,
+              "status": "pass",
+              "workload": "pebble-resnet18-gvn-slice7-iteration0"
+            }
+          ]
+        },
+        "yolo26n": {
+          "log": "2026-11-27-19-36-01-pebble-gvn-verilator-debug-device-pebble-PebbleDefaultConfig-yolo26n",
+          "passed": 419,
+          "total": 419,
+          "workloads": [
+            {
+              "elapsed_s": 3.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice227-iteration0"
+            },
+            {
+              "elapsed_s": 3.612,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice244-iteration0"
+            },
+            {
+              "elapsed_s": 0.607,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice432-iteration0"
+            },
+            {
+              "elapsed_s": 23.728,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice7-iteration0"
+            },
+            {
+              "elapsed_s": 6.115,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice253-iteration0"
+            },
+            {
+              "elapsed_s": 42.336,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice22-iteration0"
+            },
+            {
+              "elapsed_s": 1.709,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice186-iteration0"
+            },
+            {
+              "elapsed_s": 2.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice203-iteration0"
+            },
+            {
+              "elapsed_s": 2.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice270-iteration0"
+            },
+            {
+              "elapsed_s": 1.71,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice52-iteration0"
+            },
+            {
+              "elapsed_s": 2.011,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice69-iteration0"
+            },
+            {
+              "elapsed_s": 11.723,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice28-iteration0"
+            },
+            {
+              "elapsed_s": 3.412,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice212-iteration0"
+            },
+            {
+              "elapsed_s": 3.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice296-iteration0"
+            },
+            {
+              "elapsed_s": 2.011,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice287-iteration0"
+            },
+            {
+              "elapsed_s": 4.013,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice78-iteration0"
+            },
+            {
+              "elapsed_s": 14.315,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice380-iteration0"
+            },
+            {
+              "elapsed_s": 1.809,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice414-iteration0"
+            },
+            {
+              "elapsed_s": 3.81,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice400-iteration0"
+            },
+            {
+              "elapsed_s": 13.116,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice386-iteration0"
+            },
+            {
+              "elapsed_s": 23.64,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice43-iteration0"
+            },
+            {
+              "elapsed_s": 12.115,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice259-iteration0"
+            },
+            {
+              "elapsed_s": 1.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice306-iteration0"
+            },
+            {
+              "elapsed_s": 4.113,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice167-iteration0"
+            },
+            {
+              "elapsed_s": 3.914,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice322-iteration0"
+            },
+            {
+              "elapsed_s": 3.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice150-iteration0"
+            },
+            {
+              "elapsed_s": 3.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice339-iteration0"
+            },
+            {
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice162-iteration0"
+            },
+            {
+              "elapsed_s": 1.608,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice93-iteration0"
+            },
+            {
+              "elapsed_s": 1.309,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice110-iteration0"
+            },
+            {
+              "elapsed_s": 2.107,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice119-iteration0"
+            },
+            {
+              "elapsed_s": 2.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice334-iteration0"
+            },
+            {
+              "elapsed_s": 6.815,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice49-iteration0"
+            },
+            {
+              "elapsed_s": 4.212,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice394-iteration0"
+            },
+            {
+              "elapsed_s": 3.309,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice157-iteration0"
+            },
+            {
+              "elapsed_s": 3.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice329-iteration0"
+            },
+            {
+              "elapsed_s": 1.409,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice263-iteration0"
+            },
+            {
+              "elapsed_s": 15.226,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice418-iteration0"
+            },
+            {
+              "elapsed_s": 4.213,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice420-iteration0"
+            },
+            {
+              "elapsed_s": 1.708,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice422-iteration0"
+            },
+            {
+              "elapsed_s": 6.712,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice218-iteration0"
+            },
+            {
+              "elapsed_s": 6.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice267-iteration0"
+            },
+            {
+              "elapsed_s": 6.716,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice302-iteration0"
+            },
+            {
+              "elapsed_s": 6.215,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice84-iteration0"
+            },
+            {
+              "elapsed_s": 1.108,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice164-iteration0"
+            },
+            {
+              "elapsed_s": 1.211,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice155-iteration0"
+            },
+            {
+              "elapsed_s": 1.106,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice327-iteration0"
+            },
+            {
+              "elapsed_s": 1.209,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice159-iteration0"
+            },
+            {
+              "elapsed_s": 1.108,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice161-iteration0"
+            },
+            {
+              "elapsed_s": 1.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice331-iteration0"
+            },
+            {
+              "elapsed_s": 1.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice149-iteration0"
+            },
+            {
+              "elapsed_s": 1.108,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice172-iteration0"
+            },
+            {
+              "elapsed_s": 1.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice333-iteration0"
+            },
+            {
+              "elapsed_s": 1.508,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice88-iteration0"
+            },
+            {
+              "elapsed_s": 3.21,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice90-iteration0"
+            },
+            {
+              "elapsed_s": 3.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice146-iteration0"
+            },
+            {
+              "elapsed_s": 3.613,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice177-iteration0"
+            },
+            {
+              "elapsed_s": 11.115,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice224-iteration0"
+            },
+            {
+              "elapsed_s": 1.907,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice128-iteration0"
+            },
+            {
+              "elapsed_s": 2.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice170-iteration0"
+            },
+            {
+              "elapsed_s": 2.209,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice342-iteration0"
+            },
+            {
+              "elapsed_s": 1.608,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice408-iteration0"
+            },
+            {
+              "elapsed_s": 1.008,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice153-iteration0"
+            },
+            {
+              "elapsed_s": 1.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice325-iteration0"
+            },
+            {
+              "elapsed_s": 1.008,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice151-iteration0"
+            },
+            {
+              "elapsed_s": 1.21,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice323-iteration0"
+            },
+            {
+              "elapsed_s": 2.31,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice47-iteration0"
+            },
+            {
+              "elapsed_s": 0.908,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice375-iteration0"
+            },
+            {
+              "elapsed_s": 1.61,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice358-iteration0"
+            },
+            {
+              "elapsed_s": 1.006,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice366-iteration0"
+            },
+            {
+              "elapsed_s": 9.934,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice154-iteration0"
+            },
+            {
+              "elapsed_s": 3.713,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice310-iteration0"
+            },
+            {
+              "elapsed_s": 6.018,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice183-iteration0"
+            },
+            {
+              "elapsed_s": 4.31,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice350-iteration0"
+            },
+            {
+              "elapsed_s": 4.419,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice125-iteration0"
+            },
+            {
+              "elapsed_s": 1.71,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice89-iteration0"
+            },
+            {
+              "elapsed_s": 1.715,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice127-iteration0"
+            },
+            {
+              "elapsed_s": 1.711,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice141-iteration0"
+            },
+            {
+              "elapsed_s": 1.912,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice143-iteration0"
+            },
+            {
+              "elapsed_s": 1.71,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice145-iteration0"
+            },
+            {
+              "elapsed_s": 1.713,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice148-iteration0"
+            },
+            {
+              "elapsed_s": 1.61,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice169-iteration0"
+            },
+            {
+              "elapsed_s": 1.509,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice180-iteration0"
+            },
+            {
+              "elapsed_s": 1.81,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice308-iteration0"
+            },
+            {
+              "elapsed_s": 1.91,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice341-iteration0"
+            },
+            {
+              "elapsed_s": 1.819,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice368-iteration0"
+            },
+            {
+              "elapsed_s": 1.921,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice404-iteration0"
+            },
+            {
+              "elapsed_s": 1.711,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice407-iteration0"
+            },
+            {
+              "elapsed_s": 1.413,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice121-iteration0"
+            },
+            {
+              "elapsed_s": 1.31,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice346-iteration0"
+            },
+            {
+              "elapsed_s": 1.409,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice92-iteration0"
+            },
+            {
+              "elapsed_s": 1.808,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice109-iteration0"
+            },
+            {
+              "elapsed_s": 1.311,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice122-iteration0"
+            },
+            {
+              "elapsed_s": 1.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice312-iteration0"
+            },
+            {
+              "elapsed_s": 1.409,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice319-iteration0"
+            },
+            {
+              "elapsed_s": 1.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice347-iteration0"
+            },
+            {
+              "elapsed_s": 3.913,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice140-iteration0"
+            },
+            {
+              "elapsed_s": 12.54,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice2-iteration0"
+            },
+            {
+              "elapsed_s": 4.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice26-iteration0"
+            },
+            {
+              "elapsed_s": 1.521,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice131-iteration0"
+            },
+            {
+              "elapsed_s": 22.922,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice4-iteration0"
+            },
+            {
+              "elapsed_s": 1.414,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice372-iteration0"
+            },
+            {
+              "elapsed_s": 1.91,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice363-iteration0"
+            },
+            {
+              "elapsed_s": 4.316,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice239-iteration0"
+            },
+            {
+              "elapsed_s": 4.116,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice230-iteration0"
+            },
+            {
+              "elapsed_s": 4.011,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice355-iteration0"
+            },
+            {
+              "elapsed_s": 3.916,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice233-iteration0"
+            },
+            {
+              "elapsed_s": 5.013,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice242-iteration0"
+            },
+            {
+              "elapsed_s": 45.239,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice1-iteration0"
+            },
+            {
+              "elapsed_s": 1.409,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice371-iteration0"
+            },
+            {
+              "elapsed_s": 1.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice374-iteration0"
+            },
+            {
+              "elapsed_s": 7.912,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice34-iteration0"
+            },
+            {
+              "elapsed_s": 12.932,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice13-iteration0"
+            },
+            {
+              "elapsed_s": 9.32,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice0-iteration0"
+            },
+            {
+              "elapsed_s": 7.02,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice5-iteration0"
+            },
+            {
+              "elapsed_s": 13.528,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice383-iteration0"
+            },
+            {
+              "elapsed_s": 12.618,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice377-iteration0"
+            },
+            {
+              "elapsed_s": 7.017,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice10-iteration0"
+            },
+            {
+              "elapsed_s": 13.224,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice3-iteration0"
+            },
+            {
+              "elapsed_s": 4.812,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice15-iteration0"
+            },
+            {
+              "elapsed_s": 4.51,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice20-iteration0"
+            },
+            {
+              "elapsed_s": 2.712,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice33-iteration0"
+            },
+            {
+              "elapsed_s": 2.406,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice229-iteration0"
+            },
+            {
+              "elapsed_s": 2.311,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice232-iteration0"
+            },
+            {
+              "elapsed_s": 2.21,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice234-iteration0"
+            },
+            {
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice236-iteration0"
+            },
+            {
+              "elapsed_s": 2.612,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice238-iteration0"
+            },
+            {
+              "elapsed_s": 2.31,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice241-iteration0"
+            },
+            {
+              "elapsed_s": 2.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice246-iteration0"
+            },
+            {
+              "elapsed_s": 2.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice248-iteration0"
+            },
+            {
+              "elapsed_s": 2.611,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice250-iteration0"
+            },
+            {
+              "elapsed_s": 2.309,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice251-iteration0"
+            },
+            {
+              "elapsed_s": 2.31,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice354-iteration0"
+            },
+            {
+              "elapsed_s": 2.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice357-iteration0"
+            },
+            {
+              "elapsed_s": 2.11,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice362-iteration0"
+            },
+            {
+              "elapsed_s": 1.808,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice365-iteration0"
+            },
+            {
+              "elapsed_s": 4.311,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice405-iteration0"
+            },
+            {
+              "elapsed_s": 2.812,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice332-iteration0"
+            },
+            {
+              "elapsed_s": 8.311,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice391-iteration0"
+            },
+            {
+              "elapsed_s": 3.11,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice160-iteration0"
+            },
+            {
+              "elapsed_s": 4.714,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice397-iteration0"
+            },
+            {
+              "elapsed_s": 2.311,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice411-iteration0"
+            },
+            {
+              "elapsed_s": 1.911,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice313-iteration0"
+            },
+            {
+              "elapsed_s": 3.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice48-iteration0"
+            },
+            {
+              "elapsed_s": 2.709,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice86-iteration0"
+            },
+            {
+              "elapsed_s": 2.712,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice179-iteration0"
+            },
+            {
+              "elapsed_s": 2.711,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice221-iteration0"
+            },
+            {
+              "elapsed_s": 2.711,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice265-iteration0"
+            },
+            {
+              "elapsed_s": 3.11,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice304-iteration0"
+            },
+            {
+              "elapsed_s": 3.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice359-iteration0"
+            },
+            {
+              "elapsed_s": 2.709,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice390-iteration0"
+            },
+            {
+              "elapsed_s": 2.709,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice393-iteration0"
+            },
+            {
+              "elapsed_s": 1.608,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice123-iteration0"
+            },
+            {
+              "elapsed_s": 1.709,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice166-iteration0"
+            },
+            {
+              "elapsed_s": 1.708,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice173-iteration0"
+            },
+            {
+              "elapsed_s": 1.61,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice175-iteration0"
+            },
+            {
+              "elapsed_s": 1.611,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice307-iteration0"
+            },
+            {
+              "elapsed_s": 1.61,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice318-iteration0"
+            },
+            {
+              "elapsed_s": 1.715,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice321-iteration0"
+            },
+            {
+              "elapsed_s": 1.612,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice336-iteration0"
+            },
+            {
+              "elapsed_s": 1.907,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice338-iteration0"
+            },
+            {
+              "elapsed_s": 1.609,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice344-iteration0"
+            },
+            {
+              "elapsed_s": 1.408,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice348-iteration0"
+            },
+            {
+              "elapsed_s": 2.012,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice80-iteration0"
+            },
+            {
+              "elapsed_s": 2.311,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice214-iteration0"
+            },
+            {
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice298-iteration0"
+            },
+            {
+              "elapsed_s": 2.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice51-iteration0"
+            },
+            {
+              "elapsed_s": 2.012,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice68-iteration0"
+            },
+            {
+              "elapsed_s": 2.309,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice81-iteration0"
+            },
+            {
+              "elapsed_s": 2.008,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice185-iteration0"
+            },
+            {
+              "elapsed_s": 2.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice202-iteration0"
+            },
+            {
+              "elapsed_s": 2.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice215-iteration0"
+            },
+            {
+              "elapsed_s": 2.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice269-iteration0"
+            },
+            {
+              "elapsed_s": 2.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice286-iteration0"
+            },
+            {
+              "elapsed_s": 2.211,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice299-iteration0"
+            },
+            {
+              "elapsed_s": 6.816,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice45-iteration0"
+            },
+            {
+              "elapsed_s": 6.115,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice220-iteration0"
+            },
+            {
+              "elapsed_s": 1.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice370-iteration0"
+            },
+            {
+              "elapsed_s": 1.312,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice373-iteration0"
+            },
+            {
+              "elapsed_s": 3.213,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice158-iteration0"
+            },
+            {
+              "elapsed_s": 2.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice152-iteration0"
+            },
+            {
+              "elapsed_s": 16.418,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice389-iteration0"
+            },
+            {
+              "elapsed_s": 5.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice403-iteration0"
+            },
+            {
+              "elapsed_s": 2.909,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice417-iteration0"
+            },
+            {
+              "elapsed_s": 4.414,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice31-iteration0"
+            },
+            {
+              "elapsed_s": 3.31,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice58-iteration0"
+            },
+            {
+              "elapsed_s": 3.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice201-iteration0"
+            },
+            {
+              "elapsed_s": 3.011,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice282-iteration0"
+            },
+            {
+              "elapsed_s": 3.714,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice55-iteration0"
+            },
+            {
+              "elapsed_s": 3.21,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice64-iteration0"
+            },
+            {
+              "elapsed_s": 3.31,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice67-iteration0"
+            },
+            {
+              "elapsed_s": 3.913,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice189-iteration0"
+            },
+            {
+              "elapsed_s": 3.107,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice198-iteration0"
+            },
+            {
+              "elapsed_s": 3.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice276-iteration0"
+            },
+            {
+              "elapsed_s": 3.91,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice285-iteration0"
+            },
+            {
+              "elapsed_s": 2.811,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice192-iteration0"
+            },
+            {
+              "elapsed_s": 3.212,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice273-iteration0"
+            },
+            {
+              "elapsed_s": 1.909,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice410-iteration0"
+            },
+            {
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice413-iteration0"
+            },
+            {
+              "elapsed_s": 1.91,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice416-iteration0"
+            },
+            {
+              "elapsed_s": 6.012,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice382-iteration0"
+            },
+            {
+              "elapsed_s": 5.716,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice385-iteration0"
+            },
+            {
+              "elapsed_s": 5.711,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice388-iteration0"
+            },
+            {
+              "elapsed_s": 2.611,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice396-iteration0"
+            },
+            {
+              "elapsed_s": 2.809,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice399-iteration0"
+            },
+            {
+              "elapsed_s": 2.71,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice402-iteration0"
+            },
+            {
+              "elapsed_s": 3.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice12-iteration0"
+            },
+            {
+              "elapsed_s": 1.709,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice95-iteration0"
+            },
+            {
+              "elapsed_s": 2.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice98-iteration0"
+            },
+            {
+              "elapsed_s": 2.209,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice100-iteration0"
+            },
+            {
+              "elapsed_s": 2.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice102-iteration0"
+            },
+            {
+              "elapsed_s": 2.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice104-iteration0"
+            },
+            {
+              "elapsed_s": 3.21,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice107-iteration0"
+            },
+            {
+              "elapsed_s": 2.209,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice112-iteration0"
+            },
+            {
+              "elapsed_s": 2.309,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice114-iteration0"
+            },
+            {
+              "elapsed_s": 2.209,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice116-iteration0"
+            },
+            {
+              "elapsed_s": 2.011,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice117-iteration0"
+            },
+            {
+              "elapsed_s": 3.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice315-iteration0"
+            },
+            {
+              "elapsed_s": 4.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice9-iteration0"
+            },
+            {
+              "elapsed_s": 4.614,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice16-iteration0"
+            },
+            {
+              "elapsed_s": 4.814,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice19-iteration0"
+            },
+            {
+              "elapsed_s": 5.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice18-iteration0"
+            },
+            {
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice409-iteration0"
+            },
+            {
+              "elapsed_s": 2.212,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice412-iteration0"
+            },
+            {
+              "elapsed_s": 2.209,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice415-iteration0"
+            },
+            {
+              "elapsed_s": 2.311,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice317-iteration0"
+            },
+            {
+              "elapsed_s": 2.611,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice129-iteration0"
+            },
+            {
+              "elapsed_s": 2.809,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice130-iteration0"
+            },
+            {
+              "elapsed_s": 2.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice132-iteration0"
+            },
+            {
+              "elapsed_s": 2.91,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice311-iteration0"
+            },
+            {
+              "elapsed_s": 2.909,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice340-iteration0"
+            },
+            {
+              "elapsed_s": 2.61,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice163-iteration0"
+            },
+            {
+              "elapsed_s": 2.708,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice171-iteration0"
+            },
+            {
+              "elapsed_s": 2.309,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice335-iteration0"
+            },
+            {
+              "elapsed_s": 2.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice343-iteration0"
+            },
+            {
+              "elapsed_s": 3.112,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice91-iteration0"
+            },
+            {
+              "elapsed_s": 2.911,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice126-iteration0"
+            },
+            {
+              "elapsed_s": 3.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice142-iteration0"
+            },
+            {
+              "elapsed_s": 2.511,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice147-iteration0"
+            },
+            {
+              "elapsed_s": 3.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice168-iteration0"
+            },
+            {
+              "elapsed_s": 3.109,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice178-iteration0"
+            },
+            {
+              "elapsed_s": 3.009,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice367-iteration0"
+            },
+            {
+              "elapsed_s": 2.91,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice406-iteration0"
+            },
+            {
+              "elapsed_s": 2.912,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice120-iteration0"
+            },
+            {
+              "elapsed_s": 2.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice135-iteration0"
+            },
+            {
+              "elapsed_s": 2.211,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice106-iteration0"
+            },
+            {
+              "elapsed_s": 2.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice111-iteration0"
+            },
+            {
+              "elapsed_s": 1.909,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice113-iteration0"
+            },
+            {
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice314-iteration0"
+            },
+            {
+              "elapsed_s": 2.211,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice94-iteration0"
+            },
+            {
+              "elapsed_s": 2.408,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice97-iteration0"
+            },
+            {
+              "elapsed_s": 2.11,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice101-iteration0"
+            },
+            {
+              "elapsed_s": 13.718,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice24-iteration0"
+            },
+            {
+              "elapsed_s": 2.709,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice82-iteration0"
+            },
+            {
+              "elapsed_s": 2.409,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice216-iteration0"
+            },
+            {
+              "elapsed_s": 2.81,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice264-iteration0"
+            },
+            {
+              "elapsed_s": 2.609,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice300-iteration0"
+            },
+            {
+              "elapsed_s": 4.713,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice27-iteration0"
+            },
+            {
+              "elapsed_s": 4.913,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice261-iteration0"
+            },
+            {
+              "elapsed_s": 5.31,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice351-iteration0"
+            },
+            {
+              "elapsed_s": 5.711,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice376-iteration0"
+            },
+            {
+              "elapsed_s": 4.611,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice379-iteration0"
+            },
+            {
+              "elapsed_s": 3.51,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice39-iteration0"
+            },
+            {
+              "elapsed_s": 3.012,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice255-iteration0"
+            },
+            {
+              "elapsed_s": 3.312,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice30-iteration0"
+            },
+            {
+              "elapsed_s": 3.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice37-iteration0"
+            },
+            {
+              "elapsed_s": 3.413,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice40-iteration0"
+            },
+            {
+              "elapsed_s": 3.007,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice226-iteration0"
+            },
+            {
+              "elapsed_s": 3.311,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice243-iteration0"
+            },
+            {
+              "elapsed_s": 3.512,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice256-iteration0"
+            },
+            {
+              "elapsed_s": 5.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice262-iteration0"
+            },
+            {
+              "elapsed_s": 2.108,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice369-iteration0"
+            },
+            {
+              "elapsed_s": 3.509,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice423-iteration0"
+            },
+            {
+              "elapsed_s": 7.713,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice6-iteration0"
+            },
+            {
+              "elapsed_s": 3.61,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice36-iteration0"
+            },
+            {
+              "elapsed_s": 3.711,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice41-iteration0"
+            },
+            {
+              "elapsed_s": 3.309,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice257-iteration0"
+            },
+            {
+              "elapsed_s": 2.71,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice54-iteration0"
+            },
+            {
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice57-iteration0"
+            },
+            {
+              "elapsed_s": 2.509,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice59-iteration0"
+            },
+            {
+              "elapsed_s": 2.209,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice61-iteration0"
+            },
+            {
+              "elapsed_s": 2.01,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice63-iteration0"
+            },
+            {
+              "elapsed_s": 2.508,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice66-iteration0"
+            },
+            {
+              "elapsed_s": 2.712,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice71-iteration0"
+            },
+            {
+              "elapsed_s": 2.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice73-iteration0"
+            },
+            {
+              "elapsed_s": 2.21,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice75-iteration0"
+            },
+            {
+              "elapsed_s": 2.211,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice76-iteration0"
+            },
+            {
+              "elapsed_s": 2.609,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice188-iteration0"
+            },
+            {
+              "elapsed_s": 2.412,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice191-iteration0"
+            },
+            {
+              "elapsed_s": 2.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice193-iteration0"
+            },
+            {
+              "elapsed_s": 2.311,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice195-iteration0"
+            },
+            {
+              "elapsed_s": 2.511,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice197-iteration0"
+            },
+            {
+              "elapsed_s": 2.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice200-iteration0"
+            },
+            {
+              "elapsed_s": 2.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice205-iteration0"
+            },
+            {
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice207-iteration0"
+            },
+            {
+              "elapsed_s": 2.509,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice209-iteration0"
+            },
+            {
+              "elapsed_s": 2.213,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice210-iteration0"
+            },
+            {
+              "elapsed_s": 2.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice272-iteration0"
+            },
+            {
+              "elapsed_s": 2.409,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice275-iteration0"
+            },
+            {
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice277-iteration0"
+            },
+            {
+              "elapsed_s": 2.91,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice279-iteration0"
+            },
+            {
+              "elapsed_s": 2.511,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice281-iteration0"
+            },
+            {
+              "elapsed_s": 2.608,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice284-iteration0"
+            },
+            {
+              "elapsed_s": 2.511,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice289-iteration0"
+            },
+            {
+              "elapsed_s": 2.509,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice291-iteration0"
+            },
+            {
+              "elapsed_s": 2.71,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice293-iteration0"
+            },
+            {
+              "elapsed_s": 2.609,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice294-iteration0"
+            },
+            {
+              "elapsed_s": 2.512,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice103-iteration0"
+            },
+            {
+              "elapsed_s": 2.409,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice115-iteration0"
+            },
+            {
+              "elapsed_s": 5.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice352-iteration0"
+            },
+            {
+              "elapsed_s": 3.412,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice96-iteration0"
+            },
+            {
+              "elapsed_s": 4.01,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice99-iteration0"
+            },
+            {
+              "elapsed_s": 3.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice105-iteration0"
+            },
+            {
+              "elapsed_s": 3.511,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice108-iteration0"
+            },
+            {
+              "elapsed_s": 4.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice316-iteration0"
+            },
+            {
+              "elapsed_s": 3.913,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice360-iteration0"
+            },
+            {
+              "elapsed_s": 16.33,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice25-iteration0"
+            },
+            {
+              "elapsed_s": 5.111,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice305-iteration0"
+            },
+            {
+              "elapsed_s": 9.219,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice46-iteration0"
+            },
+            {
+              "elapsed_s": 6.816,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice87-iteration0"
+            },
+            {
+              "elapsed_s": 4.414,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice361-iteration0"
+            },
+            {
+              "elapsed_s": 4.41,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice364-iteration0"
+            },
+            {
+              "elapsed_s": 4.213,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice62-iteration0"
+            },
+            {
+              "elapsed_s": 4.914,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice196-iteration0"
+            },
+            {
+              "elapsed_s": 4.812,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice280-iteration0"
+            },
+            {
+              "elapsed_s": 5.611,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice74-iteration0"
+            },
+            {
+              "elapsed_s": 5.012,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice165-iteration0"
+            },
+            {
+              "elapsed_s": 5.611,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice174-iteration0"
+            },
+            {
+              "elapsed_s": 4.21,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice208-iteration0"
+            },
+            {
+              "elapsed_s": 4.21,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice292-iteration0"
+            },
+            {
+              "elapsed_s": 5.014,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice320-iteration0"
+            },
+            {
+              "elapsed_s": 5.215,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice337-iteration0"
+            },
+            {
+              "elapsed_s": 4.812,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice345-iteration0"
+            },
+            {
+              "elapsed_s": 6.412,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice425-iteration0"
+            },
+            {
+              "elapsed_s": 6.814,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice395-iteration0"
+            },
+            {
+              "elapsed_s": 7.312,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice398-iteration0"
+            },
+            {
+              "elapsed_s": 7.612,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice401-iteration0"
+            },
+            {
+              "elapsed_s": 7.717,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice184-iteration0"
+            },
+            {
+              "elapsed_s": 7.614,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice219-iteration0"
+            },
+            {
+              "elapsed_s": 7.911,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice268-iteration0"
+            },
+            {
+              "elapsed_s": 6.812,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice303-iteration0"
+            },
+            {
+              "elapsed_s": 7.912,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice50-iteration0"
+            },
+            {
+              "elapsed_s": 7.613,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice392-iteration0"
+            },
+            {
+              "elapsed_s": 7.812,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice85-iteration0"
+            },
+            {
+              "elapsed_s": 6.816,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice428-iteration0"
+            },
+            {
+              "elapsed_s": 7.212,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice430-iteration0"
+            },
+            {
+              "elapsed_s": 7.012,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice429-iteration0"
+            },
+            {
+              "elapsed_s": 7.112,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice213-iteration0"
+            },
+            {
+              "elapsed_s": 6.411,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice297-iteration0"
+            },
+            {
+              "elapsed_s": 7.317,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice79-iteration0"
+            },
+            {
+              "elapsed_s": 5.91,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice53-iteration0"
+            },
+            {
+              "elapsed_s": 7.316,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice56-iteration0"
+            },
+            {
+              "elapsed_s": 6.812,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice60-iteration0"
+            },
+            {
+              "elapsed_s": 6.816,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice65-iteration0"
+            },
+            {
+              "elapsed_s": 7.612,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice70-iteration0"
+            },
+            {
+              "elapsed_s": 6.116,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice72-iteration0"
+            },
+            {
+              "elapsed_s": 5.915,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice187-iteration0"
+            },
+            {
+              "elapsed_s": 6.415,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice190-iteration0"
+            },
+            {
+              "elapsed_s": 6.812,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice194-iteration0"
+            },
+            {
+              "elapsed_s": 6.711,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice199-iteration0"
+            },
+            {
+              "elapsed_s": 5.11,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice204-iteration0"
+            },
+            {
+              "elapsed_s": 6.316,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice206-iteration0"
+            },
+            {
+              "elapsed_s": 6.115,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice271-iteration0"
+            },
+            {
+              "elapsed_s": 6.515,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice274-iteration0"
+            },
+            {
+              "elapsed_s": 7.416,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice278-iteration0"
+            },
+            {
+              "elapsed_s": 8.815,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice283-iteration0"
+            },
+            {
+              "elapsed_s": 7.212,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice288-iteration0"
+            },
+            {
+              "elapsed_s": 6.511,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice290-iteration0"
+            },
+            {
+              "elapsed_s": 5.816,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice118-iteration0"
+            },
+            {
+              "elapsed_s": 11.121,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice421-iteration0"
+            },
+            {
+              "elapsed_s": 6.715,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice427-iteration0"
+            },
+            {
+              "elapsed_s": 9.216,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice144-iteration0"
+            },
+            {
+              "elapsed_s": 9.016,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice237-iteration0"
+            },
+            {
+              "elapsed_s": 8.821,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice249-iteration0"
+            },
+            {
+              "elapsed_s": 27.328,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice181-iteration0"
+            },
+            {
+              "elapsed_s": 14.417,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice252-iteration0"
+            },
+            {
+              "elapsed_s": 13.828,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice176-iteration0"
+            },
+            {
+              "elapsed_s": 13.416,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice431-iteration0"
+            },
+            {
+              "elapsed_s": 18.633,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice32-iteration0"
+            },
+            {
+              "elapsed_s": 15.733,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice228-iteration0"
+            },
+            {
+              "elapsed_s": 18.419,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice231-iteration0"
+            },
+            {
+              "elapsed_s": 24.926,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice235-iteration0"
+            },
+            {
+              "elapsed_s": 17.231,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice240-iteration0"
+            },
+            {
+              "elapsed_s": 25.527,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice245-iteration0"
+            },
+            {
+              "elapsed_s": 18.619,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice247-iteration0"
+            },
+            {
+              "elapsed_s": 18.349,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice353-iteration0"
+            },
+            {
+              "elapsed_s": 17.724,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice356-iteration0"
+            },
+            {
+              "elapsed_s": 14.932,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice424-iteration0"
+            },
+            {
+              "elapsed_s": 13.429,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice77-iteration0"
+            },
+            {
+              "elapsed_s": 20.019,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice38-iteration0"
+            },
+            {
+              "elapsed_s": 17.922,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice124-iteration0"
+            },
+            {
+              "elapsed_s": 18.22,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice309-iteration0"
+            },
+            {
+              "elapsed_s": 27.444,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice139-iteration0"
+            },
+            {
+              "elapsed_s": 16.83,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice426-iteration0"
+            },
+            {
+              "elapsed_s": 27.249,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice381-iteration0"
+            },
+            {
+              "elapsed_s": 29.325,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice384-iteration0"
+            },
+            {
+              "elapsed_s": 23.94,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice387-iteration0"
+            },
+            {
+              "elapsed_s": 31.028,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice44-iteration0"
+            },
+            {
+              "elapsed_s": 26.443,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice29-iteration0"
+            },
+            {
+              "elapsed_s": 26.024,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice225-iteration0"
+            },
+            {
+              "elapsed_s": 22.121,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice260-iteration0"
+            },
+            {
+              "elapsed_s": 23.122,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice378-iteration0"
+            },
+            {
+              "elapsed_s": 22.323,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice35-iteration0"
+            },
+            {
+              "elapsed_s": 24.043,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice254-iteration0"
+            },
+            {
+              "elapsed_s": 30.127,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice11-iteration0"
+            },
+            {
+              "elapsed_s": 39.732,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice419-iteration0"
+            },
+            {
+              "elapsed_s": 36.96,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice17-iteration0"
+            },
+            {
+              "elapsed_s": 54.241,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice222-iteration0"
+            },
+            {
+              "elapsed_s": 29.326,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice83-iteration0"
+            },
+            {
+              "elapsed_s": 29.626,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice266-iteration0"
+            },
+            {
+              "elapsed_s": 49.236,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice156-iteration0"
+            },
+            {
+              "elapsed_s": 57.244,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice328-iteration0"
+            },
+            {
+              "elapsed_s": 57.044,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice14-iteration0"
+            },
+            {
+              "elapsed_s": 56.641,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice21-iteration0"
+            },
+            {
+              "elapsed_s": 80.763,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice182-iteration0"
+            },
+            {
+              "elapsed_s": 47.736,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice42-iteration0"
+            },
+            {
+              "elapsed_s": 103.472,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice23-iteration0"
+            },
+            {
+              "elapsed_s": 93.07,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice8-iteration0"
+            },
+            {
+              "elapsed_s": 147.897,
+              "status": "pass",
+              "workload": "pebble-yolo26n-gvn-slice223-iteration0"
+            }
+          ]
+        }
+      },
+      "verification_log": "2026-11-27-19-52-52-pebble-gvn-verilator-check-device-pebble-PebbleDefaultConfig-all-model-debug-receipts"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T11:53:07.405639+00:00"
+}

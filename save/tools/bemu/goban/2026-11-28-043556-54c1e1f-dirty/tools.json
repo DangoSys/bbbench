@@ -1,0 +1,65 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 2201885841,
+  "design": "goban",
+  "dirty": true,
+  "elapsed_s": 9.495,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-28T04:35:56.515456+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 7,
+  "workloads": [
+    {
+      "cycles": 2201885841,
+      "elapsed_s": 9.495,
+      "frequency_hz": 231899509.32069513,
+      "log": "2026-11-28-12-35-56-goban-bemu-device-goban-GobanDefaultConfig-goban-test-linux",
+      "status": "pass",
+      "workload": "goban-test-linux"
+    },
+    {
+      "elapsed_s": 0.139,
+      "error": "thread 'ant-thread-1' (2623901) panicked at /home/wanghui/Code/buckyball/bebop/src/nodes/bemu/thread/src/instructions/operator.rs:236:39:",
+      "log": "2026-11-28-12-36-26-goban-bemu-device-goban-GobanDefaultConfig-goban-bert-base-uncased-emotion-baremetal",
+      "status": "failure",
+      "workload": "bert-base-uncased-emotion-baremetal"
+    },
+    {
+      "elapsed_s": 16.393,
+      "error": "thread 'ant-thread-1' (2624725) panicked at /home/wanghui/Code/buckyball/bebop/src/nodes/bemu/thread/src/instructions/operator.rs:236:39:",
+      "log": "2026-11-28-12-36-36-goban-bemu-device-goban-GobanDefaultConfig-goban-bert-base-uncased-emotion-linux",
+      "status": "failure",
+      "workload": "bert-base-uncased-emotion-linux"
+    },
+    {
+      "elapsed_s": 0.321,
+      "error": "thread 'ant-thread-1' (2626654) panicked at /home/wanghui/Code/buckyball/bebop/src/nodes/bemu/thread/src/instructions/operator.rs:236:39:",
+      "log": "2026-11-28-12-37-06-goban-bemu-device-goban-GobanDefaultConfig-goban-laya-baremetal",
+      "status": "failure",
+      "workload": "laya-baremetal"
+    },
+    {
+      "elapsed_s": 6.018,
+      "error": "thread 'ant-thread-1' (2627448) panicked at /home/wanghui/Code/buckyball/bebop/src/nodes/bemu/thread/src/instructions/operator.rs:236:39:",
+      "log": "2026-11-28-12-37-16-goban-bemu-device-goban-GobanDefaultConfig-goban-laya-linux",
+      "status": "failure",
+      "workload": "laya-linux"
+    },
+    {
+      "elapsed_s": 0.094,
+      "error": "thread 'ant-thread-1' (2628939) panicked at /home/wanghui/Code/buckyball/bebop/src/nodes/bemu/thread/src/instructions/operator.rs:236:39:",
+      "log": "2026-11-28-12-37-36-goban-bemu-device-goban-GobanDefaultConfig-goban-mlp-mixer-baremetal",
+      "status": "failure",
+      "workload": "mlp-mixer-baremetal"
+    },
+    {
+      "elapsed_s": 14.78,
+      "error": "thread 'ant-thread-1' (2629752) panicked at /home/wanghui/Code/buckyball/bebop/src/nodes/bemu/thread/src/instructions/operator.rs:236:39:",
+      "log": "2026-11-28-12-37-46-goban-bemu-device-goban-GobanDefaultConfig-goban-mlp-mixer-linux",
+      "status": "failure",
+      "workload": "mlp-mixer-linux"
+    }
+  ]
+}

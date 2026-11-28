@@ -1,0 +1,55 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 8143769467,
+  "design": "toy",
+  "dirty": true,
+  "elapsed_s": 35.383,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-28T03:44:36.930514+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 5,
+  "workloads": [
+    {
+      "cycles": 3023668292,
+      "elapsed_s": 15.741,
+      "frequency_hz": 192088704.14840227,
+      "log": "2026-11-28-11-44-37-toy-bemu-device-toy-ToyDefaultConfig-toy-test-linux",
+      "status": "below_target",
+      "workload": "toy-test-linux"
+    },
+    {
+      "cycles": 6964444,
+      "elapsed_s": 0.025,
+      "frequency_hz": 278577760.0,
+      "log": "2026-11-28-11-45-07-toy-bemu-device-toy-ToyDefaultConfig-toy-lenet-baremetal",
+      "status": "too_short",
+      "workload": "lenet-baremetal"
+    },
+    {
+      "cycles": 688534620,
+      "elapsed_s": 3.026,
+      "frequency_hz": 227539530.73364177,
+      "log": "2026-11-28-11-45-17-toy-bemu-device-toy-ToyDefaultConfig-toy-lenet-linux",
+      "status": "pass",
+      "workload": "lenet-linux"
+    },
+    {
+      "cycles": 1030958615,
+      "elapsed_s": 2.777,
+      "frequency_hz": 371249051.1343176,
+      "log": "2026-11-28-11-45-47-toy-bemu-device-toy-ToyDefaultConfig-toy-mobilenet-v3-small-baremetal",
+      "status": "pass",
+      "workload": "mobilenet-v3-small-baremetal"
+    },
+    {
+      "cycles": 3400607940,
+      "elapsed_s": 13.839,
+      "frequency_hz": 245726420.98417515,
+      "log": "2026-11-28-11-45-57-toy-bemu-device-toy-ToyDefaultConfig-toy-mobilenet-v3-small-linux",
+      "status": "pass",
+      "workload": "mobilenet-v3-small-linux"
+    }
+  ]
+}

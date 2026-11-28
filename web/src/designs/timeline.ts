@@ -56,11 +56,14 @@ function summary(node: Node): string[] {
   if (node.status === "skipped") return ["not applicable"];
   const suites = Object.values(node.suites ?? {});
   const models = node.models ?? node.estimates ?? node.datasets ?? [];
-  const time = duration(node.elapsed_s!);
+  const time = node.elapsed_s === undefined ? [] : [duration(node.elapsed_s)];
   if (suites.length)
-    return [`${suites.reduce((s, x) => s + x.passed, 0)} / ${suites.reduce((s, x) => s + x.total, 0)}`, time];
-  if (models.length) return [`${models.filter((m) => m.status === "pass").length} / ${models.length} models`, time];
-  return [time];
+    return [`${suites.reduce((s, x) => s + x.passed, 0)} / ${suites.reduce((s, x) => s + x.total, 0)}`, ...time];
+  if (models.length) {
+    const unit = node.id === "fpga-model" ? "runs" : "models";
+    return [`${models.filter((m) => m.status === "pass").length} / ${models.length} ${unit}`, ...time];
+  }
+  return time;
 }
 
 // The bench-device step that runs each node (bbdev/api/steps/bench).
@@ -73,6 +76,8 @@ export const steps: Record<string, string> = {
   "bemu-model": "bemu-model",
   "bemu-bench": "bemu-bench",
   "bemu-accuracy": "bemu-accuracy",
+  "verilator-gvn-perf": "verilator-gvn-perf",
+  "verilator-gvn-debug": "verilator-gvn-debug",
   uvm: "uvm",
   "fpga-bitstream": "buildbitstream",
 };

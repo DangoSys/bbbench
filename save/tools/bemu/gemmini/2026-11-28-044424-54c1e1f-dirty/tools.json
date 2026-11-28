@@ -1,0 +1,119 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 16696462056,
+  "design": "gemmini",
+  "dirty": true,
+  "elapsed_s": 196.404,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-28T04:44:24.688725+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 13,
+  "workloads": [
+    {
+      "cycles": 146123046,
+      "elapsed_s": 2.332,
+      "frequency_hz": 62659968.26758148,
+      "log": "2026-11-28-12-44-24-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-test-linux",
+      "status": "below_target",
+      "workload": "gemmini-test-linux"
+    },
+    {
+      "cycles": 524651275,
+      "elapsed_s": 2.554,
+      "frequency_hz": 205423365.30931872,
+      "log": "2026-11-28-12-45-14-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-alexnet-baremetal",
+      "status": "pass",
+      "workload": "alexnet-baremetal"
+    },
+    {
+      "cycles": 1191197271,
+      "elapsed_s": 23.035,
+      "frequency_hz": 51712492.77186889,
+      "log": "2026-11-28-12-45-24-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-alexnet-linux",
+      "status": "below_target",
+      "workload": "alexnet-linux"
+    },
+    {
+      "cycles": 1180233586,
+      "elapsed_s": 12.476,
+      "frequency_hz": 94600319.49342738,
+      "log": "2026-11-28-12-45-54-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-bert-base-uncased-emotion-baremetal",
+      "status": "below_target",
+      "workload": "bert-base-uncased-emotion-baremetal"
+    },
+    {
+      "cycles": 1423793911,
+      "elapsed_s": 23.883,
+      "frequency_hz": 59615371.226395346,
+      "log": "2026-11-28-12-46-34-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-bert-base-uncased-emotion-linux",
+      "status": "below_target",
+      "workload": "bert-base-uncased-emotion-linux"
+    },
+    {
+      "cycles": 4508013,
+      "elapsed_s": 0.05,
+      "frequency_hz": 90160260.0,
+      "log": "2026-11-28-12-47-14-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-lenet-baremetal",
+      "status": "too_short",
+      "workload": "lenet-baremetal"
+    },
+    {
+      "cycles": 186110321,
+      "elapsed_s": 3.034,
+      "frequency_hz": 61341569.215557024,
+      "log": "2026-11-28-12-47-24-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-lenet-linux",
+      "status": "below_target",
+      "workload": "lenet-linux"
+    },
+    {
+      "cycles": 208563789,
+      "elapsed_s": 1.558,
+      "frequency_hz": 133866360.07702182,
+      "log": "2026-11-28-12-47-44-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-mobilenet-v3-small-baremetal",
+      "status": "below_target",
+      "workload": "mobilenet-v3-small-baremetal"
+    },
+    {
+      "cycles": 516068296,
+      "elapsed_s": 7.616,
+      "frequency_hz": 67761068.27731092,
+      "log": "2026-11-28-12-47-54-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-mobilenet-v3-small-linux",
+      "status": "below_target",
+      "workload": "mobilenet-v3-small-linux"
+    },
+    {
+      "cycles": 326590987,
+      "elapsed_s": 3.646,
+      "frequency_hz": 89575147.28469557,
+      "log": "2026-11-28-12-48-14-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-resnet18-baremetal",
+      "status": "below_target",
+      "workload": "resnet18-baremetal"
+    },
+    {
+      "cycles": 859040271,
+      "elapsed_s": 9.007,
+      "frequency_hz": 95374738.64771844,
+      "log": "2026-11-28-12-48-34-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-resnet18-linux",
+      "status": "below_target",
+      "workload": "resnet18-linux"
+    },
+    {
+      "cycles": 4181022945,
+      "elapsed_s": 47.34,
+      "frequency_hz": 88319031.3688213,
+      "log": "2026-11-28-12-48-54-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-yolo26n-baremetal",
+      "status": "below_target",
+      "workload": "yolo26n-baremetal"
+    },
+    {
+      "cycles": 5953066358,
+      "elapsed_s": 59.923,
+      "frequency_hz": 99345265.72434624,
+      "log": "2026-11-28-12-49-54-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-yolo26n-linux",
+      "status": "below_target",
+      "workload": "yolo26n-linux"
+    }
+  ]
+}

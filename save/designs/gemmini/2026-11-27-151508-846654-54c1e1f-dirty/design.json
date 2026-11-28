@@ -1,0 +1,517 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "config": "gemmini/devices/gemmini/configs/GemminiDefaultConfig.toml",
+  "design": "gemmini",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 25796.9,
+      "error": "yolo26n: No RTL debug report",
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "failure",
+      "suites": {
+        "alexnet": {
+          "log": "2026-11-27-23-15-17-gemmini-gvn-verilator-debug-device-gemmini-GemminiDefaultConfig-alexnet",
+          "passed": 8,
+          "total": 8,
+          "workloads": [
+            {
+              "elapsed_s": 41.443,
+              "status": "pass",
+              "workload": "gemmini-alexnet-gvn-slice5"
+            },
+            {
+              "elapsed_s": 65.456,
+              "status": "pass",
+              "workload": "gemmini-alexnet-gvn-slice6"
+            },
+            {
+              "elapsed_s": 66.672,
+              "status": "pass",
+              "workload": "gemmini-alexnet-gvn-slice7"
+            },
+            {
+              "elapsed_s": 341.074,
+              "status": "pass",
+              "workload": "gemmini-alexnet-gvn-slice2"
+            },
+            {
+              "elapsed_s": 480.056,
+              "status": "pass",
+              "workload": "gemmini-alexnet-gvn-slice4"
+            },
+            {
+              "elapsed_s": 508.398,
+              "status": "pass",
+              "workload": "gemmini-alexnet-gvn-slice3"
+            },
+            {
+              "elapsed_s": 1283.401,
+              "status": "pass",
+              "workload": "gemmini-alexnet-gvn-slice1"
+            },
+            {
+              "elapsed_s": 365.387,
+              "status": "pass",
+              "workload": "gemmini-alexnet-gvn-slice0"
+            }
+          ]
+        },
+        "bert-base-uncased-emotion": {
+          "log": "2026-11-27-23-38-02-gemmini-gvn-verilator-debug-device-gemmini-GemminiDefaultConfig-bert-base-uncased-emotion",
+          "passed": 7,
+          "total": 7,
+          "workloads": [
+            {
+              "elapsed_s": 1.629,
+              "status": "pass",
+              "workload": "gemmini-bert-base-uncased-emotion-gvn-slice97"
+            },
+            {
+              "elapsed_s": 9.303,
+              "status": "pass",
+              "workload": "gemmini-bert-base-uncased-emotion-gvn-slice3"
+            },
+            {
+              "elapsed_s": 18.242,
+              "status": "pass",
+              "workload": "gemmini-bert-base-uncased-emotion-gvn-slice4"
+            },
+            {
+              "elapsed_s": 31.865,
+              "status": "pass",
+              "workload": "gemmini-bert-base-uncased-emotion-gvn-slice7"
+            },
+            {
+              "elapsed_s": 147.57,
+              "status": "pass",
+              "workload": "gemmini-bert-base-uncased-emotion-gvn-slice96"
+            },
+            {
+              "elapsed_s": 102.126,
+              "status": "pass",
+              "workload": "gemmini-bert-base-uncased-emotion-gvn-slice0"
+            },
+            {
+              "elapsed_s": 120.914,
+              "status": "pass",
+              "workload": "gemmini-bert-base-uncased-emotion-gvn-slice6"
+            }
+          ]
+        },
+        "lenet": {
+          "log": "2026-11-28-01-42-58-gemmini-gvn-verilator-debug-device-gemmini-GemminiDefaultConfig-lenet",
+          "passed": 5,
+          "total": 5,
+          "workloads": [
+            {
+              "elapsed_s": 0.314,
+              "status": "pass",
+              "workload": "gemmini-lenet-gvn-slice4"
+            },
+            {
+              "elapsed_s": 1.814,
+              "status": "pass",
+              "workload": "gemmini-lenet-gvn-slice3"
+            },
+            {
+              "elapsed_s": 2.716,
+              "status": "pass",
+              "workload": "gemmini-lenet-gvn-slice1"
+            },
+            {
+              "elapsed_s": 7.116,
+              "status": "pass",
+              "workload": "gemmini-lenet-gvn-slice2"
+            },
+            {
+              "elapsed_s": 7.619,
+              "status": "pass",
+              "workload": "gemmini-lenet-gvn-slice0"
+            }
+          ]
+        },
+        "mobilenet-v3-small": {
+          "log": "2026-11-28-04-07-58-gemmini-gvn-verilator-debug-device-gemmini-GemminiDefaultConfig-mobilenet-v3-small",
+          "passed": 34,
+          "total": 34,
+          "workloads": [
+            {
+              "elapsed_s": 0.207,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice1"
+            },
+            {
+              "elapsed_s": 0.206,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice2"
+            },
+            {
+              "elapsed_s": 0.207,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice9"
+            },
+            {
+              "elapsed_s": 0.508,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice10"
+            },
+            {
+              "elapsed_s": 0.305,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice21"
+            },
+            {
+              "elapsed_s": 0.306,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice25"
+            },
+            {
+              "elapsed_s": 0.61,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice22"
+            },
+            {
+              "elapsed_s": 0.61,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice26"
+            },
+            {
+              "elapsed_s": 0.609,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice13"
+            },
+            {
+              "elapsed_s": 0.609,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice29"
+            },
+            {
+              "elapsed_s": 0.911,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice14"
+            },
+            {
+              "elapsed_s": 1.113,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice30"
+            },
+            {
+              "elapsed_s": 1.212,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice33"
+            },
+            {
+              "elapsed_s": 1.11,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice34"
+            },
+            {
+              "elapsed_s": 2.112,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice41"
+            },
+            {
+              "elapsed_s": 3.712,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice42"
+            },
+            {
+              "elapsed_s": 17.116,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice20"
+            },
+            {
+              "elapsed_s": 8.211,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice31"
+            },
+            {
+              "elapsed_s": 8.411,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice11"
+            },
+            {
+              "elapsed_s": 14.422,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice24"
+            },
+            {
+              "elapsed_s": 14.123,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice23"
+            },
+            {
+              "elapsed_s": 11.915,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice27"
+            },
+            {
+              "elapsed_s": 38.129,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice12"
+            },
+            {
+              "elapsed_s": 22.219,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice35"
+            },
+            {
+              "elapsed_s": 44.732,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice28"
+            },
+            {
+              "elapsed_s": 38.327,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice6"
+            },
+            {
+              "elapsed_s": 35.529,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice8"
+            },
+            {
+              "elapsed_s": 23.134,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice15"
+            },
+            {
+              "elapsed_s": 23.222,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice5"
+            },
+            {
+              "elapsed_s": 46.232,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice32"
+            },
+            {
+              "elapsed_s": 30.525,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice7"
+            },
+            {
+              "elapsed_s": 41.356,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice3"
+            },
+            {
+              "elapsed_s": 94.262,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice4"
+            },
+            {
+              "elapsed_s": 168.309,
+              "status": "pass",
+              "workload": "gemmini-mobilenet-v3-small-gvn-slice0"
+            }
+          ]
+        },
+        "resnet18": {
+          "log": "2026-11-28-04-59-33-gemmini-gvn-verilator-debug-device-gemmini-GemminiDefaultConfig-resnet18",
+          "passed": 12,
+          "total": 12,
+          "workloads": [
+            {
+              "elapsed_s": 2.51,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice20"
+            },
+            {
+              "elapsed_s": 42.831,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice12"
+            },
+            {
+              "elapsed_s": 55.437,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice17"
+            },
+            {
+              "elapsed_s": 45.057,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice7"
+            },
+            {
+              "elapsed_s": 168.299,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice15"
+            },
+            {
+              "elapsed_s": 161.092,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice16"
+            },
+            {
+              "elapsed_s": 213.519,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice10"
+            },
+            {
+              "elapsed_s": 157.09,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice5"
+            },
+            {
+              "elapsed_s": 326.605,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice11"
+            },
+            {
+              "elapsed_s": 830.96,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice6"
+            },
+            {
+              "elapsed_s": 559.102,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice1"
+            },
+            {
+              "elapsed_s": 650.749,
+              "status": "pass",
+              "workload": "gemmini-resnet18-gvn-slice0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T15:15:08.846654+00:00"
+}

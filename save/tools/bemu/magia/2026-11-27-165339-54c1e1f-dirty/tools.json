@@ -1,0 +1,55 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 87947012848,
+  "design": "magia",
+  "dirty": true,
+  "elapsed_s": 858.587,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-27T16:53:39.920877+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 5,
+  "workloads": [
+    {
+      "cycles": 500606620,
+      "elapsed_s": 7.444,
+      "frequency_hz": 67249680.27941966,
+      "log": "2026-11-28-00-53-40-magia-bemu-device-magia-MagiaDefaultConfig-magia-test-linux",
+      "status": "below_target",
+      "workload": "magia-test-linux"
+    },
+    {
+      "cycles": 3469952512,
+      "elapsed_s": 39.954,
+      "frequency_hz": 86848688.79211092,
+      "log": "2026-11-28-00-54-10-magia-bemu-device-magia-MagiaDefaultConfig-magia-bert-base-uncased-emotion-baremetal",
+      "status": "below_target",
+      "workload": "bert-base-uncased-emotion-baremetal"
+    },
+    {
+      "cycles": 4608184740,
+      "elapsed_s": 58.335,
+      "frequency_hz": 78995195.68012342,
+      "log": "2026-11-28-00-55-00-magia-bemu-device-magia-MagiaDefaultConfig-magia-bert-base-uncased-emotion-linux",
+      "status": "below_target",
+      "workload": "bert-base-uncased-emotion-linux"
+    },
+    {
+      "cycles": 36951748758,
+      "elapsed_s": 360.681,
+      "frequency_hz": 102449945.4032788,
+      "log": "2026-11-28-00-56-10-magia-bemu-device-magia-MagiaDefaultConfig-magia-qwen3-0-6b-baremetal",
+      "status": "below_target",
+      "workload": "qwen3-0-6b-baremetal"
+    },
+    {
+      "cycles": 42416520218,
+      "elapsed_s": 392.173,
+      "frequency_hz": 108157675.86753805,
+      "log": "2026-11-28-01-02-20-magia-bemu-device-magia-MagiaDefaultConfig-magia-qwen3-0-6b-linux",
+      "status": "below_target",
+      "workload": "qwen3-0-6b-linux"
+    }
+  ]
+}

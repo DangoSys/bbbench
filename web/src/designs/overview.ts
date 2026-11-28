@@ -43,7 +43,7 @@ function suite(name: string, s: Suite): HTMLElement {
               { class: w.status === "pass" ? "" : "fail" },
               w.status,
             ),
-            element("td", { class: "number" }, duration(w.elapsed_s)),
+            element("td", { class: "number" }, w.elapsed_s === null ? "—" : duration(w.elapsed_s)),
           ),
         ),
       ),

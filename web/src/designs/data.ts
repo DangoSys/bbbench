@@ -4,7 +4,7 @@ import { index, type SnapshotEntry } from "../snapshot";
 export interface Workload {
   workload: string;
   status: "pass" | "fail" | "timeout" | "crash" | "infra_error";
-  elapsed_s: number;
+  elapsed_s: number | null;
   // Simulated cycles, where the simulator leaves them (BEMU: cpu-state.log).
   cycles?: number;
 }
@@ -56,13 +56,17 @@ export interface Dataset {
   model: string;
   status: "pass" | "failure";
   samples: number;
-  accuracy: number;
+  ran?: number;
+  accuracy?: number;
   pass_rate: number;
-  reference_accuracy: number;
+  reference_accuracy?: number;
   // A model of continuous outputs (actions): the mean squared errors of the
   // device's and the reference's outputs against the recorded ones.
   action_mse?: number;
   reference_action_mse?: number;
+  map50_95?: number;
+  reference_map50_95?: number;
+  dataset?: string;
   elapsed_s?: number;
   log?: string;
   error?: string;
@@ -160,11 +164,10 @@ export async function designs(all: MapDesign[]): Promise<Map<string, Design>> {
   for (const [name, design] of found) {
     const newest = design.history[design.history.length - 1].snapshot;
     const { models, benches, overview } = all.find((d) => d.design === name)!;
-    const runnableIps = overview.ips.filter((ip) => ip.has_suite);
     const applies = (id: string) =>
-      !(["model-build", "bemu-model", "bemu-accuracy"].includes(id) && !models.length) &&
+      !(["model-build", "bemu-model", "bemu-accuracy", "verilator-gvn-perf", "verilator-gvn-debug", "fpga-gvn", "fpga-model"].includes(id) && !models.length) &&
       !(["bench-build", "bemu-bench"].includes(id) && !benches.length) &&
-      !(id === "uvm" && !runnableIps.length);
+      !(id === "uvm" && !overview.ips.length);
     design.latest = {
       ...newest,
       nodes: newest.nodes.map((node) => {
@@ -172,7 +175,24 @@ export async function designs(all: MapDesign[]): Promise<Map<string, Design>> {
           .map((h) => h.snapshot.nodes.find((n) => n.id === node.id))
           .filter((n): n is Node => n !== undefined && n.status !== "pending")
           .pop();
-        if (ran?.id === "verilator-gvn" && ran.status !== "skipped") {
+        if (ran?.id === "bemu-accuracy" && models.length && (ran.status === "pass" || ran.status === "skipped")) {
+          const passed = new Set(ran.datasets?.filter((r) => r.status === "pass" && r.samples > 0 && r.ran === r.samples).map((r) => r.model));
+          const missing = models.filter((model) => !passed.has(model));
+          if (missing.length) return { ...ran, status: "failure", error: `Missing complete accuracy results: ${missing.join(", ")}` };
+        }
+        if (ran?.id === "verilator-gvn-debug" && ran.status === "pass") {
+          const missing = models.filter((model) => {
+            const suite = ran.suites?.[model];
+            return !suite || !suite.total || suite.passed !== suite.total;
+          });
+          if (missing.length) return { ...ran, status: "failure", error: `Incomplete RTL debug results: ${missing.join(", ")}` };
+        }
+        if (ran?.id === "fpga-model" && (ran.status === "pass" || ran.status === "skipped")) {
+          const passed = new Set(ran.models?.filter((r) => r.status === "pass" && (r.cycles ?? 0) > 0).map((r) => `${r.model}/${r.os}`));
+          const missing = models.flatMap((model) => ["baremetal", "linux"].map((os) => `${model}/${os}`)).filter((entry) => !passed.has(entry));
+          if (missing.length) return { ...ran, status: "failure", error: `Missing complete FPGA runs: ${missing.join(", ")}` };
+        }
+        if ((ran?.id === "verilator-gvn-perf" || ran?.id === "fpga-gvn") && ran.status !== "skipped") {
           const estimates = (ran.estimates ?? []).map((e) =>
             e.status === "pass" && !(e.slices?.length && e.slices.every((s) => s.exit === 0 && (s.cycles ?? 0) > 0))
               ? { ...e, status: "failure" as const }
@@ -184,7 +204,8 @@ export async function designs(all: MapDesign[]): Promise<Map<string, Design>> {
         }
         if (ran?.id === "uvm" && (ran.status === "skipped" || ran.status === "pass")) {
           const passed = new Set(ran.uvm?.filter((ip) => ip.status === "pass").map((ip) => ip.ip));
-          if (runnableIps.some((ip) => !passed.has(ip.ip))) return { ...ran, status: "pending" };
+          const missing = overview.ips.filter((ip) => !passed.has(ip.ip)).map((ip) => ip.ip);
+          if (missing.length) return { ...ran, status: "failure", error: `Missing UVM results: ${missing.join(", ")}` };
         }
         return ran ?? (applies(node.id) ? node : { ...node, status: "skipped" });
       }),

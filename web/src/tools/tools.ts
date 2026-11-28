@@ -6,17 +6,19 @@ import { byId, element } from "../dom";
 import { bemu } from "./bemu";
 import { latest } from "./data";
 import { fpga } from "./fpga";
-import { simulation } from "./simulation";
+import { bemuDetails, simulation } from "./simulation";
 import { verilator } from "./verilator";
 
 async function main(): Promise<void> {
-  const found = await latest();
+  let found = await latest();
   const evaluated = await designs(await map());
   const pages: Record<string, () => HTMLElement[]> = {
     "latency-simulation": () => simulation([bemu, verilator, fpga], found, evaluated),
   };
   const draw = () => {
-    const page = location.hash.slice(1) || "latency-simulation";
+    const [page, tool, design, mode] = (location.hash.slice(1) || "latency-simulation").split("/").map(decodeURIComponent);
+    const selected = tool === "bemu" && found.find((s) =>
+      s.tool === "BEMU" && s.design === design && (s.flag ?? "fastest") === mode);
     byId("content").replaceChildren(
       element(
         "nav",
@@ -25,11 +27,23 @@ async function main(): Promise<void> {
           element("a", { href: `#${p}`, ...(p === page ? { "aria-current": "page" } : {}) }, (p[0].toUpperCase() + p.slice(1)).replace("-", " ")),
         ),
       ),
-      ...pages[page](),
+      ...(selected ? [bemuDetails(selected)] : pages[page]()),
     );
   };
   window.addEventListener("hashchange", draw);
   draw();
+  async function refresh(): Promise<void> {
+    try {
+      const next = await latest();
+      if (JSON.stringify(next) !== JSON.stringify(found)) {
+        found = next;
+        draw();
+      }
+    } finally {
+      setTimeout(refresh, 10000);
+    }
+  }
+  setTimeout(refresh, 10000);
 }
 
 void main();

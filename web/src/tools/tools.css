@@ -119,6 +119,11 @@ main h2 {
   border-radius: 4px 4px 0 0;
 }
 
+.vbar.pending {
+  height: 0.6rem;
+  border-bottom: 2px dotted currentColor;
+}
+
 .vbar.none {
   height: 0;
 }

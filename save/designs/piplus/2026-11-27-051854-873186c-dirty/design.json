@@ -1,0 +1,353 @@
+{
+  "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+  "config": "piplus/devices/piplus/configs/PiplusDefaultConfig.toml",
+  "design": "piplus",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 12022.8,
+      "estimates": [
+        {
+          "cycles": 5487405463,
+          "elapsed_s": 5090.1,
+          "failed": 0,
+          "log": "2026-11-27-13-24-12-piplus-gvn-verilator-device-piplus-PiplusDefaultConfig-smolvla-base",
+          "measured": 22,
+          "model": "smolvla-base",
+          "not_run": 0,
+          "slices": [
+            {
+              "cycles": 694055,
+              "exit": 0,
+              "instance": "prefix_join_dense_graph_ht0.0-launch130-iteration0",
+              "repeats": 2048,
+              "share": 0.2590340097126517,
+              "total": 1421424640
+            },
+            {
+              "cycles": 50396,
+              "exit": 0,
+              "instance": "step_mlp_action_3_graph_ht8.0-launch148-iteration0",
+              "repeats": 14720,
+              "share": 0.13518759001898817,
+              "total": 741829120
+            },
+            {
+              "cycles": 46735,
+              "exit": 0,
+              "instance": "step_mlp_action_3_graph_ht0.0-launch148-iteration0",
+              "repeats": 10240,
+              "share": 0.08721178036265698,
+              "total": 478566400
+            },
+            {
+              "cycles": 1249826,
+              "exit": 0,
+              "instance": "vision_graph_ht12.0-launch0-iteration0",
+              "repeats": 300,
+              "share": 0.06832879445999852,
+              "total": 374947800
+            },
+            {
+              "cycles": 34717,
+              "exit": 0,
+              "instance": "step_attention_action_1_graph_ht15.0-launch146-iteration0",
+              "repeats": 10240,
+              "share": 0.06478509423024205,
+              "total": 355502080
+            },
+            {
+              "cycles": 37211,
+              "exit": 0,
+              "instance": "step_attention_action_1_graph_ht11.0-launch146-iteration0",
+              "repeats": 5120,
+              "share": 0.03471956305846612,
+              "total": 190520320
+            },
+            {
+              "cycles": 37169,
+              "exit": 0,
+              "instance": "step_attention_action_1_graph_ht10.0-launch146-iteration0",
+              "repeats": 5120,
+              "share": 0.03468037513961268,
+              "total": 190305280
+            },
+            {
+              "cycles": 36940,
+              "exit": 0,
+              "instance": "step_attention_action_graph_ht10.0-launch145-iteration0",
+              "repeats": 5120,
+              "share": 0.0344667076772927,
+              "total": 189132800
+            },
+            {
+              "cycles": 36043,
+              "exit": 0,
+              "instance": "step_attention_action_graph_ht19.0-launch145-iteration0",
+              "repeats": 3840,
+              "share": 0.025222324272049148,
+              "total": 138405120
+            },
+            {
+              "cycles": 1143786,
+              "exit": 0,
+              "instance": "vision_graph_ht1401.0-launch0-iteration0",
+              "repeats": 120,
+              "share": 0.025012607675060004,
+              "total": 137254320
+            },
+            {
+              "cycles": 141059,
+              "exit": 0,
+              "instance": "step_mlp_action_3_graph_ht4.0-launch148-iteration0",
+              "repeats": 640,
+              "share": 0.016451811445084025,
+              "total": 90277760
+            },
+            {
+              "cycles": 443853,
+              "exit": 0,
+              "instance": "vision_graph_ht139.0-launch0-iteration0",
+              "repeats": 186,
+              "share": 0.015044752671668942,
+              "total": 82556658
+            },
+            {
+              "cycles": 44839,
+              "exit": 0,
+              "instance": "step_attention_action_graph_ht23.0-launch145-iteration0",
+              "repeats": 1840,
+              "share": 0.015035112778944289,
+              "total": 82503760
+            },
+            {
+              "cycles": 97654,
+              "exit": 0,
+              "instance": "prefix_mlp_dense_1_graph_ht0.0-launch9-iteration0",
+              "repeats": 810,
+              "share": 0.014414779540776938,
+              "total": 79099740
+            },
+            {
+              "cycles": 84584,
+              "exit": 0,
+              "instance": "prefix_mlp_dense_1_graph_ht20.0-launch9-iteration0",
+              "repeats": 900,
+              "share": 0.013872785693219331,
+              "total": 76125600
+            },
+            {
+              "cycles": 41291,
+              "exit": 0,
+              "instance": "step_attention_action_1_graph_ht16.0-launch146-iteration0",
+              "repeats": 1840,
+              "share": 0.013845421212680672,
+              "total": 75975440
+            },
+            {
+              "cycles": 138448,
+              "exit": 0,
+              "instance": "step_attention_action_3_graph_ht6.0-launch152-iteration0",
+              "repeats": 480,
+              "share": 0.012110466494245279,
+              "total": 66455040
+            },
+            {
+              "cycles": 138404,
+              "exit": 0,
+              "instance": "step_attention_action_2_graph_ht9.0-launch151-iteration0",
+              "repeats": 480,
+              "share": 0.012106617680786459,
+              "total": 66433920
+            },
+            {
+              "cycles": 356090,
+              "exit": 0,
+              "instance": "vision_graph_ht137.0-launch0-iteration0",
+              "repeats": 186,
+              "share": 0.012069955545765364,
+              "total": 66232740
+            },
+            {
+              "cycles": 50048,
+              "exit": 0,
+              "instance": "step_attention_action_graph_ht0.0-launch145-iteration0",
+              "repeats": 1280,
+              "share": 0.011674267635578946,
+              "total": 64061440
+            },
+            {
+              "cycles": 46977,
+              "exit": 0,
+              "instance": "step_attention_action_1_graph_ht0.0-launch146-iteration0",
+              "repeats": 960,
+              "share": 0.008218441357046118,
+              "total": 45097920
+            },
+            {
+              "cycles": 148365,
+              "exit": 0,
+              "instance": "vision_graph_ht117.0-launch0-iteration0",
+              "repeats": 288,
+              "share": 0.007786761938426127,
+              "total": 42729120
+            },
+            {
+              "cycles": null,
+              "exit": -1,
+              "instance": "vision_graph_ht61.0-launch0-iteration0",
+              "repeats": 384,
+              "share": null,
+              "total": null
+            }
+          ],
+          "status": "failure",
+          "timed_out": 1,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 67387008
+          }
+        }
+      ],
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "failure"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T05:18:54.321373+00:00"
+}

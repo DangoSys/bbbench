@@ -121,8 +121,8 @@
       "status": "failure"
     },
     {
-      "id": "verilator-gvn",
-      "name": "Verilator GVN",
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
       "needs": [
         "verilator-workload",
         "model-build"

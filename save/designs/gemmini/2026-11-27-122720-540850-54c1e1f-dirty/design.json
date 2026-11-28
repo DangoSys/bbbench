@@ -1,0 +1,756 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "config": "gemmini/devices/gemmini/configs/GemminiDefaultConfig.toml",
+  "design": "gemmini",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "collection": "verified existing full RTL estimates",
+      "elapsed_s": 2833.8,
+      "estimates": [
+        {
+          "cycles": 1103204880.0357141,
+          "elapsed_s": 66.0,
+          "failed": 0,
+          "log": "2026-11-27-12-27-30-gemmini-gvn-verilator-device-gemmini-GemminiDefaultConfig-alexnet",
+          "manifest_sha256": "dca495f59469819a740a729929ce4d171bc9a9a4330b3a6b4d074c9a5d47b7ca",
+          "measured": 3,
+          "model": "alexnet",
+          "not_run": 0,
+          "rare": 5,
+          "rare_bemu_cycles": 39131671,
+          "simulator_sha256": "36a9f4c712c978d03e526be4194d32d1abdd3093ea4e49bcd57102b823815af6",
+          "slices": [
+            {
+              "cycles": 1992442,
+              "exit": 0,
+              "instance": "gemmini-alexnet-gvn-slice5",
+              "repeats": 292.57142857142856,
+              "share": 0.5283983173341682,
+              "total": 582931602.2857143
+            },
+            {
+              "cycles": 3021296,
+              "exit": 0,
+              "instance": "gemmini-alexnet-gvn-slice6",
+              "repeats": 128.0,
+              "share": 0.3505476589148885,
+              "total": 386725888.0
+            },
+            {
+              "cycles": 3021303,
+              "exit": 0,
+              "instance": "gemmini-alexnet-gvn-slice7",
+              "repeats": 31.25,
+              "share": 0.08558312282569261,
+              "total": 94415718.75
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        },
+        {
+          "cycles": 2620558865.363635,
+          "elapsed_s": 77.6,
+          "failed": 0,
+          "log": "2026-11-27-12-58-06-gemmini-gvn-verilator-device-gemmini-GemminiDefaultConfig-bert-base-uncased-emotion",
+          "manifest_sha256": "7bb8c4d78df8f92ab8ba6f925307b9a092a6fe91b0ab913b88c7ee3c6ea95407",
+          "measured": 3,
+          "model": "bert-base-uncased-emotion",
+          "not_run": 0,
+          "rare": 4,
+          "rare_bemu_cycles": 6054650.090909091,
+          "simulator_sha256": "36a9f4c712c978d03e526be4194d32d1abdd3093ea4e49bcd57102b823815af6",
+          "slices": [
+            {
+              "cycles": 4340052,
+              "exit": 0,
+              "instance": "gemmini-bert-base-uncased-emotion-gvn-slice0",
+              "repeats": 239.37662337662312,
+              "share": 0.3964448220455443,
+              "total": 1038906993.0389599
+            },
+            {
+              "cycles": 4337806,
+              "exit": 0,
+              "instance": "gemmini-bert-base-uncased-emotion-gvn-slice6",
+              "repeats": 239.37662337662343,
+              "share": 0.3962396597409655,
+              "total": 1038369353.1428573
+            },
+            {
+              "cycles": 1282445,
+              "exit": 0,
+              "instance": "gemmini-bert-base-uncased-emotion-gvn-slice7",
+              "repeats": 418.90909090909076,
+              "share": 0.2050050758987098,
+              "total": 537227869.0909089
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        },
+        {
+          "cycles": 969424,
+          "elapsed_s": 9.8,
+          "failed": 0,
+          "log": "2026-11-27-12-57-18-gemmini-gvn-verilator-device-gemmini-GemminiDefaultConfig-lenet",
+          "manifest_sha256": "b0930657a390f901709f1020eb059ef471b527f4f7f4632515540a115d3148e5",
+          "measured": 4,
+          "model": "lenet",
+          "not_run": 0,
+          "rare": 1,
+          "rare_bemu_cycles": 9162,
+          "simulator_sha256": "36a9f4c712c978d03e526be4194d32d1abdd3093ea4e49bcd57102b823815af6",
+          "slices": [
+            {
+              "cycles": 396975,
+              "exit": 0,
+              "instance": "gemmini-lenet-gvn-slice2",
+              "repeats": 1,
+              "share": 0.4094957418013171,
+              "total": 396975
+            },
+            {
+              "cycles": 332774,
+              "exit": 0,
+              "instance": "gemmini-lenet-gvn-slice0",
+              "repeats": 1,
+              "share": 0.343269817953754,
+              "total": 332774
+            },
+            {
+              "cycles": 139485,
+              "exit": 0,
+              "instance": "gemmini-lenet-gvn-slice1",
+              "repeats": 1,
+              "share": 0.14388440971133373,
+              "total": 139485
+            },
+            {
+              "cycles": 91028,
+              "exit": 0,
+              "instance": "gemmini-lenet-gvn-slice3",
+              "repeats": 1,
+              "share": 0.0938990575847101,
+              "total": 91028
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        },
+        {
+          "cycles": 25910964,
+          "elapsed_s": 158.6,
+          "failed": 0,
+          "log": "2026-11-27-13-10-41-gemmini-gvn-verilator-device-gemmini-GemminiDefaultConfig-mobilenet-v3-small",
+          "manifest_sha256": "bd10f2c63a4f542b97bf5bf65458276e02e673c6724ceae7a022acb4f1d7b11c",
+          "measured": 14,
+          "model": "mobilenet-v3-small",
+          "not_run": 0,
+          "rare": 20,
+          "rare_bemu_cycles": 1204378,
+          "simulator_sha256": "36a9f4c712c978d03e526be4194d32d1abdd3093ea4e49bcd57102b823815af6",
+          "slices": [
+            {
+              "cycles": 6647412,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice0",
+              "repeats": 1,
+              "share": 0.2565482318604588,
+              "total": 6647412
+            },
+            {
+              "cycles": 1852831,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice32",
+              "repeats": 3,
+              "share": 0.21452281744515564,
+              "total": 5558493
+            },
+            {
+              "cycles": 2489974,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice4",
+              "repeats": 1,
+              "share": 0.09609731231921746,
+              "total": 2489974
+            },
+            {
+              "cycles": 866897,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice15",
+              "repeats": 2,
+              "share": 0.06691352741642495,
+              "total": 1733794
+            },
+            {
+              "cycles": 855475,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice35",
+              "repeats": 2,
+              "share": 0.06603189290834567,
+              "total": 1710950
+            },
+            {
+              "cycles": 567332,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice12",
+              "repeats": 2,
+              "share": 0.04379088327242475,
+              "total": 1134664
+            },
+            {
+              "cycles": 944330,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice3",
+              "repeats": 1,
+              "share": 0.03644518976600022,
+              "total": 944330
+            },
+            {
+              "cycles": 854299,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice8",
+              "repeats": 1,
+              "share": 0.032970560261671465,
+              "total": 854299
+            },
+            {
+              "cycles": 804482,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice6",
+              "repeats": 1,
+              "share": 0.031047937853643733,
+              "total": 804482
+            },
+            {
+              "cycles": 756829,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice7",
+              "repeats": 1,
+              "share": 0.029208832214810687,
+              "total": 756829
+            },
+            {
+              "cycles": 718086,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice28",
+              "repeats": 1,
+              "share": 0.027713596452837493,
+              "total": 718086
+            },
+            {
+              "cycles": 656659,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice5",
+              "repeats": 1,
+              "share": 0.025342901174962074,
+              "total": 656659
+            },
+            {
+              "cycles": 371880,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice27",
+              "repeats": 1,
+              "share": 0.014352225567524234,
+              "total": 371880
+            },
+            {
+              "cycles": 324734,
+              "exit": 0,
+              "instance": "gemmini-mobilenet-v3-small-gvn-slice23",
+              "repeats": 1,
+              "share": 0.01253268693515224,
+              "total": 324734
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        },
+        {
+          "cycles": 305427369,
+          "elapsed_s": 651.5,
+          "failed": 0,
+          "log": "2026-11-27-14-17-02-gemmini-gvn-verilator-device-gemmini-GemminiDefaultConfig-resnet18",
+          "manifest_sha256": "692160dd53961677e91b295f337a41091acad67cf8b38a9e449ea70dc738e21c",
+          "measured": 5,
+          "model": "resnet18",
+          "not_run": 0,
+          "rare": 7,
+          "rare_bemu_cycles": 12268554,
+          "simulator_sha256": "36a9f4c712c978d03e526be4194d32d1abdd3093ea4e49bcd57102b823815af6",
+          "slices": [
+            {
+              "cycles": 36291601,
+              "exit": 0,
+              "instance": "gemmini-resnet18-gvn-slice6",
+              "repeats": 3,
+              "share": 0.3564670820315386,
+              "total": 108874803
+            },
+            {
+              "cycles": 17672094,
+              "exit": 0,
+              "instance": "gemmini-resnet18-gvn-slice1",
+              "repeats": 4,
+              "share": 0.23144086998961771,
+              "total": 70688376
+            },
+            {
+              "cycles": 18905448,
+              "exit": 0,
+              "instance": "gemmini-resnet18-gvn-slice11",
+              "repeats": 3,
+              "share": 0.18569502852902484,
+              "total": 56716344
+            },
+            {
+              "cycles": 30108474,
+              "exit": 0,
+              "instance": "gemmini-resnet18-gvn-slice0",
+              "repeats": 1,
+              "share": 0.09857817948200968,
+              "total": 30108474
+            },
+            {
+              "cycles": 8923606,
+              "exit": 0,
+              "instance": "gemmini-resnet18-gvn-slice16",
+              "repeats": 3,
+              "share": 0.08765035722780953,
+              "total": 26770818
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        },
+        {
+          "cycles": 727598910.0,
+          "elapsed_s": 1870.3,
+          "failed": 0,
+          "log": "2026-11-27-18-31-30-gemmini-gvn-verilator-device-gemmini-GemminiDefaultConfig-yolo26n",
+          "manifest_sha256": "f4ad6f9fc1cdb38f1d34ad87e8a8ebff90940378d0f556f51bd83e575f0be53b",
+          "measured": 30,
+          "model": "yolo26n",
+          "not_run": 0,
+          "rare": 22,
+          "rare_bemu_cycles": 46034987.0,
+          "simulator_sha256": "36a9f4c712c978d03e526be4194d32d1abdd3093ea4e49bcd57102b823815af6",
+          "slices": [
+            {
+              "cycles": 53590576,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice0",
+              "repeats": 1,
+              "share": 0.07365400808530623,
+              "total": 53590576
+            },
+            {
+              "cycles": 4403304,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice14",
+              "repeats": 12,
+              "share": 0.07262194496690491,
+              "total": 52839648
+            },
+            {
+              "cycles": 9351120,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice52",
+              "repeats": 5,
+              "share": 0.06426012925170545,
+              "total": 46755600
+            },
+            {
+              "cycles": 41826096,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice1",
+              "repeats": 1,
+              "share": 0.05748509986085603,
+              "total": 41826096
+            },
+            {
+              "cycles": 35894003,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice6",
+              "repeats": 1,
+              "share": 0.0493321286036561,
+              "total": 35894003
+            },
+            {
+              "cycles": 35883081,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice3",
+              "repeats": 1,
+              "share": 0.04931711758611623,
+              "total": 35883081
+            },
+            {
+              "cycles": 33830508,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice86",
+              "repeats": 1,
+              "share": 0.04649609494329781,
+              "total": 33830508
+            },
+            {
+              "cycles": 8428875,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice24",
+              "repeats": 4,
+              "share": 0.046338029835696154,
+              "total": 33715500
+            },
+            {
+              "cycles": 30614323,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice80",
+              "repeats": 1,
+              "share": 0.04207582306576023,
+              "total": 30614323
+            },
+            {
+              "cycles": 24680019,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice5",
+              "repeats": 1,
+              "share": 0.0339198130464489,
+              "total": 24680019
+            },
+            {
+              "cycles": 23500839,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice21",
+              "repeats": 1,
+              "share": 0.03229916740804353,
+              "total": 23500839
+            },
+            {
+              "cycles": 23414287,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice11",
+              "repeats": 1,
+              "share": 0.032180211759800466,
+              "total": 23414287
+            },
+            {
+              "cycles": 22313943,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice4",
+              "repeats": 1,
+              "share": 0.030667917025878996,
+              "total": 22313943
+            },
+            {
+              "cycles": 20437678,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice69",
+              "repeats": 1,
+              "share": 0.028089209204560244,
+              "total": 20437678
+            },
+            {
+              "cycles": 4958723,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice20",
+              "repeats": 4,
+              "share": 0.0272607500195403,
+              "total": 19834892
+            },
+            {
+              "cycles": 8711569,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice90",
+              "repeats": 2,
+              "share": 0.023946074905472303,
+              "total": 17423138
+            },
+            {
+              "cycles": 5761488,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice30",
+              "repeats": 3,
+              "share": 0.023755483635894945,
+              "total": 17284464
+            },
+            {
+              "cycles": 16811489,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice50",
+              "repeats": 1,
+              "share": 0.02310543455871862,
+              "total": 16811489
+            },
+            {
+              "cycles": 16419293,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice8",
+              "repeats": 1,
+              "share": 0.02256640681333621,
+              "total": 16419293
+            },
+            {
+              "cycles": 14942480,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice83",
+              "repeats": 1,
+              "share": 0.020536699264708903,
+              "total": 14942480
+            },
+            {
+              "cycles": 14373185,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice2",
+              "repeats": 1,
+              "share": 0.01975426956040932,
+              "total": 14373185
+            },
+            {
+              "cycles": 12376251,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice10",
+              "repeats": 1,
+              "share": 0.017009716246001522,
+              "total": 12376251
+            },
+            {
+              "cycles": 4114279,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice22",
+              "repeats": 3,
+              "share": 0.01696379259281738,
+              "total": 12342837
+            },
+            {
+              "cycles": 10274780,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice9",
+              "repeats": 1,
+              "share": 0.01412148899453409,
+              "total": 10274780
+            },
+            {
+              "cycles": 10124478,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice59",
+              "repeats": 1,
+              "share": 0.013914916392604271,
+              "total": 10124478
+            },
+            {
+              "cycles": 8614467,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice58",
+              "repeats": 1,
+              "share": 0.011839582057647667,
+              "total": 8614467
+            },
+            {
+              "cycles": 8551828,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice41",
+              "repeats": 1,
+              "share": 0.011753492044126344,
+              "total": 8551828
+            },
+            {
+              "cycles": 1326366,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice13",
+              "repeats": 6,
+              "share": 0.010937613966464024,
+              "total": 7958196
+            },
+            {
+              "cycles": 7913348,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice89",
+              "repeats": 1,
+              "share": 0.010875975611343344,
+              "total": 7913348
+            },
+            {
+              "cycles": 7022696,
+              "exit": 0,
+              "instance": "gemmini-yolo26n-gvn-slice7",
+              "repeats": 1,
+              "share": 0.009651878120598064,
+              "total": 7022696
+            }
+          ],
+          "status": "pass",
+          "timed_out": 0,
+          "unmeasured_bemu_cycles": {
+            "failed": 0,
+            "not_run": 0,
+            "timed_out": 0
+          }
+        }
+      ],
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T12:27:20.540850+00:00"
+}

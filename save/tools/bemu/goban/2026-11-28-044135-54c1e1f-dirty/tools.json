@@ -1,0 +1,56 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 6007737617,
+  "design": "goban",
+  "dirty": true,
+  "elapsed_s": 35.297,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-28T04:41:35.037719+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 7,
+  "workloads": [
+    {
+      "cycles": 2201885841,
+      "elapsed_s": 13.847,
+      "frequency_hz": 159015370.91066658,
+      "log": "2026-11-28-12-41-35-goban-bemu-device-goban-GobanDefaultConfig-goban-test-linux",
+      "status": "below_target",
+      "workload": "goban-test-linux"
+    },
+    {
+      "error": "build: failure",
+      "status": "failure",
+      "workload": "bert-base-uncased-emotion-baremetal"
+    },
+    {
+      "error": "build: failure",
+      "status": "failure",
+      "workload": "bert-base-uncased-emotion-linux"
+    },
+    {
+      "error": "build: failure",
+      "status": "failure",
+      "workload": "laya-baremetal"
+    },
+    {
+      "error": "build: failure",
+      "status": "failure",
+      "workload": "laya-linux"
+    },
+    {
+      "error": "build: failure",
+      "status": "failure",
+      "workload": "mlp-mixer-baremetal"
+    },
+    {
+      "cycles": 3805851776,
+      "elapsed_s": 21.45,
+      "frequency_hz": 177428987.22610724,
+      "log": "2026-11-28-12-43-35-goban-bemu-device-goban-GobanDefaultConfig-goban-mlp-mixer-linux",
+      "status": "below_target",
+      "workload": "mlp-mixer-linux"
+    }
+  ]
+}

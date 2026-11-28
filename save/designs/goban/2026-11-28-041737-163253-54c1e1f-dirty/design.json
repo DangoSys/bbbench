@@ -1,0 +1,215 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "config": "goban/devices/goban/configs/GobanDefaultConfig.toml",
+  "design": "goban",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "bitstream": "/home/wanghui/Code/buckyball/examples/designs/goban/output/sims/device/goban/GobanDefaultConfig/p2e/2026-11-27-19-24/fpgaCompDir/bitstream.bit",
+      "diff": false,
+      "elapsed_s": 5713.7,
+      "fpga_location": "0.A",
+      "id": "fpga-model",
+      "models": [
+        {
+          "error": "P2E failure: {'build_dir': '/home/wanghui/Code/buckyball/examples/designs/goban/output/sims/device/goban/GobanDefaultConfig/p2e/2026-11-27-19-24', 'failure': True, 'processing': False, 'returncode': 101, 'success': False, 'task': 'runtime_build'}",
+          "model": "bert-base-uncased-emotion",
+          "os": "baremetal",
+          "status": "failure"
+        },
+        {
+          "cycles": 597478052,
+          "elapsed_s": 1491.699,
+          "elements": 6,
+          "log": "2026-11-28-12-43-55-goban-p2e-device-goban-GobanDefaultConfig-goban-bert-base-uncased-emotion-linux",
+          "max_diff": 4.77e-07,
+          "model": "bert-base-uncased-emotion",
+          "os": "linux",
+          "relative": 9e-08,
+          "status": "pass"
+        },
+        {
+          "cycles": 3410027334,
+          "elapsed_s": 471.436,
+          "elements": 18,
+          "log": "2026-11-28-13-09-16-goban-p2e-device-goban-GobanDefaultConfig-goban-laya-baremetal-tmpx177qhfi",
+          "max_diff": 0.0,
+          "model": "laya",
+          "os": "baremetal",
+          "relative": 0.0,
+          "status": "pass"
+        },
+        {
+          "cycles": 3898309470,
+          "elapsed_s": 963.22,
+          "elements": 18,
+          "log": "2026-11-28-13-18-06-goban-p2e-device-goban-GobanDefaultConfig-goban-laya-linux",
+          "max_diff": 0.0,
+          "model": "laya",
+          "os": "linux",
+          "relative": 0.0,
+          "status": "pass"
+        },
+        {
+          "cycles": 626041928,
+          "elapsed_s": 98.42,
+          "elements": 1000,
+          "log": "2026-11-28-13-34-29-goban-p2e-device-goban-GobanDefaultConfig-goban-mlp-mixer-baremetal-tmpmygnx3sh",
+          "max_diff": 1.828089714,
+          "model": "mlp-mixer",
+          "os": "baremetal",
+          "relative": 0.131558716,
+          "status": "pass"
+        },
+        {
+          "cycles": 875245180,
+          "elapsed_s": 927.865,
+          "elements": 1000,
+          "log": "2026-11-28-13-37-10-goban-p2e-device-goban-GobanDefaultConfig-goban-mlp-mixer-linux",
+          "max_diff": 1.828089714,
+          "model": "mlp-mixer",
+          "os": "linux",
+          "relative": 0.131558716,
+          "status": "pass"
+        }
+      ],
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "failure"
+    }
+  ],
+  "taken": "2026-11-28T04:17:37.163253+00:00"
+}

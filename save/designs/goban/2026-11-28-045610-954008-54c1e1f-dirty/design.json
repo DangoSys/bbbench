@@ -1,0 +1,1040 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "config": "goban/devices/goban/configs/GobanDefaultConfig.toml",
+  "design": "goban",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "bitstream": "/home/wanghui/Code/buckyball/examples/designs/goban/output/sims/device/goban/GobanDefaultConfig/p2e/2026-11-27-19-24/fpgaCompDir/bitstream.bit",
+      "diff": false,
+      "estimates": [
+        {
+          "cycles": 6494082657,
+          "elapsed_s": 151.187,
+          "model": "bert-base-uncased-emotion",
+          "rare": [
+            {
+              "bemu_cycles": 56833,
+              "instance": "subgraph0_ht0.0-iteration0",
+              "repeats": 400
+            },
+            {
+              "bemu_cycles": 21727,
+              "instance": "subgraph0_ht4.0-iteration0",
+              "repeats": 800
+            },
+            {
+              "bemu_cycles": 24508,
+              "instance": "subgraph0_ht9.0-iteration0",
+              "repeats": 800
+            },
+            {
+              "bemu_cycles": 46398,
+              "instance": "subgraph0_ht11.0-iteration0",
+              "repeats": 2928
+            },
+            {
+              "bemu_cycles": 18267,
+              "instance": "subgraph0_ht12.0-iteration0",
+              "repeats": 1920
+            },
+            {
+              "bemu_cycles": 22054,
+              "instance": "subgraph0_ht33.0-iteration0",
+              "repeats": 1152
+            },
+            {
+              "bemu_cycles": 22077,
+              "instance": "subgraph0_ht38.0-iteration0",
+              "repeats": 1152
+            },
+            {
+              "bemu_cycles": 15613,
+              "instance": "subgraph0_ht44.0-iteration0",
+              "repeats": 4608
+            },
+            {
+              "bemu_cycles": 22028,
+              "instance": "subgraph0_ht51.0-iteration0",
+              "repeats": 768
+            },
+            {
+              "bemu_cycles": 27670,
+              "instance": "subgraph0_ht64.0-iteration0",
+              "repeats": 384
+            },
+            {
+              "bemu_cycles": 46531,
+              "instance": "subgraph0_ht922.0-iteration0",
+              "repeats": 48
+            },
+            {
+              "bemu_cycles": 26607,
+              "instance": "subgraph0_ht924.0-iteration0",
+              "repeats": 1
+            },
+            {
+              "bemu_cycles": 19954,
+              "instance": "subgraph0_ht925.0-iteration0",
+              "repeats": 1
+            }
+          ],
+          "rare_bemu_cycles": 383253633,
+          "reference_log": "2026-11-28-13-53-37-goban-gvn-device-goban-GobanDefaultConfig-bert-base-uncased-emotion",
+          "slices": [
+            {
+              "cycles": 572734,
+              "elapsed_s": 14.421,
+              "exit": 0,
+              "instance": "subgraph0_ht63.0-iteration0",
+              "log": "2026-11-28-13-53-41-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht63.0-iteration0-tmpz6nu5iix",
+              "repeats": 2304,
+              "share": 0.20319715742724953,
+              "total": 1319579136
+            },
+            {
+              "cycles": 358640,
+              "elapsed_s": 14.015,
+              "exit": 0,
+              "instance": "subgraph0_ht62.0-iteration0",
+              "log": "2026-11-28-13-54-11-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht62.0-iteration0-tmpf68b8lhz",
+              "repeats": 2304,
+              "share": 0.12723992034645887,
+              "total": 826306560
+            },
+            {
+              "cycles": 291303,
+              "elapsed_s": 13.724,
+              "exit": 0,
+              "instance": "subgraph0_ht10.0-iteration0",
+              "log": "2026-11-28-13-54-41-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht10.0-iteration0-tmp4dxr4gpb",
+              "repeats": 2304,
+              "share": 0.10334979510563382,
+              "total": 671162112
+            },
+            {
+              "cycles": 773566,
+              "elapsed_s": 13.721,
+              "exit": 0,
+              "instance": "subgraph0_ht69.0-iteration0",
+              "log": "2026-11-28-13-55-11-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht69.0-iteration0-tmpf7g7suyu",
+              "repeats": 576,
+              "share": 0.06861231055008421,
+              "total": 445574016
+            },
+            {
+              "cycles": 120755,
+              "elapsed_s": 13.521,
+              "exit": 0,
+              "instance": "subgraph0_ht42.0-iteration0",
+              "log": "2026-11-28-13-55-41-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht42.0-iteration0-tmp1wlavjoi",
+              "repeats": 4608,
+              "share": 0.08568400948827036,
+              "total": 556439040
+            },
+            {
+              "cycles": 120725,
+              "elapsed_s": 13.513,
+              "exit": 0,
+              "instance": "subgraph0_ht37.0-iteration0",
+              "log": "2026-11-28-13-56-11-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht37.0-iteration0-tmp19m3odwm",
+              "repeats": 4608,
+              "share": 0.08566272241705469,
+              "total": 556300800
+            },
+            {
+              "cycles": 118732,
+              "elapsed_s": 13.412,
+              "exit": 0,
+              "instance": "subgraph0_ht32.0-iteration0",
+              "log": "2026-11-28-13-56-41-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht32.0-iteration0-tmpn7dgfaot",
+              "repeats": 4608,
+              "share": 0.08424855131929375,
+              "total": 547117056
+            },
+            {
+              "cycles": 832600,
+              "elapsed_s": 13.622,
+              "exit": 0,
+              "instance": "subgraph0_ht68.0-iteration0",
+              "log": "2026-11-28-13-57-11-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht68.0-iteration0-tmpcs1e3mbj",
+              "repeats": 384,
+              "share": 0.04923226526157226,
+              "total": 319718400
+            },
+            {
+              "cycles": 510509,
+              "elapsed_s": 13.713,
+              "exit": 0,
+              "instance": "subgraph0_ht43.0-iteration0",
+              "log": "2026-11-28-13-57-41-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht43.0-iteration0-tmpgwzymg30",
+              "repeats": 576,
+              "share": 0.04528017266349987,
+              "total": 294053184
+            },
+            {
+              "cycles": 948569,
+              "elapsed_s": 13.912,
+              "exit": 0,
+              "instance": "subgraph0_ht31.0-iteration0",
+              "log": "2026-11-28-13-58-12-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht31.0-iteration0-tmp7c5vous_",
+              "repeats": 288,
+              "share": 0.04206719969994986,
+              "total": 273187872
+            },
+            {
+              "cycles": 21802,
+              "elapsed_s": 13.613,
+              "exit": 0,
+              "instance": "subgraph0_ht16.0-iteration0",
+              "log": "2026-11-28-13-58-42-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht16.0-iteration0-tmpzp620ljr",
+              "repeats": 13824,
+              "share": 0.046410072664401565,
+              "total": 301390848
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "cycles": 271901065453,
+          "elapsed_s": 150.668,
+          "model": "laya",
+          "rare": [
+            {
+              "bemu_cycles": 89201,
+              "instance": "subgraph0_ht0.0-iteration0",
+              "repeats": 3904
+            },
+            {
+              "bemu_cycles": 39446,
+              "instance": "subgraph0_ht4.0-iteration0",
+              "repeats": 7808
+            },
+            {
+              "bemu_cycles": 43871,
+              "instance": "subgraph0_ht9.0-iteration0",
+              "repeats": 7168
+            },
+            {
+              "bemu_cycles": 51584,
+              "instance": "subgraph0_ht10.0-iteration0",
+              "repeats": 512
+            },
+            {
+              "bemu_cycles": 15617,
+              "instance": "subgraph0_ht16.0-iteration0",
+              "repeats": 172032
+            },
+            {
+              "bemu_cycles": 36314,
+              "instance": "subgraph0_ht25.0-iteration0",
+              "repeats": 15360
+            },
+            {
+              "bemu_cycles": 36307,
+              "instance": "subgraph0_ht30.0-iteration0",
+              "repeats": 15360
+            },
+            {
+              "bemu_cycles": 15668,
+              "instance": "subgraph0_ht36.0-iteration0",
+              "repeats": 57344
+            },
+            {
+              "bemu_cycles": 291174,
+              "instance": "subgraph0_ht37.0-iteration0",
+              "repeats": 7680
+            },
+            {
+              "bemu_cycles": 38660,
+              "instance": "subgraph0_ht41.0-iteration0",
+              "repeats": 7680
+            },
+            {
+              "bemu_cycles": 256515,
+              "instance": "subgraph0_ht56.0-iteration0",
+              "repeats": 3584
+            },
+            {
+              "bemu_cycles": 46198,
+              "instance": "subgraph0_ht1700.0-iteration0",
+              "repeats": 512
+            },
+            {
+              "bemu_cycles": 14961,
+              "instance": "subgraph0_ht1701.0-iteration0",
+              "repeats": 256
+            },
+            {
+              "bemu_cycles": 481282,
+              "instance": "subgraph0_ht1706.0-iteration0",
+              "repeats": 384
+            },
+            {
+              "bemu_cycles": 34777,
+              "instance": "subgraph0_ht1707.0-iteration0",
+              "repeats": 256
+            },
+            {
+              "bemu_cycles": 15618,
+              "instance": "subgraph0_ht1711.0-iteration0",
+              "repeats": 768
+            },
+            {
+              "bemu_cycles": 15617,
+              "instance": "subgraph0_ht1712.0-iteration0",
+              "repeats": 12288
+            },
+            {
+              "bemu_cycles": 289912,
+              "instance": "subgraph0_ht1715.0-iteration0",
+              "repeats": 4096
+            },
+            {
+              "bemu_cycles": 155019,
+              "instance": "subgraph0_ht1716.0-iteration0",
+              "repeats": 2048
+            },
+            {
+              "bemu_cycles": 291373,
+              "instance": "subgraph0_ht1718.0-iteration0",
+              "repeats": 4096
+            },
+            {
+              "bemu_cycles": 15531,
+              "instance": "subgraph0_ht1729.0-iteration0",
+              "repeats": 4096
+            },
+            {
+              "bemu_cycles": 171936,
+              "instance": "subgraph0_ht1734.0-iteration0",
+              "repeats": 320
+            },
+            {
+              "bemu_cycles": 26227,
+              "instance": "subgraph0_ht1735.0-iteration0",
+              "repeats": 512
+            },
+            {
+              "bemu_cycles": 14969,
+              "instance": "subgraph0_ht1739.0-iteration0",
+              "repeats": 256
+            },
+            {
+              "bemu_cycles": 372537,
+              "instance": "subgraph0_ht1751.0-iteration0",
+              "repeats": 2048
+            },
+            {
+              "bemu_cycles": 635694,
+              "instance": "subgraph0_ht1755.0-iteration0",
+              "repeats": 512
+            },
+            {
+              "bemu_cycles": 39225,
+              "instance": "subgraph0_ht1756.0-iteration0",
+              "repeats": 256
+            },
+            {
+              "bemu_cycles": 52291,
+              "instance": "subgraph0_ht1760.0-iteration0",
+              "repeats": 256
+            },
+            {
+              "bemu_cycles": 800617,
+              "instance": "subgraph0_ht1761.0-iteration0",
+              "repeats": 512
+            },
+            {
+              "bemu_cycles": 87349,
+              "instance": "subgraph0_ht1851.0-iteration0",
+              "repeats": 8
+            },
+            {
+              "bemu_cycles": 22995,
+              "instance": "subgraph0_ht1855.0-iteration0",
+              "repeats": 16
+            },
+            {
+              "bemu_cycles": 28317,
+              "instance": "subgraph0_ht1860.0-iteration0",
+              "repeats": 16
+            },
+            {
+              "bemu_cycles": 157572,
+              "instance": "subgraph0_ht1861.0-iteration0",
+              "repeats": 64
+            },
+            {
+              "bemu_cycles": 22227,
+              "instance": "subgraph0_ht1863.0-iteration0",
+              "repeats": 16
+            },
+            {
+              "bemu_cycles": 364073,
+              "instance": "subgraph0_ht1867.0-iteration0",
+              "repeats": 16
+            },
+            {
+              "bemu_cycles": 136191,
+              "instance": "subgraph0_ht1868.0-iteration0",
+              "repeats": 1
+            },
+            {
+              "bemu_cycles": 20334,
+              "instance": "subgraph0_ht1869.0-iteration0",
+              "repeats": 1
+            },
+            {
+              "bemu_cycles": 18571,
+              "instance": "subgraph0_ht1870.0-iteration0",
+              "repeats": 1
+            },
+            {
+              "bemu_cycles": 18446,
+              "instance": "subgraph0_ht1871.0-iteration0",
+              "repeats": 1
+            },
+            {
+              "bemu_cycles": 40292,
+              "instance": "subgraph0_ht1872.0-iteration0",
+              "repeats": 16
+            },
+            {
+              "bemu_cycles": 25211,
+              "instance": "subgraph0_ht1873.0-iteration0",
+              "repeats": 16
+            },
+            {
+              "bemu_cycles": 43605,
+              "instance": "subgraph0_ht1874.0-iteration0",
+              "repeats": 1
+            },
+            {
+              "bemu_cycles": 27946,
+              "instance": "subgraph0_ht1875.0-iteration0",
+              "repeats": 1
+            },
+            {
+              "bemu_cycles": 20688,
+              "instance": "subgraph0_ht1876.0-iteration0",
+              "repeats": 1
+            }
+          ],
+          "rare_bemu_cycles": 13950442477,
+          "reference_log": "2026-11-28-14-00-43-goban-gvn-device-goban-GobanDefaultConfig-laya",
+          "slices": [
+            {
+              "cycles": 519503,
+              "elapsed_s": 13.612,
+              "exit": 0,
+              "instance": "subgraph0_ht17.0-iteration0",
+              "log": "2026-11-28-14-00-52-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht17.0-iteration0-tmpi98yjix9",
+              "repeats": 114688,
+              "share": 0.2191266149131694,
+              "total": 59580760064
+            },
+            {
+              "cycles": 447417,
+              "elapsed_s": 13.513,
+              "exit": 0,
+              "instance": "subgraph0_ht21.0-iteration0",
+              "log": "2026-11-28-14-01-22-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht21.0-iteration0-tmp3mjhg23y",
+              "repeats": 114688,
+              "share": 0.1887207054908355,
+              "total": 51313360896
+            },
+            {
+              "cycles": 548756,
+              "elapsed_s": 13.413,
+              "exit": 0,
+              "instance": "subgraph0_ht29.0-iteration0",
+              "log": "2026-11-28-14-01-52-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht29.0-iteration0-tmp7i7ytlj5",
+              "repeats": 61440,
+              "share": 0.12399939876597495,
+              "total": 33715568640
+            },
+            {
+              "cycles": 552440,
+              "elapsed_s": 13.512,
+              "exit": 0,
+              "instance": "subgraph0_ht34.0-iteration0",
+              "log": "2026-11-28-14-02-22-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht34.0-iteration0-tmpcjh9xl_0",
+              "repeats": 57344,
+              "share": 0.1165097286662746,
+              "total": 31679119360
+            },
+            {
+              "cycles": 459520,
+              "elapsed_s": 13.912,
+              "exit": 0,
+              "instance": "subgraph0_ht52.0-iteration0",
+              "log": "2026-11-28-14-02-53-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht52.0-iteration0-tmp0_7eo_kw",
+              "repeats": 36736,
+              "share": 0.062084812694189265,
+              "total": 16880926720
+            },
+            {
+              "cycles": 530419,
+              "elapsed_s": 13.614,
+              "exit": 0,
+              "instance": "subgraph0_ht84.0-iteration0",
+              "log": "2026-11-28-14-03-23-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht84.0-iteration0-tmprv5s060v",
+              "repeats": 36864,
+              "share": 0.07191353216444066,
+              "total": 19553366016
+            },
+            {
+              "cycles": 383706,
+              "elapsed_s": 13.72,
+              "exit": 0,
+              "instance": "subgraph0_ht12.0-iteration0",
+              "log": "2026-11-28-14-03-53-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht12.0-iteration0-tmpuqf12bno",
+              "repeats": 23040,
+              "share": 0.032513981603092164,
+              "total": 8840586240
+            },
+            {
+              "cycles": 2177922,
+              "elapsed_s": 14.021,
+              "exit": 0,
+              "instance": "subgraph0_ht23.0-iteration0",
+              "log": "2026-11-28-14-04-23-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht23.0-iteration0-tmp2rsfol4g",
+              "repeats": 3840,
+              "share": 0.030758321840580066,
+              "total": 8363220480
+            },
+            {
+              "cycles": 638095,
+              "elapsed_s": 13.519,
+              "exit": 0,
+              "instance": "subgraph0_ht57.0-iteration0",
+              "log": "2026-11-28-14-04-53-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht57.0-iteration0-tmp0et_0jb4",
+              "repeats": 14336,
+              "share": 0.03364359718399577,
+              "total": 9147729920
+            },
+            {
+              "cycles": 4185770,
+              "elapsed_s": 14.112,
+              "exit": 0,
+              "instance": "subgraph0_ht35.0-iteration0",
+              "log": "2026-11-28-14-05-23-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht35.0-iteration0-tmp4zxr16lq",
+              "repeats": 1920,
+              "share": 0.02955736266281456,
+              "total": 8036678400
+            },
+            {
+              "cycles": 529263,
+              "elapsed_s": 13.72,
+              "exit": 0,
+              "instance": "subgraph0_ht24.0-iteration0",
+              "log": "2026-11-28-14-05-54-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht24.0-iteration0-tmpv07ccsp1",
+              "repeats": 20480,
+              "share": 0.03986489064300357,
+              "total": 10839306240
+            }
+          ],
+          "status": "pass"
+        },
+        {
+          "model": "mlp-mixer",
+          "reference_log": "2026-11-28-14-07-10-goban-gvn-device-goban-GobanDefaultConfig-mlp-mixer",
+          "slices": [
+            {
+              "cycles": 482018,
+              "elapsed_s": 13.612,
+              "exit": 0,
+              "instance": "subgraph0_ht68.0-iteration0",
+              "log": "2026-11-28-14-07-24-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht68.0-iteration0-tmpq3wd0llk",
+              "repeats": 2352,
+              "total": 1133706336
+            },
+            {
+              "cycles": 573765,
+              "elapsed_s": 13.914,
+              "exit": 0,
+              "instance": "subgraph0_ht67.0-iteration0",
+              "log": "2026-11-28-14-07-54-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht67.0-iteration0-tmp2pdsl_2w",
+              "repeats": 2304,
+              "total": 1321954560
+            },
+            {
+              "cycles": 3173849,
+              "elapsed_s": 14.212,
+              "exit": 0,
+              "instance": "subgraph0_ht35.0-iteration0",
+              "log": "2026-11-28-14-08-24-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht35.0-iteration0-tmp5ibnrl2x",
+              "repeats": 192,
+              "total": 609379008
+            },
+            {
+              "cycles": 3170781,
+              "elapsed_s": 14.012,
+              "exit": 0,
+              "instance": "subgraph0_ht107.0-iteration0",
+              "log": "2026-11-28-14-08-54-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht107.0-iteration0-tmpii7e60gp",
+              "repeats": 192,
+              "total": 608789952
+            },
+            {
+              "cycles": 3170825,
+              "elapsed_s": 13.812,
+              "exit": 0,
+              "instance": "subgraph0_ht179.0-iteration0",
+              "log": "2026-11-28-14-09-24-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht179.0-iteration0-tmpbj8fpbbr",
+              "repeats": 192,
+              "total": 608798400
+            },
+            {
+              "cycles": 3171656,
+              "elapsed_s": 13.714,
+              "exit": 0,
+              "instance": "subgraph0_ht31.0-iteration0",
+              "log": "2026-11-28-14-09-54-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht31.0-iteration0-tmp1cq4ni8_",
+              "repeats": 192,
+              "total": 608957952
+            },
+            {
+              "cycles": 3171648,
+              "elapsed_s": 13.914,
+              "exit": 0,
+              "instance": "subgraph0_ht36.0-iteration0",
+              "log": "2026-11-28-14-10-25-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht36.0-iteration0-tmpskpd9xv_",
+              "repeats": 192,
+              "total": 608956416
+            },
+            {
+              "cycles": 3171613,
+              "elapsed_s": 14.12,
+              "exit": 0,
+              "instance": "subgraph0_ht37.0-iteration0",
+              "log": "2026-11-28-14-10-55-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht37.0-iteration0-tmp19cftd1y",
+              "repeats": 192,
+              "total": 608949696
+            },
+            {
+              "cycles": 3170257,
+              "elapsed_s": 14.312,
+              "exit": 0,
+              "instance": "subgraph0_ht103.0-iteration0",
+              "log": "2026-11-28-14-11-25-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht103.0-iteration0-tmp3hkgw5su",
+              "repeats": 192,
+              "total": 608689344
+            },
+            {
+              "cycles": 3170297,
+              "elapsed_s": 14.214,
+              "exit": 0,
+              "instance": "subgraph0_ht175.0-iteration0",
+              "log": "2026-11-28-14-11-55-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht175.0-iteration0-tmpor6skzk1",
+              "repeats": 192,
+              "total": 608697024
+            },
+            {
+              "cycles": 3170172,
+              "elapsed_s": 14.114,
+              "exit": 0,
+              "instance": "subgraph0_ht108.0-iteration0",
+              "log": "2026-11-28-14-12-25-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht108.0-iteration0-tmpp0__7sc6",
+              "repeats": 192,
+              "total": 608673024
+            },
+            {
+              "cycles": 3170270,
+              "elapsed_s": 14.013,
+              "exit": 0,
+              "instance": "subgraph0_ht109.0-iteration0",
+              "log": "2026-11-28-14-12-55-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht109.0-iteration0-tmpd4we37lv",
+              "repeats": 192,
+              "total": 608691840
+            },
+            {
+              "cycles": 3170161,
+              "elapsed_s": 14.023,
+              "exit": 0,
+              "instance": "subgraph0_ht180.0-iteration0",
+              "log": "2026-11-28-14-13-25-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht180.0-iteration0-tmpt5e33z99",
+              "repeats": 192,
+              "total": 608670912
+            },
+            {
+              "cycles": 3170239,
+              "elapsed_s": 14.212,
+              "exit": 0,
+              "instance": "subgraph0_ht181.0-iteration0",
+              "log": "2026-11-28-14-13-56-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht181.0-iteration0-tmp1gpgx1a2",
+              "repeats": 192,
+              "total": 608685888
+            },
+            {
+              "cycles": 3169807,
+              "elapsed_s": 14.122,
+              "exit": 0,
+              "instance": "subgraph0_ht395.0-iteration0",
+              "log": "2026-11-28-14-14-26-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht395.0-iteration0-tmp_e236ju0",
+              "repeats": 192,
+              "total": 608602944
+            },
+            {
+              "cycles": 3169728,
+              "elapsed_s": 14.321,
+              "exit": 0,
+              "instance": "subgraph0_ht467.0-iteration0",
+              "log": "2026-11-28-14-14-56-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht467.0-iteration0-tmpuk_f5ytv",
+              "repeats": 192,
+              "total": 608587776
+            },
+            {
+              "cycles": 3169796,
+              "elapsed_s": 14.221,
+              "exit": 0,
+              "instance": "subgraph0_ht539.0-iteration0",
+              "log": "2026-11-28-14-15-26-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht539.0-iteration0-tmpf4tfe2qm",
+              "repeats": 192,
+              "total": 608600832
+            },
+            {
+              "cycles": 3169776,
+              "elapsed_s": 14.22,
+              "exit": 0,
+              "instance": "subgraph0_ht611.0-iteration0",
+              "log": "2026-11-28-14-15-56-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht611.0-iteration0-tmpso2a4oei",
+              "repeats": 192,
+              "total": 608596992
+            },
+            {
+              "cycles": 3169790,
+              "elapsed_s": 14.22,
+              "exit": 0,
+              "instance": "subgraph0_ht683.0-iteration0",
+              "log": "2026-11-28-14-16-27-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht683.0-iteration0-tmpd0sx3q_k",
+              "repeats": 192,
+              "total": 608599680
+            },
+            {
+              "cycles": 3169718,
+              "elapsed_s": 13.92,
+              "exit": 0,
+              "instance": "subgraph0_ht755.0-iteration0",
+              "log": "2026-11-28-14-16-57-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht755.0-iteration0-tmpi5bj7be5",
+              "repeats": 192,
+              "total": 608585856
+            },
+            {
+              "cycles": 3169815,
+              "elapsed_s": 13.913,
+              "exit": 0,
+              "instance": "subgraph0_ht827.0-iteration0",
+              "log": "2026-11-28-14-17-27-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht827.0-iteration0-tmpjsl8cxdx",
+              "repeats": 192,
+              "total": 608604480
+            },
+            {
+              "cycles": 3169918,
+              "elapsed_s": 14.021,
+              "exit": 0,
+              "instance": "subgraph0_ht251.0-iteration0",
+              "log": "2026-11-28-14-17-57-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht251.0-iteration0-tmp_5_9hdrz",
+              "repeats": 192,
+              "total": 608624256
+            },
+            {
+              "cycles": 3169897,
+              "elapsed_s": 13.912,
+              "exit": 0,
+              "instance": "subgraph0_ht323.0-iteration0",
+              "log": "2026-11-28-14-18-28-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht323.0-iteration0-tmpwl0s3n2m",
+              "repeats": 192,
+              "total": 608620224
+            },
+            {
+              "cycles": 3169127,
+              "elapsed_s": 14.014,
+              "exit": 0,
+              "instance": "subgraph0_ht391.0-iteration0",
+              "log": "2026-11-28-14-18-58-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht391.0-iteration0-tmprwvk_6lw",
+              "repeats": 192,
+              "total": 608472384
+            },
+            {
+              "cycles": 3169122,
+              "elapsed_s": 16.045,
+              "exit": 0,
+              "instance": "subgraph0_ht463.0-iteration0",
+              "log": "2026-11-28-14-19-28-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht463.0-iteration0-tmp76lxqd9f",
+              "repeats": 192,
+              "total": 608471424
+            },
+            {
+              "cycles": 3169144,
+              "elapsed_s": 15.682,
+              "exit": 0,
+              "instance": "subgraph0_ht535.0-iteration0",
+              "log": "2026-11-28-14-19-58-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht535.0-iteration0-tmppzuooxd3",
+              "repeats": 192,
+              "total": 608475648
+            },
+            {
+              "cycles": 3169115,
+              "elapsed_s": 16.134,
+              "exit": 0,
+              "instance": "subgraph0_ht607.0-iteration0",
+              "log": "2026-11-28-14-20-28-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht607.0-iteration0-tmprbk0qt5z",
+              "repeats": 192,
+              "total": 608470080
+            },
+            {
+              "cycles": 3169049,
+              "elapsed_s": 16.212,
+              "exit": 0,
+              "instance": "subgraph0_ht679.0-iteration0",
+              "log": "2026-11-28-14-20-59-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht679.0-iteration0-tmp3z2fhxhj",
+              "repeats": 192,
+              "total": 608457408
+            },
+            {
+              "cycles": 3169165,
+              "elapsed_s": 14.313,
+              "exit": 0,
+              "instance": "subgraph0_ht751.0-iteration0",
+              "log": "2026-11-28-14-21-29-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht751.0-iteration0-tmpkk_69nvr",
+              "repeats": 192,
+              "total": 608479680
+            },
+            {
+              "cycles": 3169125,
+              "elapsed_s": 14.013,
+              "exit": 0,
+              "instance": "subgraph0_ht823.0-iteration0",
+              "log": "2026-11-28-14-21-59-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht823.0-iteration0-tmp7o4okfkw",
+              "repeats": 192,
+              "total": 608472000
+            },
+            {
+              "cycles": 3169059,
+              "elapsed_s": 14.423,
+              "exit": 0,
+              "instance": "subgraph0_ht396.0-iteration0",
+              "log": "2026-11-28-14-22-29-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht396.0-iteration0-tmpm9hiy8g0",
+              "repeats": 192,
+              "total": 608459328
+            },
+            {
+              "cycles": 3169078,
+              "elapsed_s": 14.021,
+              "exit": 0,
+              "instance": "subgraph0_ht397.0-iteration0",
+              "log": "2026-11-28-14-22-59-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht397.0-iteration0-tmp5w7kkdb1",
+              "repeats": 192,
+              "total": 608462976
+            },
+            {
+              "cycles": 3169015,
+              "elapsed_s": 14.433,
+              "exit": 0,
+              "instance": "subgraph0_ht468.0-iteration0",
+              "log": "2026-11-28-14-23-29-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht468.0-iteration0-tmphw8_xfmn",
+              "repeats": 192,
+              "total": 608450880
+            },
+            {
+              "cycles": 3169093,
+              "elapsed_s": 14.731,
+              "exit": 0,
+              "instance": "subgraph0_ht469.0-iteration0",
+              "log": "2026-11-28-14-24-00-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht469.0-iteration0-tmp_6fvst8z",
+              "repeats": 192,
+              "total": 608465856
+            },
+            {
+              "cycles": 3169104,
+              "elapsed_s": 14.423,
+              "exit": 0,
+              "instance": "subgraph0_ht540.0-iteration0",
+              "log": "2026-11-28-14-24-30-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht540.0-iteration0-tmpe9zljba4",
+              "repeats": 192,
+              "total": 608467968
+            },
+            {
+              "cycles": 3169064,
+              "elapsed_s": 14.323,
+              "exit": 0,
+              "instance": "subgraph0_ht541.0-iteration0",
+              "log": "2026-11-28-14-25-00-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht541.0-iteration0-tmp0r_yy_2c",
+              "repeats": 192,
+              "total": 608460288
+            },
+            {
+              "cycles": 3169071,
+              "elapsed_s": 14.823,
+              "exit": 0,
+              "instance": "subgraph0_ht612.0-iteration0",
+              "log": "2026-11-28-14-25-31-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht612.0-iteration0-tmpz1czlddd",
+              "repeats": 192,
+              "total": 608461632
+            },
+            {
+              "cycles": 3169062,
+              "elapsed_s": 14.417,
+              "exit": 0,
+              "instance": "subgraph0_ht613.0-iteration0",
+              "log": "2026-11-28-14-26-01-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht613.0-iteration0-tmpegfmz0sm",
+              "repeats": 192,
+              "total": 608459904
+            },
+            {
+              "cycles": 3169091,
+              "elapsed_s": 14.121,
+              "exit": 0,
+              "instance": "subgraph0_ht684.0-iteration0",
+              "log": "2026-11-28-14-26-31-goban-p2e-device-goban-GobanDefaultConfig-subgraph0_ht684.0-iteration0-tmpe9i6636q",
+              "repeats": 192,
+              "total": 608465472
+            }
+          ],
+          "status": "running"
+        }
+      ],
+      "fpga_location": "0.A",
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "running"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-28T04:56:10.954008+00:00"
+}

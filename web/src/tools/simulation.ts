@@ -49,7 +49,7 @@ export function simulation(simulators: Simulator[], snapshots: ToolSnapshot[], d
       label: design,
       values: runs.map(({ flag }) => {
         const run = snapshots.find((s) => s.design === design && s.tool === sim.name && s.flag === flag);
-        return run && run.cycles / run.elapsed_s;
+        return run && run.elapsed_s > 0 ? run.cycles / run.elapsed_s : undefined;
       }),
     }));
   const sources: Series[] = simulators.map((sim) => ({ name: sim.model.name, tone: sim.tone }));
@@ -66,10 +66,41 @@ export function simulation(simulators: Simulator[], snapshots: ToolSnapshot[], d
   return [
     element("h2", {}, "Simulation speed"),
     legend(runs),
-    ...simulators.map((sim) => chart(`${sim.name} · frequency`, runs, frequency(sim), hertz)),
+    ...simulators.map((sim) => chart(`${sim.name} · frequency`, runs, frequency(sim), hertz,
+      sim.name === "BEMU" ? (group, i) =>
+        snapshots.some((r) => r.tool === sim.name && r.design === group.label && r.flag === runs[i].flag)
+          ? `#latency-simulation/bemu/${encodeURIComponent(group.label)}/${runs[i].flag ?? "fastest"}`
+          : undefined : undefined)),
     element("h2", {}, "Performance evaluation"),
     legend(sources),
     chart("Accuracy · the cycles of a model", sources, models("cycles"), cycles),
     chart("Speed · the time to get them", sources, models("elapsed_s"), time),
   ];
+}
+
+export function bemuDetails(run: ToolSnapshot): HTMLElement {
+  const state = run.status === "running" ? `Running (${run.workloads.length}/${run.total})`
+    : run.status === "pass" ? "Pass" : run.status === "failure" ? "Not passed" : "Measured";
+  return element("section", {},
+    element("a", { href: "#latency-simulation" }, "← Simulation speed"),
+    element("h2", {}, `BEMU · ${run.design} · ${run.flag ?? "fastest"}`),
+    element("p", {}, state),
+    ...(run.min_elapsed_s === undefined ? [] : [element("p", {},
+      `Target > ${hertz(run.target_hz!)} for runs lasting at least ${run.min_elapsed_s} s.`)]),
+    element("table", {},
+      element("thead", {}, element("tr", {}, ...["Workload", "Wall time (s)", "Simulation speed", "Result"].map((text) => element("th", {}, text)))),
+      element("tbody", {}, ...run.workloads.map((w) => {
+        const hz = w.frequency_hz ?? (w.elapsed_s && w.cycles !== undefined ? w.cycles / w.elapsed_s : undefined);
+        const verdict = w.status === "below_target" ? "Below speed target"
+          : w.status === "too_short" ? "Excluded (< 1 s)"
+          : w.status === "timeout" ? "Timed out"
+          : w.status === "cancelled" ? "Cancelled"
+          : w.status === "failure" ? "Run failed"
+          : w.status === "pass" ? "Pass" : "—";
+        return element("tr", {}, element("td", {}, w.workload),
+          element("td", {}, w.elapsed_s === undefined ? "—" : w.elapsed_s.toFixed(3)),
+          element("td", {}, hz === undefined ? "—" : `${(hz / 1e6).toFixed(2)} MHz`), element("td", {}, w.error && w.error !== w.status ? `${verdict} · ${w.error}` : verdict));
+      })),
+    ),
+  );
 }

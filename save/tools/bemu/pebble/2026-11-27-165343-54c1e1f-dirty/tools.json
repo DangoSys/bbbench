@@ -1,0 +1,119 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 39368569016,
+  "design": "pebble",
+  "dirty": true,
+  "elapsed_s": 99.151,
+  "min_elapsed_s": 1,
+  "status": "pass",
+  "taken": "2026-11-27T16:53:43.946726+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 13,
+  "workloads": [
+    {
+      "cycles": 5468969578,
+      "elapsed_s": 16.397,
+      "frequency_hz": 333534767.2135147,
+      "log": "2026-11-28-00-53-44-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-test-linux",
+      "status": "pass",
+      "workload": "pebble-test-linux"
+    },
+    {
+      "cycles": 118896649,
+      "elapsed_s": 0.496,
+      "frequency_hz": 239710985.88709676,
+      "log": "2026-11-28-00-54-24-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-alexnet-baremetal",
+      "status": "too_short",
+      "workload": "alexnet-baremetal"
+    },
+    {
+      "cycles": 4360760632,
+      "elapsed_s": 12.178,
+      "frequency_hz": 358085123.33716536,
+      "log": "2026-11-28-00-54-34-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-alexnet-linux",
+      "status": "pass",
+      "workload": "alexnet-linux"
+    },
+    {
+      "cycles": 851309,
+      "elapsed_s": 0.014,
+      "frequency_hz": 60807785.71428572,
+      "log": "2026-11-28-00-55-04-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-lenet-baremetal",
+      "status": "too_short",
+      "workload": "lenet-baremetal"
+    },
+    {
+      "cycles": 1900419494,
+      "elapsed_s": 5.542,
+      "frequency_hz": 342912214.72392637,
+      "log": "2026-11-28-00-55-14-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-lenet-linux",
+      "status": "pass",
+      "workload": "lenet-linux"
+    },
+    {
+      "cycles": 57595362,
+      "elapsed_s": 0.255,
+      "frequency_hz": 225864164.70588234,
+      "log": "2026-11-28-00-55-34-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-mobilenet-v3-small-baremetal",
+      "status": "too_short",
+      "workload": "mobilenet-v3-small-baremetal"
+    },
+    {
+      "cycles": 2450456828,
+      "elapsed_s": 7.174,
+      "frequency_hz": 341574690.27042097,
+      "log": "2026-11-28-00-55-44-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-mobilenet-v3-small-linux",
+      "status": "pass",
+      "workload": "mobilenet-v3-small-linux"
+    },
+    {
+      "cycles": 194498554,
+      "elapsed_s": 0.626,
+      "frequency_hz": 310700565.49520767,
+      "log": "2026-11-28-00-56-04-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-resnet18-baremetal",
+      "status": "too_short",
+      "workload": "resnet18-baremetal"
+    },
+    {
+      "cycles": 3026352824,
+      "elapsed_s": 9.337,
+      "frequency_hz": 324124753.561101,
+      "log": "2026-11-28-00-56-14-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-resnet18-linux",
+      "status": "pass",
+      "workload": "resnet18-linux"
+    },
+    {
+      "cycles": 711927907,
+      "elapsed_s": 2.538,
+      "frequency_hz": 280507449.56658787,
+      "log": "2026-11-28-00-56-54-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-yolo26n-baremetal",
+      "status": "pass",
+      "workload": "yolo26n-baremetal"
+    },
+    {
+      "cycles": 6924620414,
+      "elapsed_s": 17.044,
+      "frequency_hz": 406279066.76836425,
+      "log": "2026-11-28-00-57-14-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-yolo26n-linux",
+      "status": "pass",
+      "workload": "yolo26n-linux"
+    },
+    {
+      "cycles": 32731015,
+      "elapsed_s": 0.062,
+      "frequency_hz": 527919596.7741935,
+      "log": "2026-11-28-00-57-44-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-coremark-baremetal",
+      "status": "too_short",
+      "workload": "coremark-baremetal"
+    },
+    {
+      "cycles": 14120488450,
+      "elapsed_s": 27.488,
+      "frequency_hz": 513696465.7305006,
+      "log": "2026-11-28-00-58-14-pebble-bemu-device-pebble-PebbleDefaultConfig-pebble-coremark-linux",
+      "status": "pass",
+      "workload": "coremark-linux"
+    }
+  ]
+}

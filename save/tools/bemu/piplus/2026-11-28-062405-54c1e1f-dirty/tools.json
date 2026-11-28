@@ -1,0 +1,39 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 12849040556,
+  "design": "piplus",
+  "dirty": true,
+  "elapsed_s": 112.80499999999999,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-28T06:24:05.510400+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 3,
+  "workloads": [
+    {
+      "cycles": 1032344719,
+      "elapsed_s": 3.799,
+      "frequency_hz": 271741173.7299289,
+      "log": "2026-11-28-14-24-06-piplus-bemu-device-piplus-PiplusDefaultConfig-piplus-test-linux",
+      "status": "pass",
+      "workload": "piplus-test-linux"
+    },
+    {
+      "cycles": 803066372,
+      "elapsed_s": 29.305,
+      "frequency_hz": 27403732.19587101,
+      "log": "2026-11-28-14-24-36-piplus-bemu-device-piplus-PiplusDefaultConfig-piplus-smolvla-base-baremetal",
+      "status": "below_target",
+      "workload": "smolvla-base-baremetal"
+    },
+    {
+      "cycles": 11013629465,
+      "elapsed_s": 79.701,
+      "frequency_hz": 138186841.63310373,
+      "log": "2026-11-28-14-25-16-piplus-bemu-device-piplus-PiplusDefaultConfig-piplus-smolvla-base-linux",
+      "status": "below_target",
+      "workload": "smolvla-base-linux"
+    }
+  ]
+}

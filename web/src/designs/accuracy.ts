@@ -98,7 +98,8 @@ export function accuracy(snapshot: DesignSnapshot, available: number): HTMLEleme
     .join(" · ");
   const runs = snapshot.nodes.find((n) => n.id === "bemu-accuracy")?.datasets ?? [];
   const continuous = runs.filter((d) => d.action_mse !== undefined);
-  const classified = models.filter((model) => !continuous.some((d) => d.model === model));
+  const detectors = runs.filter((d) => d.map50_95 !== undefined);
+  const classified = models.filter((model) => ![...continuous, ...detectors].some((d) => d.model === model));
   const errors = element(
     "section",
     { class: "perf" },
@@ -126,6 +127,17 @@ export function accuracy(snapshot: DesignSnapshot, available: number): HTMLEleme
     element("p", { class: "muted" }, `Samples per model — ${samples}`),
     ...(classified.length ? [chart("Task accuracy", "accuracy", classified, snapshot.nodes, available)] : []),
     ...(continuous.length ? [errors] : []),
+    ...(detectors.length ? [element("section", { class: "perf" },
+      element("h3", {}, "Detection mAP50–95"),
+      element("table", {},
+        element("thead", {}, element("tr", {}, ...["Model", "Dataset", "PyTorch FP32", "BEMU"].map((title) => element("th", {}, title)))),
+        element("tbody", {}, ...detectors.map((d) => element("tr", {},
+          element("td", {}, d.model), element("td", {}, d.dataset!),
+          element("td", { class: "number" }, `${(100 * d.reference_map50_95!).toFixed(2)}%`),
+          element("td", { class: "number" }, `${(100 * d.map50_95!).toFixed(2)}%`),
+        ))),
+      ),
+    )] : []),
     chart("Sample pass rate", "pass", models, snapshot.nodes, available),
   ];
 }

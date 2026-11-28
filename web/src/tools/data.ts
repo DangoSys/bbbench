@@ -5,8 +5,11 @@ import { index } from "../snapshot";
 // A workload the tool ran to its end.
 export interface Workload {
   workload: string;
-  elapsed_s: number;
-  cycles: number;
+  elapsed_s?: number;
+  cycles?: number;
+  frequency_hz?: number;
+  status?: string;
+  error?: string;
 }
 
 // A tool on a design, on the tool's own workloads (BEMU: Linux boot and whole
@@ -20,6 +23,10 @@ export interface ToolSnapshot {
   design: string;
   // The tool's name as the pages show it: BEMU, Verilator, FPGA.
   tool: string;
+  target_hz?: number;
+  min_elapsed_s?: number;
+  total?: number;
+  status?: string;
   // The flag it ran with: every trace on, or DiffTest; none is its fastest.
   flag?: "all-trace" | "diff";
   cycles: number;

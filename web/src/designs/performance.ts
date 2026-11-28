@@ -12,7 +12,7 @@ const svgNs = "http://www.w3.org/2000/svg";
 // cycles, the same under either OS.
 const levels = [
   { node: "bemu-model", name: "BEMU" },
-  { node: "verilator-gvn", name: "Verilator GVN" },
+  { node: "verilator-gvn-perf", name: "Verilator GVN perf" },
   { node: "fpga-gvn", name: "FPGA GVN" },
   { node: "fpga-model", name: "FPGA end to end" },
 ] as const;

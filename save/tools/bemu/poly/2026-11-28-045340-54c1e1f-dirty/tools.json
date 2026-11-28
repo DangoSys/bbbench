@@ -1,0 +1,113 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 54868701803,
+  "design": "poly",
+  "dirty": true,
+  "elapsed_s": 693.265,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-28T04:53:40.095472+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 13,
+  "workloads": [
+    {
+      "cycles": 2364900201,
+      "elapsed_s": 12.152,
+      "frequency_hz": 194609957.29098094,
+      "log": "2026-11-28-12-53-41-poly-bemu-device-poly-PolyDefaultConfig-poly-test-linux",
+      "status": "below_target",
+      "workload": "poly-test-linux"
+    },
+    {
+      "cycles": 2166436548,
+      "elapsed_s": 67.565,
+      "frequency_hz": 32064479.360615704,
+      "log": "2026-11-28-12-54-21-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-baremetal",
+      "status": "below_target",
+      "workload": "deepseek-r1-0528-qwen3-8b-baremetal"
+    },
+    {
+      "cycles": 9303498604,
+      "elapsed_s": 116.588,
+      "frequency_hz": 79798080.45424916,
+      "log": "2026-11-28-12-55-41-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-linux",
+      "status": "below_target",
+      "workload": "deepseek-r1-0528-qwen3-8b-linux"
+    },
+    {
+      "error": "build: failure",
+      "status": "failure",
+      "workload": "gemma4-e2b-it-baremetal"
+    },
+    {
+      "error": "build: failure",
+      "status": "failure",
+      "workload": "gemma4-e2b-it-linux"
+    },
+    {
+      "cycles": 443204281,
+      "elapsed_s": 13.607,
+      "frequency_hz": 32571785.184096422,
+      "log": "2026-11-28-12-58-21-poly-bemu-device-poly-PolyDefaultConfig-poly-laya-baremetal",
+      "status": "below_target",
+      "workload": "laya-baremetal"
+    },
+    {
+      "cycles": 13415369974,
+      "elapsed_s": 72.203,
+      "frequency_hz": 185800728.14148995,
+      "log": "2026-11-28-12-59-01-poly-bemu-device-poly-PolyDefaultConfig-poly-laya-linux",
+      "status": "below_target",
+      "workload": "laya-linux"
+    },
+    {
+      "cycles": 866255118,
+      "elapsed_s": 33.056,
+      "frequency_hz": 26205684.83785092,
+      "log": "2026-11-28-13-00-41-poly-bemu-device-poly-PolyDefaultConfig-poly-llama3-2-3b-instruct-baremetal",
+      "status": "below_target",
+      "workload": "llama3-2-3b-instruct-baremetal"
+    },
+    {
+      "cycles": 4835074664,
+      "elapsed_s": 61.025,
+      "frequency_hz": 79231047.3412536,
+      "log": "2026-11-28-13-01-21-poly-bemu-device-poly-PolyDefaultConfig-poly-llama3-2-3b-instruct-linux",
+      "status": "below_target",
+      "workload": "llama3-2-3b-instruct-linux"
+    },
+    {
+      "cycles": 1094411098,
+      "elapsed_s": 42.839,
+      "frequency_hz": 25547073.881276406,
+      "log": "2026-11-28-13-02-31-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-0-6b-baremetal",
+      "status": "below_target",
+      "workload": "qwen3-0-6b-baremetal"
+    },
+    {
+      "cycles": 13878126855,
+      "elapsed_s": 112.647,
+      "frequency_hz": 123200146.0757943,
+      "log": "2026-11-28-13-03-21-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-0-6b-linux",
+      "status": "below_target",
+      "workload": "qwen3-0-6b-linux"
+    },
+    {
+      "cycles": 1291894339,
+      "elapsed_s": 61.682,
+      "frequency_hz": 20944430.125482313,
+      "log": "2026-11-28-13-05-21-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-8b-baremetal",
+      "status": "below_target",
+      "workload": "qwen3-8b-baremetal"
+    },
+    {
+      "cycles": 5209530121,
+      "elapsed_s": 99.901,
+      "frequency_hz": 52146926.667400725,
+      "log": "2026-11-28-13-06-31-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-8b-linux",
+      "status": "below_target",
+      "workload": "qwen3-8b-linux"
+    }
+  ]
+}

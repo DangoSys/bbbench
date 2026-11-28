@@ -1,0 +1,119 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 62588467168,
+  "design": "poly",
+  "dirty": true,
+  "elapsed_s": 1616.753,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-27T17:18:58.328482+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 13,
+  "workloads": [
+    {
+      "cycles": 2364533993,
+      "elapsed_s": 29.773,
+      "frequency_hz": 79418734.86044402,
+      "log": "2026-11-28-01-18-59-poly-bemu-device-poly-PolyDefaultConfig-poly-test-linux",
+      "status": "below_target",
+      "workload": "poly-test-linux"
+    },
+    {
+      "cycles": 2169607446,
+      "elapsed_s": 73.023,
+      "frequency_hz": 29711288.854196623,
+      "log": "2026-11-28-01-19-59-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-baremetal",
+      "status": "below_target",
+      "workload": "deepseek-r1-0528-qwen3-8b-baremetal"
+    },
+    {
+      "cycles": 9310712977,
+      "elapsed_s": 123.375,
+      "frequency_hz": 75466771.85005066,
+      "log": "2026-11-28-01-21-29-poly-bemu-device-poly-PolyDefaultConfig-poly-deepseek-r1-0528-qwen3-8b-linux",
+      "status": "below_target",
+      "workload": "deepseek-r1-0528-qwen3-8b-linux"
+    },
+    {
+      "cycles": 1266610407,
+      "elapsed_s": 40.137,
+      "frequency_hz": 31557176.844308242,
+      "log": "2026-11-28-01-23-49-poly-bemu-device-poly-PolyDefaultConfig-poly-gemma4-e2b-it-baremetal",
+      "status": "below_target",
+      "workload": "gemma4-e2b-it-baremetal"
+    },
+    {
+      "cycles": 6316350246,
+      "elapsed_s": 131.179,
+      "frequency_hz": 48150620.49565861,
+      "log": "2026-11-28-01-24-59-poly-bemu-device-poly-PolyDefaultConfig-poly-gemma4-e2b-it-linux",
+      "status": "below_target",
+      "workload": "gemma4-e2b-it-linux"
+    },
+    {
+      "cycles": 442606179,
+      "elapsed_s": 36.696,
+      "frequency_hz": 12061428.466317855,
+      "log": "2026-11-28-01-27-29-poly-bemu-device-poly-PolyDefaultConfig-poly-laya-baremetal",
+      "status": "below_target",
+      "workload": "laya-baremetal"
+    },
+    {
+      "cycles": 13375682199,
+      "elapsed_s": 150.987,
+      "frequency_hz": 88588303.62216616,
+      "log": "2026-11-28-01-28-39-poly-bemu-device-poly-PolyDefaultConfig-poly-laya-linux",
+      "status": "below_target",
+      "workload": "laya-linux"
+    },
+    {
+      "cycles": 868737582,
+      "elapsed_s": 47.597,
+      "frequency_hz": 18251939.870159883,
+      "log": "2026-11-28-01-31-30-poly-bemu-device-poly-PolyDefaultConfig-poly-llama3-2-3b-instruct-baremetal",
+      "status": "below_target",
+      "workload": "llama3-2-3b-instruct-baremetal"
+    },
+    {
+      "cycles": 4824524368,
+      "elapsed_s": 99.014,
+      "frequency_hz": 48725678.87369463,
+      "log": "2026-11-28-01-32-50-poly-bemu-device-poly-PolyDefaultConfig-poly-llama3-2-3b-instruct-linux",
+      "status": "below_target",
+      "workload": "llama3-2-3b-instruct-linux"
+    },
+    {
+      "cycles": 1099626498,
+      "elapsed_s": 112.859,
+      "frequency_hz": 9743365.597781302,
+      "log": "2026-11-28-01-34-40-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-0-6b-baremetal",
+      "status": "below_target",
+      "workload": "qwen3-0-6b-baremetal"
+    },
+    {
+      "cycles": 13967503451,
+      "elapsed_s": 267.808,
+      "frequency_hz": 52154914.90545466,
+      "log": "2026-11-28-01-36-50-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-0-6b-linux",
+      "status": "below_target",
+      "workload": "qwen3-0-6b-linux"
+    },
+    {
+      "cycles": 1330526991,
+      "elapsed_s": 171.114,
+      "frequency_hz": 7775675.812616151,
+      "log": "2026-11-28-01-41-30-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-8b-baremetal",
+      "status": "below_target",
+      "workload": "qwen3-8b-baremetal"
+    },
+    {
+      "cycles": 5251444831,
+      "elapsed_s": 333.191,
+      "frequency_hz": 15761064.467527635,
+      "log": "2026-11-28-01-44-40-poly-bemu-device-poly-PolyDefaultConfig-poly-qwen3-8b-linux",
+      "status": "below_target",
+      "workload": "qwen3-8b-linux"
+    }
+  ]
+}

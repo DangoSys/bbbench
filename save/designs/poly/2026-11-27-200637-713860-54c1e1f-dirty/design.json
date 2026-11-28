@@ -1,0 +1,459 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "config": "poly/devices/poly/configs/PolyDefaultConfig.toml",
+  "design": "poly",
+  "dirty": true,
+  "nodes": [
+    {
+      "id": "workload",
+      "name": "Workload build",
+      "needs": [],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-workload",
+      "name": "BEMU workload",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "model-build",
+      "name": "Model build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bench-build",
+      "name": "Bench build",
+      "needs": [
+        "workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-workload",
+      "name": "Verilator workload",
+      "needs": [
+        "bemu-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-model",
+      "name": "BEMU model",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-bench",
+      "name": "BEMU bench",
+      "needs": [
+        "bemu-workload",
+        "bench-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "bemu-accuracy",
+      "name": "BEMU accuracy",
+      "needs": [
+        "bemu-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "verilator-gvn-perf",
+      "name": "Verilator GVN perf",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "dc-area",
+      "name": "DC area",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "elapsed_s": 5541.3,
+      "error": "gemma4-e2b-it: No RTL debug report; laya: No RTL debug report; llama3-2-3b-instruct: No RTL debug report; qwen3-0-6b: No RTL debug report; qwen3-8b: No RTL debug report",
+      "id": "verilator-gvn-debug",
+      "name": "Verilator GVN debug",
+      "needs": [
+        "verilator-workload",
+        "model-build"
+      ],
+      "status": "failure",
+      "suites": {
+        "deepseek-r1-0528-qwen3-8b": {
+          "log": "2026-11-28-04-17-15-poly-gvn-verilator-debug-device-poly-PolyDefaultConfig-deepseek-r1-0528-qwen3-8b",
+          "passed": 60,
+          "total": 60,
+          "workloads": [
+            {
+              "elapsed_s": 46.267,
+              "status": "pass",
+              "workload": "prepare_2_ht0.0-step0-launch729-iteration0"
+            },
+            {
+              "elapsed_s": 51.565,
+              "status": "pass",
+              "workload": "attention_ht12.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 48.565,
+              "status": "pass",
+              "workload": "mlp_ht12.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 60.467,
+              "status": "pass",
+              "workload": "attention_ht29.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 49.967,
+              "status": "pass",
+              "workload": "prepare_ht0.0-step0-launch0-iteration0"
+            },
+            {
+              "elapsed_s": 51.153,
+              "status": "pass",
+              "workload": "attention_ht43.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 50.187,
+              "status": "pass",
+              "workload": "attention_ht17.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 46.557,
+              "status": "pass",
+              "workload": "prepare_ht2.0-step0-launch0-iteration0"
+            },
+            {
+              "elapsed_s": 45.448,
+              "status": "pass",
+              "workload": "prepare_ht4.0-step0-launch0-iteration0"
+            },
+            {
+              "elapsed_s": 55.465,
+              "status": "pass",
+              "workload": "lm_head_ht0.0-step0-launch730-iteration0"
+            },
+            {
+              "elapsed_s": 55.583,
+              "status": "pass",
+              "workload": "lm_head_1_ht0.0-step0-launch734-iteration0"
+            },
+            {
+              "elapsed_s": 55.372,
+              "status": "pass",
+              "workload": "lm_head_1_ht1.0-step0-launch734-iteration0"
+            },
+            {
+              "elapsed_s": 47.054,
+              "status": "pass",
+              "workload": "attention_ht45.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 54.767,
+              "status": "pass",
+              "workload": "lm_head_ht1.0-step0-launch730-iteration0"
+            },
+            {
+              "elapsed_s": 54.068,
+              "status": "pass",
+              "workload": "lm_head_1_ht2.0-step0-launch734-iteration0"
+            },
+            {
+              "elapsed_s": 54.975,
+              "status": "pass",
+              "workload": "lm_head_ht2.0-step0-launch730-iteration0"
+            },
+            {
+              "elapsed_s": 56.671,
+              "status": "pass",
+              "workload": "lm_head_1_ht3.0-step0-launch734-iteration0"
+            },
+            {
+              "elapsed_s": 57.456,
+              "status": "pass",
+              "workload": "attention_ht27.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 52.458,
+              "status": "pass",
+              "workload": "attention_ht14.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 57.858,
+              "status": "pass",
+              "workload": "attention_ht22.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 62.573,
+              "status": "pass",
+              "workload": "attention_ht33.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 55.055,
+              "status": "pass",
+              "workload": "attention_ht35.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 57.383,
+              "status": "pass",
+              "workload": "attention_ht36.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 61.465,
+              "status": "pass",
+              "workload": "attention_ht9.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 56.368,
+              "status": "pass",
+              "workload": "attention_ht25.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 61.86,
+              "status": "pass",
+              "workload": "prepare_1_ht0.0-step0-launch9-iteration0"
+            },
+            {
+              "elapsed_s": 59.857,
+              "status": "pass",
+              "workload": "attention_ht16.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 57.162,
+              "status": "pass",
+              "workload": "attention_ht11.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 64.587,
+              "status": "pass",
+              "workload": "attention_ht7.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 67.48,
+              "status": "pass",
+              "workload": "attention_ht41.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 57.272,
+              "status": "pass",
+              "workload": "attention_ht19.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 70.071,
+              "status": "pass",
+              "workload": "attention_ht31.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 84.379,
+              "status": "pass",
+              "workload": "attention_ht24.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 82.686,
+              "status": "pass",
+              "workload": "attention_ht37.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 92.487,
+              "status": "pass",
+              "workload": "attention_ht23.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 94.493,
+              "status": "pass",
+              "workload": "attention_ht20.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 148.93,
+              "status": "pass",
+              "workload": "attention_ht47.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 155.038,
+              "status": "pass",
+              "workload": "attention_ht49.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 149.873,
+              "status": "pass",
+              "workload": "attention_ht48.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 157.587,
+              "status": "pass",
+              "workload": "attention_ht46.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 159.34,
+              "status": "pass",
+              "workload": "attention_ht4.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 166.665,
+              "status": "pass",
+              "workload": "attention_ht2.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 195.972,
+              "status": "pass",
+              "workload": "attention_ht6.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 198.167,
+              "status": "pass",
+              "workload": "attention_ht0.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 313.376,
+              "status": "pass",
+              "workload": "attention_ht38.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 312.537,
+              "status": "pass",
+              "workload": "attention_ht40.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 281.535,
+              "status": "pass",
+              "workload": "attention_ht39.0-step0-launch10-iteration0"
+            },
+            {
+              "elapsed_s": 275.738,
+              "status": "pass",
+              "workload": "mlp_ht10.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 333.377,
+              "status": "pass",
+              "workload": "mlp_ht13.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 339.381,
+              "status": "pass",
+              "workload": "mlp_ht15.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 343.17,
+              "status": "pass",
+              "workload": "mlp_ht14.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 341.495,
+              "status": "pass",
+              "workload": "mlp_ht16.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 361.663,
+              "status": "pass",
+              "workload": "mlp_ht2.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 381.236,
+              "status": "pass",
+              "workload": "mlp_ht7.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 367.28,
+              "status": "pass",
+              "workload": "mlp_ht0.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 373.977,
+              "status": "pass",
+              "workload": "mlp_ht5.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 369.959,
+              "status": "pass",
+              "workload": "mlp_ht3.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 367.065,
+              "status": "pass",
+              "workload": "mlp_ht8.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 417.972,
+              "status": "pass",
+              "workload": "mlp_ht1.0-step0-launch20-iteration0"
+            },
+            {
+              "elapsed_s": 419.478,
+              "status": "pass",
+              "workload": "mlp_ht6.0-step0-launch20-iteration0"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "needs": [
+        "dc-area"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "uvm",
+      "name": "UVM",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-bitstream",
+      "name": "FPGA bitstream",
+      "needs": [
+        "verilator-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-workload",
+      "name": "FPGA workload",
+      "needs": [
+        "fpga-bitstream"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-gvn",
+      "name": "FPGA GVN",
+      "needs": [
+        "fpga-workload"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "fpga-model",
+      "name": "FPGA model",
+      "needs": [
+        "fpga-gvn"
+      ],
+      "status": "pending"
+    }
+  ],
+  "taken": "2026-11-27T20:06:37.713860+00:00"
+}

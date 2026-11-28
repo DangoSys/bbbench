@@ -4508,6 +4508,1005 @@
       ],
       "id": "designs/pebble/2026-11-25-124320-2746472-dirty",
       "taken": "2026-11-25T12:43:20.859100+00:00"
+    },
+    {
+      "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/toy/2026-11-27-042215-873186c-dirty",
+      "taken": "2026-11-27T04:22:15.407214+00:00"
+    },
+    {
+      "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/pebble/2026-11-27-042427-873186c-dirty",
+      "taken": "2026-11-27T04:24:27.643733+00:00"
+    },
+    {
+      "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/gemmini/2026-11-27-042709-873186c-dirty",
+      "taken": "2026-11-27T04:27:09.859092+00:00"
+    },
+    {
+      "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-27-043019-873186c-dirty",
+      "taken": "2026-11-27T04:30:19.755505+00:00"
+    },
+    {
+      "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/piplus/2026-11-27-051252-873186c-dirty",
+      "taken": "2026-11-27T05:12:52.882995+00:00"
+    },
+    {
+      "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/poly/2026-11-27-051645-873186c-dirty",
+      "taken": "2026-11-27T05:16:45.428983+00:00"
+    },
+    {
+      "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/piplus/2026-11-27-051854-873186c-dirty",
+      "taken": "2026-11-27T05:18:54.321373+00:00"
+    },
+    {
+      "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/multi-rocket/2026-11-27-061533-873186c-dirty",
+      "taken": "2026-11-27T06:15:33.649015+00:00"
+    },
+    {
+      "commit": "873186c06f2f6b6d5215881c055292ac59df347a",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-27-075248-308680-873186c-dirty",
+      "taken": "2026-11-27T07:52:48.308680+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/pebble/2026-11-27-101837-54c1e1f-dirty",
+      "taken": "2026-11-27T10:18:37.488382+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/multi-rocket/2026-11-27-103221-884084-54c1e1f-dirty",
+      "taken": "2026-11-27T10:32:21.884084+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/multi-rocket/2026-11-27-103230-213061-54c1e1f-dirty",
+      "taken": "2026-11-27T10:32:30.213061+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/pebble/2026-11-27-104257-634119-54c1e1f-dirty",
+      "taken": "2026-11-27T10:42:57.634119+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/toy/2026-11-27-111302-850035-54c1e1f-dirty",
+      "taken": "2026-11-27T11:13:02.850035+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-27-112146-192532-54c1e1f-dirty",
+      "taken": "2026-11-27T11:21:46.192532+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/piplus/2026-11-27-112313-897977-54c1e1f-dirty",
+      "taken": "2026-11-27T11:23:13.897977+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-27-112322-566667-54c1e1f-dirty",
+      "taken": "2026-11-27T11:23:22.566667+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/poly/2026-11-27-113627-705891-54c1e1f-dirty",
+      "taken": "2026-11-27T11:36:27.705891+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/pebble/2026-11-27-115307-405639-54c1e1f-dirty",
+      "taken": "2026-11-27T11:53:07.405639+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/magia/2026-11-27-121611-579678-54c1e1f-dirty",
+      "taken": "2026-11-27T12:16:11.579678+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/gemmini/2026-11-27-122720-540850-54c1e1f-dirty",
+      "taken": "2026-11-27T12:27:20.540850+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/poly/2026-11-27-122814-639225-54c1e1f-dirty",
+      "taken": "2026-11-27T12:28:14.639225+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-27-122817-927922-54c1e1f-dirty",
+      "taken": "2026-11-27T12:28:17.927922+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/magia/2026-11-27-122822-027544-54c1e1f-dirty",
+      "taken": "2026-11-27T12:28:22.027544+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/gemmini/2026-11-27-123646-737121-54c1e1f-dirty",
+      "taken": "2026-11-27T12:36:46.737121+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/magia/2026-11-27-124608-088995-54c1e1f-dirty",
+      "taken": "2026-11-27T12:46:08.088995+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/toy/2026-11-27-130124-344234-54c1e1f-dirty",
+      "taken": "2026-11-27T13:01:24.344234+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/pebble/2026-11-27-130452-391811-54c1e1f-dirty",
+      "taken": "2026-11-27T13:04:52.391811+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/multi-rocket/2026-11-27-131222-357059-54c1e1f-dirty",
+      "taken": "2026-11-27T13:12:22.357059+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/piplus/2026-11-27-131302-643294-54c1e1f-dirty",
+      "taken": "2026-11-27T13:13:02.643294+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/pebble/2026-11-27-132053-529915-54c1e1f-dirty",
+      "taken": "2026-11-27T13:20:53.529915+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/multi-rocket/2026-11-27-132056-818240-54c1e1f-dirty",
+      "taken": "2026-11-27T13:20:56.818240+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/pebble/2026-11-27-134326-427728-54c1e1f-dirty",
+      "taken": "2026-11-27T13:43:26.427728+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-27-135136-305007-54c1e1f-dirty",
+      "taken": "2026-11-27T13:51:36.305007+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/piplus/2026-11-27-143731-215765-54c1e1f-dirty",
+      "taken": "2026-11-27T14:37:31.215765+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/gemmini/2026-11-27-151508-846654-54c1e1f-dirty",
+      "taken": "2026-11-27T15:15:08.846654+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/poly/2026-11-27-153533-858825-54c1e1f-dirty",
+      "taken": "2026-11-27T15:35:33.858825+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/poly/2026-11-27-155309-54c1e1f-dirty",
+      "taken": "2026-11-27T15:53:09.017686+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/pebble/2026-11-27-160248-54c1e1f-dirty",
+      "taken": "2026-11-27T16:02:48.935855+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-27-161037-54c1e1f-dirty",
+      "taken": "2026-11-27T16:10:37.360272+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-27-161721-54c1e1f-dirty",
+      "taken": "2026-11-27T16:17:21.090847+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-27-162010-54c1e1f-dirty",
+      "taken": "2026-11-27T16:20:10.032345+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/magia/2026-11-27-162022-54c1e1f-dirty",
+      "taken": "2026-11-27T16:20:22.230329+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/pebble/2026-11-27-162253-54c1e1f-dirty",
+      "taken": "2026-11-27T16:22:53.431370+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/pebble/2026-11-27-163929-54c1e1f-dirty",
+      "taken": "2026-11-27T16:39:29.219092+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/piplus/2026-11-27-164315-54c1e1f-dirty",
+      "taken": "2026-11-27T16:43:15.641770+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/poly/2026-11-27-164918-54c1e1f-dirty",
+      "taken": "2026-11-27T16:49:18.080011+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/magia/2026-11-27-165339-54c1e1f-dirty",
+      "taken": "2026-11-27T16:53:39.920877+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/pebble/2026-11-27-165343-54c1e1f-dirty",
+      "taken": "2026-11-27T16:53:43.946726+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-27-170359-54c1e1f-dirty",
+      "taken": "2026-11-27T17:03:59.054273+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/piplus/2026-11-27-171346-54c1e1f-dirty",
+      "taken": "2026-11-27T17:13:46.932642+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-27-171605-54c1e1f-dirty",
+      "taken": "2026-11-27T17:16:05.342758+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/toy/2026-11-27-171630-54c1e1f-dirty",
+      "taken": "2026-11-27T17:16:30.580453+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/poly/2026-11-27-171858-54c1e1f-dirty",
+      "taken": "2026-11-27T17:18:58.328482+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/toy/2026-11-27-174030-994618-54c1e1f-dirty",
+      "taken": "2026-11-27T17:40:30.994618+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/pebble/2026-11-27-185632-451136-54c1e1f-dirty",
+      "taken": "2026-11-27T18:56:32.451136+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/magia/2026-11-27-190917-991246-54c1e1f-dirty",
+      "taken": "2026-11-27T19:09:17.991246+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/poly/2026-11-27-200637-713860-54c1e1f-dirty",
+      "taken": "2026-11-27T20:06:37.713860+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/toy/2026-11-28-023509-54c1e1f-dirty",
+      "taken": "2026-11-28T02:35:09.928478+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/piplus/2026-11-28-023924-54c1e1f-dirty",
+      "taken": "2026-11-28T02:39:24.462636+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/poly/2026-11-28-023928-54c1e1f-dirty",
+      "taken": "2026-11-28T02:39:28.383014+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/toy/2026-11-28-023936-279856-54c1e1f-dirty",
+      "taken": "2026-11-28T02:39:36.279856+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-28-023940-358015-54c1e1f-dirty",
+      "taken": "2026-11-28T02:39:40.358015+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-28-024100-665496-54c1e1f-dirty",
+      "taken": "2026-11-28T02:41:00.665496+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-28-024301-184008-54c1e1f-dirty",
+      "taken": "2026-11-28T02:43:01.184008+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-28-024413-54c1e1f-dirty",
+      "taken": "2026-11-28T02:44:13.730467+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-28-025116-54c1e1f-dirty",
+      "taken": "2026-11-28T02:51:16.141110+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/toy/2026-11-28-025231-54c1e1f-dirty",
+      "taken": "2026-11-28T02:52:31.128434+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/magia/2026-11-28-025647-54c1e1f-dirty",
+      "taken": "2026-11-28T02:56:47.740168+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/toy/2026-11-28-031211-54c1e1f-dirty",
+      "taken": "2026-11-28T03:12:11.918643+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/toy/2026-11-28-033145-54c1e1f-dirty",
+      "taken": "2026-11-28T03:31:45.831435+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/magia/2026-11-28-033337-54c1e1f-dirty",
+      "taken": "2026-11-28T03:33:37.230908+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-28-034147-54c1e1f-dirty",
+      "taken": "2026-11-28T03:41:47.924312+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/magia/2026-11-28-034316-54c1e1f-dirty",
+      "taken": "2026-11-28T03:43:16.124513+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-28-034327-187332-54c1e1f-dirty",
+      "taken": "2026-11-28T03:43:27.187332+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/toy/2026-11-28-034436-54c1e1f-dirty",
+      "taken": "2026-11-28T03:44:36.930514+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-28-034746-54c1e1f-dirty",
+      "taken": "2026-11-28T03:47:46.039625+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/piplus/2026-11-28-035134-54c1e1f-dirty",
+      "taken": "2026-11-28T03:51:34.225290+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/magia/2026-11-28-035406-961350-54c1e1f-dirty",
+      "taken": "2026-11-28T03:54:06.961350+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/poly/2026-11-28-035426-54c1e1f-dirty",
+      "taken": "2026-11-28T03:54:26.393033+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/toy/2026-11-28-040324-54c1e1f-dirty",
+      "taken": "2026-11-28T04:03:24.806776+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/piplus/2026-11-28-041527-54c1e1f-dirty",
+      "taken": "2026-11-28T04:15:27.840861+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-28-041737-163253-54c1e1f-dirty",
+      "taken": "2026-11-28T04:17:37.163253+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/toy/2026-11-28-042405-54c1e1f-dirty",
+      "taken": "2026-11-28T04:24:05.197286+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-28-043556-54c1e1f-dirty",
+      "taken": "2026-11-28T04:35:56.515456+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-28-044135-54c1e1f-dirty",
+      "taken": "2026-11-28T04:41:35.037719+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-28-044424-54c1e1f-dirty",
+      "taken": "2026-11-28T04:44:24.688725+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-28-044508-54c1e1f-dirty",
+      "taken": "2026-11-28T04:45:08.531854+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/poly/2026-11-28-045340-54c1e1f-dirty",
+      "taken": "2026-11-28T04:53:40.095472+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-28-045523-54c1e1f-dirty",
+      "taken": "2026-11-28T04:55:23.893412+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/goban/2026-11-28-045610-954008-54c1e1f-dirty",
+      "taken": "2026-11-28T04:56:10.954008+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/piplus/2026-11-28-045719-54c1e1f-dirty",
+      "taken": "2026-11-28T04:57:19.767891+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-28-045944-54c1e1f-dirty",
+      "taken": "2026-11-28T04:59:44.705531+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-28-050608-54c1e1f-dirty",
+      "taken": "2026-11-28T05:06:08.757852+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/poly/2026-11-28-050852-54c1e1f-dirty",
+      "taken": "2026-11-28T05:08:52.033678+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/pebble/2026-11-28-051102-54c1e1f-dirty",
+      "taken": "2026-11-28T05:11:02.403546+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/toy/2026-11-28-051443-54c1e1f-dirty",
+      "taken": "2026-11-28T05:14:43.054921+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/magia/2026-11-28-051713-54c1e1f-dirty",
+      "taken": "2026-11-28T05:17:13.592907+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/piplus/2026-11-28-052316-54c1e1f-dirty",
+      "taken": "2026-11-28T05:23:16.250922+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-28-052431-54c1e1f-dirty",
+      "taken": "2026-11-28T05:24:31.427870+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-28-052540-54c1e1f-dirty",
+      "taken": "2026-11-28T05:25:40.581413+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-28-053226-54c1e1f-dirty",
+      "taken": "2026-11-28T05:32:26.569956+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-28-054332-54c1e1f-dirty",
+      "taken": "2026-11-28T05:43:32.611114+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/poly/2026-11-28-061112-353184-54c1e1f-dirty",
+      "taken": "2026-11-28T06:11:12.353184+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/poly/2026-11-28-061133-287191-54c1e1f-dirty",
+      "taken": "2026-11-28T06:11:33.287191+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/gemmini/2026-11-28-061220-54c1e1f-dirty",
+      "taken": "2026-11-28T06:12:20.069807+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/piplus/2026-11-28-061407-54c1e1f-dirty",
+      "taken": "2026-11-28T06:14:07.782811+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/goban/2026-11-28-061613-54c1e1f-dirty",
+      "taken": "2026-11-28T06:16:13.857022+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/poly/2026-11-28-061831-54c1e1f-dirty",
+      "taken": "2026-11-28T06:18:31.069640+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "tools.json"
+      ],
+      "id": "tools/bemu/piplus/2026-11-28-062405-54c1e1f-dirty",
+      "taken": "2026-11-28T06:24:05.510400+00:00"
+    },
+    {
+      "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+      "dirty": true,
+      "files": [
+        "design.json"
+      ],
+      "id": "designs/pebble/2026-11-28-062444-561126-54c1e1f-dirty",
+      "taken": "2026-11-28T06:24:44.561126+00:00"
     }
   ]
 }

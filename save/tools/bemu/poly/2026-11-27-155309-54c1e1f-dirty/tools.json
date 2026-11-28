@@ -1,0 +1,81 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 62728798436,
+  "design": "poly",
+  "dirty": true,
+  "elapsed_s": 3022.293,
+  "taken": "2026-11-27T15:53:09.017686+00:00",
+  "timelines": {
+    "bemu-model": "designs/poly/2026-11-24-205920-f7eb431-dirty",
+    "bemu-workload": "designs/poly/2026-11-24-191101-f7eb431-dirty"
+  },
+  "tool": "BEMU",
+  "workloads": [
+    {
+      "cycles": 2360607477,
+      "elapsed_s": 78.06,
+      "status": "pass",
+      "workload": "poly-test-linux"
+    },
+    {
+      "cycles": 2172762421,
+      "elapsed_s": 99.931,
+      "workload": "deepseek-r1-0528-qwen3-8b-baremetal"
+    },
+    {
+      "cycles": 9312589887,
+      "elapsed_s": 151.505,
+      "workload": "deepseek-r1-0528-qwen3-8b-linux"
+    },
+    {
+      "cycles": 1271563098,
+      "elapsed_s": 53.211,
+      "workload": "gemma4-e2b-it-baremetal"
+    },
+    {
+      "cycles": 6326110480,
+      "elapsed_s": 78.773,
+      "workload": "gemma4-e2b-it-linux"
+    },
+    {
+      "cycles": 441969092,
+      "elapsed_s": 19.034,
+      "workload": "laya-baremetal"
+    },
+    {
+      "cycles": 13322059347,
+      "elapsed_s": 227.547,
+      "workload": "laya-linux"
+    },
+    {
+      "cycles": 913886149,
+      "elapsed_s": 196.955,
+      "workload": "llama3-2-3b-instruct-baremetal"
+    },
+    {
+      "cycles": 4867344226,
+      "elapsed_s": 452.199,
+      "workload": "llama3-2-3b-instruct-linux"
+    },
+    {
+      "cycles": 1121059318,
+      "elapsed_s": 240.491,
+      "workload": "qwen3-0-6b-baremetal"
+    },
+    {
+      "cycles": 13973683093,
+      "elapsed_s": 591.602,
+      "workload": "qwen3-0-6b-linux"
+    },
+    {
+      "cycles": 1375031682,
+      "elapsed_s": 300.986,
+      "workload": "qwen3-8b-baremetal"
+    },
+    {
+      "cycles": 5270132166,
+      "elapsed_s": 531.999,
+      "workload": "qwen3-8b-linux"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "commit": "54c1e1f3f40000d035f744f9ef6fe3362cf91052",
+  "cycles": 16180393760,
+  "design": "gemmini",
+  "dirty": true,
+  "elapsed_s": 150.947,
+  "min_elapsed_s": 1,
+  "status": "failure",
+  "taken": "2026-11-28T04:55:23.893412+00:00",
+  "target_hz": 200000000,
+  "tool": "BEMU",
+  "total": 13,
+  "workloads": [
+    {
+      "cycles": 146123046,
+      "elapsed_s": 1.685,
+      "frequency_hz": 86719908.60534124,
+      "log": "2026-11-28-12-55-24-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-test-linux",
+      "status": "below_target",
+      "workload": "gemmini-test-linux"
+    },
+    {
+      "cycles": 524651275,
+      "elapsed_s": 3.697,
+      "frequency_hz": 141912706.24830943,
+      "log": "2026-11-28-12-55-54-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-alexnet-baremetal",
+      "status": "below_target",
+      "workload": "alexnet-baremetal"
+    },
+    {
+      "cycles": 1191197271,
+      "elapsed_s": 15.453,
+      "frequency_hz": 77085178.99437003,
+      "log": "2026-11-28-12-56-14-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-alexnet-linux",
+      "status": "below_target",
+      "workload": "alexnet-linux"
+    },
+    {
+      "cycles": 1180233586,
+      "elapsed_s": 7.925,
+      "frequency_hz": 148925373.62776026,
+      "log": "2026-11-28-12-56-44-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-bert-base-uncased-emotion-baremetal",
+      "status": "below_target",
+      "workload": "bert-base-uncased-emotion-baremetal"
+    },
+    {
+      "cycles": 1423793911,
+      "elapsed_s": 19.267,
+      "frequency_hz": 73898059.42803758,
+      "log": "2026-11-28-12-57-04-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-bert-base-uncased-emotion-linux",
+      "status": "below_target",
+      "workload": "bert-base-uncased-emotion-linux"
+    },
+    {
+      "cycles": 4508013,
+      "elapsed_s": 0.03,
+      "frequency_hz": 150267100.0,
+      "log": "2026-11-28-12-57-34-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-lenet-baremetal",
+      "status": "too_short",
+      "workload": "lenet-baremetal"
+    },
+    {
+      "cycles": 186110321,
+      "elapsed_s": 2.264,
+      "frequency_hz": 82204205.38869259,
+      "log": "2026-11-28-12-57-44-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-lenet-linux",
+      "status": "below_target",
+      "workload": "lenet-linux"
+    },
+    {
+      "cycles": 208563789,
+      "elapsed_s": 1.029,
+      "frequency_hz": 202685897.9591837,
+      "log": "2026-11-28-12-57-54-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-mobilenet-v3-small-baremetal",
+      "status": "pass",
+      "workload": "mobilenet-v3-small-baremetal"
+    },
+    {
+      "error": "build: failure",
+      "status": "failure",
+      "workload": "mobilenet-v3-small-linux"
+    },
+    {
+      "cycles": 326590987,
+      "elapsed_s": 2.207,
+      "frequency_hz": 147979604.44041687,
+      "log": "2026-11-28-12-58-14-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-resnet18-baremetal",
+      "status": "below_target",
+      "workload": "resnet18-baremetal"
+    },
+    {
+      "cycles": 859040271,
+      "elapsed_s": 8.972,
+      "frequency_hz": 95746797.92688364,
+      "log": "2026-11-28-12-58-44-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-resnet18-linux",
+      "status": "below_target",
+      "workload": "resnet18-linux"
+    },
+    {
+      "cycles": 4181022945,
+      "elapsed_s": 29.522,
+      "frequency_hz": 141623973.47740668,
+      "log": "2026-11-28-12-59-14-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-yolo26n-baremetal",
+      "status": "below_target",
+      "workload": "yolo26n-baremetal"
+    },
+    {
+      "cycles": 5953066358,
+      "elapsed_s": 58.926,
+      "frequency_hz": 101026140.54916336,
+      "log": "2026-11-28-12-59-54-gemmini-bemu-device-gemmini-GemminiDefaultConfig-gemmini-yolo26n-linux",
+      "status": "below_target",
+      "workload": "yolo26n-linux"
+    }
+  ]
+}
